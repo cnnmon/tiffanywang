@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'Augillion';
+  src: url('../public/Augillion.otf');
+  font-weight: normal;
+}
+
+:root {
+  --black: #403f43;
+  --gray: #403f4380;
+  --white: #f8edeb;
+  --red: #fa871b;
+  --orange: #f8bb34;
+  --yellow: #f2d58e;
+  --darkyellow: #f1bb25;
+  --lightgreen: #a3c98d;
+  --green: #89b19a;
+}
+
+body {
+  background: var(--white);
+  font-family: 'IBM Plex Mono';
+  margin: 0;
+  color: var(--black);
+}
+
+h1 {
+  font-family: 'Augillion';
+  font-weight: 400;
+  font-size: 90px;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Augillion';
+  font-weight: 400;
+  font-size: 60px;
+  margin: 0;
+}
+
+p, ul {
+  font-size: 18px;
+  margin: 0;
+  line-height: 24px;
+}
+
+a {
+  color: var(--black);
+}
+
+.inactive {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+a:hover, button:hover {
+  color: var(--red);
+}
+
+.active {
+  color: var(--red);
+  text-decoration: line-through;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 40px;
+}
+
+.icon {
+  margin-bottom: -3px;
+  margin-right: 7px;
+}
+
+.card-image {
+  transition: box-shadow 0.15s;
+  border: 2px solid var(--black);
+}
+
+.card-image:hover {
+  box-shadow: 10px 10px 0px 0px var(--yellow);;
+}
+
+.tags {
+  display: inline-flex;
+  padding: 10px 0px 30px;
+}
+
+.tag-container {
+  padding-left: 10px;
+}
+
+.tag-item {
+  display: inline-flex;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.me {
+  pointer-events: none;
+  padding-right: 20px;
+}
+
+@media (max-width: 600px) {
+  .me {
+    display: none;
+  }
+}
