@@ -75,11 +75,10 @@ function Home() {
           <h2 style={{ color: COLORS.red }}>featured</h2>
           <p>what i've been up to recently</p>
           <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-            <Card data={getProject('ezcv')} imageOnly />
-            <Card data={getProject('coffee')} imageOnly />
-            <Card data={getProject('gm')} imageOnly />
-            <Card data={getProject('boba')} imageOnly />
-            <Card data={getProject('cardio')} imageOnly />
+            <Card data={getProject('ezcv')} />
+            <Card data={getProject('coffee')} />
+            <Card data={getProject('gm')} />
+            <Card data={getProject('boba')} />
           </div>
           <p>
             <Link href="/work">see all projects ↗︎</Link>
