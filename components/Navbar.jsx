@@ -12,12 +12,12 @@ function Navbar({ active }) {
   }
 
   return (
-    <div className="center" style={{ fontSize: 18 }}>
+    <div className="center" style={{ fontSize: 20 }}>
       <div className="container">
         <NavItem path="/" title="TIFFANYWANG" />
         <div style={{ float: 'right' }}>
           <NavItem path="/about" title="ABOUT" />
-          {'  '}
+          <span style={{ marginRight: 30 }} />
           <NavItem path="/work" title="WORK" />
         </div>
       </div>
