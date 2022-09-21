@@ -4,7 +4,7 @@ import { COLORS } from '../constants';
 
 function Footer() {
   return (
-    <div className="center">
+    <div className="center" style={{ paddingTop: 30 }}>
       <div className="container">
         <h2 style={{ color: COLORS.green }}>get in touch!</h2>
         <p>email me at <a href="mailto:tiffanywang@berkeley.edu">tiffanywang@berkeley.edu</a>.</p>

@@ -45,7 +45,7 @@ function Work() {
             </div>
           </div>
           <br />
-          <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
             {list.map((data, index) => (
               <div key={index} style={{ width: 300, paddingRight: 20}}>
                 <Card data={data} />

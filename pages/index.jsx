@@ -74,15 +74,15 @@ function Home() {
         <div className="container">
           <h2 style={{ color: COLORS.red }}>featured</h2>
           <p>what i've been up to recently</p>
-          <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
             <Card data={getProject('ezcv')} />
             <Card data={getProject('coffee')} />
             <Card data={getProject('gm')} />
             <Card data={getProject('boba')} />
           </div>
-          <p>
+          <h3>
             <Link href="/work">see all projects ↗︎</Link>
-          </p>
+          </h3>
         </div>
       </div>
 
