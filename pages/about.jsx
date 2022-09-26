@@ -40,14 +40,20 @@ function About() {
           <br />
 
           {/* BODY */}
-          <p>I’m a software engineer, hobbyist artist, and computer science junior at <Link href="https://www.berkeley.edu/"><IoSchool className="icon" />UC Berkeley</Link>.</p>
+          <p>I’m a software engineer, artist/designer, and computer science junior at <Link href="https://www.berkeley.edu/"><IoSchool className="icon" />UC Berkeley</Link>.</p>
           <br />
-          <p>Growing up as a self-proclaimed “art kid” in northeast Ohio, I discovered coding through the Flash game ecosystem of the early 2010s. Since then, I’ve delved into game development, created some web experiments, and began pursuing my degree in CS (in my quest to learn more than what YouTube videos and w3schools can offer me).</p>
+          <p>Growing up as an art kid in Cleveland, I first discovered coding through colorful and  Flash games. Above all, I loved the interactivity; with it, you could step into fantasy worlds, acquire the coolest gear, and participate in something incomparably bigger than yourself.</p>
           <br />
-          <p>While I'm still throwing things and seeing what sticks, I'm especially curious about tools that enable creativity and productivity, how tech can make good, and storytelling.</p>
+          <p>
+          I began building out games of my own, tinkering with animation, music, writing, and, of course, code. It was unbelievably fun! I kept teaching myself, joining hackathons, experimenting with web technologies, all until I found myself at Berkeley studying to become a software engineer.
+          </p>
           <br />
-          <p><i>Looking for my next move!</i> Shoot me an email at <a href="mailto:tiffanywang@berkeley.edu">tiffanywang@berkeley.edu</a> if you would like to work together or collaborate in some way (or just say hi!).</p>
+          <p>While I'm still exploring and learning, I've been curious recently about how we can better enable creativity and productivity, how tech can make good as well as increase accessibility, as well as digital storytelling and immersion. I also love sharing and experimenting with colorful projects on the side.</p>
+          <br />
+          <p>That being said: <i>I'm looking for my next move!</i> Want to work together in some way (or just want to say hi)? Shoot me an email at <a href="mailto:tiffanywang@berkeley.edu">tiffanywang@berkeley.edu</a>.</p>
           <br /><br />
+          <p>~</p>
+          <br />
           <p>Currently:</p>
           <ul>
             <li>Leading tech and facilitating hacker culture at <Link href="https://calhacks.io/">Cal Hacks</Link></li>
