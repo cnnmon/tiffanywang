@@ -42,7 +42,7 @@ function About() {
           {/* BODY */}
           <p>I’m a software engineer, artist/designer, and computer science junior at <Link href="https://www.berkeley.edu/"><IoSchool className="icon" />UC Berkeley</Link>.</p>
           <br />
-          <p>Growing up as an art kid in Cleveland, I first discovered coding through colorful and  Flash games. Above all, I loved the interactivity; with it, you could step into fantasy worlds, acquire the coolest gear, and participate in something incomparably bigger than yourself.</p>
+          <p>Growing up as an art kid in Cleveland, I first discovered coding through colorful and  Flash games. Above all, I loved the interactivity: the ability to step into fantasy worlds, acquire the coolest gear, and participate in something incomparably bigger than yourself.</p>
           <br />
           <p>
           I began building out games of my own, tinkering with animation, music, writing, and, of course, code. It was unbelievably fun! I kept teaching myself, joining hackathons, experimenting with web technologies, all until I found myself at Berkeley studying to become a software engineer.
