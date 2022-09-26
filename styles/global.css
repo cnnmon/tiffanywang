@@ -85,6 +85,7 @@ a:hover, button:hover {
 .card-image {
   transition: box-shadow 0.15s;
   border: 2px solid var(--black);
+  max-height: 250px;
 }
 
 .card-image:hover {

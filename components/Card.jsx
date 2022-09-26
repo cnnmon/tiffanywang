@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Image from 'next/image';
-import { COLORS } from '../constants';
 
 const styles = {
   card: {
@@ -39,7 +38,7 @@ function CardImage(props) {
   )
 }
 
-function Card({ data, imageOnly }) {
+function Card({ data }) {
   const getLink = (content, image) => {
     return (
       <a href={data.link} target="_blank" rel="noreferrer" style={image ? styles.link : undefined}>
@@ -51,17 +50,15 @@ function Card({ data, imageOnly }) {
   return (
     <div style={styles.card}>
       {getLink(<CardImage data={data} />, true)}
-      {imageOnly ? null : (
-        <div style={styles.description}>
-          <p>
-            {getLink(<b>{data.name}</b>, false)}<br />
-            <b>{data.tags.join(', ')}</b>
-            <span> {data.date}</span>
-            <br />
-            {data.description}
-          </p>
-        </div>
-      )}
+      <div style={styles.description}>
+        <p>
+          {getLink(<b>{data.name}</b>, false)}<br />
+          <b>{data.tags.join(', ')}</b>
+          <span> {data.date}</span>
+          <br />
+          {data.description}
+        </p>
+      </div>
     </div>
   )
 }
