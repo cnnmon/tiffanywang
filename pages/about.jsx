@@ -74,7 +74,7 @@ function About() {
           <ul>
             <li><Link href="https://eecs.berkeley.edu/resources/undergrads/accel">Accel Scholars</Link></li>
             <li><Link href="https://joininteract.com/">Interact Fellowship</Link></li>
-            {/*<li><Link href="https://neo.com/">Neo Scholars</Link></li>*/}
+            <li><Link href="https://neo.com/">Neo Scholars</Link></li>
           </ul>
           <br />
           <p>
