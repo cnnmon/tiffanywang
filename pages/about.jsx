@@ -70,7 +70,7 @@ function About() {
             <li>Made a <Link href="https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk">chrome extension</Link> that was <Link href="https://youtu.be/iXN_THcp408?t=144">boosted by study YouTubers</Link> and accumulated 200k users</li>
           </ul>
           <br /><br />
-          <p>Cool misc communities I'm a part of:</p>
+          <p>Cool communities I'm a part of:</p>
           <ul>
             <li><Link href="https://eecs.berkeley.edu/resources/undergrads/accel">Accel Scholars</Link></li>
             <li><Link href="https://joininteract.com/">Interact Fellowship</Link></li>
