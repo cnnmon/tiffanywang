@@ -85,7 +85,7 @@ const projects = {
   },
   ashes: {
     name: "LD45, Ashes to Ash",
-    description: "72-hour platformer eabout collecting emotions",
+    description: "72-hour platformer about collecting emotions",
     thumb: ashes_thumb,
     static: ashes_static,
     date: "oct 2019",

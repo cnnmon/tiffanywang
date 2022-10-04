@@ -48,9 +48,9 @@ function About() {
           I began building out games of my own, tinkering with animation, music, writing, and, of course, code. It was unbelievably fun! I kept teaching myself, joining hackathons, experimenting with web technologies, all until I found myself at Berkeley studying to become a software engineer.
           </p>
           <br />
-          <p>While I'm still exploring and learning, I've been curious recently about how we can better enable creativity and productivity, how tech can make good as well as increase accessibility, as well as digital storytelling and immersion. I also love sharing and experimenting with colorful projects on the side.</p>
+          <p>While I'm still exploring, I've been curious about how we can better enable creativity and productivity, how tech can make good/increase accessibility, and empowering digital storytelling and immersion. I also love sharing and experimenting with colorful projects on the side.</p>
           <br />
-          <p>That being said: <i>I'm looking for my next move!</i> Want to work together in some way (or just want to say hi)? Shoot me an email at <a href="mailto:tiffanywang@berkeley.edu">tiffanywang@berkeley.edu</a>.</p>
+          <p>That being said: <i>I'm looking for more!</i> Want to work together in some way (or just want to say hi)? Shoot me an email at <a href="mailto:tiffanywang@berkeley.edu">tiffanywang@berkeley.edu</a>.</p>
           <br /><br />
           <p>~</p>
           <br />
