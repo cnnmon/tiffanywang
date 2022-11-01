@@ -24,7 +24,7 @@ function About() {
           {/* TITLE TEXT */}
           <div style={{ display: 'flex', paddingTop: 80 }}>
             <div className="me">
-              <Image src={me} height={280} width={200} objectFit="cover" />
+              <Image src={me} height={280} width={300} objectFit="cover" />
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
               <p>Nice to meet you,</p>
