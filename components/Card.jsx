@@ -28,10 +28,10 @@ function CardImage(props) {
       onMouseLeave={() => { setHovering(false); }}
       className="card-image"
     >
-      <div style={{ display: hovering ? 'none' : 'block' }}>
+      <div style={{ display: hovering ? 'block' : 'none' }}>
         <Image width={400} height={250} objectFit="cover" src={data.static} />
       </div>
-      <div style={{ display: hovering ? 'block' : 'none' }}>
+      <div style={{ display: hovering ? 'none' : 'block' }}>
         <Image width={400} height={250} objectFit="cover" src={data.thumb} />
       </div>
     </div>
