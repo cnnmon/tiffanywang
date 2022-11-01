@@ -15,7 +15,7 @@ import kitty_static from "/public/projects/kitty_static.png";
 import spacebar_thumb from "/public/projects/spacebar_thumb.gif";
 import spacebar_static from "/public/projects/spacebar_static.png";
 import art_thumb from "/public/projects/art_thumb.gif";
-import art_static from "/public/projects/art_static.jpg";
+import art_static from "/public/projects/art_static.png";
 import ezcv_static from "/public/projects/ezcv_static.png";
 import ezcv_thumb from "/public/projects/ezcv_thumb.gif";
 
