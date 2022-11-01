@@ -32,7 +32,14 @@ function CardImage(props) {
         <Image width={400} height={250} objectFit="cover" src={data.static} />
       </div>
       <div style={{ display: hovering ? 'none' : 'block' }}>
-        <Image width={400} height={250} objectFit="cover" src={data.thumb} />
+        <Image
+          width={400}
+          height={250}
+          src={data.thumb}
+          objectFit="cover"
+          placeholder="blur"
+          blurDataURL={data.static}
+        />
       </div>
     </div>
   )
