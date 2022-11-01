@@ -20,27 +20,19 @@ const styles = {
 
 function CardImage(props) {
   const { data } = props;
-  const [hovering, setHovering] = useState(false);
 
   return (
     <div
-      onMouseEnter={() => { setHovering(true); }}
-      onMouseLeave={() => { setHovering(false); }}
       className="card-image"
     >
-      <div style={{ display: hovering ? 'block' : 'none' }}>
-        <Image width={400} height={250} objectFit="cover" src={data.static} />
-      </div>
-      <div style={{ display: hovering ? 'none' : 'block' }}>
-        <Image
-          width={400}
-          height={250}
-          src={data.thumb}
-          objectFit="cover"
-          placeholder="blur"
-          blurDataURL={data.static}
-        />
-      </div>
+      <Image
+        width={400}
+        height={250}
+        src={data.thumb}
+        objectFit="cover"
+        placeholder="blur"
+        blurDataURL={data.static}
+      />
     </div>
   )
 }
