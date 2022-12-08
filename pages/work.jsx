@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Card from '../components/Card';
 import Footer from '../components/Footer';
 import projects, { tags } from '../projects';
@@ -45,7 +45,7 @@ function Work() {
             </div>
           </div>
           <br />
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
             {list.map((data, index) => (
               <div key={index} style={{ width: 300, paddingRight: 20}}>
                 <Card data={data} />

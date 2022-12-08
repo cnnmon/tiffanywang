@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import Image from 'next/image';
 
 const styles = {
   card: {
-    alignItems: 'center',
     margin: '20px 0px',
     maxWidth: 450,
     width: '100%',

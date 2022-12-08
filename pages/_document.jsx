@@ -1,7 +1,6 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { COLORS } from '../constants';
 
 class MyDocument extends Document {
   render() {
