@@ -11,7 +11,7 @@ function About() {
         <br /><br />
         In a past life, I was an indie game dev. Growing up in the not-very-techy 'burbs of Cleveland, Ohio, I was first exposed to coding via Flash games. I started drawing up games of my own, doing everything from art to music to code; I frequented game jams, featured in two exhibitions, and published on my <a href="https://cnnmon.itch.io/" target="_blank" className="link">itch.io</a> <FaItchIo className="clear-left inline" />.
         <br /><br />
-        Life looks very different in an undergrad CS degree but my background has shaped my approach. I love dabbling in as many skills as possible, learning by experimenting, and building wonderful, colorful experiences.
+        Life looks very different in undergrad but my background has shaped my approach. I love dabbling in as many skills as possible, learning by experimenting, and building wonderful, colorful experiences.
       </p>
       <p>
         <br />
