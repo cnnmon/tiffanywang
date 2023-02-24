@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import logo from '../public/logo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   function NavItem({ path, title, name }) {
@@ -20,6 +21,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div className="flex flex-col justify-center w-full md:max-w-3xl mx-auto gap-8 mt-[10vh] p-4">
+      <Head>
+        <title>tiffanywang</title>
+      </Head>
       <Image src={logo} alt="logo" className="w-[150px] md:w-1/5 px-6" />
       <div className="flex md:flex-row flex-col">
         <nav className="flex md:w-1/5 p-3 md:flex-col gap-2 text-right">
