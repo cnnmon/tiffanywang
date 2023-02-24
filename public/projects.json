@@ -1,0 +1,85 @@
+{
+  "projects": [
+    {
+      "title": "2020-2023",
+      "list": [
+        {
+          "name": "drip or drown",
+          "type": "web",
+          "description": "your personal AI-powered stylist",
+          "date": "feb 2023",
+          "image": "/../public/images/dripordrown.png",
+          "link": "https://devpost.com/software/drip-or-drown-k8sv1t"
+        },
+        {
+          "name": "ezcv",
+          "type": "web",
+          "description": "plaintext-to-resume generator",
+          "date": "sep 2022",
+          "image": "/../public/images/ezcv.png",
+          "link": "https://www.ezcv.pro/"
+        },
+        {
+          "name": "boba",
+          "type": "mobile game",
+          "description": "themed mobile puzzle game",
+          "date": "aug 2020",
+          "image": "/../public/images/boba.png",
+          "link": "https://cnnmon.itch.io/boba"
+        }
+      ]
+    }, {
+      "title": "2019-2018",
+      "list": [
+        {
+          "name": "coffeelings",
+          "type": "chrome extension",
+          "description": "mood tracker & journal (200k DAU)",
+          "date": "mar 2020",
+          "image": "/../public/images/coffeelings.png",
+          "link": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/"
+        },
+        {
+          "name": "ashes to ash",
+          "type": "game",
+          "description": "collect emotions",
+          "date": "oct 2019",
+          "image": "/../public/images/ashestoash.png",
+          "link": "https://ldjam.com/events/ludum-dare/45/ashes-to-ash/"
+        },
+        {
+          "name": "slice of scythe",
+          "type": "game",
+          "description": "do chores as a grim reaper",
+          "date": "apr 2019",
+          "image": "/../public/images/sliceofscythe.png",
+          "link": "https://ldjam.com/events/ludum-dare/44/slice-of-scythe/"
+        },
+        {
+          "name": "good morning!",
+          "type": "game",
+          "description": "morning routine simulator (500k+ views)",
+          "date": "jan 2019",
+          "image": "/../public/images/goodmorning.png",
+          "link": "https://cnnmon.itch.io/goodmorning"
+        },
+        {
+          "name": "kittyclinic",
+          "type": "game",
+          "description": "holistic cat clinic",
+          "date": "nov 2018",
+          "image": "/../public/images/kittyclinic.png",
+          "link": "https://cnnmon.itch.io/kittyclinic"
+        },
+        {
+          "name": "spacebar",
+          "type": "game",
+          "description": "endless-runner typing game",
+          "date": "sep 2018",
+          "image": "/../public/images/spacebar.png",
+          "link": "https://cnnmon.itch.io/spacebar"
+        }
+      ]
+    }
+  ]
+}
