@@ -1,4 +1,4 @@
-import projects from '../public/projects.json'
+import projects from '../projects.json'
 import Image from 'next/image'
 
 function Projects() {
