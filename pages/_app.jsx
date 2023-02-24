@@ -6,7 +6,8 @@ import Link from 'next/link';
 function MyApp({ Component, pageProps }) {
   function NavItem({ path, title, name }) {
     const isActive = Component.name == name;
-  
+
+    // TODO: navigation styling for active link doesn't work on deployment
     return (
       <Link href={path} className={isActive ? 'font-bold text-cosmic' : ''}>
         <span className="hidden md:inline">
