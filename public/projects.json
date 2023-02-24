@@ -8,7 +8,7 @@
           "type": "web",
           "description": "your personal AI-powered stylist",
           "date": "feb 2023",
-          "image": "/../public/images/dripordrown.png",
+          "image": "https://github.com/cnnmon/tiffanywang/blob/main/public/images/dripordrown.png?raw=true",
           "link": "https://devpost.com/software/drip-or-drown-k8sv1t"
         },
         {
@@ -16,7 +16,7 @@
           "type": "web",
           "description": "plaintext-to-resume generator",
           "date": "sep 2022",
-          "image": "/../public/images/ezcv.png",
+          "image": "https://github.com/cnnmon/tiffanywang/blob/main/public/images/ezcv.png?raw=true",
           "link": "https://www.ezcv.pro/"
         },
         {
@@ -24,7 +24,7 @@
           "type": "mobile game",
           "description": "themed mobile puzzle game",
           "date": "aug 2020",
-          "image": "/../public/images/boba.png",
+          "image": "https://github.com/cnnmon/tiffanywang/blob/main/public/images/boba.png?raw=true",
           "link": "https://cnnmon.itch.io/boba"
         }
       ]
@@ -44,7 +44,7 @@
           "type": "game",
           "description": "collect emotions",
           "date": "oct 2019",
-          "image": "/../public/images/ashestoash.png",
+          "image": "https://github.com/cnnmon/tiffanywang/blob/main/public/images/ashestoash.png?raw=true",
           "link": "https://ldjam.com/events/ludum-dare/45/ashes-to-ash/"
         },
         {
@@ -52,7 +52,7 @@
           "type": "game",
           "description": "do chores as a grim reaper",
           "date": "apr 2019",
-          "image": "/../public/images/sliceofscythe.png",
+          "image": "https://github.com/cnnmon/tiffanywang/blob/main/public/images/sliceofscythe.png?raw=true",
           "link": "https://ldjam.com/events/ludum-dare/44/slice-of-scythe/"
         },
         {
@@ -60,7 +60,7 @@
           "type": "game",
           "description": "morning routine simulator (500k+ views)",
           "date": "jan 2019",
-          "image": "/../public/images/goodmorning.png",
+          "image": "https://github.com/cnnmon/tiffanywang/blob/main/public/images/goodmorning.png?raw=true",
           "link": "https://cnnmon.itch.io/goodmorning"
         },
         {
@@ -68,7 +68,7 @@
           "type": "game",
           "description": "holistic cat clinic",
           "date": "nov 2018",
-          "image": "/../public/images/kittyclinic.png",
+          "image": "https://github.com/cnnmon/tiffanywang/blob/main/public/images/kittyclinic.png?raw=true",
           "link": "https://cnnmon.itch.io/kittyclinic"
         },
         {
@@ -76,7 +76,7 @@
           "type": "game",
           "description": "endless-runner typing game",
           "date": "sep 2018",
-          "image": "/../public/images/spacebar.png",
+          "image":"https://github.com/cnnmon/tiffanywang/blob/main/public/images/spacebar.png?raw=true",
           "link": "https://cnnmon.itch.io/spacebar"
         }
       ]
