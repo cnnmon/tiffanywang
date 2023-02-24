@@ -34,9 +34,9 @@ function Home() {
         </a>
         {' '}{drinksEmoji[drinkIndex]}.
         <br /><br />
-        I’m currently in sunny <a href="https://www.berkeley.edu/" target="_blank" className="link">Berkeley</a> ☀️ where I study computer science as a 3rd year. Outside doing ML problem sets, I enjoy experimenting with digital creative tools 🎨, talking about the idea of going to the gym, and hosting game nights.
+        I’m currently in sunny Berkeley ☀️ where I study computer science as a 3rd year. Outside doing ML problem sets, I enjoy experimenting with digital creative tools 🎨, talking about the idea of going to the gym, and hosting game nights.
         <br /><br />
-        Reach out anytime at <a href="mailto:tiffanywang@berkeley.edu" target="_blank" className="link">tiffanywang at berkeley dot edu</a>.
+        Reach out anytime at tiffanywang at berkeley dot edu.
         <br /><br />
       </p>
       <p className="flex flex-row gap-4 text-xl">
