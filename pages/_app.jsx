@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { pages } from './utils/constants'
+import { pages } from '../utils/constants'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
@@ -13,8 +13,6 @@ function MyApp({ Component, pageProps }) {
   function NavItem({ path, title }) {
     const activePath = pages[activePathIndex]
     const isActive = activePath.path === path
-
-    console.log(`text-${activePath.color}`)
 
     return (
       <Link href={path} style={{ color: isActive ? undefined: 'rgba(0, 0, 0, 0.3)' }}>

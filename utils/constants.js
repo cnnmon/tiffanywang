@@ -20,7 +20,3 @@ export const pages = [
     color: '#e3a266',
   },
 ]
-
-const help = "help"
-
-export default help
