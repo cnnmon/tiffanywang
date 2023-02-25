@@ -2,11 +2,24 @@ import { useEffect, useState } from 'react'
 import { AiFillLinkedin, AiFillGithub, AiOutlineTwitter } from 'react-icons/ai';
 import { FaItchIo } from 'react-icons/fa';
 
+const words = {
+  drinks: ['yakult', 'chrysanthemum tea', 'Yerba Mate', 'La Croix', 'Cholula hot sauce'],
+  do: ['study computer science as a 3rd year', 'purchase an unhealthy amount of boba', 'shout "Go Bears!" occasionally', 'play DDR at the MLK student building'],
+  hobbies: ['hosting game nights', 'singing my heart out at karaoke', 'cooking upscaled instant noodles', 'talking about the idea of going to the gym']
+}
+const drinksEmoji = ['🍓', '🧃', '🌿', '🍊', '🌶️']
+const greeting = 'hi, i\'m tiffany!'
+
 function Home() {
-  const drinksEmoji = ['🍓', '🧃', '🌿', '🍊', '🌶️']
-  const drinks = ['yakult', 'chrysanthemum tea', 'Yerba Mate', 'La Croix', 'Cholula hot sauce']
-  const [drinkIndex, setDrinkIndex] = useState(0)
-  const greeting = 'hi, i\'m tiffany!'
+  // generate initial state for words dictionary
+  const initialWordsState = Object.fromEntries(Object.keys(words).map(key => [key, 0]));
+  const [wordsState, setWordsState] = useState(initialWordsState)
+
+  useEffect(() => {
+    // set drink to random
+    const randomDrinkIndex = Math.floor(Math.random() * words.drinks.length)
+    setWordsState({...wordsState, drinks: randomDrinkIndex})
+  }, [])
   
   let greetingCharacters = []
   for (let i = 0; i < greeting.length; i++) {
@@ -14,9 +27,20 @@ function Home() {
     greetingCharacters.push(char == ' ' ? '\u00A0' : char)
   }
 
-  useEffect(() => {
-    setDrinkIndex(Math.floor(Math.random() * drinks.length))
-  }, [])
+  function incrementWords(key) {
+    const index = wordsState[key]
+    const length = words[key].length
+    const nextIndex = (index + 1) % length
+    setWordsState({...wordsState, [key]: nextIndex})
+  }
+
+  function PlayLink({ type }) {
+    return (
+      <a className="link" onClick={() => incrementWords(type)}>
+        {words[type][wordsState[type]]}
+      </a>
+    )
+  }
 
   return (
     <>
@@ -29,12 +53,10 @@ function Home() {
         Welcome to my web-home!
         <br /><br/>
         Go ahead, grab yourself something to drink. I have a fridge full of{' '}
-        <a className="link" onClick={() => setDrinkIndex((drinkIndex + 1) % drinks.length)}>
-          {drinks[drinkIndex]}
-        </a>
-        {' '}{drinksEmoji[drinkIndex]}.
+        <PlayLink type="drinks" />
+        {' '}{drinksEmoji[wordsState['drinks']]}.
         <br /><br />
-        I’m currently in sunny Berkeley ☀️ where I study computer science as a 3rd year. Outside doing ML problem sets, I enjoy experimenting with digital creative tools 🎨, talking about the idea of going to the gym, and hosting game nights.
+        I’m currently in sunny Berkeley ☀️ where I <PlayLink type="do" />. Outside the typical coding and doing ML problem sets, I enjoy experimenting with digital creative tools 🎨 and <PlayLink type="hobbies" />.
         <br /><br />
         Reach out anytime at tiffanywang at berkeley dot edu.
         <br /><br />

@@ -31,7 +31,7 @@ function Projects() {
   return (
     <>
       <p>✧･ﾟ: *✧･ﾟ:*</p>
-      <p>A gallery of projects I've worked on.</p>
+      <p>My gallery of things. Take a look around!</p>
       <div className="flex flex-col gap-4 mt-4">
         {sections.map((section, index) => <Section key={index} section={section} />)}
       </div>
