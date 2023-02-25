@@ -20,3 +20,5 @@ export const pages = [
     color: '#e3a266',
   },
 ]
+
+export default pages
