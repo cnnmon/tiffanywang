@@ -18,7 +18,8 @@ function Home() {
   useEffect(() => {
     // set drink to random
     const randomDrinkIndex = Math.floor(Math.random() * words.drinks.length)
-    setWordsState({...wordsState, drinks: randomDrinkIndex})
+    const randomHobbyIndex = Math.floor(Math.random() * words.hobbies.length)
+    setWordsState({...wordsState, drinks: randomDrinkIndex, hobbies: randomHobbyIndex})
   }, [])
   
   let greetingCharacters = []
