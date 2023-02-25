@@ -4,7 +4,6 @@ import { FaItchIo } from 'react-icons/fa'
 
 const words = {
   drinks: ['yakult', 'chrysanthemum tea', 'Yerba Mate', 'La Croix', 'Cholula hot sauce'],
-  do: ['study computer science', 'purchase an unhealthy amount of boba', 'shout "Go Bears!" occasionally', 'play DDR at the MLK student building'],
   hobbies: ['hosting game nights', 'singing my heart out at karaoke', 'cooking upscaled instant noodles', 'talking about the idea of going to the gym']
 }
 const drinksEmoji = ['🍓', '🧃', '🌿', '🍊', '🌶️']
@@ -19,7 +18,7 @@ function Home() {
     // set drink to random
     const randomDrinkIndex = Math.floor(Math.random() * words.drinks.length)
     const randomHobbyIndex = Math.floor(Math.random() * words.hobbies.length)
-    setWordsState({...wordsState, drinks: randomDrinkIndex, hobbies: randomHobbyIndex})
+    setWordsState({ ...wordsState, drinks: randomDrinkIndex, hobbies: randomHobbyIndex })
   }, [])
   
   let greetingCharacters = []
@@ -57,9 +56,8 @@ function Home() {
         <PlayLink type="drinks" />
         {' '}{drinksEmoji[wordsState['drinks']]}.
         <br /><br />
-        I’m currently based in sunny Berkeley, California ☀️ where I <PlayLink type="do" />.
-        <br /><br />
-        Outside the typical coding and doing ML problem sets, I enjoy experimenting with digital creative tools 🎨 and <PlayLink type="hobbies" />.
+        Although raised by the Midwest, I’m currently based in the (typically) sunny city of Berkeley ☀️ where I study computer science.
+        When I'm not doing ML problem sets, I enjoy experimenting with digital creative tools 🎨, beverages, and <PlayLink type="hobbies" />.
         <br /><br />
         Reach out anytime at tiffanywang at berkeley dot edu.
         <br /><br />
