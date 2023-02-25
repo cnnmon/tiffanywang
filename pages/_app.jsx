@@ -1,14 +1,14 @@
 import '../styles/globals.css'
-import logo from '../public/logo.svg';
-import Image from 'next/image';
-import Link from 'next/link';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
+import logo from '../public/logo.svg'
+import Image from 'next/image'
+import Link from 'next/link'
+import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 function MyApp({ Component, pageProps }) {
   function NavItem({ path, title }) {
-    const router = useRouter();
-    const isActive = router.pathname === path;
+    const router = useRouter()
+    const isActive = router.pathname === path
 
     return (
       <Link href={path} className={isActive ? 'font-bold text-cosmic' : ''}>
@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
           <NavItem path="/" title="home" />
           <NavItem path="/about" title="about" />
           <NavItem path="/projects" title="projects" />
-          <a href="https://drive.google.com/file/d/1eLelGRhX6h65sQhYiB_LqCli2UL2U-wW/view" target="_blank">resume</a>
+          <NavItem path="/resume" title="resume" />
         </nav>
         <div className="md:w-4/5 p-3 body">
           <Component {...pageProps} />

@@ -52,7 +52,7 @@ h1 {
   cursor: pointer;
 }
 
-.link:hover {
+.link:hover, .icon-link:hover {
   opacity: 0.5;
 }
 

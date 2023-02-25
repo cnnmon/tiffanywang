@@ -1,6 +1,6 @@
 import me from '../public/images/me.png'
-import Image from 'next/image';
-import { FaItchIo } from 'react-icons/fa';
+import Image from 'next/image'
+import { FaItchIo } from 'react-icons/fa'
 
 function About() {
   return (
@@ -21,7 +21,7 @@ function About() {
         <br /><br />
         I'm curious about socially impactful tech, broadly ML/AI applications, and creative technology.
         <br /><br />
-        This summer, I'll be interning as a software engineer at <a href="https://watershed.com/" target="_blank" className="link">Watershed</a> 🌍, a climate tech startup helping companies decarbonize.
+        This summer I'll be interning as a software engineer at <a href="https://watershed.com/" target="_blank" className="link">Watershed</a> 🌍, a climate tech startup helping companies decarbonize.
       </p>
       <p>
         <br />
@@ -34,8 +34,8 @@ function About() {
           </li>
           <li>Led tech at 2 lovely Berkeley student orgs:
             <ul className="list-none list-inside ml-12">
-              <li><a href="https://www.calblueprint.org/" target="_blank" className="link">Blueprint</a> 💻, tech for non-profits</li>
-              <li><a href="https://www.calhacks.io/" target="_blank" className="link">Cal Hacks</a> 🐻, Berkeley's collegiate hackathon</li>
+              <li><a href="https://www.calblueprint.org/" target="_blank" className="link">Blueprint</a>, tech for non-profits</li>
+              <li><a href="https://www.calhacks.io/" target="_blank" className="link">Cal Hacks</a>, Berkeley's flagship collegiate hackathon</li>
             </ul>
           </li>
           <li>Taught the <a href="https://cs61a.org/" target="_blank" className="link">intro CS class</a> and <a href="http://wdd.io/" target="_blank" className="link">Web Design Decal</a></li>
@@ -47,7 +47,6 @@ function About() {
             </ul>
           </li>
         </ul>
-
     </>
   )
 }

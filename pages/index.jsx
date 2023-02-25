@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { AiFillLinkedin, AiFillGithub, AiOutlineTwitter } from 'react-icons/ai';
-import { FaItchIo } from 'react-icons/fa';
+import { AiFillLinkedin, AiFillGithub, AiOutlineTwitter } from 'react-icons/ai'
+import { FaItchIo } from 'react-icons/fa'
 
 const words = {
   drinks: ['yakult', 'chrysanthemum tea', 'Yerba Mate', 'La Croix', 'Cholula hot sauce'],
@@ -12,7 +12,7 @@ const greeting = 'hi, i\'m tiffany!'
 
 function Home() {
   // generate initial state for words dictionary
-  const initialWordsState = Object.fromEntries(Object.keys(words).map(key => [key, 0]));
+  const initialWordsState = Object.fromEntries(Object.keys(words).map(key => [key, 0]))
   const [wordsState, setWordsState] = useState(initialWordsState)
 
   useEffect(() => {
@@ -62,10 +62,10 @@ function Home() {
         <br /><br />
       </p>
       <p className="flex flex-row gap-4 text-xl">
-        <a href="https://www.linkedin.com/in/wtiffany/" target="_blank" rel="noreferrer"><AiFillLinkedin className="clear-left inline" alt="linkedin" /></a>
-        <a href="https://github.com/cnnmon" target="_blank" rel="noreferrer"><AiFillGithub className="clear-left inline" alt="github" /></a>
-        <a href="https://cnnmon.itch.io/" target="_blank" rel="noreferrer"><FaItchIo className="clear-left inline" alt="itch.io" /></a>
-        <a href="https://twitter.com/cnnmonsugar" target="_blank" rel="noreferrer"><AiOutlineTwitter className="clear-left inline" alt="twitter" /></a>
+        <a href="https://www.linkedin.com/in/wtiffany/" target="_blank" rel="noreferrer"><AiFillLinkedin className="clear-left inline icon-link" alt="linkedin" /></a>
+        <a href="https://github.com/cnnmon" target="_blank" rel="noreferrer"><AiFillGithub className="clear-left inline icon-link" alt="github" /></a>
+        <a href="https://cnnmon.itch.io/" target="_blank" rel="noreferrer"><FaItchIo className="clear-left inline icon-link" alt="itch.io" /></a>
+        <a href="https://twitter.com/cnnmonsugar" target="_blank" rel="noreferrer"><AiOutlineTwitter className="clear-left inline icon-link" alt="twitter" /></a>
       </p>
     </>
   )
