@@ -4,7 +4,7 @@ import { FaItchIo } from 'react-icons/fa'
 
 const words = {
   drinks: ['yakult', 'chrysanthemum tea', 'Yerba Mate', 'La Croix', 'Cholula hot sauce'],
-  do: ['study computer science as a 3rd year', 'purchase an unhealthy amount of boba', 'shout "Go Bears!" occasionally', 'play DDR at the MLK student building'],
+  do: ['study computer science', 'purchase an unhealthy amount of boba', 'shout "Go Bears!" occasionally', 'play DDR at the MLK student building'],
   hobbies: ['hosting game nights', 'singing my heart out at karaoke', 'cooking upscaled instant noodles', 'talking about the idea of going to the gym']
 }
 const drinksEmoji = ['🍓', '🧃', '🌿', '🍊', '🌶️']
