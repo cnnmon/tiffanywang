@@ -4,15 +4,21 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { pages } from './utils/constants'
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter()
+  const activePathIndex = pages.findIndex(page => page.path === router.pathname)
+
   function NavItem({ path, title }) {
-    const router = useRouter()
-    const isActive = router.pathname === path
+    const activePath = pages[activePathIndex]
+    const isActive = activePath.path === path
+
+    console.log(`text-${activePath.color}`)
 
     return (
-      <Link href={path} className={isActive ? 'font-bold text-cosmic' : ''}>
-        <span className="hidden md:inline">
+      <Link href={path} style={{ color: isActive ? undefined: 'rgba(0, 0, 0, 0.3)' }}>
+        <span className="hidden md:inline"  style={{ color: isActive ? activePath.color : undefined }}>
           {isActive && '> '}
         </span>
         {title}
@@ -28,10 +34,7 @@ function MyApp({ Component, pageProps }) {
       <Image src={logo} alt="logo" className="w-[150px] md:w-1/5 px-6" />
       <div className="flex md:flex-row flex-col">
         <nav className="flex md:w-1/5 p-3 md:flex-col gap-2 text-right">
-          <NavItem path="/" title="home" />
-          <NavItem path="/about" title="about" />
-          <NavItem path="/projects" title="projects" />
-          <NavItem path="/resume" title="resume" />
+          {pages.map((page, index) => <NavItem key={index} path={page.path} title={page.title} />)}
         </nav>
         <div className="md:w-4/5 p-3 body">
           <Component {...pageProps} />

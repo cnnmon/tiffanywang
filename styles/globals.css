@@ -20,6 +20,7 @@
 body {
   background-color: #FBF5EF;
   font-family: 'IBM Plex Mono';
+  color: rgba(0, 0, 0, 0.85);
 }
 
 h1 {

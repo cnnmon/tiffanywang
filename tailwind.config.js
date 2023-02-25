@@ -8,9 +8,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'cosmic': '#5F68BB',
-        'peach': '#FFBBB1',
-        'dusk': '#CEA8C5',
       },
     },
   },
