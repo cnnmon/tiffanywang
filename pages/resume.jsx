@@ -5,7 +5,6 @@ function Resume() {
 
   return (
     <>
-      ｡･:*:･ﾟ★,｡･:*:･ﾟ☆
       <div className="mb-4">
         { isLoading ? <p>Loading... 🔎</p> : <p>In all its black-and-white glory; made with <a href="https://ezcv.pro/." target="_blank" rel="noreferrer" className="link">ezcv.pro</a>.</p> }
       </div>

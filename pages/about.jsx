@@ -7,7 +7,7 @@ function About() {
     <>
       <Image src={me} alt="me" className="max-w-[250px] mb-5 border-[1.5px] border-black" />
       <p>
-        <b>a little about me!</b>
+        <b>✧･ﾟ: *✧･ﾟ:*</b>
         <br /><br />
         In a past life, I was an indie game dev. Growing up in the not-very-techy 'burbs of Cleveland, Ohio, I was first exposed to coding via Flash games. I started drawing up games of my own, doing everything from art to music to code; I frequented game jams, featured in two exhibitions, and published on my <a href="https://cnnmon.itch.io/" target="_blank" className="link">itch.io</a> <FaItchIo className="clear-left inline" />.
         <br /><br />
