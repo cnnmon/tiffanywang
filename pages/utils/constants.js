@@ -21,4 +21,6 @@ export const pages = [
   },
 ]
 
-export default pages
+const help = "help"
+
+export default help
