@@ -26,11 +26,7 @@
           "date": "aug 2020",
           "image": "/images/boba.png",
           "link": "https://cnnmon.itch.io/boba"
-        }
-      ]
-    }, {
-      "title": "2019-2018",
-      "list": [
+        },
         {
           "name": "coffeelings",
           "type": "chrome extension",
@@ -38,7 +34,11 @@
           "date": "mar 2020",
           "image": "/images/coffeelings.png",
           "link": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/"
-        },
+        }
+      ]
+    }, {
+      "title": "2019-2018",
+      "list": [
         {
           "name": "ashes to ash",
           "type": "game",
