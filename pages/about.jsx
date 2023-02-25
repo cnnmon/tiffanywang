@@ -17,7 +17,7 @@ function About() {
         <br />
         <b>now</b>
         <br /><br />
-        I'm a 3rd year undergraduate CS major at <a href="https://www.berkeley.edu/" target="_blank" className="link">UC Berkeley</a> 🐻.
+        I'm a 3rd year CS major at <a href="https://www.berkeley.edu/" target="_blank" className="link">UC Berkeley</a> 🐻.
         <br /><br />
         I'm curious about socially impactful tech, broadly ML/AI applications, and creative technology.
         <br /><br />
