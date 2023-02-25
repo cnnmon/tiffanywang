@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
 
   function NavItem({ path, title }) {
     const activePath = pages[activePathIndex]
-    const isActive = activePath.path === path
+    const isActive = activePath && activePath.path === path
 
     return (
       <Link href={path} style={{ color: isActive ? undefined: 'rgba(0, 0, 0, 0.3)' }}>
