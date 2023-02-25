@@ -57,7 +57,9 @@ function Home() {
         <PlayLink type="drinks" />
         {' '}{drinksEmoji[wordsState['drinks']]}.
         <br /><br />
-        I’m currently based in sunny Berkeley, California where I <PlayLink type="do" />. Outside the typical coding and doing ML problem sets, I enjoy experimenting with digital creative tools 🎨 and <PlayLink type="hobbies" />.
+        I’m currently based in sunny Berkeley, California where I <PlayLink type="do" />.
+        <br /><br />
+        Outside the typical coding and doing ML problem sets, I enjoy experimenting with digital creative tools 🎨 and <PlayLink type="hobbies" />.
         <br /><br />
         Reach out anytime at tiffanywang at berkeley dot edu.
         <br /><br />
