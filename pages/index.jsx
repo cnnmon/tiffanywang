@@ -56,7 +56,7 @@ function Home() {
         <PlayLink type="drinks" />
         {' '}{drinksEmoji[wordsState['drinks']]}.
         <br /><br />
-        Although raised in the Midwest, I’m currently based in the (typically) sunny city of Berkeley ☀️ where I study computer science.
+        I’m currently based in the sunny city of Berkeley, CA ☀️ where I study computer science.
         When I'm not doing ML problem sets, I enjoy beverages, experimenting with digital creative tools, and <PlayLink type="hobbies" />.
         <br /><br />
         Reach out anytime at tiffanywang at berkeley dot edu.
