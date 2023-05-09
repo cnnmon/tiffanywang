@@ -5,7 +5,6 @@ import { FaItchIo } from 'react-icons/fa'
 function About() {
   return (
     <>
-      <Image src={me} alt="me" className="max-w-[250px] mb-5 border-[1.5px] border-black" />
       <p>
         <b>✧･ﾟ: *✧･ﾟ:*</b>
         <br /><br />
