@@ -36,7 +36,7 @@ function Home() {
 
   function PlayLink({ type }) {
     return (
-      <a className="link" onClick={() => incrementWords(type)}>
+      <a className="link play" onClick={() => incrementWords(type)}>
         {words[type][wordsState[type]]}
       </a>
     )

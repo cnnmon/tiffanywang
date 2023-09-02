@@ -51,7 +51,13 @@ h1 {
 .link {
   text-decoration: underline;
   cursor: pointer;
+  color: #db8a8a;
 }
+
+.play {
+  color: #9e7ca7;
+}
+
 
 .link:hover, .icon-link:hover {
   opacity: 0.5;
