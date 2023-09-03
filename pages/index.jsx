@@ -57,7 +57,7 @@ function Home() {
         {' '}{drinksEmoji[wordsState['drinks']]}.
         <br /><br />
         I’m currently based in sunny Berkeley, CA ☀️ where I study computer science.
-        When I'm not doing ML problem sets, I enjoy beverages, experimenting with digital creative tools, and <PlayLink type="hobbies" />.
+        When I'm not doing problem sets, I enjoy beverages, experimenting with digital creative tools, and <PlayLink type="hobbies" />.
         <br /><br />
         Reach out anytime at tiffanywang at berkeley dot edu.
         <br /><br />

@@ -8,15 +8,15 @@ function About() {
       <p>
         <img src="/images/me.png" className="w-[200px]" />
         <br />
-        I'm a 4th year CS major at <a href="https://www.berkeley.edu/" target="_blank" className="link">UC Berkeley</a> 🐻. On campus, I teach <a href="https://cs162.org/" target="_blank" className="link">Operating Systems</a>. I also research AI jailbreaks at Stuart Russell's lab <a href="https://humancompatible.ai/" target="_blank" className="link">CHAI</a>.
+        I'm a 4th year CS major at <a href="https://www.berkeley.edu/" target="_blank" className="link">UC Berkeley</a> 🐻. On campus, I teach <a href="https://cs162.org/" target="_blank" className="link">Operating Systems</a>. I also research AI jailbreaks at Stuart Russell's lab in <a href="https://humancompatible.ai/" target="_blank" className="link">CHAI</a>.
         <br /><br />
-        I'm curious about socially impactful tech, ML/AI applications, and creative technology.
+        I'm curious about socially impactful tech, AI safety and interpretability, and creative technology.
       </p>
       <p>
         <br />
         <b>✧･ﾟ: *✧･ﾟ:*</b>
         <br /><br />
-        In a past life, I was an indie game dev. Growing up in Cleveland, OH, I was first exposed to coding via Flash games. I drew up games of my own, frequented game jams, featured in two exhibitions, and published on <a href="https://cnnmon.itch.io/" target="_blank" className="link">itch.io</a> <FaItchIo className="clear-left inline" />.
+        In a past life, I was an indie game dev. Growing up in Cleveland, OH, I was first exposed to coding via Flash dress-up games. I drew up games of my own, frequented game jams, featured in two exhibitions, and published on <a href="https://cnnmon.itch.io/" target="_blank" className="link">itch.io</a> <FaItchIo className="clear-left inline" />.
         <br /><br />
         Life looks very different in undergrad but my background has shaped my approach. I love dabbling in as many skills as possible, learning by experimenting, and building wonderful, colorful experiences.
       </p>
