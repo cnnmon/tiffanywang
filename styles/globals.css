@@ -51,16 +51,25 @@ h1 {
 .link {
   text-decoration: underline;
   cursor: pointer;
-  color: #db8a8a;
+  color: #e98b78;
+}
+
+.link:hover {
+  opacity: 0.5;
 }
 
 .play {
-  color: #9e7ca7;
+  color: #4d4d4d;
 }
 
-
-.link:hover, .icon-link:hover {
+.play:hover {
+  color: #4d4d4d;
   opacity: 0.5;
+}
+
+.icon-links {
+  font-size: 22px;
+  opacity: 0.75;
 }
 
 .wave span:nth-of-type(1) {

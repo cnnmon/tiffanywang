@@ -50,19 +50,17 @@ function Home() {
         </span>
       </h1>
       <p>
-        Welcome to my web-home!
-        <br /><br/>
-        Go ahead, grab yourself something to drink. I have a fridge full of{' '}
+        <b>Welcome to my web-home!</b> Go ahead, grab yourself something to drink. I have a fridge full of{' '}
         <PlayLink type="drinks" />
         {' '}{drinksEmoji[wordsState['drinks']]}.
         <br /><br />
-        I’m currently based in sunny Berkeley, CA ☀️ where I study computer science.
-        When I'm not doing problem sets, I enjoy beverages, experimenting with digital creative tools, and <PlayLink type="hobbies" />.
+        I’m currently in sunny Berkeley, CA ☀️ where I study computer science.
+        When I'm not walking northside, I enjoy beverages, digital creative tools, and <PlayLink type="hobbies" />.
         <br /><br />
         Reach out anytime at tiffanywang at berkeley dot edu.
-        <br /><br />
+        <br />
       </p>
-      <p className="flex flex-row gap-4 text-xl">
+      <p className="flex flex-row gap-3 icon-links mt-3">
         <a href="https://www.linkedin.com/in/wtiffany/" target="_blank" rel="noreferrer"><AiFillLinkedin className="clear-left inline icon-link" alt="linkedin" /></a>
         <a href="https://github.com/cnnmon" target="_blank" rel="noreferrer"><AiFillGithub className="clear-left inline icon-link" alt="github" /></a>
         <a href="https://cnnmon.itch.io/" target="_blank" rel="noreferrer"><FaItchIo className="clear-left inline icon-link" alt="itch.io" /></a>

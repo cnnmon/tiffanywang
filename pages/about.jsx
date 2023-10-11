@@ -8,40 +8,36 @@ function About() {
       <p>
         <img src="/images/me.png" className="w-[200px]" />
         <br />
-        I'm a 4th year CS major at <a href="https://www.berkeley.edu/" target="_blank" className="link">UC Berkeley</a> 🐻. On campus, I teach <a href="https://cs162.org/" target="_blank" className="link">Operating Systems</a>. I also research AI jailbreaks at Stuart Russell's lab in <a href="https://humancompatible.ai/" target="_blank" className="link">CHAI</a>.
+        I'm a 4th year computer science major at <a href="https://www.berkeley.edu/" target="_blank" className="link">UC Berkeley</a> 🐻. On campus, I teach <a href="https://cs162.org/" target="_blank" className="link">Operating Systems</a> and research the adversarial robustness of large language models in <a href="https://humancompatible.ai/" target="_blank" className="link">CHAI</a> and <a href="https://bair.berkeley.edu/" target="_blank" className="link">BAIR</a>.
         <br /><br />
-        I'm curious about socially impactful tech, AI safety and interpretability, and creative technology.
+        I'm interested in social impact, sustainability, artificial intelligence, and creative technology. I love dabbling in as many disciplines as possible, learning by experimenting, and building wonderful, helpful, colorful experiences.
       </p>
       <p>
         <br />
         <b>✧･ﾟ: *✧･ﾟ:*</b>
         <br /><br />
-        In a past life, I was an indie game dev. Growing up in Cleveland, OH, I was first exposed to coding via Flash dress-up games. I drew up games of my own, frequented game jams, featured in two exhibitions, and published on <a href="https://cnnmon.itch.io/" target="_blank" className="link">itch.io</a> <FaItchIo className="clear-left inline" />.
+        I grew up in Cleveland, Ohio and learned to code by making Flash games. Later, I exhibited games in Cleveland and New York City and achieved 1M views on <a href="https://cnnmon.itch.io/" target="_blank" className="link">itch.io</a>. Games remain my favorite form of art, and I still find inspiration in <a href="https://store.steampowered.com/app/206440/To_the_Moon/" target="_blank" className="link">unconventional</a> <a href="https://www.omori-game.com/en" target="_blank" className="link">indie</a> <a href="https://ldjam.com/" target="_blank" className="link">games</a>.
         <br /><br />
-        Life looks very different in undergrad but my background has shaped my approach. I love dabbling in as many skills as possible, learning by experimenting, and building wonderful, colorful experiences.
-      </p>
-      <p>
-        <br />
-        <b>previously</b>
+        Nowadays, I’m more of a software engineer. I’ve spent my summers and gap semesters at <a href="https://watershed.com/" target="_blank" className="link">Watershed</a>, <a href="https://about.meta.com/realitylabs/" target="_blank" className="link">Facebook Reality Labs</a>, and <a href="https://ramp.com/" target="_blank" className="link">Ramp</a> thinking about product, indulging in pseudo-healthy snacks, and doing 1:1s at SF Costco.
         <br /><br />
+        Elsewhere in college, I’ve:
       </p>
       <ul className="list-disc list-inside">
-        <li>Indulged many ideas (see /projects)</li>
-        <li>Did software engineering stints at:
+        <li>Made art with <a href="https://www.instagram.com/gag.magazine/" target="_blank" className="link">student-run art magazines</a> and friends 🎨</li>
+        <li>Taught CS in no prior experience classrooms:
           <ul className="list-none list-inside ml-12">
-            <li><a href="https://watershed.com/" target="_blank" className="link">Watershed</a>, Infrastructure & Reporting</li>
-            <li><a href="https://about.meta.com/realitylabs/" target="_blank" className="link">Facebook Reality Labs</a>, New User Experience</li>
-            <li><a href="https://ramp.com/" target="_blank" className="link">Ramp</a>, Spend Management</li>
+            <li><a href="https://cs61a.org/" target="_blank" className="link">CS 61A</a>, Berkeley's introduction to CS</li>
+            <li><a href="https://webdesigndecal.github.io/" target="_blank" className="link">Web Design Decal</a>, a student-run course on design & web-making</li>
           </ul>
         </li>
         <li>Led tech at 2 lovely Berkeley student orgs:
           <ul className="list-none list-inside ml-12">
-            <li><a href="https://www.calblueprint.org/" target="_blank" className="link">Blueprint</a>, tech for non-profits</li>
+            <li><a href="https://www.calblueprint.org/" target="_blank" className="link">Blueprint</a>, pro-bono tech for non-profits</li>
             <li><a href="https://www.calhacks.io/" target="_blank" className="link">Cal Hacks</a>, Berkeley's flagship collegiate hackathon</li>
           </ul>
         </li>
-        <li>Taught the <a href="https://cs61a.org/" target="_blank" className="link">intro CS class</a> and <a href="http://wdd.io/" target="_blank" className="link">Web Design Decal</a></li>
-        <li>Joined some cool communities:
+        
+        <li>Joined cool communities:
           <ul className="list-none list-inside ml-12">
             <li><a href="https://eecs.berkeley.edu/resources/undergrads/accel" target="_blank" className="link">Accel Scholars</a></li>
             <li><a href="https://joininteract.com/" target="_blank" className="link">Interact Fellowship</a></li>
@@ -49,6 +45,12 @@ function About() {
           </ul>
         </li>
       </ul>
+      <p>
+        <br />
+        <b>✧･ﾟ: *✧･ﾟ:*</b>
+        <br /><br />
+        I love meeting new people, so please reach out if you'd like to chat or collaborate in any way, shape or form! My email is <b>tiffanywang at berkeley dot edu</b> 📬. 
+      </p>
     </>
   )
 }

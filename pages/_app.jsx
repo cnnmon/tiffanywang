@@ -33,6 +33,9 @@ function MyApp({ Component, pageProps }) {
         </nav>
         <div className="md:w-4/5 p-3 body">
           <Component {...pageProps} />
+          <footer className="p-4 text-center  text-sm">
+            <p>•───────• Built with <a className="link" href="https://github.com/cnnmon/tiffanywang"><b>˙ᵕ˙</b></a> •───────•</p>
+          </footer>
         </div>
       </div>
     </div>
