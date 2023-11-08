@@ -8,17 +8,17 @@ function About() {
       <p>
         <img src="/images/me.png" className="w-[200px]" />
         <br />
-        I'm a 4th year computer science major at <a href="https://www.berkeley.edu/" target="_blank" className="link">UC Berkeley</a> 🐻. On campus, I teach <a href="https://cs162.org/" target="_blank" className="link">Operating Systems</a> and research the adversarial robustness of large language models in <a href="https://humancompatible.ai/" target="_blank" className="link">CHAI</a> and <a href="https://bair.berkeley.edu/" target="_blank" className="link">BAIR</a>.
+        I'm a 4th year computer science major at <a href="https://www.berkeley.edu/" target="_blank" className="link">UC Berkeley</a> 🐻. On campus, I teach <a href="https://cs162.org/" target="_blank" className="link">Operating Systems</a> and research human-AI interaction in <a href="https://humancompatible.ai/" target="_blank" className="link">CHAI</a> and <a href="https://bair.berkeley.edu/" target="_blank" className="link">BAIR</a>.
         <br /><br />
-        I'm interested in social impact, sustainability, artificial intelligence, and creative technology. I love dabbling in as many disciplines as possible, learning by experimenting, and building wonderful, helpful, colorful experiences.
+        I'm interested in social impact, sustainability, and creative technology. I love dabbling in as many disciplines as possible, learning by experimenting, and building wonderful, colorful experiences.
       </p>
       <p>
         <br />
         <b>✧･ﾟ: *✧･ﾟ:*</b>
         <br /><br />
-        I grew up in Cleveland, Ohio and learned to code by making Flash games. Later, I exhibited games in Cleveland and New York City and achieved 1M views on <a href="https://cnnmon.itch.io/" target="_blank" className="link">itch.io</a>. Games remain my favorite form of art, and I still find inspiration in <a href="https://store.steampowered.com/app/206440/To_the_Moon/" target="_blank" className="link">unconventional</a> <a href="https://www.omori-game.com/en" target="_blank" className="link">indie</a> <a href="https://ldjam.com/" target="_blank" className="link">games</a>.
+        I grew up in Cleveland, Ohio and learned to code via Flash games. Later, I exhibited games in Cleveland and New York City and achieved 1M(!!) views on <a href="https://cnnmon.itch.io/" target="_blank" className="link">itch.io</a>. Games remain my favorite form of art, and I still find inspiration in <a href="https://store.steampowered.com/app/206440/To_the_Moon/" target="_blank" className="link">unconventional</a> <a href="https://www.omori-game.com/en" target="_blank" className="link">indie</a> <a href="https://ldjam.com/" target="_blank" className="link">games</a>.
         <br /><br />
-        Nowadays, I’m more of a software engineer. I’ve spent my summers and gap semesters at <a href="https://watershed.com/" target="_blank" className="link">Watershed</a>, <a href="https://about.meta.com/realitylabs/" target="_blank" className="link">Facebook Reality Labs</a>, and <a href="https://ramp.com/" target="_blank" className="link">Ramp</a> thinking about product, indulging in pseudo-healthy snacks, and doing 1:1s at SF Costco.
+        Nowadays, I software engineer. I’ve spent summers and gap semesters at <a href="https://watershed.com/" target="_blank" className="link">Watershed</a>, <a href="https://about.meta.com/realitylabs/" target="_blank" className="link">Facebook Reality Labs</a>, and <a href="https://ramp.com/" target="_blank" className="link">Ramp</a> thinking about product, indulging in pseudo-healthy snacks, and doing 1:1s at SF Costco.
         <br /><br />
         Elsewhere in college, I’ve:
       </p>

@@ -4,6 +4,14 @@
       "title": "2023-2020",
       "list": [
         {
+          "name": "my singing friends",
+          "type": "game",
+          "description": "interpersonal music maker  🎵🕺🏻",
+          "date": "oct 2023",
+          "image": "/images/mysingingfriends_2.png",
+          "link": "https://singing-friends.vercel.app/"
+        },
+        {
           "name": "drip or drown",
           "type": "web",
           "description": "your personal AI-powered stylist",
