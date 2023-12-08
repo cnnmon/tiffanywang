@@ -4,6 +4,14 @@
       "title": "2023-2020",
       "list": [
         {
+          "name": "univers(ity)",
+          "type": "game",
+          "description": "space is big. you are small.",
+          "date": "dec 2023",
+          "image": "/images/university.png",
+          "link": "https://university-game.vercel.app/"
+        },
+        {
           "name": "my singing friends",
           "type": "game",
           "description": "interpersonal music maker  🎵🕺🏻",
