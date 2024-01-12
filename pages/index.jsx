@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react'
-import { AiFillLinkedin, AiFillGithub, AiOutlineTwitter } from 'react-icons/ai'
-import { FaItchIo } from 'react-icons/fa'
 
 const words = {
   drinks: ['yakult', 'chrysanthemum tea', 'Yerba Mate', 'La Croix', 'Cholula hot sauce'],
-  hobbies: ['hosting game nights', 'singing my heart out at karaoke', 'cooking upscaled instant noodles', 'talking about the idea of going to the gym']
+  hobbies: ['hosting board game nights', 'singing my heart out at karaoke', 'cooking the spiciest soups known to man', 'talking about the idea of going to the gym']
 }
 const drinksEmoji = ['🍓', '🧃', '🌿', '🍊', '🌶️']
 const greeting = 'hi, i\'m tiffany!'
@@ -44,27 +42,23 @@ function Home() {
 
   return (
     <>
-      <h1 className="font-outline-1 text-center my-8">
+      <h1 className="font-outline-1 pt-10 pb-5 text-center">
         <span className="wave">
           {greetingCharacters.map((letter, index) => (<span key={index}>{letter}</span>))}
         </span>
       </h1>
+      <br />
       <p>
-        <b>Welcome to my web-home!</b> Go ahead, grab yourself something to drink. I have a fridge full of{' '}
+        <b>Welcome to my corner of the galaxy ⋆⭒˚.⋆.</b> Go ahead, grab yourself something to drink. Very conveniently, I have a cooler full of{' '}
         <PlayLink type="drinks" />
         {' '}{drinksEmoji[wordsState['drinks']]}.
         <br /><br />
-        I’m currently in sunny Berkeley, CA ☀️ where I study computer science.
-        When I'm not walking northside, I enjoy beverages, digital creative tools, and <PlayLink type="hobbies" />.
+        I'm a developer, artist, and toy-maker. I study CS at Berkeley. I like fizzy beverages, digital creative tools, and <PlayLink type="hobbies" />.
         <br /><br />
         Reach out anytime at tiffanywang at berkeley dot edu.
+        <br /><br />
+        Else, find me at: <a href="https://www.linkedin.com/in/wtiffany/" target="_blank" rel="noreferrer" className="link">Linkedin</a>, <a href="https://github.com/cnnmon" target="_blank" rel="noreferrer" className="link">GitHub</a>, <a href="https://cnnmon.itch.io/" target="_blank" rel="noreferrer" className="link">itch.io</a>, <a href="https://twitter.com/cnnmonsugar" target="_blank" rel="noreferrer" className="link">Twitter</a>
         <br />
-      </p>
-      <p className="flex flex-row gap-3 icon-links mt-3">
-        <a href="https://www.linkedin.com/in/wtiffany/" target="_blank" rel="noreferrer"><AiFillLinkedin className="clear-left inline icon-link" alt="linkedin" /></a>
-        <a href="https://github.com/cnnmon" target="_blank" rel="noreferrer"><AiFillGithub className="clear-left inline icon-link" alt="github" /></a>
-        <a href="https://cnnmon.itch.io/" target="_blank" rel="noreferrer"><FaItchIo className="clear-left inline icon-link" alt="itch.io" /></a>
-        <a href="https://twitter.com/cnnmonsugar" target="_blank" rel="noreferrer"><AiOutlineTwitter className="clear-left inline icon-link" alt="twitter" /></a>
       </p>
     </>
   )

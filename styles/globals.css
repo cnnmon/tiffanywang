@@ -26,22 +26,22 @@ body {
 h1 {
   font-family: 'Augillion';
   font-size: 50px;
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.85);
+  line-height: 1.0;
+}
+
+h2 {
+  font-family: 'Augillion';
+  font-size: 25px;
 }
 
 .card {
-  border: 1.5px solid black;
+  border: 1.5px solid rgba(0, 0, 0, 0.85);
   cursor: pointer;
 }
 
 .card:hover {
   box-shadow: 8px 8px 0px 0px #FEC2AE;
-}
-
-.wave span {
-  display: inline-block;
-  -webkit-animation: wave-text 1.5s ease-in-out infinite;
-    animation: wave-text 1.5s ease-in-out infinite;
 }
 
 .body {
@@ -67,9 +67,10 @@ h1 {
   opacity: 0.5;
 }
 
-.icon-links {
-  font-size: 22px;
-  opacity: 0.75;
+.wave span {
+  display: inline-block;
+  -webkit-animation: wave-text 1.5s ease-in-out infinite;
+    animation: wave-text 1.5s ease-in-out infinite;
 }
 
 .wave span:nth-of-type(1) {
