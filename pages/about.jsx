@@ -33,7 +33,7 @@ function About() {
         <br /><br />
         Professionally, I software engineer. I’ve spent summers and gap semesters at:
         <ul className="list-disc list-inside">
-          <li><a href="https://watershed.com/" target="_blank" className="link">Watershed</a> on carbon accounting, reporting, and infrastructure</li>
+          <li><a href="https://watershed.com/" target="_blank" className="link">Watershed</a> on carbon accounting & infrastructure</li>
           <li><a href="https://about.meta.com/realitylabs/" target="_blank" className="link">Facebook Reality Labs</a> on Oculus onboarding</li>
           <li><a href="https://ramp.com/" target="_blank" className="link">Ramp</a> on corporate card spend management</li>
         </ul>
