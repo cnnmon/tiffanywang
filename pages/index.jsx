@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
+import Url from '../components/Url'
 
 const words = {
   drinks: ['yakult', 'chrysanthemum tea', 'Yerba Mate', 'La Croix', 'Cholula hot sauce'],
-  hobbies: ['hosting board game nights', 'singing my heart out at karaoke', 'cooking the spiciest soups known to man', 'talking about the idea of going to the gym']
+  hobbies: ['hosting board game nights', 'singing my heart out at karaoke', 'brewing the spiciest soups known to man', 'talking about the idea of going to the gym']
 }
 const drinksEmoji = ['🍓', '🧃', '🌿', '🍊', '🌶️']
 const greeting = 'hi, i\'m tiffany!'
@@ -57,7 +58,7 @@ function Home() {
         <br /><br />
         Reach out anytime at tiffanywang at berkeley dot edu.
         <br /><br />
-        Else, find me at: <a href="https://www.linkedin.com/in/wtiffany/" target="_blank" rel="noreferrer" className="link">Linkedin</a>, <a href="https://github.com/cnnmon" target="_blank" rel="noreferrer" className="link">GitHub</a>, <a href="https://cnnmon.itch.io/" target="_blank" rel="noreferrer" className="link">itch.io</a>, <a href="https://twitter.com/cnnmonsugar" target="_blank" rel="noreferrer" className="link">Twitter</a>
+        Else, find me at: <Url href="https://www.linkedin.com/in/wtiffany/">Linkedin</Url>, <Url href="https://github.com/cnnmon">GitHub</Url>, <Url href="https://cnnmon.itch.io/">itch.io</Url>, <Url href="https://twitter.com/cnnmonsugar">Twitter</Url>
         <br />
       </p>
     </>
