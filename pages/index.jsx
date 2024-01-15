@@ -58,7 +58,7 @@ function Home() {
         <br /><br />
         Reach out anytime at tiffanywang at berkeley dot edu.
         <br /><br />
-        Else, find me at: <Url href="https://www.linkedin.com/in/wtiffany/">Linkedin</Url>, <Url href="https://github.com/cnnmon">GitHub</Url>, <Url href="https://cnnmon.itch.io/">itch.io</Url>, <Url href="https://twitter.com/cnnmonsugar">Twitter</Url>
+        Else, find me at: <Url href="https://www.linkedin.com/in/wtiffany/">Linkedin</Url>, <Url href="https://github.com/cnnmon">GitHub</Url>, <Url href="https://cnnmon.itch.io/">itch.io</Url>, <Url href="https://twitter.com/cnnmonie">Twitter</Url>
         <br />
       </p>
     </>
