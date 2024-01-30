@@ -56,9 +56,9 @@ function Home() {
         <br /><br />
         I'm a developer, artist, and toy-maker. I study CS at Berkeley. I like fizzy beverages, digital creative tools, and <PlayLink type="hobbies" />.
         <br /><br />
-        Reach out anytime at tiffanywang at berkeley dot edu.
+        Reach out anytime at <b>tiffanywang at berkeley dot edu</b>.
         <br /><br />
-        Else, find me at: <Url href="https://www.linkedin.com/in/wtiffany/">Linkedin</Url>, <Url href="https://github.com/cnnmon">GitHub</Url>, <Url href="https://cnnmon.itch.io/">itch.io</Url>, <Url href="https://twitter.com/cnnmonie">Twitter</Url>
+        Else, find me at: <Url href="https://www.linkedin.com/in/wtiffany/">Linkedin</Url>, <Url href="https://github.com/cnnmon">GitHub</Url>, <Url href="https://cnnmon.itch.io/">itch.io</Url>, or <Url href="https://twitter.com/cnnmonie">Twitter</Url>
         <br />
       </p>
     </>
