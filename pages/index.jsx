@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import { SiLinkedin, SiGooglescholar, SiGithub, SiTwitter } from 'react-icons/si'
+import { FaItchIo } from 'react-icons/fa'
 import Url from '../components/Url'
 
 const words = {
@@ -50,15 +52,25 @@ function Home() {
       </h1>
       <br />
       <p>
-        <b>Welcome to my corner of the galaxy ⋆⭒˚.⋆.</b> Go ahead, grab yourself something to drink. Very conveniently, I have a cooler full of{' '}
+        <b>Welcome to my corner of the galaxy ⋆✩˚.⋆.</b> Go ahead, grab yourself something to drink. Conveniently, I already have a cooler full of{' '}
         <PlayLink type="drinks" />
         {' '}{drinksEmoji[wordsState['drinks']]}.
         <br /><br />
-        I'm a developer, artist, and toy-maker. I study CS at Berkeley. I like fizzy beverages, digital creative tools, and <PlayLink type="hobbies" />.
+        I'm a programmer, researcher, artist, and toy-maker. I study CS at Berkeley. I care about socially impactful tech, digital creative tools, and <PlayLink type="hobbies" />.
         <br /><br />
         Reach out anytime at <b>tiffanywang at berkeley dot edu</b>.
         <br /><br />
-        Else, find me at: <Url href="https://www.linkedin.com/in/wtiffany/">Linkedin</Url>, <Url href="https://github.com/cnnmon">GitHub</Url>, <Url href="https://cnnmon.itch.io/">itch.io</Url>, or <Url href="https://twitter.com/cnnmonie">Twitter</Url>
+        <span className="flex items-center">
+          Else, find me at:
+          <span className="flex items-center ml-2 gap-2">
+            <Url href="https://www.linkedin.com/in/wtiffany/"><SiLinkedin /></Url>
+            <Url href="https://github.com/cnnmon"><SiGithub /></Url>
+            <Url href="https://cnnmon.itch.io/"><FaItchIo /></Url>
+            <Url href="https://twitter.com/cnnmonie"><SiTwitter /></Url>
+            <Url href="https://scholar.google.com/citations?hl=en&user=p8hhfi4AAAAJ"><SiGooglescholar /></Url>
+          </span>
+          .
+        </span>
         <br />
       </p>
     </>

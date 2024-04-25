@@ -12,7 +12,7 @@ function About() {
       return (
         <>
           <Image src='/images/frog.jpg' className="mb-2" width={300} height={195} onMouseLeave={onLeave} />
-          ❓ My friend's frog that apparently bears resemblance to me
+          ❓ Do I look like my friend's frog?
         </>
       )
     } else {
@@ -34,13 +34,13 @@ function About() {
         <br /><br />
         Hi! I'm Tiffany!
         <br /><br />
-        Hailing from the cornfields (jk) of Cleveland, OH, I'm now a 4th year CS major at UC Berkeley. Here on campus, you can find me teaching <Url href="https://cs162.org/">Operating Systems</Url> and researching <Url href="https://arxiv.org/abs/2311.01011">human-compatible AI</Url> in <Url href="https://humancompatible.ai/">CHAI</Url>/<Url href="https://bair.berkeley.edu/">BAIR</Url>.
+        Hailing from the cornfields of Cleveland, OH, I'm now a 4th year CS major at UC Berkeley. Here on campus, you can find me teaching <Url href="https://cs162.org/">Operating Systems</Url> and researching human-compatible AI in <Url href="https://humancompatible.ai/">CHAI</Url>/<Url href="https://bair.berkeley.edu/">BAIR</Url> under Prof. Stuart Russell.
         <br /><br />
-        I software engineer. I've spent summers and gap semesters at <Url href="https://watershed.com/">Watershed</Url> on carbon accounting & infrastructure; <Url href="https://about.meta.com/realitylabs/">Facebook Reality Labs</Url> on VR headset onboarding; <Url href="https://ramp.com/">Ramp</Url> on corporate card spend management.
+        Professionally, I software engineer. I've spent summers and gap semesters at <Url href="https://watershed.com/">Watershed</Url> on carbon accounting & infrastructure; <Url href="https://about.meta.com/realitylabs/">Facebook Reality Labs</Url> on VR headset onboarding; <Url href="https://ramp.com/">Ramp</Url> on corporate card spend management.
         <br /><br />
-        I make games. In fact, I learned to code by making Flash dress-up games. I have <Url href="https://www.scriptype.com/2020/05/19/self-taught-digital-artist-and-video-game-designer-receives-national-recognition/">exhibited games in NYC</Url> and achieved 1M plays on <Url href="https://cnnmon.itch.io/">itch.io</Url>. Supplementally, I try to draw, write, 3D model, make music, etc. I primarily post art on <Url href="https://twitter.com/cnnmonie">@cnnmonie</Url>.
+        On the side, I make experimental and light-hearted indie games. I've <Url href="https://www.scriptype.com/2020/05/19/self-taught-digital-artist-and-video-game-designer-receives-national-recognition/">exhibited</Url> in Cleveland & New York City and achieved 1.1m plays on <Url href="https://cnnmon.itch.io/">itch.io</Url>. Supplementally, I draw, write, 3D model, etc. For my art, check out <Url href="https://twitter.com/cnnmonie">@cnnmonie</Url>.
         <br /><br />
-        I care about social impact & creative technology. I love dabbling in as many disciplines as possible, learning by experimenting, and building colorful experiences. I also love collaborations!
+        I love dabbling in as many disciplines as possible, learning by experimenting, and building colorful experiences. I also love collaborations — reach out!
         <br />
       </p>
       <br />
@@ -51,14 +51,14 @@ function About() {
         <li>Illustrated for <Url href="https://www.tiktok.com/@gag.magazine/">student-run art magazines</Url></li>
         <li>Taught CS in no prior experience classrooms:
           <ul className="list-none ml-12">
-            <li><Url href="https://cs61a.org/">CS 61A</Url>, Berkeley's introduction to CS</li>
-            <li><Url href="https://webdesigndecal.github.io/">Web Design Decal</Url>, a student-run course on design & web-making</li>
+            <li><Url href="https://cs61a.org/">CS 61A</Url>, Berkeley's intro to CS</li>
+            <li><Url href="https://webdesigndecal.github.io/">Web Design Decal</Url>, a course on design & web-making</li>
           </ul>
         </li>
         <li>Led tech at 2 lovely Berkeley student orgs:
           <ul className="list-none ml-12">
             <li><Url href="https://www.calblueprint.org/">Blueprint</Url>, pro-bono tech for non-profits</li>
-            <li><Url href="https://www.calhacks.io/">Cal Hacks</Url>, our flagship collegiate hackathon</li>
+            <li><Url href="https://www.calhacks.io/">Cal Hacks</Url>, the world's largest collegiate hackathon</li>
           </ul>
         </li>
         <li>Drew inspiration from cool communities:

@@ -1,12 +1,28 @@
 {
   "projects": [
     {
-      "title": "2023-2020",
+      "title": "2023-2024 late college",
       "list": [
+        {
+          "name": "dango",
+          "type": "app, research",
+          "description": "AI pair programmer powered by a living design doc",
+          "date": "apr 2024",
+          "image": "/images/dango.png",
+          "link": ""
+        },
+        {
+          "name": "tensor trust",
+          "type": "web, research",
+          "description": "hack a bank by sweet-talking its AI",
+          "date": "nov 2023",
+          "image": "/images/tensortrust.png",
+          "link": "https://tensortrust.ai/"
+        },
         {
           "name": "univers(ity)",
           "type": "game",
-          "description": "space is big. you are small.",
+          "description": "you're a university student in space",
           "date": "dec 2023",
           "image": "/images/university.png",
           "link": "https://university-game.vercel.app/"
@@ -14,7 +30,7 @@
         {
           "name": "my singing friends",
           "type": "game",
-          "description": "interpersonal music maker  🎵🕺🏻",
+          "description": "an interpersonal music maker  🎵🕺🏻",
           "date": "oct 2023",
           "image": "/images/mysingingfriends.png",
           "link": "https://singing-friends.vercel.app/"
@@ -26,7 +42,12 @@
           "date": "feb 2023",
           "image": "/images/dripordrown.png",
           "link": "https://devpost.com/software/drip-or-drown-k8sv1t"
-        },
+        }
+      ]
+    },
+    {
+      "title": "2020-2022 early college",
+      "list": [
         {
           "name": "ezcv",
           "type": "web",
@@ -53,7 +74,7 @@
         }
       ]
     }, {
-      "title": "2019-2018",
+      "title": "2018-2019 high school",
       "list": [
         {
           "name": "ashes to ash",
