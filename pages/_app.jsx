@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Image src={logo} alt="logo" className="w-[150px] md:w-1/5 px-6" />
       <div className="flex flex-row gap-5 md:flex-row flex-col">
-        <nav className="flex md:w-1/7 p-3 md:flex-col gap-2 text-right text-lg">
+        <nav className="flex md:w-1/7 md:flex-col gap-2 text-right text-lg">
           {pages.map((page, index) => <NavItem key={index} path={page.path} title={page.title} />)}
         </nav>
         <div className="md:w-4/5 body">

@@ -1,0 +1,51 @@
+[
+  {
+    "title": "3d art (blender)",
+    "list": [
+      {
+        "title": "my ass!!!",
+        "images": ["/images/cat.gif"]
+      },
+      {
+        "title": "digital upload",
+        "images": ["/images/digitalupload.gif"]
+      },
+      {
+        "title": "cat cafe",
+        "images": ["/images/catcafe.gif"]
+      },
+      {
+        "title": "peppermint",
+        "images": ["/images/peppermint.gif"]
+      }
+    ]
+  },
+  {
+    "title": "2d art (procreate)",
+    "list": [
+      {
+        "title": "me on a bike",
+        "images": ["/images/bike.png"]
+      },
+      {
+        "title": "illustrations for https://www.kernelmag.io/",
+        "images": [
+          "/images/irena.png",
+          "/images/zora.png"
+        ]
+      },
+      {
+        "title": "summer",
+        "images": ["/images/summer.png"]
+      },
+      {
+        "title": "meditation study",
+        "images": ["/images/meditation.png"]
+      },
+      {
+        "title": "me but online",
+        "images": ["/images/online.png"]
+      }
+    ]
+  }
+]

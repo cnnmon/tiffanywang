@@ -1,122 +1,120 @@
-{
-  "projects": [
-    {
-      "title": "2023-2024 late college",
-      "list": [
-        {
-          "name": "dango",
-          "type": "app, research",
-          "description": "AI pair programmer powered by a living design doc",
-          "date": "apr 2024",
-          "image": "/images/dango.png",
-          "link": ""
-        },
-        {
-          "name": "tensor trust",
-          "type": "web, research",
-          "description": "hack a bank by sweet-talking its AI",
-          "date": "nov 2023",
-          "image": "/images/tensortrust.png",
-          "link": "https://tensortrust.ai/"
-        },
-        {
-          "name": "univers(ity)",
-          "type": "game",
-          "description": "you're a university student in space",
-          "date": "dec 2023",
-          "image": "/images/university.png",
-          "link": "https://university-game.vercel.app/"
-        },
-        {
-          "name": "my singing friends",
-          "type": "game",
-          "description": "an interpersonal music maker  🎵🕺🏻",
-          "date": "oct 2023",
-          "image": "/images/mysingingfriends.png",
-          "link": "https://singing-friends.vercel.app/"
-        },
-        {
-          "name": "drip or drown",
-          "type": "web",
-          "description": "your personal AI-powered stylist",
-          "date": "feb 2023",
-          "image": "/images/dripordrown.png",
-          "link": "https://devpost.com/software/drip-or-drown-k8sv1t"
-        }
-      ]
-    },
-    {
-      "title": "2020-2022 early college",
-      "list": [
-        {
-          "name": "ezcv",
-          "type": "web",
-          "description": "plaintext-to-resume generator",
-          "date": "sep 2022",
-          "image": "/images/ezcv.png",
-          "link": "https://www.ezcv.pro/"
-        },
-        {
-          "name": "boba",
-          "type": "mobile game",
-          "description": "themed mobile puzzle game",
-          "date": "aug 2020",
-          "image": "/images/boba.png",
-          "link": "https://cnnmon.itch.io/boba"
-        },
-        {
-          "name": "coffeelings",
-          "type": "chrome extension",
-          "description": "mood tracker & journal (200k DAU)",
-          "date": "mar 2020",
-          "image": "/images/coffeelings.png",
-          "link": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/"
-        }
-      ]
-    }, {
-      "title": "2018-2019 high school",
-      "list": [
-        {
-          "name": "ashes to ash",
-          "type": "game",
-          "description": "collect emotions",
-          "date": "oct 2019",
-          "image": "/images/ashestoash.png",
-          "link": "https://ldjam.com/events/ludum-dare/45/ashes-to-ash/"
-        },
-        {
-          "name": "slice of scythe",
-          "type": "game",
-          "description": "do chores as a grim reaper",
-          "date": "apr 2019",
-          "image": "/images/sliceofscythe.png",
-          "link": "https://ldjam.com/events/ludum-dare/44/slice-of-scythe/"
-        },
-        {
-          "name": "good morning!",
-          "type": "game",
-          "description": "morning routine simulator (500k+ views)",
-          "date": "jan 2019",
-          "image": "/images/goodmorning.png",
-          "link": "https://cnnmon.itch.io/goodmorning"
-        },
-        {
-          "name": "kittyclinic",
-          "type": "game",
-          "description": "holistic cat clinic",
-          "date": "nov 2018",
-          "image": "/images/kittyclinic.png",
-          "link": "https://cnnmon.itch.io/kittyclinic"
-        },
-        {
-          "name": "spacebar",
-          "type": "game",
-          "description": "endless-runner typing game",
-          "date": "sep 2018",
-          "image": "/images/spacebar.png",
-          "link": "https://cnnmon.itch.io/spacebar"
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "title": "2023-2024 late college",
+    "list": [
+      {
+        "name": "dango",
+        "type": "app, research",
+        "description": "AI pair programmer powered by a living design doc",
+        "date": "apr 2024",
+        "image": "/images/dango.png",
+        "link": ""
+      },
+      {
+        "name": "tensor trust",
+        "type": "web, research",
+        "description": "hack a bank by sweet-talking its AI",
+        "date": "nov 2023",
+        "image": "/images/tensortrust.png",
+        "link": "https://tensortrust.ai/"
+      },
+      {
+        "name": "univers(ity)",
+        "type": "game",
+        "description": "you're a university student in space",
+        "date": "dec 2023",
+        "image": "/images/university.png",
+        "link": "https://university-game.vercel.app/"
+      },
+      {
+        "name": "my singing friends",
+        "type": "toy",
+        "description": "an interpersonal music maker  🎵🕺🏻",
+        "date": "oct 2023",
+        "image": "/images/mysingingfriends.png",
+        "link": "https://singing-friends.vercel.app/"
+      },
+      {
+        "name": "drip or drown",
+        "type": "web",
+        "description": "your personal AI-powered stylist",
+        "date": "feb 2023",
+        "image": "/images/dripordrown.png",
+        "link": "https://devpost.com/software/drip-or-drown-k8sv1t"
+      }
+    ]
+  },
+  {
+    "title": "2020-2022 early college",
+    "list": [
+      {
+        "name": "ezcv",
+        "type": "web",
+        "description": "plaintext-to-resume generator",
+        "date": "sep 2022",
+        "image": "/images/ezcv.png",
+        "link": "https://www.ezcv.pro/"
+      },
+      {
+        "name": "boba",
+        "type": "mobile game",
+        "description": "themed mobile puzzle game",
+        "date": "aug 2020",
+        "image": "/images/boba.png",
+        "link": "https://cnnmon.itch.io/boba"
+      },
+      {
+        "name": "coffeelings",
+        "type": "chrome extension",
+        "description": "mood tracker & journal (200k DAU)",
+        "date": "mar 2020",
+        "image": "/images/coffeelings.png",
+        "link": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/"
+      }
+    ]
+  }, {
+    "title": "2018-2019 high school",
+    "list": [
+      {
+        "name": "ashes to ash",
+        "type": "game",
+        "description": "collect emotions",
+        "date": "oct 2019",
+        "image": "/images/ashestoash.png",
+        "link": "https://ldjam.com/events/ludum-dare/45/ashes-to-ash/"
+      },
+      {
+        "name": "slice of scythe",
+        "type": "game",
+        "description": "do chores as a grim reaper",
+        "date": "apr 2019",
+        "image": "/images/sliceofscythe.png",
+        "link": "https://ldjam.com/events/ludum-dare/44/slice-of-scythe/"
+      },
+      {
+        "name": "good morning!",
+        "type": "game",
+        "description": "morning routine simulator (500k+ views)",
+        "date": "jan 2019",
+        "image": "/images/goodmorning.png",
+        "link": "https://cnnmon.itch.io/goodmorning"
+      },
+      {
+        "name": "kittyclinic",
+        "type": "game",
+        "description": "holistic cat clinic",
+        "date": "nov 2018",
+        "image": "/images/kittyclinic.png",
+        "link": "https://cnnmon.itch.io/kittyclinic"
+      },
+      {
+        "name": "spacebar",
+        "type": "game",
+        "description": "endless-runner typing game",
+        "date": "sep 2018",
+        "image": "/images/spacebar.png",
+        "link": "https://cnnmon.itch.io/spacebar"
+      }
+    ]
+  }
+]
