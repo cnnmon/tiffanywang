@@ -34,13 +34,13 @@ function About() {
         <br /><br />
         Hi! I'm Tiffany!
         <br /><br />
-        Hailing from the cornfields of Cleveland, OH, I'm now a 4th year CS major at UC Berkeley. Here on campus, you can find me teaching <Url href="https://cs162.org/">Operating Systems</Url> and researching human-compatible AI in <Url href="https://humancompatible.ai/">CHAI</Url>/<Url href="https://bair.berkeley.edu/">BAIR</Url> under Prof. Stuart Russell.
+        Hailing from the cornfields of Cleveland, OH, I now roam the matcha cafes of San Francisco. I recently graduated as a CS major from UC Berkeley, where I taught <Url href="https://cs162.org/">Operating Systems</Url> and researched human-compatible AI in <Url href="https://humancompatible.ai/">CHAI</Url>/<Url href="https://bair.berkeley.edu/">BAIR</Url> under Prof. Stuart Russell.
         <br /><br />
         Professionally, I software engineer. I've spent summers and gap semesters at <Url href="https://watershed.com/">Watershed</Url> on carbon accounting & infrastructure; <Url href="https://about.meta.com/realitylabs/">Facebook Reality Labs</Url> on VR headset onboarding; <Url href="https://ramp.com/">Ramp</Url> on corporate card spend management.
         <br /><br />
         On the side, I make experimental and light-hearted indie games. I've <Url href="https://www.scriptype.com/2020/05/19/self-taught-digital-artist-and-video-game-designer-receives-national-recognition/">exhibited</Url> in Cleveland & New York City and achieved 1.1m plays on <Url href="https://cnnmon.itch.io/">itch.io</Url>. Supplementally, I draw, write, 3D model, etc. For my art, check out <Url href="https://twitter.com/cnnmonie">@cnnmonie</Url>.
         <br /><br />
-        I love dabbling in as many disciplines as possible, learning by experimenting, and building colorful experiences. I also love collaborations — reach out!
+        I love dabbling in as many disciplines as possible, learning by experimenting, and building colorful experiences. I also love collaborations!
         <br />
       </p>
       <br />

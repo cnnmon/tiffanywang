@@ -56,7 +56,7 @@ function Home() {
         <PlayLink type="drinks" />
         {' '}{drinksEmoji[wordsState['drinks']]}.
         <br /><br />
-        I'm a programmer, researcher, artist, and toy-maker. I study CS at Berkeley. I care about socially impactful tech, digital creative tools, and <PlayLink type="hobbies" />.
+        I'm a programmer, researcher, artist, and toy-maker. I care about socially impactful tech, digital creative tools, and <PlayLink type="hobbies" />.
         <br /><br />
         Reach out anytime at <b>tiffanywang at berkeley dot edu</b>.
         <br /><br />
