@@ -5,6 +5,4 @@ module.exports = {
   images: {
     domains: ['https://github.com', 'https://githubusercontent.com/' ],
   },
-  basePath: "/tiffanywang",
-  output: "export",
 }
