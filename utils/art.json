@@ -1,50 +1,74 @@
 [
   {
-    "title": "3d art (blender)",
-    "list": [
-      {
-        "title": "my ass!!!",
-        "images": ["/images/cat.gif"]
-      },
-      {
-        "title": "digital upload",
-        "images": ["/images/digitalupload.gif"]
-      },
-      {
-        "title": "cat cafe",
-        "images": ["/images/catcafe.gif"]
-      },
-      {
-        "title": "peppermint",
-        "images": ["/images/peppermint.gif"]
-      }
-    ]
-  },
-  {
     "title": "2d art (procreate)",
     "list": [
       {
         "title": "me on a bike",
-        "images": ["/images/bike.png"]
+        "images": ["/images/bike.png"],
+        "width": 400,
+        "height": 400
       },
       {
         "title": "illustrations for https://www.kernelmag.io/",
         "images": [
           "/images/irena.png",
           "/images/zora.png"
-        ]
+        ],
+        "width": 400,
+        "height": 100
       },
       {
         "title": "summer",
-        "images": ["/images/summer.png"]
+        "images": ["/images/summer.png"],
+        "width": 600,
+        "height": 400
       },
       {
         "title": "meditation study",
-        "images": ["/images/meditation.png"]
+        "images": ["/images/meditation.png"],
+        "width": 500,
+        "height": 400
       },
       {
         "title": "me but online",
-        "images": ["/images/online.png"]
+        "images": ["/images/online.png"],
+        "width": 500,
+        "height": 400
+      }
+    ]
+  },
+  {
+    "title": "3d art (blender)",
+    "list": [
+      {
+        "title": "fred",
+        "images": ["/images/fred.gif"],
+        "width": 300,
+        "height": 400
+      },
+      {
+        "title": "my ass!!!",
+        "images": ["/images/cat.gif"],
+        "width": 500,
+        "height": 400
+      },
+      {
+        "title": "digital upload",
+        "images": ["/images/digitalupload.gif"],
+        "width": 500,
+        "height": 400
+      },
+      {
+        "title": "cat cafe",
+        "images": ["/images/catcafe.gif"],
+        "width": 500,
+        "height": 400
+      },
+      {
+        "title": "peppermint",
+        "images": ["/images/peppermint.gif"],
+        "width": 500,
+        "height": 400
       }
     ]
   }

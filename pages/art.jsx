@@ -1,5 +1,6 @@
 import artSections from '../utils/art.json'
 import Image from 'next/image'
+
 function Section({ section }) {
   const { title, list } = section;
 
@@ -19,14 +20,12 @@ function Section({ section }) {
           <p>[<span dangerouslySetInnerHTML={{ __html: autolink(art.title) }} />]</p>
           <div className="flex w-full justify-between gap-2">
             {art.images.map((image, imgIndex) => (
-              <img
+              <Image
                 key={imgIndex}
                 src={image}
                 alt={art.title}
-                style={{
-                  width: `calc(100% / ${art.images.length})`,
-                  height: 'auto'
-                }}
+                width={art.width}
+                height={art.height}
               />
             ))}
           </div>
