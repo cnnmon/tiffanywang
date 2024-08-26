@@ -8,7 +8,7 @@
         "description": "AI pair programmer powered by a living design doc",
         "date": "apr 2024",
         "image": "/images/dango.png",
-        "link": "https://marketplace.visualstudio.com/items?itemName=cnnmon.dango"
+        "link": "https://github.com/cnnmon/dango"
       },
       {
         "name": "tensor trust",
