@@ -34,7 +34,7 @@ function About() {
         <br /><br />
         Hi! I'm Tiffany!
         <br /><br />
-        Hailing from the cornfields of Cleveland, I have now found a new home for myself within the parks and matcha cafes of San Francisco. I'm a software engineer, artist, researcher, and game developer.
+        Hailing from the cornfields of Cleveland, I have now found a new home for myself within the parks and matcha cafes of San Francisco.
         <br /><br />
         Professionally, I've spent summers and gap semesters at <Url href="https://watershed.com/">Watershed</Url> on carbon accounting & infrastructure; <Url href="https://about.meta.com/realitylabs/">Facebook Reality Labs</Url> on VR headset onboarding; <Url href="https://ramp.com/">Ramp</Url> on corporate card spend management.
         <br /><br />
