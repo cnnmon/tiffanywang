@@ -34,13 +34,13 @@ function About() {
         <br /><br />
         Hi! I'm Tiffany!
         <br /><br />
-        Hailing from the cornfields of Cleveland, OH, I now roam the matcha cafes of San Francisco. I recently graduated as a CS major from UC Berkeley, where I taught <Url href="https://cs162.org/">Operating Systems</Url> and researched human-compatible AI in <Url href="https://humancompatible.ai/">CHAI</Url>/<Url href="https://bair.berkeley.edu/">BAIR</Url> under Prof. Stuart Russell.
+        Hailing from the cornfields of Cleveland, I have now found a new home for myself within the parks and matcha cafes of San Francisco. I'm a software engineer, artist, researcher, and game developer.
         <br /><br />
-        Professionally, I software engineer. I've spent summers and gap semesters at <Url href="https://watershed.com/">Watershed</Url> on carbon accounting & infrastructure; <Url href="https://about.meta.com/realitylabs/">Facebook Reality Labs</Url> on VR headset onboarding; <Url href="https://ramp.com/">Ramp</Url> on corporate card spend management.
+        Professionally, I've spent summers and gap semesters at <Url href="https://watershed.com/">Watershed</Url> on carbon accounting & infrastructure; <Url href="https://about.meta.com/realitylabs/">Facebook Reality Labs</Url> on VR headset onboarding; <Url href="https://ramp.com/">Ramp</Url> on corporate card spend management.
         <br /><br />
-        On the side, I make experimental and light-hearted indie games. I've <Url href="https://www.scriptype.com/2020/05/19/self-taught-digital-artist-and-video-game-designer-receives-national-recognition/">exhibited</Url> in Cleveland & New York City and achieved 1.1m plays on <Url href="https://cnnmon.itch.io/">itch.io</Url>. Supplementally, I draw, write, 3D model, etc. For my art, check out <Url href="https://twitter.com/cnnmonie">@cnnmonie</Url>.
+        On the side, I make experimental web and mobile games. I've <Url href="https://www.scriptype.com/2020/05/19/self-taught-digital-artist-and-video-game-designer-receives-national-recognition/">exhibited for interactive media</Url> in Cleveland & New York City and achieved 1.2 million plays online via <Url href="https://cnnmon.itch.io/">itch.io</Url>. I also draw, write, animate, 3D model, etc. For my art, check out <Url href="https://twitter.com/cnnmonie">@cnnmonie</Url>.
         <br /><br />
-        I love dabbling in as many disciplines as possible, learning by experimenting, and building colorful experiences. I also love collaborations!
+        I love dabbling in as many disciplines as possible, learning by experimenting, and building colorful experiences. I'm also happy to chat or collaborate! Reach out ˙ᵕ˙
         <br />
       </p>
       <br />
@@ -48,6 +48,9 @@ function About() {
         <b>Previously, I...</b>
       </p>
       <ul className="list-disc list-inside">
+        <li>Graduated Berkeley! yay</li>
+        <li>Researched <Url href="https://humancompatible.ai/">human-compatible AI</Url> at <Url href="https://humancompatible.ai/">CHAI</Url>/<Url href="https://bair.berkeley.edu/">BAIR</Url> advised by Prof. Stuart Russell</li>
+        <li>Taught people <Url href="https://cs162.org/">how to code up their own operating system</Url></li>
         <li>Illustrated for <Url href="https://www.tiktok.com/@gag.magazine/">student-run art magazines</Url></li>
         <li>Taught CS in no prior experience classrooms:
           <ul className="list-none ml-12">

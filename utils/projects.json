@@ -1,6 +1,19 @@
 [
   {
-    "title": "2023-2024 late college",
+    "title": "2024-present",
+    "list": [
+      {
+        "name": "botsbotsbots",
+        "type": "web game",
+        "description": "4 bots, 1 human. blend in to survive.",
+        "date": "aug 2024",
+        "image": "/images/botsbotsbots.png",
+        "link": "https://botsbotsbots.vercel.app/"
+      }
+    ]
+  },
+  {
+    "title": "2020-2024 college era",
     "list": [
       {
         "name": "dango",
@@ -41,12 +54,7 @@
         "date": "feb 2023",
         "image": "/images/dripordrown.png",
         "link": "https://www.youtube.com/watch?v=g8LlEDijwe8&t=36s&ab_channel=AKS"
-      }
-    ]
-  },
-  {
-    "title": "2020-2022 early college",
-    "list": [
+      },
       {
         "name": "ezcv",
         "type": "web",
@@ -54,7 +62,11 @@
         "date": "sep 2022",
         "image": "/images/ezcv.png",
         "link": "https://www.ezcv.pro/"
-      },
+      }
+    ]
+  }, {
+    "title": "2016-2020 high school era",
+    "list": [
       {
         "name": "boba",
         "type": "mobile game",
@@ -66,15 +78,11 @@
       {
         "name": "coffeelings",
         "type": "chrome extension",
-        "description": "mood tracker & journal (200k DAU)",
+        "description": "mood tracker & journal (200k+ users)",
         "date": "mar 2020",
         "image": "/images/coffeelings.png",
         "link": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/"
-      }
-    ]
-  }, {
-    "title": "2018-2019 high school",
-    "list": [
+      },
       {
         "name": "ashes to ash",
         "type": "game",
