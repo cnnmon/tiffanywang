@@ -52,11 +52,11 @@ function Home() {
       </h1>
       <br />
       <p>
-        <b>Welcome to my corner of the galaxy ⋆✩˚.⋆.</b> Go ahead, grab yourself something to drink. Conveniently, I already have a cooler full of{' '}
+        <b>Welcome to my corner of the galaxy ⋆✩˚.⋆.!</b> Go ahead, grab yourself something to drink. I have a cooler there full of{' '}
         <PlayLink type="drinks" />
         {' '}{drinksEmoji[wordsState['drinks']]}.
         <br /><br />
-        I'm a programmer, researcher, artist, and toy-maker. I care about socially impactful tech, experimental games and interfaces, and <PlayLink type="hobbies" />.
+        I'm a programmer, researcher, artist, and toy-maker. I care about socially impactful tech, experimental game-making, and <PlayLink type="hobbies" />.
         <br /><br />
         Reach out anytime at <b>tiffanywang at berkeley dot edu</b>.
         <br /><br />

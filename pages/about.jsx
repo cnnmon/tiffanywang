@@ -19,7 +19,7 @@ function About() {
       return (
         <>
           <Image src='/images/me.png' className="mb-2" width={300} height={195} onMouseEnter={onHover} />
-          📍 Home
+          📍 San Francisco, CA
         </>
       )
     }
@@ -34,11 +34,13 @@ function About() {
         <br /><br />
         Hi! I'm Tiffany!
         <br /><br />
-        Hailing from the cornfields of Cleveland, I have now found a new home for myself within the parks and matcha cafes of San Francisco.
+        Hailing from the cornfields of Ohio, I now roam the parks and matcha cafes of San Francisco.
         <br /><br />
-        Professionally, I've spent summers and gap semesters at <Url href="https://watershed.com/">Watershed</Url> on carbon accounting & infrastructure; <Url href="https://about.meta.com/realitylabs/">Facebook Reality Labs</Url> on VR headset onboarding; <Url href="https://ramp.com/">Ramp</Url> on corporate card spend management.
+        Professionally, I'm a software engineer at <Url href="https://watershed.com/">Watershed</Url> on data infrastructure. In the past, I've interned at <Url href="https://watershed.com/">Watershed</Url> on carbon accounting & infrastructure, <Url href="https://about.meta.com/realitylabs/">Facebook Reality Labs</Url> on VR headset onboarding, and <Url href="https://ramp.com/">Ramp</Url> on corporate card spend management.
         <br /><br />
-        On the side, I make experimental web and mobile games. I've <Url href="https://www.scriptype.com/2020/05/19/self-taught-digital-artist-and-video-game-designer-receives-national-recognition/">exhibited for interactive media</Url> in Cleveland & New York City and achieved 1.2 million plays online via <Url href="https://cnnmon.itch.io/">itch.io</Url>. I also draw, write, animate, 3D model, etc. For my art, check out <Url href="https://twitter.com/cnnmonie">@cnnmonie</Url>.
+        I've researched <Url href="https://tensortrust.ai/paper/">human-compatible AI</Url> with Prof. Stuart Russell at <Url href="https://humancompatible.ai/">CHAI</Url>/<Url href="https://bair.berkeley.edu/">BAIR</Url>.
+        <br /><br />
+        I make experimental games. I've <Url href="https://www.scriptype.com/2020/05/19/self-taught-digital-artist-and-video-game-designer-receives-national-recognition/">exhibited</Url> in Cleveland & New York City, worked with the Cleveland Clinic, and achieved 1.2 million plays online on <Url href="https://cnnmon.itch.io/">itch.io</Url>. I draw, write, animate, 3D model, etc. Updates here: <Url href="https://twitter.com/cnnmonie">@cnnmonie</Url>.
         <br /><br />
         I love dabbling in as many disciplines as possible, learning by experimenting, and building colorful experiences. I'm also happy to chat or collaborate! Don't hesitate to reach out ˙ᵕ˙
         <br />
@@ -49,9 +51,7 @@ function About() {
       </p>
       <ul className="list-disc list-inside">
         <li>Graduated Berkeley! yay</li>
-        <li>Researched <Url href="https://tensortrust.ai/paper/">human-compatible AI</Url> at <Url href="https://humancompatible.ai/">CHAI</Url>/<Url href="https://bair.berkeley.edu/">BAIR</Url>
-        </li>
-        <li>Illustrated for <Url href="https://www.tiktok.com/@gag.magazine/">student-run art magazines</Url></li>
+        <li>Illustrated for <Url href="https://www.kernelmag.io/">Kernel</Url> and <Url href="https://www.tiktok.com/@gag.magazine/">student-run art magazines</Url></li>
         <li>Taught CS:
           <ul className="list-none ml-12">
             <li> <Url href="https://cs162.org/">Operating Systems</Url> with our favorite bean pintOS</li>

@@ -16,19 +16,21 @@ function Section({ section }) {
     <>
       <p>•───────• {title} •───────•</p>
       {list.map((art, index) => (
-        <div key={index} className="flex flex-col w-full md:w-[80%] mb-10">
-          <p>[<span dangerouslySetInnerHTML={{ __html: autolink(art.title) }} />]</p>
-          <div className="flex w-full justify-between gap-2">
-            {art.images.map((image, imgIndex) => (
+        <div key={index} className="flex flex-col mb-10 w-[100%]">
+          <div className="flex flex-col w-full justify-between gap-2 md:flex-row overflow-x-scroll">
+            {art.images.map((image, imgIndex) => 
               <Image
                 key={imgIndex}
                 src={image}
                 alt={art.title}
-                width={art.width}
-                height={art.height}
+                height={0}
+                width={0}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
               />
-            ))}
+            )}
           </div>
+          <p className="font-bold">[<span dangerouslySetInnerHTML={{ __html: autolink(art.title) }} />]</p>
         </div>
       ))}
     </>

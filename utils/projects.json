@@ -7,7 +7,7 @@
         "type": "web game",
         "description": "4 bots, 1 human. blend in to survive.",
         "date": "aug 2024",
-        "image": "/images/botsbotsbots.png",
+        "image": "/images/botsbotsbots.gif",
         "link": "https://botsbotsbots.vercel.app/"
       }
     ]
@@ -20,7 +20,7 @@
         "type": "app, research",
         "description": "AI pair programmer powered by a living design doc",
         "date": "apr 2024",
-        "image": "/images/dango.png",
+        "image": "/images/dango.gif",
         "link": "https://github.com/cnnmon/dango"
       },
       {
@@ -28,7 +28,7 @@
         "type": "web, research",
         "description": "hack a bank by sweet-talking its AI",
         "date": "nov 2023",
-        "image": "/images/tensortrust.png",
+        "image": "/images/tensortrust.gif",
         "link": "https://tensortrust.ai/"
       },
       {
@@ -36,7 +36,7 @@
         "type": "game",
         "description": "you're a university student in space",
         "date": "dec 2023",
-        "image": "/images/university.png",
+        "image": "/images/university.gif",
         "link": "https://university-game.vercel.app/"
       },
       {
@@ -44,7 +44,7 @@
         "type": "toy",
         "description": "an interpersonal music maker  🎵🕺🏻",
         "date": "oct 2023",
-        "image": "/images/mysingingfriends.png",
+        "image": "/images/mysingingfriends.gif",
         "link": "https://singing-friends.vercel.app/"
       },
       {
@@ -52,7 +52,7 @@
         "type": "web",
         "description": "your personal AI-powered stylist",
         "date": "feb 2023",
-        "image": "/images/dripordrown.png",
+        "image": "/images/dripordrown.gif",
         "link": "https://www.youtube.com/watch?v=g8LlEDijwe8&t=36s&ab_channel=AKS"
       },
       {
@@ -60,7 +60,7 @@
         "type": "web",
         "description": "plaintext-to-resume generator",
         "date": "sep 2022",
-        "image": "/images/ezcv.png",
+        "image": "/images/ezcv.gif",
         "link": "https://www.ezcv.pro/"
       }
     ]
@@ -72,7 +72,7 @@
         "type": "mobile game",
         "description": "themed mobile puzzle game",
         "date": "aug 2020",
-        "image": "/images/boba.png",
+        "image": "/images/boba.gif",
         "link": "https://cnnmon.itch.io/boba"
       },
       {
@@ -80,7 +80,7 @@
         "type": "chrome extension",
         "description": "mood tracker & journal (200k+ users)",
         "date": "mar 2020",
-        "image": "/images/coffeelings.png",
+        "image": "/images/coffeelings.gif",
         "link": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/"
       },
       {
@@ -88,7 +88,7 @@
         "type": "game",
         "description": "collect emotions",
         "date": "oct 2019",
-        "image": "/images/ashestoash.png",
+        "image": "/images/ashestoash.gif",
         "link": "https://ldjam.com/events/ludum-dare/45/ashes-to-ash/"
       },
       {
@@ -96,7 +96,7 @@
         "type": "game",
         "description": "do chores as a grim reaper",
         "date": "apr 2019",
-        "image": "/images/sliceofscythe.png",
+        "image": "/images/sliceofscythe.gif",
         "link": "https://ldjam.com/events/ludum-dare/44/slice-of-scythe/"
       },
       {
@@ -104,7 +104,7 @@
         "type": "game",
         "description": "morning routine simulator (500k+ views)",
         "date": "jan 2019",
-        "image": "/images/goodmorning.png",
+        "image": "/images/goodmorning.gif",
         "link": "https://cnnmon.itch.io/goodmorning"
       },
       {
@@ -120,7 +120,7 @@
         "type": "game",
         "description": "endless-runner typing game",
         "date": "sep 2018",
-        "image": "/images/spacebar.png",
+        "image": "/images/spacebar.gif",
         "link": "https://cnnmon.itch.io/spacebar"
       }
     ]

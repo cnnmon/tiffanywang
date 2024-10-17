@@ -17,12 +17,12 @@ function Section({ section }) {
           };
 
           return (
-            <div key={index} className="flex flex-col w-[300px] md:w-[47%] mb-10">
+            <div key={index} className="flex flex-col w-full mb-10">
               {/* Conditionally render the href attribute or onClick event based on the presence of link */}
               <a href={link || undefined} onClick={!link ? handleNoLinkClick : undefined} target="_blank" className="font-bold">
                 <Image src={image} alt={name} width={500} height={362} className="w-full card mb-5" />
               </a>
-              <a href={link || undefined} onClick={!link ? handleNoLinkClick : undefined} target="_blank" className="font-bold">{name}</a>
+              <a href={link || undefined} onClick={!link ? handleNoLinkClick : undefined} target="_blank" className="font-bold">[{name}]</a>
               <p>{type} / {date}</p>
               <p>{description}</p>
             </div>

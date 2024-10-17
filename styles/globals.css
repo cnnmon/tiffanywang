@@ -14,7 +14,7 @@
 
 /* hide scroll bar */
 ::-webkit-scrollbar {
-  display: none;
+  display: default;
 }
 
 body {
