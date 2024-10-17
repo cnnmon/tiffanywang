@@ -17,7 +17,7 @@ function Section({ section }) {
       <p>•───────• {title} •───────•</p>
       {list.map((art, index) => (
         <div key={index} className="flex flex-col mb-10 w-[100%]">
-          <div className="flex flex-col w-full justify-between gap-2 md:flex-row overflow-x-scroll">
+          <div className="flex flex-col w-full justify-between gap-2 md:flex-row mb-5 overflow-x-auto">
             {art.images.map((image, imgIndex) => 
               <Image
                 key={imgIndex}
@@ -26,11 +26,11 @@ function Section({ section }) {
                 height={0}
                 width={0}
                 sizes="100vw"
-                style={{ width: '100%', height: 'auto' }}
+                className="w-full h-auto"
               />
             )}
           </div>
-          <p className="font-bold">[<span dangerouslySetInnerHTML={{ __html: autolink(art.title) }} />]</p>
+          <p>[<span dangerouslySetInnerHTML={{ __html: autolink(art.title) }} />]</p>
         </div>
       ))}
     </>
