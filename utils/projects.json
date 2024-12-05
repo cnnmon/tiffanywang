@@ -3,9 +3,17 @@
     "title": "2024-present",
     "list": [
       {
+        "name": "principal",
+        "type": "game",
+        "description": "a tamagotchi with moral dilemmas. would you let your pet pull the lever!? how will this affect their development!?",
+        "date": "dec 2024",
+        "image": "/images/principal.gif",
+        "link": null
+      },
+      {
         "name": "botsbotsbots",
-        "type": "web game",
-        "description": "4 bots, 1 human. blend in to survive.",
+        "type": "game",
+        "description": "a reverse turing test set in a post-apocalyptic chatroom. 4 bots, 1 human (you). blend in to survive.",
         "date": "aug 2024",
         "image": "/images/botsbotsbots.gif",
         "link": "https://botsbotsbots.vercel.app/"
@@ -17,16 +25,16 @@
     "list": [
       {
         "name": "dango",
-        "type": "app, research",
-        "description": "AI pair programmer powered by a living design doc",
+        "type": "research",
+        "description": "ai pair programmer powered by a living design doc. informed by need-finding with creative coders.",
         "date": "apr 2024",
         "image": "/images/dango.gif",
         "link": "https://github.com/cnnmon/dango"
       },
       {
         "name": "tensor trust",
-        "type": "web, research",
-        "description": "hack a bank by sweet-talking its AI",
+        "type": "research",
+        "description": "hack a bank by sweet-talking and jailbreaking its ai. published dataset & benchmarks at ICLR'24.",
         "date": "nov 2023",
         "image": "/images/tensortrust.gif",
         "link": "https://tensortrust.ai/"
@@ -34,31 +42,31 @@
       {
         "name": "univers(ity)",
         "type": "game",
-        "description": "you're a university student in space",
+        "description": "you're a university student in space over holiday break.",
         "date": "dec 2023",
         "image": "/images/university.gif",
         "link": "https://university-game.vercel.app/"
       },
       {
         "name": "my singing friends",
-        "type": "toy",
-        "description": "an interpersonal music maker  🎵🕺🏻",
+        "type": "game",
+        "description": "an interpersonal music maker  🎵🕺🏻.",
         "date": "oct 2023",
         "image": "/images/mysingingfriends.gif",
         "link": "https://singing-friends.vercel.app/"
       },
       {
         "name": "drip or drown",
-        "type": "web",
-        "description": "your personal AI-powered stylist",
+        "type": "app",
+        "description": "ai can and will roast your style.",
         "date": "feb 2023",
         "image": "/images/dripordrown.gif",
         "link": "https://www.youtube.com/watch?v=g8LlEDijwe8&t=36s&ab_channel=AKS"
       },
       {
         "name": "ezcv",
-        "type": "web",
-        "description": "plaintext-to-resume generator",
+        "type": "app",
+        "description": "the easiest resume maker you'll ever use. just add plaintext.",
         "date": "sep 2022",
         "image": "/images/ezcv.gif",
         "link": "https://www.ezcv.pro/"
@@ -69,16 +77,16 @@
     "list": [
       {
         "name": "boba",
-        "type": "mobile game",
-        "description": "themed mobile puzzle game",
+        "type": "game",
+        "description": "drink boba... efficiently? a boba-themed puzzle game.",
         "date": "aug 2020",
         "image": "/images/boba.gif",
         "link": "https://cnnmon.itch.io/boba"
       },
       {
         "name": "coffeelings",
-        "type": "chrome extension",
-        "description": "mood tracker & journal (200k+ users)",
+        "type": "app",
+        "description": "a mood tracking & journaling chrome extension. (200k+ daily active users on chrome web store)",
         "date": "mar 2020",
         "image": "/images/coffeelings.gif",
         "link": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/"
@@ -86,7 +94,7 @@
       {
         "name": "ashes to ash",
         "type": "game",
-        "description": "collect emotions",
+        "description": "72-hour ludum dare platformer about collecting emotions.",
         "date": "oct 2019",
         "image": "/images/ashestoash.gif",
         "link": "https://ldjam.com/events/ludum-dare/45/ashes-to-ash/"
@@ -94,7 +102,7 @@
       {
         "name": "slice of scythe",
         "type": "game",
-        "description": "do chores as a grim reaper",
+        "description": "72-hour ludum dare game about doing chores (and collecting souls!?) as a grim reaper.",
         "date": "apr 2019",
         "image": "/images/sliceofscythe.gif",
         "link": "https://ldjam.com/events/ludum-dare/44/slice-of-scythe/"
@@ -102,7 +110,7 @@
       {
         "name": "good morning!",
         "type": "game",
-        "description": "morning routine simulator (500k+ views)",
+        "description": "morning routine simulator (500k+ views).",
         "date": "jan 2019",
         "image": "/images/goodmorning.gif",
         "link": "https://cnnmon.itch.io/goodmorning"
@@ -110,7 +118,7 @@
       {
         "name": "kittyclinic",
         "type": "game",
-        "description": "holistic cat clinic",
+        "description": "do research. treat patients. eat catnip. repeat.",
         "date": "nov 2018",
         "image": "/images/kittyclinic.png",
         "link": "https://cnnmon.itch.io/kittyclinic"
@@ -118,7 +126,7 @@
       {
         "name": "spacebar",
         "type": "game",
-        "description": "endless-runner typing game",
+        "description": "endless-runner typing game. explore planets. if you type fast enough, you won't fall into endless void.",
         "date": "sep 2018",
         "image": "/images/spacebar.gif",
         "link": "https://cnnmon.itch.io/spacebar"

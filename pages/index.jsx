@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react'
-import { SiLinkedin, SiGooglescholar, SiGithub, SiTwitter } from 'react-icons/si'
-import { FaItchIo } from 'react-icons/fa'
 import Url from '../components/Url'
 
 const words = {
-  drinks: ['yakult', 'chrysanthemum tea', 'Yerba Mate', 'La Croix', 'Cholula hot sauce'],
-  hobbies: ['hosting board game nights', 'singing my heart out at karaoke', 'brewing the spiciest soups known to man', 'talking about the idea of going to the gym']
+  drinks: ['yakult', 'grape soda', 'oat matcha lattes', 'La Croix', 'Cholula hot sauce'],
+  hobbies: ['hosting social deduction board game nights', 'singing my heart out at karaoke', 'brewing the spiciest soups known to man', 'talking about the idea of going to the gym']
 }
-const drinksEmoji = ['🍓', '🧃', '🌿', '🍊', '🌶️']
+const drinksEmoji = ['🍓', '🍇', '🍵', '🍊', '🌶️']
 const greeting = 'hi, i\'m tiffany!'
 
 function Home() {
@@ -52,24 +50,24 @@ function Home() {
       </h1>
       <br />
       <p>
-        <b>Welcome to my corner of the galaxy ⋆✩˚.⋆.!</b> Go ahead, grab yourself something to drink. I have a cooler there full of{' '}
+        ⋆✩˚.⋆. <br /><br />
+        <b>Welcome to my web-home!</b> Go ahead, grab yourself something to drink. I have a cooler full of{' '}
         <PlayLink type="drinks" />
         {' '}{drinksEmoji[wordsState['drinks']]}.
         <br /><br />
-        I'm a programmer, researcher, artist, and toy-maker. I care about socially impactful tech, experimental game-making, and <PlayLink type="hobbies" />.
+        I'm a programmer, researcher, artist, and game-maker. I care about socially impactful tech, experimental new media, creative tools, and <PlayLink type="hobbies" />.
         <br /><br />
         Reach out anytime at <b>tiffanywang at berkeley dot edu</b>.
         <br /><br />
-        <span className="flex items-center">
+        <span className="flex flex-col sm:flex-row sm:items-center">
           Else, find me at:
-          <span className="flex items-center ml-2 gap-2">
-            <Url href="https://www.linkedin.com/in/wtiffany/"><SiLinkedin /></Url>
-            <Url href="https://github.com/cnnmon"><SiGithub /></Url>
-            <Url href="https://cnnmon.itch.io/"><FaItchIo /></Url>
-            <Url href="https://twitter.com/cnnmonie"><SiTwitter /></Url>
-            <Url href="https://scholar.google.com/citations?hl=en&user=p8hhfi4AAAAJ"><SiGooglescholar /></Url>
+          <span className="flex flex-wrap items-center sm:ml-2 gap-2">
+            <Url href="https://www.linkedin.com/in/wtiffany/">linkedin</Url>
+            <Url href="https://github.com/cnnmon">github</Url>
+            <Url href="https://cnnmon.itch.io/">itch.io</Url>
+            <Url href="https://twitter.com/cnnmonie">twitter</Url>
+            <Url href="https://scholar.google.com/citations?hl=en&user=p8hhfi4AAAAJ">gscholar</Url>
           </span>
-          .
         </span>
         <br />
       </p>

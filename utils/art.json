@@ -1,69 +1,87 @@
 [
   {
-    "title": "2d art (procreate)",
+    "title": "2d",
     "list": [
       {
         "title": "me on a bike",
-        "images": ["/images/bike.png"]
+        "images": ["/images/bike.png"],
+        "description": "i like baywheels"
       },
       {
         "title": "roadtrip",
-        "images": ["/images/roadtrip.png"]
+        "images": ["/images/roadtrip.png"],
+        "description": "stick season blasting as we drive through vermont"
+      },
+      {
+        "title": "memory",
+        "images": ["/images/lookback.png"],
+        "description": "look back (2024) is a great movie"
       },
       {
         "title": "illustrations for https://www.kernelmag.io/",
         "images": [
           "/images/irena.png",
           "/images/zora.png"
-        ]
+        ],
+        "description": "accompanied very cool writers"
+      },
+      {
+        "title": "twirl",
+        "images": ["/images/twirl.gif"],
+        "description": "learning frame by frame animation"
       },
       {
         "title": "summer",
-        "images": ["/images/summer.png"]
+        "images": ["/images/summer.png"],
+        "description": ":p"
       },
       {
         "title": "meditation study",
-        "images": ["/images/meditation.png"]
+        "images": ["/images/meditation.png"],
+        "description": "20 min figure drawing!"
       },
       {
         "title": "me but online",
-        "images": ["/images/online.png"]
+        "images": ["/images/online.png"],
+        "description": "concept art for my 3d piece virtual upload"
       },
       {
         "title": "ap art portfolio",
         "images": [
           "/images/reflection.jpg",
           "/images/why.jpg"
-        ]
-      },
-      {
-        "title": "twirl",
-        "images": ["/images/twirl.gif"]
+        ],
+        "description": "my theme was introspection"
       }
     ]
   },
   {
-    "title": "3d art (blender)",
+    "title": "3d",
     "list": [
       {
         "title": "yakult",
-        "images": ["/images/yakult.gif"]
-      },
-      {
-        "title": "my ass!!!",
-        "images": ["/images/cat.gif"]
-      },
-      {
-        "title": "digital upload",
-        "images": ["/images/digitalupload.gif"]
+        "images": ["/images/yakult.gif"],
+        "description": "hand-drawn in blender"
       },
       {
         "title": "cat cafe",
-        "images": ["/images/catcafe.gif"]
+        "images": ["/images/catcafe.gif"],
+        "description": "exercise in structural integrity"
+      },
+      {
+        "title": "digital upload",
+        "images": ["/images/digitalupload.gif"],
+        "description": "virtual persona 3d-ified"
       },
       {
         "title": "peppermint",
-        "images": ["/images/peppermint.gif"]
+        "images": ["/images/peppermint.gif"],
+        "description": "music video for jack stauber's peppermint"
+      },
+      {
+        "title": "my ass!!!",
+        "images": ["/images/cat.gif"],
+        "description": "inspired by a clip from bee and puppycat"
       }
     ]
   }
