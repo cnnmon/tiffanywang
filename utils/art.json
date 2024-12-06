@@ -13,11 +13,6 @@
         "description": "stick season blasting as we drive through vermont"
       },
       {
-        "title": "memory",
-        "images": ["/images/lookback.png"],
-        "description": "look back (2024) is a great movie"
-      },
-      {
         "title": "illustrations for https://www.kernelmag.io/",
         "images": [
           "/images/irena.png",
@@ -69,6 +64,11 @@
         "description": "exercise in structural integrity"
       },
       {
+        "title": "fred",
+        "images": ["/images/fred.gif"],
+        "description": "friend"
+      },
+      {
         "title": "digital upload",
         "images": ["/images/digitalupload.gif"],
         "description": "virtual persona 3d-ified"
@@ -82,6 +82,11 @@
         "title": "my ass!!!",
         "images": ["/images/cat.gif"],
         "description": "inspired by a clip from bee and puppycat"
+      },
+      {
+        "title": "claw machine",
+        "images": ["/images/clawmachine.gif"],
+        "description": "claw breaks free"
       }
     ]
   }
