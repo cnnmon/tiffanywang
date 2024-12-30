@@ -1,33 +1,13 @@
-import { useState } from 'react';
 import Image from 'next/image';
 import Url from '../components/Url';
 
 function About() {
-  const [isHovering, setIsHovering] = useState(false);
-  const onHover = () => setIsHovering(true);
-  const onLeave = () => setIsHovering(false);
-
-  const getProfileSection = () => {
-    if (isHovering) {
-      return (
-        <>
-          <Image src='/images/frog.jpg' className="mb-2" width={300} height={195} onMouseLeave={onLeave} />
-          ❓ Do I look like my friend's frog?
-        </>
-      )
-    } else {
-      return (
-        <>
-          <Image src='/images/me.png' className="mb-2" width={300} height={195} onMouseEnter={onHover} />
-          📍 San Francisco, CA
-        </>
-      )
-    }
-  }
-
   return (
     <div className="flex flex-col gap-2">
-      <p>{getProfileSection()}</p>
+      <div>
+        <Image src='/images/me.png'  width={300} height={195} className="mb-2" />
+        <p>📍 San Francisco, CA</p>
+      </div>
       <br />
       <p>
         <b>About me</b>
@@ -68,7 +48,8 @@ function About() {
             <li><Url href="https://neo.com/">Neo Scholars</Url></li>
           </ul>
         </li>
-        <li>Made educational games with the Cleveland Clinic</li>
+        <li>Collaborated on educational games with the Cleveland Clinic</li>
+        <li>Made dress-up games in Flash</li>
       </ul>
       <p>
         <br />
