@@ -33,7 +33,7 @@ function Project({ item, index }) {
           target="_blank"
           className="font-bold"
         >
-          <Image src={image} alt={name} width={500} height={362} className="w-full card mb-5" />
+          <Image src={image} alt={name} width={500} height={370} className="w-full card mb-5 object-cover" />
         </motion.a>
       <a href={link || undefined} onClick={!link ? handleNoLinkClick : undefined} target="_blank" className="font-bold">[{name}]</a>
       <p>{type} / {date}</p>

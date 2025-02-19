@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { pages } from '../utils/constants'
+import { motion, AnimatePresence } from 'framer-motion'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
@@ -32,8 +33,18 @@ function MyApp({ Component, pageProps }) {
           {pages.map((page, index) => <NavItem key={index} path={page.path} title={page.title} />)}
         </nav>
         <div className="md:w-4/5 body">
-          <Component {...pageProps} />
-          <footer className="p-4 text-center  text-sm">
+          <AnimatePresence exitBeforeEnter mode="wait">
+            <motion.div
+              key={router.route}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Component {...pageProps} />
+            </motion.div>
+          </AnimatePresence>
+          <footer className="p-4 text-center text-sm">
             <p>•───────• Built with <a className="link" href="https://github.com/cnnmon/tiffanywang"><b>˙ᵕ˙</b></a> •───────•</p>
           </footer>
         </div>
