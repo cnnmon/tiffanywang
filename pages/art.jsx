@@ -1,6 +1,7 @@
 import artSections from '../utils/art.json'
 import Image from 'next/image'
 import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 function Section({ section }) {
   const { list } = section;
@@ -16,22 +17,42 @@ function Section({ section }) {
   return (
     <>
       {list.map((art, index) => (
-        <div key={index} className="flex flex-col mb-10 w-[100%]">
+        <motion.div
+          key={index}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 }
+          }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col mb-10 w-[100%]"
+        >
           <div className="flex w-full justify-between gap-2 flex-col mb-4">
-            {art.images.map((image, imgIndex) => (
-              <Image
-                key={imgIndex}
-                src={image}
-                alt={art.title}
-                height={500}
-                width={500}
-                className="w-full h-auto"
-              />
-            ))}
+            <AnimatePresence>
+              {art.images.map((image, imgIndex) => (
+                <motion.div
+                  key={imgIndex}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Image
+                    src={image}
+                    alt={art.title}
+                    height={500}
+                    width={500}
+                    className="w-full h-auto"
+                  />
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </div>
           <p><b>[<span dangerouslySetInnerHTML={{ __html: autolink(art.title) }} />]</b></p>
           <p>{art.description}</p>
-        </div>
+        </motion.div>
       ))}
     </>
   );

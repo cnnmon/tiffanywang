@@ -1,10 +1,11 @@
 import projectSections from '../utils/projects.json'
 import Image from 'next/image'
 import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 function Project({ item, index }) {
   const { name, type, description, date, link, image } = item;
-  
+
   const handleNoLinkClick = () => {
     if (!link) {
       alert('this is a work in progress — email me if you want a preview!');
@@ -13,14 +14,31 @@ function Project({ item, index }) {
   };
 
   return (
-    <div key={index} className="flex flex-col w-full mb-10">
-      <a href={link || undefined} onClick={!link ? handleNoLinkClick : undefined} target="_blank" className="font-bold">
-        <Image src={image} alt={name} width={500} height={362} className="w-full card mb-5" />
-      </a>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 }
+      }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col w-full mb-10"
+    >
+      <AnimatePresence>
+        <motion.a
+          href={link || undefined}
+          onClick={!link ? handleNoLinkClick : undefined}
+          target="_blank"
+          className="font-bold"
+        >
+          <Image src={image} alt={name} width={500} height={362} className="w-full card mb-5" />
+        </motion.a>
+      </AnimatePresence>
       <a href={link || undefined} onClick={!link ? handleNoLinkClick : undefined} target="_blank" className="font-bold">[{name}]</a>
       <p>{type} / {date}</p>
       <p>{description}</p>
-    </div>
+    </motion.div>
   )
 }
 

@@ -8,7 +8,7 @@
         "description": "a tamagotchi with moral dilemmas. would you let your pet pull the lever!? how will this affect their development!?",
         "date": "dec 2024",
         "image": "/images/principal.gif",
-        "link": null
+        "link": "https://princi-pal.vercel.app/"
       },
       {
         "name": "botsbotsbots",
