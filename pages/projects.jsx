@@ -14,6 +14,8 @@ function Project({ item, index }) {
   };
 
   return (
+    <AnimatePresence mode="wait">
+
     <motion.div
       initial="hidden"
       whileInView="visible"
@@ -25,7 +27,6 @@ function Project({ item, index }) {
       transition={{ duration: 0.5 }}
       className="flex flex-col w-full mb-10"
     >
-      <AnimatePresence>
         <motion.a
           href={link || undefined}
           onClick={!link ? handleNoLinkClick : undefined}
@@ -34,11 +35,11 @@ function Project({ item, index }) {
         >
           <Image src={image} alt={name} width={500} height={362} className="w-full card mb-5" />
         </motion.a>
-      </AnimatePresence>
       <a href={link || undefined} onClick={!link ? handleNoLinkClick : undefined} target="_blank" className="font-bold">[{name}]</a>
       <p>{type} / {date}</p>
       <p>{description}</p>
     </motion.div>
+    </AnimatePresence>
   )
 }
 
