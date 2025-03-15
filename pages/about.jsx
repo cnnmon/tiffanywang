@@ -14,7 +14,7 @@ function About() {
         <br /><br />
         Hi, I'm Tiffany! Hailing from the cornfields of Ohio, I now roam the cafes of San Francisco.
         <br /><br />
-        I'm a software engineer building data infrastructure for enterprise sustainability teams @ <Url href="https://watershed.com/">Watershed</Url>. I'm also an artist who makes <Url href="https://cnnmon.itch.io/">silly indie games (1.3m+ plays!)</Url> and experiments with human-AI interaction, creativity, safety (see: <Url href="projects">/projects</Url>).
+        I'm a software engineer building data infrastructure for enterprise sustainability teams @ <Url href="https://watershed.com/">Watershed</Url>. I'm also an artist who makes <Url href="https://cnnmon.itch.io/">experimental indie games (1.3m+ plays!)</Url> and other projects exploring human-AI interaction, creativity, safety (see: <Url href="projects">/projects</Url>).
         <br /><br />
         I love dabbling in as many disciplines as possible, learning by experimenting, and building colorful experiences. I'm also happy to chat or collaborate! Don't hesitate to reach out ˙ᵕ˙
         <br />
@@ -26,7 +26,7 @@ function About() {
       <ul className="list-disc list-inside">
         <li>Graduated Berkeley! yay</li>
         <li>Co-authored a paper on <Url href="https://tensortrust.ai/paper/">the art of jailbreaking LLMs</Url> at <Url href="https://humancompatible.ai/">CHAI</Url></li>
-        <li>'nterned at <Url href="https://about.meta.com/realitylabs/">Facebook Reality Labs</Url> & <Url href="https://ramp.com/">Ramp</Url></li>
+        <li>'nterned at <Url href="https://watershed.com/">Watershed</Url>, <Url href="https://about.meta.com/realitylabs/">Facebook Reality Labs</Url>, and <Url href="https://ramp.com/">Ramp</Url></li>
         <li>Illustrated for <Url href="https://www.kernelmag.io/">Kernel</Url> and <Url href="https://www.tiktok.com/@gag.magazine/">student-run art magazines</Url></li>
         <li>Taught:
           <ul className="list-none ml-12">
