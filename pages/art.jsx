@@ -64,7 +64,7 @@ function Art() {
 
   return (
     <div className="flex flex-col gap-2">
-      <p>I dabble in all digital art — 2d, 3d, static, moving. I use Procreate, Blender, After Effects.</p>
+      <p>I often use Procreate, Blender, After Effects.</p>
       <div className="flex flex-row gap-2 mt-2 mb-4">
         {allTypes.map(type => (
           <button

@@ -14,7 +14,7 @@ function About() {
         <br /><br />
         Hi, I'm Tiffany! Hailing from the cornfields of Ohio, I now roam the cafes of San Francisco.
         <br /><br />
-        I'm a software engineer building data infrastructure for enterprise sustainability teams @ <Url href="https://watershed.com/">Watershed</Url>. I'm also an artist who makes <Url href="https://cnnmon.itch.io/">experimental indie games (1.3m+ plays!)</Url> and other projects exploring human-AI interaction, creativity, safety (see: <Url href="projects">/projects</Url>).
+        I'm a software engineer and artist who makes <Url href="https://cnnmon.itch.io/">experimental indie games (1.3m+ plays!)</Url> and other projects exploring human-AI interaction and collaborative creativity (see: <Url href="projects">/projects</Url>).
         <br /><br />
         I love dabbling in as many disciplines as possible, learning by experimenting, and building colorful experiences. I'm also happy to chat or collaborate! Don't hesitate to reach out ˙ᵕ˙
         <br />

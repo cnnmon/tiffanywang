@@ -5,7 +5,7 @@
       {
         "name": "principal",
         "type": "game",
-        "description": "a tamagotchi with moral dilemmas. would you let your pet pull the lever!? how will this affect their development!?",
+        "description": "a tamagotchi that grows and learns from moral dilemmas.",
         "date": "dec 2024",
         "image": "/images/principal.gif",
         "link": "https://princi-pal.vercel.app/"

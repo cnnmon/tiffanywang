@@ -2,8 +2,9 @@ import projectSections from '../utils/projects.json'
 import Image from 'next/image'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Url from '../components/Url'
 
-function Project({ item, index }) {
+function Project({ item }) {
   const { name, type, description, date, link, image } = item;
 
   const handleNoLinkClick = () => {
@@ -15,30 +16,38 @@ function Project({ item, index }) {
 
   return (
     <AnimatePresence mode="wait">
-
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      variants={{
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 }
-      }}
-      transition={{ duration: 0.5 }}
-      className="flex flex-col w-full mb-10"
-    >
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0 }
+        }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col w-full mb-10"
+      >
         <motion.a
           href={link || undefined}
           onClick={!link ? handleNoLinkClick : undefined}
           target="_blank"
           className="font-bold"
         >
-          <Image src={image} alt={name} width={500} height={370} className="w-full card mb-5 object-cover" />
+          <Image
+            src={image}
+            alt={name}
+            width={500}
+            height={370} className="w-full card mb-5 object-cover" style={{
+              width: 800,
+              height: 370,
+              objectFit: 'cover'
+            }}
+          />
         </motion.a>
-      <a href={link || undefined} onClick={!link ? handleNoLinkClick : undefined} target="_blank" className="font-bold">[{name}]</a>
-      <p>{type} / {date}</p>
-      <p>{description}</p>
-    </motion.div>
+        <a href={link || undefined} onClick={!link ? handleNoLinkClick : undefined} target="_blank" className="font-bold">[{name}]</a>
+        <p>{type} / {date}</p>
+        <p>{description}</p>
+      </motion.div>
     </AnimatePresence>
   )
 }
@@ -46,8 +55,6 @@ function Project({ item, index }) {
 function Section({ section, selectedType }) {
   const { title, list } = section
   const filteredList = selectedType === 'all' ? list : list.filter(item => item.type === selectedType)
-
-  // Don't render section if filtered list is empty
   if (filteredList.length === 0) return null
 
   return (
@@ -55,7 +62,9 @@ function Section({ section, selectedType }) {
       <p><b>{title}</b></p>
       <div className="flex flex-row gap-2 flex-wrap justify-between">
         {filteredList.map((item, index) => (
-          <Project key={index} item={item} />
+          <div key={index}>
+            <Project item={item} />
+          </div>
         ))}
       </div>
     </>
@@ -72,7 +81,7 @@ function Projects() {
 
   return (
     <>
-      <p>My gallery of toys, tools, experiments. Take a look around! I often use Typescript, Python, Next.js, Unity.</p>
+      <p>Take a look around! I often use Typescript, Python, Next.js, and Unity. Smaller projects live on my <Url href="https://github.com/cnnmon">GitHub</Url>.</p>
       <div className="flex flex-row gap-2 mt-4 mb-4">
         {allTypes.map(type => (
           <button
