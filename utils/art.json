@@ -64,11 +64,6 @@
         "description": "exercise in structural integrity"
       },
       {
-        "title": "fred",
-        "images": ["/images/fred.gif"],
-        "description": "friend"
-      },
-      {
         "title": "digital upload",
         "images": ["/images/digitalupload.gif"],
         "description": "virtual persona 3d-ified"
