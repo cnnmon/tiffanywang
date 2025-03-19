@@ -36,7 +36,8 @@ function Project({ item }) {
             src={image}
             alt={name}
             width={800}
-            height={370}
+            height={500}
+            sharp
             className="card mb-5 object-cover"
           />
         </motion.a>

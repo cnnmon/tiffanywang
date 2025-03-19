@@ -43,7 +43,7 @@ function Home() {
 
   return (
     <>
-      <h1 className="font-outline-1 pt-10 pb-5 text-center">
+      <h1 className="pt-10 pb-5 text-center">
         <span className="wave">
           {greetingCharacters.map((letter, index) => (<span key={index}>{letter}</span>))}
         </span>
