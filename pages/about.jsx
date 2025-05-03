@@ -12,7 +12,7 @@ function About() {
       <p>
         <b>About me</b>
         <br /><br />
-        Hi, I'm Tiffany! Hailing from the cornfields of Ohio, I now roam the cafes of San Francisco.
+        Hi, I'm Tiffany! Hailing from the cornfields of Ohio, I now roam the cafes of San Francisco and work on <Url href="https://mj-storytelling.github.io/">AI-supported storytelling tools</Url>.
         <br /><br />
         I'm a software engineer and artist who makes <Url href="https://cnnmon.itch.io/">experimental indie games (1.3m+ plays!)</Url> and other projects exploring human-AI interaction and collaborative creativity (see: <Url href="projects">/projects</Url>).
         <br /><br />

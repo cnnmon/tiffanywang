@@ -15,8 +15,4 @@ export const pages = [
     title: 'art',
     path: '/art',
   },
-  {
-    title: 'resume',
-    path: '/resume',
-  },
 ]
