@@ -1,10 +1,17 @@
-/* get ibm plex mono font */
+/* ibm plex mono font */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
 
-/* get augillion font */
+/* augillion font */
 @font-face {
   font-family: 'Augillion';
   src: url('../public/Augillion.otf');
+  font-weight: normal;
+}
+
+/* bitmap font */
+@font-face {
+  font-family: 'bitmap';
+  src: url('../public/bitmap.otf');
   font-weight: normal;
 }
 
@@ -18,21 +25,7 @@
 }
 
 body {
-  background-color: #FBF5EF;
-  font-family: 'IBM Plex Mono';
-  color: rgba(0, 0, 0, 0.85);
-}
-
-h1 {
-  font-family: 'Augillion';
-  font-size: 50px;
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.85);
-  line-height: 1.0;
-}
-
-h2 {
-  font-family: 'Augillion';
-  font-size: 25px;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .card {
@@ -59,7 +52,9 @@ h2 {
 }
 
 .play {
-  color: #4d4d4d;
+  text-decoration: none;
+  font-style: italic;
+  color: #000000;
 }
 
 .play:hover {
@@ -73,107 +68,48 @@ h2 {
     animation: wave-text 1.5s ease-in-out infinite;
 }
 
-.wave span:nth-of-type(1) {
-  -webkit-animation-delay: -2s;
-          animation-delay: -2s;
-  -webkit-text-fill-color: #BFA7C5;
-}
-.wave span:nth-of-type(2) {
-  -webkit-animation-delay: -1.9s;
-          animation-delay: -1.9s;
-  -webkit-text-fill-color: #C4A7C5;
-}
-.wave span:nth-of-type(3) {
-  -webkit-animation-delay: -1.8s;
-          animation-delay: -1.8s;
-  -webkit-text-fill-color: #CBA7C5;
-}
-.wave span:nth-of-type(4) {
-  -webkit-animation-delay: -1.7s;
-          animation-delay: -1.7s;
-  -webkit-text-fill-color: #D4A8C5;
-}
-.wave span:nth-of-type(5) {
-  -webkit-animation-delay: -1.6s;
-          animation-delay: -1.6s;
-  -webkit-text-fill-color: #D9A8C5;
-}
-.wave span:nth-of-type(6) {
-  -webkit-animation-delay: -1.5s;
-          animation-delay: -1.5s;
-  -webkit-text-fill-color: #E3A8C6;
-}
-.wave span:nth-of-type(7) {
-  -webkit-animation-delay: -1.4s;
-          animation-delay: -1.4s;
-  -webkit-text-fill-color: #E9A8C6;
-}
-.wave span:nth-of-type(8) {
-  -webkit-animation-delay: -1.3s;
-          animation-delay: -1.3s;
-  -webkit-text-fill-color: #F0A8C6;
-}
-.wave span:nth-of-type(9) {
-  -webkit-animation-delay: -1.2s;
-          animation-delay: -1.2s;
-  -webkit-text-fill-color: #F5A8C6;
-}
-.wave span:nth-of-type(10) {
-  -webkit-animation-delay: -1.1s;
-          animation-delay: -1.1s;
-  -webkit-text-fill-color: #FCA4B4;
-}
-.wave span:nth-of-type(11) {
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
-  -webkit-text-fill-color: #FDAEB2;
-}
-.wave span:nth-of-type(12) {
-  -webkit-animation-delay: -0.9s;
-          animation-delay: -0.9s;
-  -webkit-text-fill-color: #FEB8B0;
-}
-.wave span:nth-of-type(13) {
-  -webkit-animation-delay: -0.8s;
-          animation-delay: -0.8s;
-  -webkit-text-fill-color: #FEC2AE;
-}
-.wave span:nth-of-type(14) {
-  -webkit-animation-delay: -0.7s;
-          animation-delay: -0.7s;
-  -webkit-text-fill-color: #FECBAC;
-}
-.wave span:nth-of-type(15) {
-  -webkit-animation-delay: -0.6s;
-          animation-delay: -0.6s;
-  -webkit-text-fill-color: #FED4AA;
-}
-.wave span:nth-of-type(16) {
-  -webkit-animation-delay: -0.5s;
-          animation-delay: -0.5s;
-  -webkit-text-fill-color: #FEDDA8;
-}
+/* animation delays for each character in the wave */
+.wave span:nth-of-type(1) { animation-delay: -2s; -webkit-animation-delay: -2s; }
+.wave span:nth-of-type(2) { animation-delay: -1.9s; -webkit-animation-delay: -1.9s; }
+.wave span:nth-of-type(3) { animation-delay: -1.8s; -webkit-animation-delay: -1.8s; }
+.wave span:nth-of-type(4) { animation-delay: -1.7s; -webkit-animation-delay: -1.7s; }
+.wave span:nth-of-type(5) { animation-delay: -1.6s; -webkit-animation-delay: -1.6s; }
+.wave span:nth-of-type(6) { animation-delay: -1.5s; -webkit-animation-delay: -1.5s; }
+.wave span:nth-of-type(7) { animation-delay: -1.4s; -webkit-animation-delay: -1.4s; }
+.wave span:nth-of-type(8) { animation-delay: -1.3s; -webkit-animation-delay: -1.3s; }
+.wave span:nth-of-type(9) { animation-delay: -1.2s; -webkit-animation-delay: -1.2s; }
+.wave span:nth-of-type(10) { animation-delay: -1.1s; -webkit-animation-delay: -1.1s; }
+.wave span:nth-of-type(11) { animation-delay: -1s; -webkit-animation-delay: -1s; }
+.wave span:nth-of-type(12) { animation-delay: -0.9s; -webkit-animation-delay: -0.9s; }
+.wave span:nth-of-type(13) { animation-delay: -0.8s; -webkit-animation-delay: -0.8s; }
+.wave span:nth-of-type(14) { animation-delay: -0.7s; -webkit-animation-delay: -0.7s; }
+.wave span:nth-of-type(15) { animation-delay: -0.6s; -webkit-animation-delay: -0.6s; }
+.wave span:nth-of-type(16) { animation-delay: -0.5s; -webkit-animation-delay: -0.5s; }
+.wave span:nth-of-type(17) { animation-delay: -0.4s; -webkit-animation-delay: -0.4s; }
+.wave span:nth-of-type(18) { animation-delay: -0.3s; -webkit-animation-delay: -0.3s; }
+.wave span:nth-of-type(19) { animation-delay: -0.2s; -webkit-animation-delay: -0.2s; }
+.wave span:nth-of-type(20) { animation-delay: -0.1s; -webkit-animation-delay: -0.1s; }
 
 @-webkit-keyframes wave-text {
   00% {
-    transform: translateY(0em);
+    transform: translateY(-0.1em);
   }
   50% {
-    transform: translateY(-0.2em);
+    transform: translateY(0.05em);
   }
   100% {
-    transform: translateY(0em);
+    transform: translateY(-0.1em);
   }
 }
  
 @keyframes wave-text {
   00% {
-    transform: translateY(0em);
+    transform: translateY(-0.1em);
   }
   50% {
-    transform: translateY(-0.2em);
+    transform: translateY(0.05em);
   }
   100% {
-    transform: translateY(0em);
+    transform: translateY(-0.1em);
   }
 }
