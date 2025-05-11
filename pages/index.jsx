@@ -2,7 +2,7 @@ import Url from '../components/Url'
 import { useState, useEffect } from 'react'
 
 const words = {
-  drinks: ['yakult 🍓', 'grape soda 🍇', 'oat matcha lattes 🍵', 'mango milk tea 🥭', 'Cholula hot sauce 🌶️'],
+  drinks: ['yakult 🍓', 'grape soda 🍇', 'oat matcha lattes 🍵', 'golden monkey black tea 🌱', 'Cholula hot sauce 🌶️'],
   hobbies: ['host social deduction board game nights 🎲', 'sing my heart out at karaoke 🎤', 'brew the spiciest soups known to man 🍲', 'talk about the idea of going to the gym 💪']
 }
 
@@ -24,15 +24,15 @@ function Home() {
   }, [])
 
   return (
-    <div className="flex flex-col text-lg select-none">
-      <p>
-        <WaveText text="welcome to my web home" />!
-        {" "}im tiffany. go ahead, grab yourself a drink; my cooler stocks infinite amounts of <a className="link play" onClick={() => setDrinkIdx((prev) => (prev + 1) % words.drinks.length)}>{words.drinks[drinkIdx]}</a>.
-      </p>
+    <div className="flex flex-col text-lg select-none justify-between">
+      <h1 className="text-3xl">
+        <WaveText text="hi im tiffany!" />{" "}go ahead, grab yourself a drink; my cooler stocks unlimited amounts of <a className="link play" onClick={() => setDrinkIdx((prev) => (prev + 1) % words.drinks.length)}>{words.drinks[drinkIdx]}</a>.
+      </h1>
       
       <br />
+      <p>. ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁.</p>
       <p>im based in sunny san francisco, where i:</p>
-      <p>¹work on <Url href="https://mj-storytelling.github.io/">ai-supported creative tools</Url></p>
+      <p>¹work on <Url href="https://mj-storytelling.github.io/">ai-supported storytelling tools</Url></p>
       <p>²make experimental <Url href="/projects">indie games</Url></p>
       <p>³<a className="link play" onClick={() => setHobbyIdx((prev) => (prev + 1) % words.hobbies.length)}>{words.hobbies[hobbyIdx]}</a></p>
 
@@ -47,7 +47,6 @@ function Home() {
           <Url href="https://scholar.google.com/citations?hl=en&user=p8hhfi4AAAAJ">gscholar</Url>
         </span>
         {"}"}
-        {" "}. ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁.
       </p>
     </div>
   )

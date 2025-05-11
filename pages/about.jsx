@@ -5,7 +5,13 @@ function About() {
   return (
     <div className="flex flex-col gap-2">
       <div>
-        <Image src='/images/me.png'  width={300} height={195} className="mb-2" sharp />
+        <Image 
+          src='/images/me.png' 
+          width={300} 
+          height={195} 
+          className="mb-2" 
+          alt="profile picture" 
+        />
         <p>📍 San Francisco, CA</p>
       </div>
       <br />

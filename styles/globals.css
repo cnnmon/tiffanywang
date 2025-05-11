@@ -1,17 +1,7 @@
-/* ibm plex mono font */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
-
-/* augillion font */
+/* mermaid font */
 @font-face {
-  font-family: 'Augillion';
-  src: url('../public/Augillion.otf');
-  font-weight: normal;
-}
-
-/* bitmap font */
-@font-face {
-  font-family: 'bitmap';
-  src: url('../public/bitmap.otf');
+  font-family: 'mermaid';
+  src: url('../public/Mermaid.ttf');
   font-weight: normal;
 }
 
@@ -25,7 +15,13 @@
 }
 
 body {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'mermaid', monospace;
+  color: #076e9d;
+}
+
+.sky {
+  background-size: 500px 300px;
+  background-image: url('../public/sky.jpg'), url('../public/sky.jpg');
 }
 
 .card {
@@ -38,7 +34,7 @@ body {
 }
 
 .body {
-  padding-bottom: 20vh;
+  padding-bottom: 15vh;
 }
 
 .link {
@@ -54,7 +50,7 @@ body {
 .play {
   text-decoration: none;
   font-style: italic;
-  color: #000000;
+  color: #076e9d;
 }
 
 .play:hover {
@@ -86,9 +82,6 @@ body {
 .wave span:nth-of-type(15) { animation-delay: -0.6s; -webkit-animation-delay: -0.6s; }
 .wave span:nth-of-type(16) { animation-delay: -0.5s; -webkit-animation-delay: -0.5s; }
 .wave span:nth-of-type(17) { animation-delay: -0.4s; -webkit-animation-delay: -0.4s; }
-.wave span:nth-of-type(18) { animation-delay: -0.3s; -webkit-animation-delay: -0.3s; }
-.wave span:nth-of-type(19) { animation-delay: -0.2s; -webkit-animation-delay: -0.2s; }
-.wave span:nth-of-type(20) { animation-delay: -0.1s; -webkit-animation-delay: -0.1s; }
 
 @-webkit-keyframes wave-text {
   00% {
