@@ -56,29 +56,9 @@ const LazyImage = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="absolute inset-0 bg-gradient-to-br from-orange-100 via-orange-200 to-orange-100"
+          className="absolute inset-0 bg-gray-300"
           style={{ width, height }}
-        >
-          <motion.div
-            animate={{ 
-              backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-            style={{
-              backgroundSize: '200% 100%'
-            }}
-          />
-          {isGif && (
-            <div className="absolute inset-0 flex items-center justify-center text-gray-600 text-sm font-mono">
-              ◐ loading gif...
-            </div>
-          )}
-        </motion.div>
+        />
       )}
 
       {/* Actual image */}
