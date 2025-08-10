@@ -57,15 +57,13 @@ function Home() {
         <br /><br />
         I'm a programmer, researcher, artist, and game-maker. I care about socially impactful tech, experimental new media, creative tools, and <PlayLink type="hobbies" />.
         <br /><br />
-        Reach out anytime at <b>tiffanywang at berkeley dot edu</b>.
-        <br /><br />
         <span className="flex flex-col sm:flex-row sm:items-center">
-          Else, find me at:
+          Find me at:
           <span className="flex flex-wrap items-center sm:ml-2 gap-2">
-            <Url href="https://www.linkedin.com/in/wtiffany/">linkedin</Url>
             <Url href="https://github.com/cnnmon">github</Url>
             <Url href="https://cnnmon.itch.io/">itch.io</Url>
             <Url href="https://twitter.com/cnnmonie">twitter</Url>
+            <Url href="https://www.linkedin.com/in/wtiffany/">linkedin</Url>
             <Url href="https://scholar.google.com/citations?hl=en&user=p8hhfi4AAAAJ">gscholar</Url>
           </span>
         </span>

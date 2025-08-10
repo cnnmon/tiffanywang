@@ -1,8 +1,8 @@
 import projectSections from '../utils/projects.json'
-import Image from 'next/image'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Url from '../components/Url'
+import LazyImage from '../components/LazyImage'
 
 function Project({ item }) {
   const { name, type, description, date, link, image } = item;
@@ -32,12 +32,11 @@ function Project({ item }) {
           onClick={!link ? handleNoLinkClick : undefined}
           target="_blank"
         >
-          <Image
+          <LazyImage
             src={image}
             alt={name}
             width={800}
             height={500}
-            sharp
             className="card mb-5 object-cover"
           />
         </motion.a>

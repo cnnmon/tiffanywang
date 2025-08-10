@@ -1,7 +1,7 @@
 import artSections from '../utils/art.json'
-import Image from 'next/image'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import LazyImage from '../components/LazyImage'
 
 function Section({ section }) {
   const { list } = section;
@@ -39,7 +39,7 @@ function Section({ section }) {
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <Image
+                  <LazyImage
                     src={image}
                     alt={art.title}
                     height={500}

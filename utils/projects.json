@@ -8,7 +8,7 @@
         "description": "a tamagotchi that grows and learns from moral dilemmas.",
         "date": "dec 2024",
         "image": "/images/principal.gif",
-        "link": "https://princi-pal.vercel.app/"
+        "link": "https://cnnmon.itch.io/principal"
       },
       {
         "name": "botsbotsbots",
@@ -16,7 +16,7 @@
         "description": "a reverse turing test set in a post-apocalyptic chatroom. 4 bots, 1 human (you). blend in to survive.",
         "date": "aug 2024",
         "image": "/images/botsbotsbots.gif",
-        "link": "https://botsbotsbots.vercel.app/"
+        "link": "https://cnnmon.itch.io/botsbotsbots"
       }
     ]
   },
@@ -90,6 +90,14 @@
         "date": "mar 2020",
         "image": "/images/coffeelings.gif",
         "link": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/"
+      },
+      {
+        "name": "cardio casino",
+        "type": "game",
+        "description": "a slot machine game tied to your childhood.",
+        "date": "oct 2019",
+        "image": "/images/cardio.gif",
+        "link": "https://cnnmon.itch.io/cardiocasino"
       },
       {
         "name": "ashes to ash",

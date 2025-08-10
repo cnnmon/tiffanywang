@@ -3,8 +3,18 @@
     "title": "2d",
     "list": [
       {
+        "title": "touching grass",
+        "images": ["/images/grass.png"],
+        "description": "me in dolores park"
+      },
+      {
+        "title": "beachfront",
+        "images": ["/images/sea.png"],
+        "description": "sparkly"
+      },
+      {
         "title": "me on a bike",
-        "images": ["/images/bike.png"],
+        "images": ["/images/bike.png", "/images/medripped.png"],
         "description": "i like baywheels"
       },
       {
@@ -44,7 +54,11 @@
         "title": "ap art portfolio",
         "images": [
           "/images/reflection.jpg",
-          "/images/why.jpg"
+          "/images/why.jpg",
+          "/images/model.jpg",
+          "/images/train.jpg",
+          "/images/stars.jpg",
+          "/images/outside.jpg"
         ],
         "description": "my theme was introspection"
       }
@@ -82,6 +96,43 @@
         "title": "claw machine",
         "images": ["/images/clawmachine.gif"],
         "description": "claw breaks free"
+      }
+    ]
+  },
+  {
+    "title": "game",
+    "list": [
+      {
+        "title": "botsbotsbots early sketch",
+        "images": ["/images/botssketch.png"],
+        "description": "what a reverse turing test game might look like"
+      },
+      {
+        "title": "university animation",
+        "images": ["/images/walk.gif"],
+        "description": "animation cycles of a college kid"
+      },
+      {
+        "title": "bobagame assets",
+        "images": [
+          "/images/bobasketch1.png",
+          "/images/bobasketch2.png"
+        ],
+        "description": "progress art for boba game"
+      },
+      {
+        "title": "coding with turtle game",
+        "images": [
+          "/images/turtle.png"
+        ],
+        "description": "a coding game that never got made..."
+      },
+      {
+        "title": "a cat download wizard",
+        "images": [
+          "/images/downloadwizard.gif"
+        ],
+        "description": "another game that never got made..."
       }
     ]
   }

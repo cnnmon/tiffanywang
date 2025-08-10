@@ -1,11 +1,11 @@
-import Image from 'next/image';
 import Url from '../components/Url';
+import LazyImage from '../components/LazyImage';
 
 function About() {
   return (
     <div className="flex flex-col gap-2">
       <div>
-        <Image src='/images/me.png'  width={300} height={195} className="mb-2" sharp />
+        <LazyImage src='/images/me.png'  width={300} height={195} className="mb-2" priority />
         <p>📍 San Francisco, CA</p>
       </div>
       <br />
@@ -55,7 +55,7 @@ function About() {
         <br />
         <b>✧･ﾟ: *✧･ﾟ:*</b>
         <br /><br />
-        Want to reach out? Feel free to email me at <b>tiffanywang at berkeley dot edu</b> 📬. 
+        Want to reach out? Feel free to email me at <b>wangttiffany at gmail dot com</b> 📬. 
       </p>
     </div>
   )
