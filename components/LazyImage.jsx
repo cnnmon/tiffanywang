@@ -1,55 +1,46 @@
-import { useState, useRef, useEffect } from 'react'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
-const LazyImage = ({ 
-  src, 
-  alt, 
-  width, 
-  height, 
-  className = '', 
-  priority = false,
-  ...props 
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isInView, setIsInView] = useState(false)
-  const [hasError, setHasError] = useState(false)
-  const imgRef = useRef(null)
+const LazyImage = ({ src, alt, width, height, className = '', priority = false, ...props }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const imgRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true)
-          observer.disconnect()
+          setIsInView(true);
+          observer.disconnect();
         }
       },
       {
         threshold: 0.1,
-        rootMargin: '50px'
-      }
-    )
+        rootMargin: '50px',
+      },
+    );
 
     if (imgRef.current) {
-      observer.observe(imgRef.current)
+      observer.observe(imgRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   const handleLoad = () => {
-    setIsLoaded(true)
-  }
+    setIsLoaded(true);
+  };
 
   const handleError = () => {
-    setHasError(true)
-    setIsLoaded(true)
-  }
-
-  const isGif = src && src.toLowerCase().includes('.gif')
+    setHasError(true);
+    setIsLoaded(true);
+  };
 
   return (
-    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
+    <div ref={imgRef} className={twMerge(`relative overflow-hidden w-full`, className)}>
       {/* Loading skeleton/placeholder */}
       {!isLoaded && isInView && (
         <motion.div
@@ -64,15 +55,15 @@ const LazyImage = ({
       {/* Actual image */}
       {(isInView || priority) && (
         <motion.div
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ 
+          initial={{ opacity: 0 }}
+          animate={{
             opacity: isLoaded ? 1 : 0,
-            scale: isLoaded ? 1 : 1.05
           }}
-          transition={{ 
+          transition={{
             duration: 0.6,
-            ease: "easeOut"
+            ease: 'easeOut',
           }}
+          className="w-full"
         >
           <Image
             src={src}
@@ -82,7 +73,7 @@ const LazyImage = ({
             onLoad={handleLoad}
             onError={handleError}
             priority={priority}
-            className={hasError ? 'opacity-50' : ''}
+            className={twMerge('w-full', hasError && 'opacity-50')}
             {...props}
           />
         </motion.div>
@@ -99,7 +90,7 @@ const LazyImage = ({
         </motion.div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default LazyImage
+export default LazyImage;

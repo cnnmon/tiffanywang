@@ -70,11 +70,7 @@ function Art() {
           <button
             key={type}
             onClick={() => setSelectedType(type)}
-            className={`${
-              selectedType === type 
-                ? 'bg-black text-white' 
-                : 'bg-orange-200 hover:bg-gray-300'
-            }`}
+            data-active={selectedType === type}
           >
             [{type}]
           </button>
