@@ -1,60 +1,107 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { shopItems } from '../utils/constants';
+import { twMerge } from 'tailwind-merge';
 import { getDateHourSeed, shuffleWithSeed, storageUtils } from '../utils/shop';
+import shopItems from '../utils/shop.json';
 
-function Shop() {
+function SelectedItemModal({ selectedItem, setSelectedItem, money, isPurchased, handlePurchase }) {
+  if (!selectedItem) {
+    return null;
+  }
+
+  const purchased = isPurchased(selectedItem);
+  return (
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[1]"
+      onClick={() => setSelectedItem(null)}
+    >
+      <div
+        className="bg-white rounded-lg max-w-2xl w-full mx-4 space-y-4 h-[80%] relative overflow-y-hidden"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="absolute w-full bg-white p-6 rounded-t-lg flex justify-between items-start">
+          <h2 className="text-xl font-bold">{selectedItem.name}</h2>
+          <button
+            onClick={() => setSelectedItem(null)}
+            className="text-gray-500 hover:text-gray-700"
+          >
+            ✕
+          </button>
+        </div>
+        <div className="overflow-y-scroll flex flex-col h-full gap-4 p-6 pt-20 pb-40">
+          <Image
+            src={selectedItem.imageUrl}
+            alt={selectedItem.name}
+            width={400}
+            height={400}
+            className="border w-fit object-cover h-full max-h-[70%]"
+          />
+          <div>
+            <p className="text-gray-700">{selectedItem.description}</p>
+            <div className="space-y-2">
+              <div className="flex justify-between">
+                <span className="font-semibold">Rarity:</span>
+                <span className="capitalize">{selectedItem.stats.rarity}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="font-semibold">Power:</span>
+                <span>{selectedItem.stats.power}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="font-semibold">Speed:</span>
+                <span>{selectedItem.stats.speed}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="font-semibold">Price:</span>
+                <span>{selectedItem.price} fishcoin</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute bottom-0 bg-white p-6 w-full">
+          <button
+            onClick={() => {
+              handlePurchase(selectedItem);
+              setSelectedItem(null);
+            }}
+            disabled={money < selectedItem.price || purchased}
+            className={twMerge(
+              'w-full border-2 py-2 rounded-full transition-colors',
+              purchased
+                ? 'bg-gray-300 cursor-not-allowed'
+                : money >= selectedItem.price
+                  ? 'hover:bg-gray-100'
+                  : 'bg-gray-300 cursor-not-allowed',
+            )}
+          >
+            {purchased ? 'sold' : money >= selectedItem.price ? 'buy' : 'not enough fishcoin'}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function Shop() {
   const [availableItems, setAvailableItems] = useState([]);
-  const [nextDropIn, setNextDropIn] = useState(3600);
   const [money, setMoney] = useState(500);
   const [purchasedIds, setPurchasedIds] = useState([]);
-
-  const getRandomItems = () => {
-    const seed = getDateHourSeed();
-    const shuffled = shuffleWithSeed(shopItems, seed);
-    return shuffled.slice(0, 5);
-  };
-
-  const getSecondsUntilNextHour = () => {
-    const now = new Date();
-    const minutes = now.getMinutes();
-    const seconds = now.getSeconds();
-    return (60 - minutes) * 60 - seconds;
-  };
-
-  const isPurchased = (item) => {
-    return purchasedIds.includes(item.id);
-  };
+  const [selectedItem, setSelectedItem] = useState(null);
 
   useEffect(() => {
     setMoney(storageUtils.getMoney());
     setPurchasedIds(storageUtils.getPurchasedIds());
     setAvailableItems(getRandomItems());
-    setNextDropIn(getSecondsUntilNextHour());
-
-    const countdownInterval = setInterval(() => {
-      setNextDropIn((prev) => {
-        if (prev <= 1) {
-          setAvailableItems(getRandomItems());
-          return getSecondsUntilNextHour();
-        }
-        return prev - 1;
-      });
-    }, 1000);
-
-    return () => {
-      clearInterval(countdownInterval);
-    };
   }, []);
 
-  const handleResetGame = () => {
-    if (confirm('Are you sure you want to reset? This will clear all your money and items!')) {
-      storageUtils.clearAll();
-      setMoney(500);
-      setPurchasedIds([]);
-      setAvailableItems(getRandomItems());
-      setNextDropIn(getSecondsUntilNextHour());
-    }
+  const getRandomItems = () => {
+    const seed = getDateHourSeed();
+    const shuffled = shuffleWithSeed(shopItems, seed);
+    return shuffled;
+  };
+
+  const isPurchased = (item) => {
+    return purchasedIds.includes(item.id);
   };
 
   const handlePurchase = (item) => {
@@ -64,13 +111,12 @@ function Shop() {
       setPurchasedIds((prev) => [...prev, item.id]);
       storageUtils.setMoney(newMoney);
       storageUtils.setPurchasedIds([...purchasedIds, item.id]);
-    }
-  };
 
-  const formatTime = (seconds) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${mins}:${secs.toString().padStart(2, '0')}`;
+      setPurchaseAnimation(item);
+      setTimeout(() => {
+        setPurchaseAnimation(null);
+      }, 1500);
+    }
   };
 
   const inventoryItems = purchasedIds
@@ -78,72 +124,69 @@ function Shop() {
     .filter((item) => item !== undefined);
 
   return (
-    <div className="max-w-5xl mx-auto p-6 bg-white">
-      <div className="text-center mb-6 pb-4 border-b">
-        <p className="font-bold mb-2">You have: {money} NP</p>
-        <p className="text-gray-600">
-          New items drop every hour • Next drop in: {formatTime(nextDropIn)}
-        </p>
-        <button onClick={handleResetGame} className="text-gray-400 underline mt-1">
-          Reset
-        </button>
-      </div>
+    <>
+      <SelectedItemModal
+        selectedItem={selectedItem}
+        setSelectedItem={setSelectedItem}
+        money={money}
+        isPurchased={isPurchased}
+        handlePurchase={handlePurchase}
+      />
 
-      {inventoryItems.length > 0 && (
-        <div className="mb-8">
-          <h2 className="font-bold mb-4 pb-2 border-b">Your Inventory:</h2>
-          <div className="grid grid-cols-3 gap-4">
-            {inventoryItems.map((item) => (
-              <div key={item.id} className="text-center">
+      <div className="max-w-5xl mx-auto space-y-4">
+        <div className="text-center">
+          <p>
+            you have <i>{money} fishcoin</i>. spend wisely.
+          </p>
+        </div>
+
+        {inventoryItems.length > 0 && (
+          <div>
+            <div className="flex overflow-x-auto gap-2">
+              {inventoryItems.map((item) => (
+                <div
+                  key={item.id}
+                  onClick={() => setSelectedItem(item)}
+                  className="text-center cursor-pointer hover:opacity-80 transition-opacity"
+                >
+                  <Image
+                    src={item.imageUrl}
+                    alt={item.name}
+                    width={150}
+                    height={150}
+                    className="border"
+                  />
+                  <p className="text-sm mt-2">{item.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="grid grid-cols-7 gap-2">
+          {availableItems.map((item, index) => {
+            const purchased = isPurchased(item);
+            return (
+              <div
+                key={index}
+                onClick={() => setSelectedItem(item)}
+                className={twMerge(
+                  'relative w-20 h-20 cursor-pointer hover:opacity-80',
+                  purchased && 'grayscale',
+                )}
+              >
                 <Image
                   src={item.imageUrl}
                   alt={item.name}
-                  width={150}
-                  height={150}
-                  className="border"
+                  width={200}
+                  height={200}
+                  className="border w-full h-full object-cover"
                 />
-                <p className="text-sm mt-2">{item.name}</p>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
-      )}
-
-      <h2 className="font-bold mb-4 pb-2 border-b">Shop Front:</h2>
-      <div className="grid grid-cols-4 gap-4">
-        {availableItems.map((item, index) => {
-          const purchased = isPurchased(item);
-          return (
-            <div key={index} className="text-center">
-              <Image
-                src={item.imageUrl}
-                alt={item.name}
-                width={200}
-                height={200}
-                className="border"
-              />
-              <p className="font-bold text-sm mt-2">{item.name}</p>
-              <p className="text-xs">1 in stock</p>
-              <p className="text-sm mt-1">Cost: {item.price} NP</p>
-              <button
-                onClick={() => handlePurchase(item)}
-                disabled={money < item.price || purchased}
-                className={`mt-2 px-3 py-1 text-sm border ${
-                  purchased
-                    ? 'opacity-50 cursor-not-allowed'
-                    : money >= item.price
-                      ? 'hover:bg-gray-100'
-                      : 'opacity-50 cursor-not-allowed'
-                }`}
-              >
-                {purchased ? 'Sold' : 'Buy'}
-              </button>
-            </div>
-          );
-        })}
       </div>
-    </div>
+    </>
   );
 }
-
-export default Shop;

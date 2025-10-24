@@ -26,8 +26,6 @@ function About() {
         <p>📍 San Francisco, CA</p>
       </div>
       <MarkdownFormatter file="/text/about.md" />
-      <MarkdownFormatter file="/text/previously.md" />
-      <MarkdownFormatter file="/text/contact.md" />
 
       <div className="flex flex-col gap-2">
         <p>

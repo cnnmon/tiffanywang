@@ -42,10 +42,7 @@ h2 {
 }
 
 button {
-  background-color: transparent;
-  border: none;
   cursor: pointer;
-  font-family: 'reformat';
 }
 
 button[data-active='true'] {

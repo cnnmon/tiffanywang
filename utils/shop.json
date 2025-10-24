@@ -1,0 +1,386 @@
+[
+  {
+    "id": "ashestoash",
+    "name": "Ashes to Ash",
+    "price": 45,
+    "imageUrl": "/images/ashestoash.gif",
+    "description": "Phoenix rising from digital flames",
+    "stats": { "rarity": "uncommon", "power": 72, "speed": 88 }
+  },
+  {
+    "id": "bike",
+    "name": "Cyber Bike",
+    "price": 120,
+    "imageUrl": "/images/bike.png",
+    "description": "Neon two-wheeler for the modern nomad",
+    "stats": { "rarity": "rare", "power": 65, "speed": 95 }
+  },
+  {
+    "id": "boba",
+    "name": "Boba Dreams",
+    "price": 85,
+    "imageUrl": "/images/boba.gif",
+    "description": "Animated bubble tea paradise",
+    "stats": { "rarity": "rare", "power": 78, "speed": 60 }
+  },
+  {
+    "id": "bobasketch1",
+    "name": "Boba Sketch I",
+    "price": 35,
+    "imageUrl": "/images/bobasketch1.png",
+    "description": "First draft of bubble tea bliss",
+    "stats": { "rarity": "common", "power": 45, "speed": 50 }
+  },
+  {
+    "id": "bobasketch2",
+    "name": "Boba Sketch II",
+    "price": 40,
+    "imageUrl": "/images/bobasketch2.png",
+    "description": "Evolution of the perfect boba",
+    "stats": { "rarity": "common", "power": 48, "speed": 52 }
+  },
+  {
+    "id": "botsbotsbots",
+    "name": "Bot Army",
+    "price": 150,
+    "imageUrl": "/images/botsbotsbots.gif",
+    "description": "An unstoppable legion of automatons",
+    "stats": { "rarity": "epic", "power": 92, "speed": 75 }
+  },
+  {
+    "id": "botssketch",
+    "name": "Bot Blueprint",
+    "price": 55,
+    "imageUrl": "/images/botssketch.png",
+    "description": "Original design schematics",
+    "stats": { "rarity": "uncommon", "power": 58, "speed": 62 }
+  },
+  {
+    "id": "cardio",
+    "name": "Cardio Rush",
+    "price": 65,
+    "imageUrl": "/images/cardio.gif",
+    "description": "Heart-pumping exercise energy",
+    "stats": { "rarity": "uncommon", "power": 70, "speed": 85 }
+  },
+  {
+    "id": "cardiocasino",
+    "name": "Cardio Casino",
+    "price": 180,
+    "imageUrl": "/images/cardiocasino.gif",
+    "description": "Where fitness meets fortune",
+    "stats": { "rarity": "legendary", "power": 88, "speed": 82 }
+  },
+  {
+    "id": "cat",
+    "name": "Pixel Cat",
+    "price": 75,
+    "imageUrl": "/images/cat.gif",
+    "description": "Adorable feline in motion",
+    "stats": { "rarity": "rare", "power": 55, "speed": 90 }
+  },
+  {
+    "id": "catcafe",
+    "name": "Cat Cafe",
+    "price": 95,
+    "imageUrl": "/images/catcafe.gif",
+    "description": "Cozy corner with whiskers",
+    "stats": { "rarity": "rare", "power": 68, "speed": 55 }
+  },
+  {
+    "id": "clawmachine",
+    "name": "Claw Machine",
+    "price": 70,
+    "imageUrl": "/images/clawmachine.gif",
+    "description": "Try your luck at the arcade",
+    "stats": { "rarity": "uncommon", "power": 62, "speed": 48 }
+  },
+  {
+    "id": "coffeelings",
+    "name": "Coffeelings",
+    "price": 110,
+    "imageUrl": "/images/coffeelings.gif",
+    "description": "Emotional coffee beans with personality",
+    "stats": { "rarity": "epic", "power": 80, "speed": 65 }
+  },
+  {
+    "id": "dango",
+    "name": "Dango Delight",
+    "price": 50,
+    "imageUrl": "/images/dango.gif",
+    "description": "Sweet Japanese treats on a stick",
+    "stats": { "rarity": "uncommon", "power": 52, "speed": 58 }
+  },
+  {
+    "id": "digitalupload",
+    "name": "Digital Upload",
+    "price": 135,
+    "imageUrl": "/images/digitalupload.gif",
+    "description": "Transcending physical boundaries",
+    "stats": { "rarity": "epic", "power": 95, "speed": 78 }
+  },
+  {
+    "id": "downloadwizard",
+    "name": "Download Wizard",
+    "price": 200,
+    "imageUrl": "/images/downloadwizard.gif",
+    "description": "Master of data transmission",
+    "stats": { "rarity": "legendary", "power": 98, "speed": 88 }
+  },
+  {
+    "id": "dripordrown",
+    "name": "Drip or Drown",
+    "price": 125,
+    "imageUrl": "/images/dripordrown.gif",
+    "description": "Fashion that makes waves",
+    "stats": { "rarity": "epic", "power": 85, "speed": 72 }
+  },
+  {
+    "id": "ezcv",
+    "name": "EZ CV",
+    "price": 60,
+    "imageUrl": "/images/ezcv.gif",
+    "description": "Resume building made simple",
+    "stats": { "rarity": "uncommon", "power": 68, "speed": 70 }
+  },
+  {
+    "id": "frog",
+    "name": "Contemplative Frog",
+    "price": 30,
+    "imageUrl": "/images/frog.jpg",
+    "description": "Wise amphibian pondering life",
+    "stats": { "rarity": "common", "power": 42, "speed": 35 }
+  },
+  {
+    "id": "goodmorning",
+    "name": "Good Morning",
+    "price": 55,
+    "imageUrl": "/images/goodmorning.gif",
+    "description": "Start your day with sunshine",
+    "stats": { "rarity": "uncommon", "power": 60, "speed": 65 }
+  },
+  {
+    "id": "grass",
+    "name": "Touch Grass",
+    "price": 25,
+    "imageUrl": "/images/grass.png",
+    "description": "Remember to go outside",
+    "stats": { "rarity": "common", "power": 38, "speed": 40 }
+  },
+  {
+    "id": "irena",
+    "name": "Irena Portrait",
+    "price": 90,
+    "imageUrl": "/images/irena.png",
+    "description": "Elegant character study",
+    "stats": { "rarity": "rare", "power": 75, "speed": 58 }
+  },
+  {
+    "id": "kittyclinic",
+    "name": "Kitty Clinic",
+    "price": 105,
+    "imageUrl": "/images/kittyclinic.png",
+    "description": "Healthcare for your favorite felines",
+    "stats": { "rarity": "rare", "power": 72, "speed": 60 }
+  },
+  {
+    "id": "meditation",
+    "name": "Meditation Zone",
+    "price": 80,
+    "imageUrl": "/images/meditation.png",
+    "description": "Find your inner peace",
+    "stats": { "rarity": "rare", "power": 70, "speed": 45 }
+  },
+  {
+    "id": "medripped",
+    "name": "Med Ripped",
+    "price": 140,
+    "imageUrl": "/images/medripped.png",
+    "description": "Academic gains and muscle gains",
+    "stats": { "rarity": "epic", "power": 90, "speed": 75 }
+  },
+  {
+    "id": "model",
+    "name": "Fashion Model",
+    "price": 85,
+    "imageUrl": "/images/model.jpg",
+    "description": "Runway-ready elegance",
+    "stats": { "rarity": "rare", "power": 78, "speed": 68 }
+  },
+  {
+    "id": "mysingingfriends",
+    "name": "My Singing Friends",
+    "price": 160,
+    "imageUrl": "/images/mysingingfriends.gif",
+    "description": "Musical companions in harmony",
+    "stats": { "rarity": "epic", "power": 88, "speed": 80 }
+  },
+  {
+    "id": "online",
+    "name": "Always Online",
+    "price": 95,
+    "imageUrl": "/images/online.png",
+    "description": "Connected 24/7",
+    "stats": { "rarity": "rare", "power": 82, "speed": 90 }
+  },
+  {
+    "id": "outside",
+    "name": "Great Outdoors",
+    "price": 70,
+    "imageUrl": "/images/outside.jpg",
+    "description": "Nature calling your name",
+    "stats": { "rarity": "uncommon", "power": 65, "speed": 55 }
+  },
+  {
+    "id": "peppermint",
+    "name": "Peppermint Swirl",
+    "price": 60,
+    "imageUrl": "/images/peppermint.gif",
+    "description": "Refreshing minty animation",
+    "stats": { "rarity": "uncommon", "power": 58, "speed": 62 }
+  },
+  {
+    "id": "principal",
+    "name": "Principal Office",
+    "price": 220,
+    "imageUrl": "/images/principal.gif",
+    "description": "Where important decisions are made",
+    "stats": { "rarity": "legendary", "power": 95, "speed": 70 }
+  },
+  {
+    "id": "reflection",
+    "name": "Deep Reflection",
+    "price": 100,
+    "imageUrl": "/images/reflection.jpg",
+    "description": "Mirror of the soul",
+    "stats": { "rarity": "rare", "power": 80, "speed": 50 }
+  },
+  {
+    "id": "roadtrip",
+    "name": "Road Trip",
+    "price": 145,
+    "imageUrl": "/images/roadtrip.png",
+    "description": "Journey into the unknown",
+    "stats": { "rarity": "epic", "power": 86, "speed": 92 }
+  },
+  {
+    "id": "sea",
+    "name": "Endless Sea",
+    "price": 110,
+    "imageUrl": "/images/sea.png",
+    "description": "Waves of tranquility",
+    "stats": { "rarity": "epic", "power": 75, "speed": 60 }
+  },
+  {
+    "id": "sliceofscythe",
+    "name": "Slice of Scythe",
+    "price": 175,
+    "imageUrl": "/images/sliceofscythe.gif",
+    "description": "Sharp precision in every frame",
+    "stats": { "rarity": "legendary", "power": 94, "speed": 88 }
+  },
+  {
+    "id": "spacebar",
+    "name": "Spacebar Hero",
+    "price": 65,
+    "imageUrl": "/images/spacebar.gif",
+    "description": "Keyboard warrior supreme",
+    "stats": { "rarity": "uncommon", "power": 68, "speed": 85 }
+  },
+  {
+    "id": "spacebarPNG",
+    "name": "Spacebar Still",
+    "price": 45,
+    "imageUrl": "/images/spacebar.PNG",
+    "description": "Captured moment of key glory",
+    "stats": { "rarity": "common", "power": 55, "speed": 60 }
+  },
+  {
+    "id": "stars",
+    "name": "Stargazing",
+    "price": 75,
+    "imageUrl": "/images/stars.jpg",
+    "description": "Cosmic wonder above",
+    "stats": { "rarity": "rare", "power": 72, "speed": 58 }
+  },
+  {
+    "id": "summer",
+    "name": "Summer Vibes",
+    "price": 90,
+    "imageUrl": "/images/summer.png",
+    "description": "Endless sunny days",
+    "stats": { "rarity": "rare", "power": 76, "speed": 70 }
+  },
+  {
+    "id": "tensortrust",
+    "name": "Tensor Trust",
+    "price": 155,
+    "imageUrl": "/images/tensortrust.gif",
+    "description": "AI security in action",
+    "stats": { "rarity": "epic", "power": 92, "speed": 82 }
+  },
+  {
+    "id": "train",
+    "name": "Train Journey",
+    "price": 80,
+    "imageUrl": "/images/train.jpg",
+    "description": "Rails to anywhere",
+    "stats": { "rarity": "rare", "power": 70, "speed": 78 }
+  },
+  {
+    "id": "turtle",
+    "name": "Wise Turtle",
+    "price": 55,
+    "imageUrl": "/images/turtle.png",
+    "description": "Slow and steady wins",
+    "stats": { "rarity": "uncommon", "power": 62, "speed": 30 }
+  },
+  {
+    "id": "twirl",
+    "name": "Twirl Dance",
+    "price": 70,
+    "imageUrl": "/images/twirl.gif",
+    "description": "Graceful spinning motion",
+    "stats": { "rarity": "uncommon", "power": 65, "speed": 75 }
+  },
+  {
+    "id": "university",
+    "name": "University Life",
+    "price": 130,
+    "imageUrl": "/images/university.gif",
+    "description": "Campus adventures await",
+    "stats": { "rarity": "epic", "power": 85, "speed": 68 }
+  },
+  {
+    "id": "walk",
+    "name": "Evening Walk",
+    "price": 50,
+    "imageUrl": "/images/walk.gif",
+    "description": "Peaceful stroll animation",
+    "stats": { "rarity": "uncommon", "power": 58, "speed": 65 }
+  },
+  {
+    "id": "why",
+    "name": "Why Though",
+    "price": 120,
+    "imageUrl": "/images/why.jpg",
+    "description": "Questioning everything",
+    "stats": { "rarity": "epic", "power": 88, "speed": 55 }
+  },
+  {
+    "id": "yakult",
+    "name": "Yakult Party",
+    "price": 95,
+    "imageUrl": "/images/yakult.gif",
+    "description": "Probiotic celebration",
+    "stats": { "rarity": "rare", "power": 80, "speed": 72 }
+  },
+  {
+    "id": "zora",
+    "name": "Zora Collection",
+    "price": 165,
+    "imageUrl": "/images/zora.png",
+    "description": "Digital art marketplace treasure",
+    "stats": { "rarity": "epic", "power": 90, "speed": 78 }
+  }
+]

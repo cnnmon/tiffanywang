@@ -106,7 +106,11 @@ function MarkdownFormatter({ file }) {
 
     const flushSection = () => {
       if (currentSection.length > 0) {
-        elements.push(<div key={`section-${currentSectionKey}`}>{currentSection}</div>);
+        elements.push(
+          <div key={`section-${currentSectionKey}`} className="space-y-4">
+            {currentSection}
+          </div>,
+        );
         currentSection = [];
         currentSectionKey = null;
       }
