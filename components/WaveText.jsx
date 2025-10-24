@@ -32,19 +32,20 @@ function lerpColor(colors, t) {
   return rgbToHex(r, g, b);
 }
 
-export default function WaveText({ text }) {
+export default function WaveText({ text, className, gradient = 'true' }) {
   const characters = text.split('').map((char) => (char === ' ' ? '\u00A0' : char));
   return (
-    <span className="font-bold cursor-grab select-none">
+    <span className="cursor-grab select-none">
       <span className="wave">
         {characters.map((letter, index) => {
           const t = characters.length > 1 ? index / (characters.length - 1) : 0;
           return (
             <span
               key={index}
+              className={className}
               style={{
                 animationDelay: `${-2 + index * 0.1}s`,
-                WebkitTextFillColor: lerpColor(waveColors, t),
+                WebkitTextFillColor: gradient ? lerpColor(waveColors, t) : '#6a3b7b',
               }}
             >
               {letter}

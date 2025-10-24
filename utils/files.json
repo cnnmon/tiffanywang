@@ -1,246 +1,189 @@
 [
   {
+    "id": "october",
+    "name": "october",
+    "date": "oct 24 2025",
+    "blog": "/text/october/index.md"
+  },
+  {
     "id": "grass",
     "name": "touching grass",
-    "price": 25,
     "imageUrl": "/images/grass.png",
-    "description": "remember to go outside",
-    "stats": { "rarity": "common", "power": 38, "speed": 40 }
+    "description": "remember to go outside"
   },
   {
     "id": "sea",
     "name": "Endless Sea",
-    "price": 110,
     "imageUrl": "/images/sea.png",
-    "description": "Waves of tranquility",
-    "stats": { "rarity": "epic", "power": 75, "speed": 60 }
+    "description": "Waves of tranquility"
   },
   {
     "id": "bike",
     "name": "me on baywheels",
-    "price": 120,
     "imageUrl": "/images/bike.png",
-    "description": "i love baywheels",
-    "stats": { "rarity": "rare", "power": 65, "speed": 95 }
+    "description": "i love baywheels"
   },
   {
     "id": "fit",
     "name": "fit check",
-    "price": 140,
     "imageUrl": "/images/medripped.png",
-    "description": "the state of things",
-    "stats": { "rarity": "epic", "power": 90, "speed": 75 }
+    "description": "the state of things"
+  },
+  {
+    "id": "botsbotsbots",
+    "name": "botsbotsbots",
+    "date": "jan 2025",
+    "blog": "/text/botsbotsbots/index.md"
   },
   {
     "id": "botssketch",
     "name": "botsbotsbots initial sketch",
-    "price": 55,
     "imageUrl": "/images/botssketch.png",
-    "description": "Original design schematics",
-    "stats": { "rarity": "uncommon", "power": 58, "speed": 62 }
+    "description": "Original design schematics"
   },
   {
     "id": "peppermint",
     "name": "Peppermint Swirl",
-    "price": 60,
     "imageUrl": "/images/peppermint.gif",
-    "description": "Refreshing minty animation",
-    "stats": { "rarity": "uncommon", "power": 58, "speed": 62 }
+    "description": "Refreshing minty animation"
   },
   {
     "id": "digitalupload",
     "name": "digital upload",
-    "price": 135,
     "imageUrl": "/images/digitalupload.gif",
-    "description": "she's rendering, give her a sec",
-    "stats": { "rarity": "epic", "power": 95, "speed": 78 }
+    "description": "she's rendering, give her a sec"
   },
   {
     "id": "online",
     "name": "me, but online",
-    "price": 95,
     "imageUrl": "/images/online.png",
-    "description": "sketch for digital upload",
-    "stats": { "rarity": "rare", "power": 82, "speed": 90 }
+    "description": "sketch for digital upload"
   },
   {
     "id": "clawmachine",
     "name": "claw machine breaks free",
-    "price": 70,
     "imageUrl": "/images/clawmachine.gif",
-    "description": "see title",
-    "stats": { "rarity": "uncommon", "power": 62, "speed": 48 }
+    "description": "see title"
   },
   {
     "id": "myass",
     "name": "my ass (from bee and puppycat)",
-    "price": 75,
     "imageUrl": "/images/cat.gif",
-    "description": "Adorable feline in motion",
-    "stats": { "rarity": "rare", "power": 55, "speed": 90 }
+    "description": "Adorable feline in motion"
   },
   {
     "id": "catcafe",
     "name": "cat cafe",
-    "price": 95,
     "imageUrl": "/images/catcafe.gif",
-    "description": "look how far we've come from donut tutorial...",
-    "stats": { "rarity": "rare", "power": 68, "speed": 55 }
+    "description": "look how far we've come from donut tutorial..."
   },
   {
     "id": "university",
     "name": "University Life",
-    "price": 130,
     "imageUrl": "/images/university.gif",
-    "description": "Campus adventures await",
-    "stats": { "rarity": "epic", "power": 85, "speed": 68 }
+    "description": "Campus adventures await"
   },
   {
     "id": "walk",
     "name": "Evening Walk",
-    "price": 50,
     "imageUrl": "/images/walk.gif",
-    "description": "Peaceful stroll animation",
-    "stats": { "rarity": "uncommon", "power": 58, "speed": 65 }
+    "description": "Peaceful stroll animation"
   },
   {
     "id": "twirl",
     "name": "Twirl Dance",
-    "price": 70,
     "imageUrl": "/images/twirl.gif",
-    "description": "Graceful spinning motion",
-    "stats": { "rarity": "uncommon", "power": 65, "speed": 75 }
-  },
-  {
-    "id": "frog",
-    "name": "Contemplative Frog",
-    "price": 30,
-    "imageUrl": "/images/frog.jpg",
-    "description": "does this frog look like me?",
-    "stats": { "rarity": "common", "power": 42, "speed": 35 }
+    "description": "Graceful spinning motion"
   },
   {
     "id": "zora",
     "name": "Zora Collection",
-    "price": 165,
     "imageUrl": "/images/zora.png",
-    "description": "Digital art marketplace treasure",
-    "stats": { "rarity": "epic", "power": 90, "speed": 78 }
+    "description": "Digital art marketplace treasure"
   },
   {
     "id": "irena",
     "name": "for irena",
-    "price": 90,
     "imageUrl": "/images/irena.png",
     "description": "Kernel magazine",
-    "link": "TODO: add kernel mag link",
-    "stats": { "rarity": "rare", "power": 75, "speed": 58 }
+    "link": "TODO: add kernel mag link"
   },
   {
     "id": "meditation",
     "name": "meditation",
-    "price": 80,
     "imageUrl": "/images/meditation.png",
-    "description": "20min figure drawing",
-    "stats": { "rarity": "rare", "power": 70, "speed": 45 }
+    "description": "20min figure drawing"
   },
   {
     "id": "roadtrip",
     "name": "Road Trip",
-    "price": 145,
     "imageUrl": "/images/roadtrip.png",
-    "description": "Journey into the unknown",
-    "stats": { "rarity": "epic", "power": 86, "speed": 92 }
+    "description": "Journey into the unknown"
   },
   {
     "id": "summer",
     "name": "Summer Vibes",
-    "price": 90,
     "imageUrl": "/images/summer.png",
-    "description": "Endless sunny days",
-    "stats": { "rarity": "rare", "power": 76, "speed": 70 }
+    "description": "Endless sunny days"
   },
   {
     "id": "yakult",
     "name": "Yakult Party",
-    "price": 95,
     "imageUrl": "/images/yakult.gif",
-    "description": "Probiotic celebration",
-    "stats": { "rarity": "rare", "power": 80, "speed": 72 }
+    "description": "Probiotic celebration"
   },
-
   {
     "id": "turtle",
     "name": "Wise Turtle",
-    "price": 55,
     "imageUrl": "/images/turtle.png",
-    "description": "Slow and steady wins",
-    "stats": { "rarity": "uncommon", "power": 62, "speed": 30 }
+    "description": "Slow and steady wins"
   },
   {
-    "id": "bobasketches",
+    "id": "boba-artbook",
     "name": "boba artbook",
-    "price": 40,
-    "imageUrl": "/images/bobasketch2.png",
-    "description": "Evolution of the perfect boba",
-    "link": "TODO: boba artbook",
-    "stats": { "rarity": "common", "power": 48, "speed": 52 }
+    "imageUrl": "/images/bobasketch.png",
+    "pdfUrl": "https://drive.google.com/file/d/1SFVpI8nrKWvd9WKqb_tzCEGFUpq7fDS8/preview"
   },
-
   {
     "id": "why",
     "name": "Why Though",
-    "price": 120,
     "imageUrl": "/images/why.jpg",
-    "description": "Questioning everything",
-    "stats": { "rarity": "epic", "power": 88, "speed": 55 }
+    "description": "Questioning everything"
   },
   {
     "id": "stars",
     "name": "Stargazing",
-    "price": 75,
     "imageUrl": "/images/stars.jpg",
-    "description": "Cosmic wonder above",
-    "stats": { "rarity": "rare", "power": 72, "speed": 58 }
+    "description": "Cosmic wonder above"
   },
   {
     "id": "model",
     "name": "model",
-    "price": 85,
     "imageUrl": "/images/model.jpg",
-    "description": "yeah",
-    "stats": { "rarity": "rare", "power": 78, "speed": 68 }
+    "description": "yeah"
   },
   {
     "id": "outside",
     "name": "go outside",
-    "price": 70,
     "imageUrl": "/images/outside.jpg",
-    "description": "college apps are hard",
-    "stats": { "rarity": "uncommon", "power": 65, "speed": 55 }
+    "description": "college apps are hard"
   },
   {
     "id": "train",
     "name": "Train Journey",
-    "price": 80,
     "imageUrl": "/images/train.jpg",
-    "description": "Rails to anywhere",
-    "stats": { "rarity": "rare", "power": 70, "speed": 78 }
+    "description": "Rails to anywhere"
   },
   {
     "id": "reflection",
     "name": "Deep Reflection",
-    "price": 100,
     "imageUrl": "/images/reflection.jpg",
-    "description": "Mirror of the soul",
-    "stats": { "rarity": "rare", "power": 80, "speed": 50 }
+    "description": "Mirror of the soul"
   },
   {
     "id": "downloadwizard",
     "name": "download wizard",
-    "price": 200,
     "imageUrl": "/images/downloadwizard.gif",
-    "description": "you remember this right?",
-    "stats": { "rarity": "legendary", "power": 98, "speed": 88 }
+    "description": "you remember this right?"
   }
 ]

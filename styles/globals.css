@@ -1,6 +1,12 @@
 @font-face {
-  font-family: 'reformat';
+  font-family: 'bodytext';
   src: url('../public/neuemontreal.otf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'wavetext';
+  src: url('../public/neuebit.otf');
   font-weight: normal;
 }
 
@@ -16,7 +22,7 @@
 body {
   background-color: #e2dde8;
   color: rgba(0, 0, 0, 0.85);
-  font-family: 'reformat';
+  font-family: 'bodytext';
   line-height: 1.4;
 }
 
@@ -65,9 +71,11 @@ a:hover {
 }
 
 .wave span {
+  font-family: 'wavetext';
   display: inline-block;
-  -webkit-animation: wave-text 1.5s ease-in-out infinite;
-  animation: wave-text 1.5s ease-in-out infinite;
+  -webkit-animation: wave-text 2s ease-in-out infinite;
+  animation: wave-text 2s ease-in-out infinite;
+  @apply relative mt-[-10px] bottom-[-2px] mb-[-10px];
 }
 
 .wave:hover span {

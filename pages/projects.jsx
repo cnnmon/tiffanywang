@@ -98,9 +98,7 @@ function Projects() {
 
           return (
             <div key={index} className="space-y-4">
-              <p>
-                <b>{title}</b>
-              </p>
+              <p className="text-gray-500">{title}</p>
               <div className="sm:grid grid-cols-2 gap-4">
                 {filteredList.map((item, index) => (
                   <div key={index}>

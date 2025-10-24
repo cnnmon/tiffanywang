@@ -7,12 +7,8 @@ class MarkdownPreloader {
 
   // Preload all markdown files at app start
   async preloadAll() {
-    const markdownFiles = [
-      '/text/about.md',
-      '/text/home.md'
-    ];
-
-    const promises = markdownFiles.map(file => this.preload(file));
+    const markdownFiles = [];
+    const promises = markdownFiles.map((file) => this.preload(file));
     await Promise.all(promises);
   }
 
@@ -23,13 +19,13 @@ class MarkdownPreloader {
     }
 
     const promise = fetch(file)
-      .then(res => res.text())
-      .then(text => {
+      .then((res) => res.text())
+      .then((text) => {
         this.cache.set(file, text);
         this.loading.delete(file);
         return text;
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(`Failed to preload markdown file: ${file}`, error);
         this.loading.delete(file);
         return '';

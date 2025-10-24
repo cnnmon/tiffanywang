@@ -1,0 +1,3 @@
+[botsbotsbots](https://cnnmon.itch.io/botsbotsbots) is a reverse [Turing test](TODO) game. you are a human who's hacked into a corporate server fully run by ai workers, trying to hijack their resources to mine fishcoin. unfortunately, an admin has detected the intrusion, and has put you and 5 fellow suspected bots into a chatroom! survive 4 levels of increasing difficulty to prove your bothood and escape elimination.
+
+the summer of 2024, it was my first free summer in several years and i was wasting away watching [jubilee](TODO)-style "spot the imposter" videos.

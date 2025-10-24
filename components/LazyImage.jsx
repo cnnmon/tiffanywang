@@ -46,7 +46,6 @@ const LazyImage = ({ src, alt, width, height, className = '', priority = false, 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
           className="absolute inset-0 bg-gray-300"
           style={{ width, height }}
         />

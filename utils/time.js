@@ -1,41 +1,24 @@
-const A_MINUTE = 60000;
-const A_HOUR = A_MINUTE * 60;
-const A_DAY = A_HOUR * 24;
-const A_WEEK = A_DAY * 7;
-
-export const formatTimeAgo = (timestamp, variant = 'short') => {
+export const formatTime = (timestamp) => {
   if (!timestamp) return 'never';
-  const now = Date.now();
-  const diff = now - timestamp;
 
-  if (diff < A_MINUTE) return 'just now';
+  const now = new Date();
+  const date = new Date(timestamp);
+  const diffInMs = now - date;
+  const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
+  const diffInMonths = Math.floor(diffInDays / 30);
+  const diffInYears = Math.floor(diffInDays / 365);
 
-  if (diff < A_HOUR) {
-    const mins = Math.floor(diff / A_MINUTE);
-    return `${mins} min${mins === 1 ? '' : 's'} ago`;
+  if (diffInYears > 0) {
+    return `${diffInYears} ${diffInYears === 1 ? 'year' : 'years'} ago`;
   }
 
-  if (diff < A_DAY) {
-    const hours = Math.floor(diff / A_HOUR);
-    return `${hours} hour${hours === 1 ? '' : 's'} ago`;
+  if (diffInMonths > 0) {
+    return `${diffInMonths} ${diffInMonths === 1 ? 'month' : 'months'} ago`;
   }
 
-  if (diff < A_WEEK) {
-    const days = Math.floor(diff / A_DAY);
-    return `${days} day${days === 1 ? '' : 's'} ago`;
+  if (diffInDays === 0) {
+    return 'today';
   }
 
-  if (variant === 'short') {
-    return new Date(timestamp).toLocaleDateString('en-US', {
-      month: '2-digit',
-      day: '2-digit',
-      year: '2-digit',
-    });
-  }
-
-  return new Date(timestamp).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: variant,
-    day: 'numeric',
-  });
+  return `${diffInDays} ${diffInDays === 1 ? 'day' : 'days'} ago`;
 };

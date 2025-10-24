@@ -5,7 +5,6 @@ import { useRouter } from 'next/router';
 import { createContext, useContext, useEffect, useState } from 'react';
 import WaveText from '../components/WaveText';
 import '../styles/globals.css';
-import markdownPreloader from '../utils/markdownPreloader';
 
 const MouseContext = createContext();
 
@@ -21,10 +20,6 @@ function MyApp({ Component, pageProps }) {
     };
 
     window.addEventListener('mousemove', handleMouseMove);
-
-    // Preload all markdown content on app start
-    markdownPreloader.preloadAll().catch(console.error);
-
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
   return (
@@ -34,15 +29,15 @@ function MyApp({ Component, pageProps }) {
           <title>tiffanywang</title>
         </Head>
         <div className="flex justify-center py-10 h-full w-full">
-          <div className="max-w-2xl w-full relative p-10 flex flex-col gap-8">
+          <div className="w-full max-w-2xl relative p-10 flex flex-col gap-8">
             <header className="flex justify-between">
               <Link href="/" className="text-xl">
-                <WaveText text="tiffanywang⊹" />
+                <WaveText text="tiffanywang⊹" className="text-3xl" />
               </Link>
               <div className="flex gap-4">
                 <Link href="/about">about</Link>
                 <Link href="/projects">projects</Link>
-                <Link href="/filesys">filesys</Link>
+                <Link href="/files">files</Link>
               </div>
             </header>
 

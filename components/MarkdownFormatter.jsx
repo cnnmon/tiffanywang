@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import WaveText from '../components/WaveText';
 import markdownPreloader from '../utils/markdownPreloader';
 import Url from './Url';
 
@@ -22,7 +23,6 @@ function MarkdownFormatter({ file }) {
     let listItems = [];
     let inList = false;
     let currentSection = [];
-    let currentSectionKey = null;
 
     const processLine = (line, key) => {
       // Bold text
@@ -33,6 +33,8 @@ function MarkdownFormatter({ file }) {
       const imageRegex = /!\[([^\]]*)\]\(([^)]+)\)/g;
       // Links [text](url)
       const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+      // Wavy text {text}
+      const waveRegex = /{(.*?)}/g;
 
       let parts = [line];
 
@@ -81,6 +83,38 @@ function MarkdownFormatter({ file }) {
               segments.push(part.substring(lastIndex, match.index));
             }
             segments.push(<b key={`b-${key}-${match.index}`}>{match[1]}</b>);
+            lastIndex = regex.lastIndex;
+          }
+
+          if (lastIndex < part.length) {
+            segments.push(part.substring(lastIndex));
+          }
+
+          return segments.length > 0 ? segments : [part];
+        }
+        return [part];
+      });
+
+      // Process wave
+      parts = parts.flatMap((part) => {
+        if (typeof part === 'string') {
+          const segments = [];
+          let lastIndex = 0;
+          let match;
+          const regex = new RegExp(waveRegex);
+
+          while ((match = regex.exec(part)) !== null) {
+            if (match.index > lastIndex) {
+              segments.push(part.substring(lastIndex, match.index));
+            }
+            segments.push(
+              <WaveText
+                key={`b-${key}-${match.index}`}
+                text={match[1]}
+                className="text-2xl"
+                gradient={false}
+              />,
+            );
             lastIndex = regex.lastIndex;
           }
 
@@ -165,11 +199,10 @@ function MarkdownFormatter({ file }) {
       inList = false;
     };
 
-    const flushSection = () => {
+    const flushSection = (key) => {
       if (currentSection.length > 0) {
-        elements.push(<div key={`section-${currentSectionKey}`}>{currentSection}</div>);
+        elements.push(<div key={key}>{currentSection}</div>);
         currentSection = [];
-        currentSectionKey = null;
       }
     };
 
@@ -177,7 +210,7 @@ function MarkdownFormatter({ file }) {
       // Check for blank lines - they separate sections
       if (line.trim() === '') {
         flushList();
-        flushSection();
+        flushSection(index);
         return;
       }
 
@@ -185,8 +218,7 @@ function MarkdownFormatter({ file }) {
       const headerMatch = line.match(/^(#{1,2})\s+(.+)$/);
       if (headerMatch) {
         flushList();
-        flushSection();
-        currentSectionKey = index;
+        flushSection(index);
         const level = headerMatch[1].length;
         const content = headerMatch[2];
         const HeaderTag = level === 1 ? 'h1' : 'h2';
@@ -226,7 +258,7 @@ function MarkdownFormatter({ file }) {
     });
 
     flushList();
-    flushSection();
+    flushSection(lines.length);
     return elements;
   };
 
