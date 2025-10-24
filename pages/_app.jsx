@@ -1,6 +1,5 @@
 import { AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { createContext, useContext, useEffect, useState } from 'react';
@@ -30,17 +29,6 @@ function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <MouseContext.Provider value={mousePosition}>
-      <Image
-        src="/deco/peanut.JPG"
-        width={500}
-        height={500}
-        className="fixed top-0 left-0 object-cover z-[2] pointer-events-none w-full h-full"
-        style={{
-          mixBlendMode: 'multiply',
-          opacity: 0.2,
-        }}
-        priority
-      />
       <div className="flex flex-col w-full h-screen">
         <Head>
           <title>tiffanywang</title>
