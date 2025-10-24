@@ -3,7 +3,6 @@ Hi, I'm Tiffany! I'm a programmer, researcher, and artist. I'm currently thinkin
 I'm interested in playful, collaborative, even adversarial interactions between man and machine. I also love game-making and personality tests. Recent works at [/projects](/projects).
 
 Previously, I:
-
 - Graduated from Berkeley!
 - Built product and infra at [Watershed](https://watershed.com/), [Meta Reality Labs](https://about.meta.com/realitylabs/), and [Ramp](https://ramp.com/)
 - Researched [adversarial robustness in LLMs](https://tensortrust.ai/paper/) at the [CHAI lab](https://humancompatible.ai/)

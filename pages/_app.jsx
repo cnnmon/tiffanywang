@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }) {
               <div className="flex gap-4">
                 <Link href="/about">about</Link>
                 <Link href="/projects">projects</Link>
-                <Link href="/shop">shop</Link>
+                <Link href="/filesys">filesys</Link>
               </div>
             </header>
 

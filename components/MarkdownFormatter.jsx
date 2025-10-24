@@ -27,10 +27,46 @@ function MarkdownFormatter({ file }) {
     const processLine = (line, key) => {
       // Bold text
       const boldRegex = /\*\*(.*?)\*\*/g;
+      // Strikethrough text
+      const strikeRegex = /~~(.*?)~~/g;
+      // Images ![alt](url)
+      const imageRegex = /!\[([^\]]*)\]\(([^)]+)\)/g;
       // Links [text](url)
       const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
 
       let parts = [line];
+
+      // Process images (before links since syntax is similar)
+      parts = parts.flatMap((part, idx) => {
+        if (typeof part === 'string') {
+          const segments = [];
+          let lastIndex = 0;
+          let match;
+          const regex = new RegExp(imageRegex);
+
+          while ((match = regex.exec(part)) !== null) {
+            if (match.index > lastIndex) {
+              segments.push(part.substring(lastIndex, match.index));
+            }
+            segments.push(
+              <img
+                key={`img-${key}-${idx}-${match.index}`}
+                src={match[2]}
+                alt={match[1]}
+                className="max-w-full h-auto"
+              />,
+            );
+            lastIndex = regex.lastIndex;
+          }
+
+          if (lastIndex < part.length) {
+            segments.push(part.substring(lastIndex));
+          }
+
+          return segments.length > 0 ? segments : [part];
+        }
+        return [part];
+      });
 
       // Process bold
       parts = parts.flatMap((part) => {
@@ -45,6 +81,31 @@ function MarkdownFormatter({ file }) {
               segments.push(part.substring(lastIndex, match.index));
             }
             segments.push(<b key={`b-${key}-${match.index}`}>{match[1]}</b>);
+            lastIndex = regex.lastIndex;
+          }
+
+          if (lastIndex < part.length) {
+            segments.push(part.substring(lastIndex));
+          }
+
+          return segments.length > 0 ? segments : [part];
+        }
+        return [part];
+      });
+
+      // Process strikethrough
+      parts = parts.flatMap((part) => {
+        if (typeof part === 'string') {
+          const segments = [];
+          let lastIndex = 0;
+          let match;
+          const regex = new RegExp(strikeRegex);
+
+          while ((match = regex.exec(part)) !== null) {
+            if (match.index > lastIndex) {
+              segments.push(part.substring(lastIndex, match.index));
+            }
+            segments.push(<s key={`s-${key}-${match.index}`}>{match[1]}</s>);
             lastIndex = regex.lastIndex;
           }
 
@@ -106,17 +167,20 @@ function MarkdownFormatter({ file }) {
 
     const flushSection = () => {
       if (currentSection.length > 0) {
-        elements.push(
-          <div key={`section-${currentSectionKey}`} className="space-y-4">
-            {currentSection}
-          </div>,
-        );
+        elements.push(<div key={`section-${currentSectionKey}`}>{currentSection}</div>);
         currentSection = [];
         currentSectionKey = null;
       }
     };
 
     lines.forEach((line, index) => {
+      // Check for blank lines - they separate sections
+      if (line.trim() === '') {
+        flushList();
+        flushSection();
+        return;
+      }
+
       // Check for headers
       const headerMatch = line.match(/^(#{1,2})\s+(.+)$/);
       if (headerMatch) {
@@ -127,11 +191,6 @@ function MarkdownFormatter({ file }) {
         const content = headerMatch[2];
         const HeaderTag = level === 1 ? 'h1' : 'h2';
         currentSection.push(<HeaderTag key={`h-${index}`}>{content}</HeaderTag>);
-        return;
-      }
-
-      if (line.trim() === '') {
-        flushList();
         return;
       }
 
@@ -172,7 +231,7 @@ function MarkdownFormatter({ file }) {
   };
 
   if (!content) return null;
-  return <div className="flex flex-col">{formatMarkdown(content)}</div>;
+  return <div className="flex flex-col space-y-4">{formatMarkdown(content)}</div>;
 }
 
 export default MarkdownFormatter;
