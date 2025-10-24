@@ -1,9 +1,1 @@
-Hi, I'm Tiffany! I'm currently working on [AI-supported creative tools](https://mj-storytelling.github.io/). I'm generally interested in playful, collaborative, even adversarial human-AI interactions as sites for mutual understanding. Some recent experiments include a [reverse Turing test](https://cnnmon.itch.io/botsbotsbots) and a [moral dilemma Tamagotchi](https://cnnmon.itch.io/principal).
-
-I earned a BA in Computer Science from Berkeley. There, I researched [adversarial robustness in LLMs](https://tensortrust.ai/paper/) at the [CHAI lab](https://humancompatible.ai/), advised by Stuart Russell, and taught [Operating Systems](https://cs162.org/), [Intro to CS](https://cs61a.org/), and [Web Design](https://webdesigndecal.github.io/). I've also spent time building product and infra at [Watershed](https://watershed.com/), [Meta Reality Labs](https://about.meta.com/realitylabs/), and [Ramp](https://ramp.com/).
-
-Before that, I grew up in a town that's home to (apparently) [one of the largest urban parks in the US](https://en.wikipedia.org/wiki/Brecksville_Reservation) in Ohio, where I mostly sat indoors browsing Neopets shops, editing AMVs, and clicking circles. I made games for [game](https://ldjam.com/events/ludum-dare/45/ashes-to-ash/) [jams](https://ldjam.com/events/ludum-dare/44/slice-of-scythe/), the [Cleveland](https://cnnmon.itch.io/cardiocasino) [Clinic](https://cnnmon.itch.io/kittyclinic), and an Akron-based [biofeedback therapy startup](https://www.news5cleveland.com/news/local-news/akron-canton-news/akron-startups-getting-big-bounce-at-innovation-hub).
-
-I've drawn for [Kernel](https://www.kernelmag.io/) and [GAG](https://www.tiktok.com/@gag.magazine/) magazine, and occasionally designed merch.
-
-Want to chat? Feel free to email me at **wangttiffany at gmail dot com** 📬.
+Hi, I'm Tiffany! I'm a research engineer thinking about [AI-supported creative tools](https://mj-storytelling.github.io/) on the Storytelling team at Midjourney. I'm interested in learning from playful, collaborative, even adversarial human-AI interactions. I also love game-making and personality tests. Recent works at: [/projects](/projects).

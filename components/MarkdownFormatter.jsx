@@ -1,13 +1,19 @@
 import { useEffect, useState } from 'react';
+import markdownPreloader from '../utils/markdownPreloader';
 import Url from './Url';
 
 function MarkdownFormatter({ file }) {
   const [content, setContent] = useState('');
 
   useEffect(() => {
-    fetch(file)
-      .then((res) => res.text())
-      .then((text) => setContent(text));
+    // Try to get preloaded content first, fallback to fetch if needed
+    const preloadedContent = markdownPreloader.getContent(file);
+    if (preloadedContent) {
+      setContent(preloadedContent);
+    } else {
+      // Fallback to async loading if not preloaded
+      markdownPreloader.getContentAsync(file).then(setContent);
+    }
   }, [file]);
 
   const formatMarkdown = (text) => {
@@ -100,11 +106,7 @@ function MarkdownFormatter({ file }) {
 
     const flushSection = () => {
       if (currentSection.length > 0) {
-        elements.push(
-          <div className="space-y-2" key={`section-${currentSectionKey}`}>
-            {currentSection}
-          </div>,
-        );
+        elements.push(<div key={`section-${currentSectionKey}`}>{currentSection}</div>);
         currentSection = [];
         currentSectionKey = null;
       }

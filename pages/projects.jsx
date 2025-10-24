@@ -1,9 +1,11 @@
 import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 import LazyImage from '../components/LazyImage';
 import Url from '../components/Url';
 import projectSections from '../utils/projects.json';
 
-function Project({ item }) {
+function Project({ item, selectedType, setSelectedType }) {
   const { name, type, description, link, image, award } = item;
 
   const handleNoLinkClick = () => {
@@ -30,14 +32,13 @@ function Project({ item }) {
           href={link || undefined}
           onClick={!link ? handleNoLinkClick : undefined}
           target="_blank"
-          className="w-full"
         >
           <LazyImage
             src={image}
             alt={name}
             width={500}
             height={300}
-            className="card mb-5 object-cover w-full"
+            className="card mb-5 object-cover"
           />
         </motion.a>
         <div className="flex flex-row justify-between gap-2">
@@ -50,8 +51,22 @@ function Project({ item }) {
             {name}
           </a>
           <div className="flex flex-row gap-2">
-            {type.split(', ').map((t) => (
-              <div className="bg-gray-300 px-2 rounded-full">{t}</div>
+            {type.split(' ').map((t) => (
+              <div
+                onClick={() => {
+                  if (selectedType === t) {
+                    setSelectedType(null);
+                  } else {
+                    setSelectedType(t);
+                  }
+                }}
+                className={twMerge(
+                  'cursor-pointer hover:opacity-50 bg-[#6a3b7b] text-white px-2 text-sm rounded-full',
+                  selectedType === t && 'opacity-50 bg-gray-800',
+                )}
+              >
+                {t}
+              </div>
             ))}
           </div>
         </div>
@@ -63,6 +78,8 @@ function Project({ item }) {
 }
 
 function Projects() {
+  const [selectedType, setSelectedType] = useState(null);
+
   return (
     <div className="space-y-4">
       <p>
@@ -70,20 +87,34 @@ function Projects() {
         <Url href="https://github.com/cnnmon">GitHub</Url>.
       </p>
       <div>
-        {projectSections.map(({ title, list }, index) => (
-          <div key={index} className="space-y-4">
-            <p>
-              <b>{title}</b>
-            </p>
-            <div className="sm:grid grid-cols-2 gap-4">
-              {list.map((item, index) => (
-                <div key={index}>
-                  <Project item={item} />
-                </div>
-              ))}
+        {projectSections.map(({ title, list }, index) => {
+          const filteredList = list.filter(
+            (item) => selectedType === null || item.type.split(' ').includes(selectedType),
+          );
+
+          if (filteredList.length === 0) {
+            return null;
+          }
+
+          return (
+            <div key={index} className="space-y-4">
+              <p>
+                <b>{title}</b>
+              </p>
+              <div className="sm:grid grid-cols-2 gap-4">
+                {filteredList.map((item, index) => (
+                  <div key={index}>
+                    <Project
+                      item={item}
+                      selectedType={selectedType}
+                      setSelectedType={setSelectedType}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

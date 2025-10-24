@@ -63,7 +63,7 @@ const LazyImage = ({ src, alt, width, height, className = '', priority = false, 
             duration: 0.6,
             ease: 'easeOut',
           }}
-          className="w-full"
+          className="w-full h-full"
         >
           <Image
             src={src}
@@ -73,7 +73,10 @@ const LazyImage = ({ src, alt, width, height, className = '', priority = false, 
             onLoad={handleLoad}
             onError={handleError}
             priority={priority}
-            className={twMerge('w-full', hasError && 'opacity-50')}
+            className={twMerge(
+              'w-full object-cover overflow-hidden bg-red-500',
+              hasError && 'opacity-50',
+            )}
             {...props}
           />
         </motion.div>

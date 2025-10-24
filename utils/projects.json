@@ -4,7 +4,7 @@
     "list": [
       {
         "name": "principal",
-        "type": "game, web, research",
+        "type": "game web research",
         "description": "a tamagotchi that grows and learns from moral dilemmas.",
         "image": "/images/principal.gif",
         "link": "https://cnnmon.itch.io/principal",
@@ -12,7 +12,7 @@
       },
       {
         "name": "botsbotsbots",
-        "type": "game, web",
+        "type": "game web",
         "description": "a reverse turing test set in a post-apocalyptic chatroom. 4 bots, 1 human (you). blend in to survive.",
         "image": "/images/botsbotsbots.gif",
         "link": "https://cnnmon.itch.io/botsbotsbots"
@@ -32,7 +32,7 @@
       },
       {
         "name": "tensor trust",
-        "type": "game, research",
+        "type": "game web research",
         "description": "hack a bank by sweet-talking and jailbreaking its ai. published dataset & robustness benchmarks.",
         "date": "nov 2023",
         "image": "/images/tensortrust.gif",
@@ -57,7 +57,7 @@
       },
       {
         "name": "drip or drown",
-        "type": "app",
+        "type": "web",
         "description": "ai can and will roast your style.",
         "date": "feb 2023",
         "image": "/images/dripordrown.gif",
@@ -65,7 +65,7 @@
       },
       {
         "name": "ezcv",
-        "type": "app",
+        "type": "web",
         "description": "the easiest resume maker. just add plaintext.",
         "date": "sep 2022",
         "image": "/images/ezcv.gif",
@@ -78,7 +78,7 @@
     "list": [
       {
         "name": "boba",
-        "type": "game",
+        "type": "game mobile",
         "description": "drink boba... efficiently? a boba-themed puzzle game.",
         "date": "aug 2020",
         "image": "/images/boba.gif",
@@ -86,11 +86,12 @@
       },
       {
         "name": "coffeelings",
-        "type": "app",
+        "type": "web",
         "description": "a mood tracking chrome extension. (100k+ daily active users)",
         "date": "mar 2020",
         "image": "/images/coffeelings.gif",
-        "link": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/"
+        "link": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/",
+        "award": "Featured on Chrome Web Store"
       },
       {
         "name": "cardio casino",
@@ -139,7 +140,7 @@
         "type": "game",
         "description": "endless-runner typing game. explore planets. if you type fast enough, you won't fall into endless void.",
         "date": "sep 2018",
-        "image": "/images/spacebar.gif",
+        "image": "/images/spacebar.png",
         "link": "https://cnnmon.itch.io/spacebar"
       }
     ]

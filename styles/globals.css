@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'reformat';
-  src: url('../public/reformatb.otf');
+  src: url('../public/neuemontreal.otf');
   font-weight: normal;
 }
 
@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: #eae9ec;
+  background-color: #e2dde8;
   color: rgba(0, 0, 0, 0.85);
   font-family: 'reformat';
   line-height: 1.4;
@@ -27,7 +27,7 @@ body {
 a {
   text-decoration: underline;
   cursor: pointer;
-  color: #806495;
+  color: #6a3b7b;
 }
 
 h1 {

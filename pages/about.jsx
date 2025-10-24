@@ -19,17 +19,20 @@ function About() {
               width={200}
               height={200}
               title="me 3d"
-              className="h-40 w-40 object-cover overflow-hidden object-center pointer-events-none"
+              className="h-40 w-40 object-cover overflow-hidden object-center pointer-events-none rotate-90"
             />
           </motion.div>
         </AnimatePresence>
         <p>📍 San Francisco, CA</p>
       </div>
       <MarkdownFormatter file="/text/about.md" />
-      <div className="flex flex-col gap-2 text-gray-500">
+      <MarkdownFormatter file="/text/previously.md" />
+      <MarkdownFormatter file="/text/contact.md" />
+
+      <div className="flex flex-col gap-2">
         <p>
-          Time travel to older versions of this website:{' '}
-          <a href="https://tiffanywang-azqu4w7ti-cnnmons-projects.vercel.app">2023</a>{' '}
+          <span className="opacity-50">Time travel to older versions of this website: </span>
+          <a href="https://tiffanywang-4w3l9uyno-cnnmon.vercel.app/">2023</a>{' '}
           <a href="https://tiffanywang-nddwqs5e6-cnnmon.vercel.app">2022</a>
         </p>
       </div>
