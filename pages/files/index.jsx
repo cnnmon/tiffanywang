@@ -27,9 +27,7 @@ function File({ item, setSelectedItem }) {
     const blogLink = `/files/${item.id}`;
     return (
       <div>
-        <a href={blogLink} target="_blank">
-          {item.name}
-        </a>
+        <a href={blogLink}>{item.name}</a>
         <p className="text-gray-500 text-sm">{formatTime(item.date)}</p>
       </div>
     );

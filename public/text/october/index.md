@@ -1,6 +1,6 @@
 i redesigned my website! see: [2023](https://tiffanywang-4w3l9uyno-cnnmon.vercel.app/) and [2022](https://tiffanywang-nddwqs5e6-cnnmon.vercel.app)
 
-# design
+### the design
 
 redesigning a website is a vulnerable experience. do i try a new aesthetic? optimize for fast loading times? this time, i dug up this old blender model i made of myself, retextured the hair to my new seasonal color(s), and placed her as the centerpiece of my landing page. this was the first design of that. you can spin her:
 
@@ -10,7 +10,7 @@ i stole the pretty font (neue montreal) from [this cool website](https://abrande
 
 well, if you've found your way here, it seems like you've found my new secret(?) blog where i will experiment with writing. welcome!!
 
-# ideas from october
+### ideas from october
 
 i might act on these ideas when i have the time, but i think it'd be cool if there were more of these things in general - let me know if any of these ideas are particularly inspiring to you!
 

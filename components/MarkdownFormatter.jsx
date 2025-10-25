@@ -215,14 +215,24 @@ function MarkdownFormatter({ file }) {
       }
 
       // Check for headers
-      const headerMatch = line.match(/^(#{1,2})\s+(.+)$/);
+      const headerMatch = line.match(/^(#{1,3})\s+(.+)$/);
       if (headerMatch) {
         flushList();
         flushSection(index);
         const level = headerMatch[1].length;
         const content = headerMatch[2];
-        const HeaderTag = level === 1 ? 'h1' : 'h2';
-        currentSection.push(<HeaderTag key={`h-${index}`}>{content}</HeaderTag>);
+        const HeaderTag = level === 1 ? 'h1' : level === 2 ? 'h2' : 'h3';
+        const className =
+          level === 1
+            ? 'text-4xl font-bold'
+            : level === 2
+              ? 'text-2xl font-bold'
+              : 'text-xl font-bold';
+        currentSection.push(
+          <HeaderTag key={`h-${index}`} className={className}>
+            {content}
+          </HeaderTag>,
+        );
         return;
       }
 
