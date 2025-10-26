@@ -1,14 +1,14 @@
-i redesigned my website! see: [2023](https://tiffanywang-4w3l9uyno-cnnmon.vercel.app/) and [2022](https://tiffanywang-nddwqs5e6-cnnmon.vercel.app)
+i redesigned my website! if you've found your way here, it seems like you've found my new secret(?) blog where i will experiment with writing. welcome!!
 
 ### the design
 
-redesigning a website is a vulnerable experience. do i try a new aesthetic? optimize for fast loading times? this time, i dug up this old blender model i made of myself, retextured the hair to my new seasonal color(s), and placed her as the centerpiece of my landing page. this was the first design of that. you can spin her:
+redesigning a website is a vulnerable experience. every time, i flirt with the idea of making a hyper-optimized, minimalistic, professional-looking website, and lose my way [again](https://tiffanywang-4w3l9uyno-cnnmon.vercel.app/) and [again](https://tiffanywang-nddwqs5e6-cnnmon.vercel.app) and [again](https://drive.google.com/file/d/1cjlGzkEwjKlM0HqieyNCmgYJnHS1sYuu/view?usp=sharing). this time, i was lured in by the idea of making a pseudo-3d centerpiece, so i dug up a blender model i made for a class last year, retextured the hair to my new seasonal color(s), exported her spinning as an mp4, and vibe coded a way to reactively "spin" her with your mouse (really, scrubbing the video).
+
+my first design of that:
 
 ![figma design](/text/october/mock.png)
 
 i stole the pretty font (neue montreal) from [this cool website](https://abrandenberger.github.io/#colophon) and coded the site in nextjs and tailwind on the flight from sf -> denver -> tennessee.
-
-well, if you've found your way here, it seems like you've found my new secret(?) blog where i will experiment with writing. welcome!!
 
 ### ideas from october
 

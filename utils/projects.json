@@ -33,7 +33,7 @@
       {
         "name": "tensor trust",
         "type": "game web research",
-        "description": "hack a bank by sweet-talking and jailbreaking its ai. published dataset & robustness benchmarks.",
+        "description": "sweet-talk your way into bank robbery.",
         "date": "nov 2023",
         "image": "/images/tensortrust.gif",
         "link": "https://tensortrust.ai/",
@@ -79,7 +79,7 @@
       {
         "name": "boba",
         "type": "game mobile",
-        "description": "drink boba... efficiently? a boba-themed puzzle game.",
+        "description": "drink boba... efficiently? a boba-themed mobile puzzle game.",
         "date": "aug 2020",
         "image": "/images/boba.gif",
         "link": "https://cnnmon.itch.io/boba"
@@ -87,11 +87,11 @@
       {
         "name": "coffeelings",
         "type": "web",
-        "description": "a mood tracking chrome extension. (100k+ daily active users)",
+        "description": "a mood tracking chrome extension. (200k+ daily active users)",
         "date": "mar 2020",
         "image": "/images/coffeelings.gif",
         "link": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/",
-        "award": "Featured on Chrome Web Store"
+        "award": "Front-paged Chrome Web Store"
       },
       {
         "name": "cardio casino",
