@@ -24,7 +24,7 @@ i might act on these ideas when i have the time, but i think it'd be cool if the
 
 **emotional fighting game:** game where you can ~~win~~ resolve conflicts with an artificial [friend, parent, partner]. conflict is a 2-player puzzle, and new opponents pose new solutions. emotions are a core mechanic, dampening communication from both sides.
 
-**wishing well:** braindump about the person you want to be, and create a [living design doc](TODO) to help you achieve those goals. you may ask for a new thing to learn, and the llm will update and add to the list based on your completion. evolving knowledge of "person you want to be" is powerful; you could use this to filter feeds based on your stated preferences (e.g. i want to stop watching so many south park clips on youtube shorts).
+**wishing well:** braindump about the person you want to be, and create a [living design doc](https://github.com/cnnmon/dango) to help you achieve those goals. you may ask for a new thing to learn, and the llm will update and add to the list based on your completion. evolving knowledge of "person you want to be" is powerful; you could use this to filter feeds based on your stated preferences (e.g. i want to stop watching so many south park clips on youtube shorts).
 
 **llm arena for overlooked traits:** mbti, enneagram, bartle taxonomy, favorite thing about itself, favorite other llm, least favorite other llm, best financial advice (disclaimer: don't use it for financial advice), ability to deceive.
 
