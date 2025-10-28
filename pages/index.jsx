@@ -30,21 +30,21 @@ function Home() {
           alt="vector"
           width={100}
           height={100}
-          className="absolute bottom-[48%] right-[15%]"
+          className="absolute bottom-[48%] right-[15%] pointer-events-none"
         />
         <Image
           src="/deco/Vector 4.png"
           alt="vector"
           width={200}
           height={100}
-          className="absolute top-[10%] right-[60%]"
+          className="absolute top-[10%] right-[60%] pointer-events-none"
         />
         <Image
           src="/deco/Vector 6.png"
           alt="vector"
           width={200}
           height={100}
-          className="absolute bottom-[20%] left-[50%]"
+          className="absolute bottom-[20%] left-[50%] pointer-events-none"
         />
 
         <VideoScrubber
