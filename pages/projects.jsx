@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import LazyImage from '../components/LazyImage';
 import Url from '../components/Url';
 import projectSections from '../utils/projects.json';
 
@@ -33,13 +32,7 @@ function Project({ item, selectedType, setSelectedType }) {
           onClick={!link ? handleNoLinkClick : undefined}
           target="_blank"
         >
-          <LazyImage
-            src={image}
-            alt={name}
-            width={500}
-            height={300}
-            className="card mb-5 object-cover"
-          />
+          <img src={image} alt={name} className="card mb-5 object-cover h-400 w-400" />
         </motion.a>
         <div className="flex flex-row justify-between gap-2">
           <a
