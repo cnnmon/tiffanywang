@@ -1,5 +1,6 @@
 import { AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { createContext, useContext, useEffect, useState } from 'react';
@@ -28,9 +29,27 @@ function MyApp({ Component, pageProps }) {
         <Head>
           <title>tiffanywang</title>
         </Head>
+
+        {router.route === '/' && (
+          <div
+            className="fixed inset-0 w-full min-h-[80px] z-[1] h-full pointer-events-none rounded-full opacity-50"
+            style={{
+              mixBlendMode: 'multiply',
+            }}
+          >
+            <Image
+              src="/deco/peanut.JPG"
+              alt="peanut"
+              width={200}
+              height={200}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        )}
+
         <div className="flex justify-center py-10 h-full w-full">
           <div className="w-full max-w-2xl relative p-10 flex flex-col gap-8">
-            <header className="flex justify-between">
+            <header className="flex justify-between z-[2]">
               <Link href="/" className="text-xl">
                 <WaveText text="tiffanywang⊹" className="text-3xl" />
               </Link>

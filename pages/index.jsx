@@ -1,27 +1,13 @@
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import VideoScrubber from '../components/VideoScrubber';
 
 function Home() {
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.5 }}
-        className="absolute inset-0 w-full min-h-[80px] h-full z-[1] pointer-events-none rounded-full"
-        style={{
-          mixBlendMode: 'overlay',
-          filter: 'blur(5px)',
-        }}
-      >
-        <Image
-          src="/deco/peanut.JPG"
-          alt="peanut"
-          width={200}
-          height={200}
-          className="w-full h-full object-cover"
-        />
-      </motion.div>
+      <div className="flex flex-col absolute opacity-50">
+        <p>hi there!</p>
+        <p>don't mind me</p>
+      </div>
 
       <div className="flex justify-center items-center relative">
         {/* sparkles */}

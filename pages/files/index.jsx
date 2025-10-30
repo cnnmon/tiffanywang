@@ -59,17 +59,19 @@ export default function Filesys() {
         <Modal selectedItem={selectedItem} setSelectedItem={setSelectedItem} />
       </AnimatePresence>
       <div className="flex flex-wrap">
-        {files.map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: index * 0.01, ease: 'easeOut' }}
-            className="relative w-[118px] h-[118px] cursor-pointer"
-          >
-            <File item={item} setSelectedItem={setSelectedItem} />
-          </motion.div>
-        ))}
+        {files
+          .filter((item) => !item.wip)
+          .map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: index * 0.01, ease: 'easeOut' }}
+              className="relative w-[118px] h-[118px] cursor-pointer"
+            >
+              <File item={item} setSelectedItem={setSelectedItem} />
+            </motion.div>
+          ))}
       </div>
     </>
   );

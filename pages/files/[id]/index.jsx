@@ -13,7 +13,9 @@ export default function BlogPost() {
   }
 
   const { blog, name, date } = item;
-  const estTime = Math.round(item.blog.length / 30);
+  const wordCount = blog.trim().split(/\s+/).length;
+  const estTime = Math.round(wordCount / 260);
+
   return (
     <div className="space-y-4">
       <div>

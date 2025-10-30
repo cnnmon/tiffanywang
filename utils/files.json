@@ -1,5 +1,20 @@
 [
   {
+    "id": "emofighting",
+    "name": "emotional fighting game",
+    "description": "emofighting",
+    "date": "oct 29 2025",
+    "wip": true,
+    "blog": "/text/emofighting/index.md"
+  },
+  {
+    "id": "botsbotsbots",
+    "name": "botsbotsbots",
+    "description": "botsbotsbots",
+    "wip": true,
+    "blog": "/text/botsbotsbots/index.md"
+  },
+  {
     "id": "october",
     "name": "october",
     "date": "oct 24 2025",
@@ -93,14 +108,14 @@
     "id": "zora",
     "name": "Zora Collection",
     "imageUrl": "/images/zora.png",
-    "description": "Digital art marketplace treasure"
+    "link": "https://www.kernelmag.io/4/oracles"
   },
   {
     "id": "irena",
     "name": "for irena",
     "imageUrl": "/images/irena.png",
     "description": "Kernel magazine",
-    "link": "TODO: add kernel mag link"
+    "link": "https://www.kernelmag.io/4/adieu"
   },
   {
     "id": "meditation",
