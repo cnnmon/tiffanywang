@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import MarkdownFormatter from '../../../components/MarkdownFormatter';
 import files from '../../../utils/files.json';
+import markdownPreloader from '../../../utils/markdownPreloader';
 import { formatTime } from '../../../utils/time';
 
 export default function BlogPost() {
@@ -13,7 +14,8 @@ export default function BlogPost() {
   }
 
   const { blog, name, date } = item;
-  const wordCount = blog.trim().split(/\s+/).length;
+  const content = markdownPreloader.getContent(blog);
+  const wordCount = content.trim().split(/\s+/).length;
   const estTime = Math.round(wordCount / 260);
 
   return (

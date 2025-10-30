@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -23,8 +24,10 @@ function MyApp({ Component, pageProps }) {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+
   return (
     <MouseContext.Provider value={mousePosition}>
+      <GoogleAnalytics gaId="G-3GQCPVERX9" />
       <div className="flex flex-col w-full h-screen">
         <Head>
           <title>tiffanywang</title>
@@ -61,7 +64,7 @@ function MyApp({ Component, pageProps }) {
             </header>
 
             <AnimatePresence mode="wait">
-              <div key={router.route} className="pb-20">
+              <div key={router.route} className="pb-[200px]">
                 <Component {...pageProps} />
               </div>
             </AnimatePresence>

@@ -20,7 +20,7 @@ i might act on these ideas when i have the time, but i think it'd be cool if the
 
 ![figma design](/text/october/stuffed.png)
 
-**monkey's paw**: unintended things happen when you ask things of it.
+**monkey's paw**: the unintended happens when you ask things of it.
 
 **emotional fighting game:** game where you can ~~win~~ resolve conflicts with an artificial [friend, parent, partner]. conflict is a 2-player puzzle, and new opponents pose new solutions. emotions are a core mechanic, dampening communication from both sides.
 

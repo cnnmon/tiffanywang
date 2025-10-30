@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@next/third-parties": "^16.0.1",
     "@react-icons/all-files": "^4.1.0",
     "framer-motion": "^12.4.4",
     "next": "latest",
