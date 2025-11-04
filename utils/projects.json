@@ -140,7 +140,7 @@
         "type": "game",
         "description": "endless-runner typing game. explore planets. if you type fast enough, you won't fall into endless void.",
         "date": "sep 2018",
-        "image": "/images/spacebar.png",
+        "image": "/images/spacebar.PNG",
         "link": "https://cnnmon.itch.io/spacebar"
       }
     ]
