@@ -1,11 +1,32 @@
+import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import { MdClose, MdOpenInNew } from 'react-icons/md';
+import { useEffect, useMemo, useState } from 'react';
+import { MdChevronLeft, MdChevronRight, MdClose, MdOpenInNew } from 'react-icons/md';
+import files from '../../../utils/files.json';
 import Button from './Button';
 
 export default function Modal({ selectedItem, setSelectedItem }) {
   const [isLoading, setIsLoading] = useState(true);
   const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
+
+  const imageItems = useMemo(() => files.filter((item) => item.imageUrl && !item.wip), []);
+
+  const currentIndex = useMemo(
+    () => imageItems.findIndex((item) => item.id === selectedItem?.id),
+    [imageItems, selectedItem],
+  );
+
+  const goToPrevious = () => {
+    if (currentIndex > 0) {
+      setSelectedItem(imageItems[currentIndex - 1]);
+    }
+  };
+
+  const goToNext = () => {
+    if (currentIndex < imageItems.length - 1) {
+      setSelectedItem(imageItems[currentIndex + 1]);
+    }
+  };
 
   useEffect(() => {
     setIsLoading(true);
@@ -31,17 +52,64 @@ export default function Modal({ selectedItem, setSelectedItem }) {
     }
   }, [selectedItem]);
 
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (e.key === 'ArrowLeft') {
+        goToPrevious();
+      } else if (e.key === 'ArrowRight') {
+        goToNext();
+      } else if (e.key === 'Escape') {
+        setSelectedItem(null);
+      }
+    };
+
+    if (selectedItem) {
+      window.addEventListener('keydown', handleKeyPress);
+      return () => window.removeEventListener('keydown', handleKeyPress);
+    }
+  }, [selectedItem, currentIndex]);
+
   if (!selectedItem) {
     return null;
   }
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
       className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[2]"
       onClick={() => setSelectedItem(null)}
     >
+      {currentIndex > 0 && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            goToPrevious();
+          }}
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-full p-2 transition z-10"
+          aria-label="Previous image"
+        >
+          <MdChevronLeft className="w-8 h-8" />
+        </button>
+      )}
+
+      {currentIndex < imageItems.length - 1 && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            goToNext();
+          }}
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-full p-2 transition z-10"
+          aria-label="Next image"
+        >
+          <MdChevronRight className="w-8 h-8" />
+        </button>
+      )}
+
       <div
-        className="relative flex flex-col justify-center items-center gap-4"
+        className="relative flex flex-col justify-center items-center max-w-2xl gap-4"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex border bg-black relative">
@@ -53,10 +121,10 @@ export default function Modal({ selectedItem, setSelectedItem }) {
           {selectedItem.pdfUrl ? (
             <iframe
               src={selectedItem.pdfUrl}
-              width={100}
+              width={1000}
               height={1000}
               allow="autoplay"
-              className="w-full h-full"
+              className="w-[50vw] h-[50vh]"
               onLoad={() => setIsLoading(false)}
             />
           ) : imageDimensions.width > 0 ? (
@@ -69,6 +137,9 @@ export default function Modal({ selectedItem, setSelectedItem }) {
             />
           ) : null}
         </div>
+        <p className="text-white text-sm">
+          {selectedItem.id} {selectedItem.date}
+        </p>
         <div className="flex gap-2">
           <Button onClick={() => setSelectedItem(null)}>
             <MdClose className="w-4 h-4 hover:text-gray-700" /> Close
@@ -84,6 +155,6 @@ export default function Modal({ selectedItem, setSelectedItem }) {
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

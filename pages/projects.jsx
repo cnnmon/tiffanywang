@@ -1,10 +1,11 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 import Url from '../components/Url';
 import projectSections from '../utils/projects.json';
 
-function Project({ item, selectedType, setSelectedType }) {
+function Project({ item, selectedType, setSelectedType, index }) {
   const { name, type, description, link, image, award } = item;
 
   const handleNoLinkClick = () => {
@@ -15,58 +16,57 @@ function Project({ item, selectedType, setSelectedType }) {
   };
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        transition={{ duration: 0.5 }}
-        className="flex flex-col w-full mb-10"
-      >
-        <motion.a
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+      className="flex flex-col w-full mb-10"
+    >
+      <a href={link || undefined} onClick={!link ? handleNoLinkClick : undefined} target="_blank">
+        <div className="relative card mb-5 bg-gray-100 h-[200px]">
+          <Image
+            src={image}
+            alt={name}
+            fill
+            sizes="(max-width: 640px) 100vw, 50vw"
+            loading={index < 4 ? 'eager' : 'lazy'}
+            priority={index < 2}
+            className="object-cover w-full h-full"
+          />
+        </div>
+      </a>
+      <div className="flex flex-row justify-between gap-2">
+        <a
           href={link || undefined}
           onClick={!link ? handleNoLinkClick : undefined}
           target="_blank"
+          className="font-bold"
         >
-          <img src={image} alt={name} className="card mb-5 object-cover h-400 w-400" />
-        </motion.a>
-        <div className="flex flex-row justify-between gap-2">
-          <a
-            href={link || undefined}
-            onClick={!link ? handleNoLinkClick : undefined}
-            target="_blank"
-            className="font-bold"
-          >
-            {name}
-          </a>
-          <div className="flex flex-row gap-2">
-            {type.split(' ').map((t) => (
-              <div
-                onClick={() => {
-                  if (selectedType === t) {
-                    setSelectedType(null);
-                  } else {
-                    setSelectedType(t);
-                  }
-                }}
-                className={twMerge(
-                  'cursor-pointer hover:opacity-50 bg-[#6a3b7b] text-white px-2 text-sm rounded-full',
-                  selectedType === t && 'opacity-50 bg-gray-800',
-                )}
-              >
-                {t}
-              </div>
-            ))}
-          </div>
+          {name}
+        </a>
+        <div className="flex flex-row gap-2">
+          {type.split(' ').map((t) => (
+            <div
+              onClick={() => {
+                if (selectedType === t) {
+                  setSelectedType(null);
+                } else {
+                  setSelectedType(t);
+                }
+              }}
+              className={twMerge(
+                'cursor-pointer hover:opacity-50 bg-[#6a3b7b] text-white px-2 text-sm rounded-full',
+                selectedType === t && 'opacity-50 bg-gray-800',
+              )}
+            >
+              {t}
+            </div>
+          ))}
         </div>
-        <p>{description}</p>
-        <p className="text-gray-500">{award}</p>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+      <p>{description}</p>
+      <p className="text-gray-500">{award}</p>
+    </motion.div>
   );
 }
 
@@ -74,13 +74,18 @@ function Projects() {
   const [selectedType, setSelectedType] = useState(null);
 
   return (
-    <div className="space-y-4">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4 }}
+      className="space-y-4"
+    >
       <p>
         Take a look around! Smaller projects live on my{' '}
         <Url href="https://github.com/cnnmon">GitHub</Url>.
       </p>
       <div>
-        {projectSections.map(({ title, list }, index) => {
+        {projectSections.map(({ title, list }, sectionIndex) => {
           const filteredList = list.filter(
             (item) => selectedType === null || item.type.split(' ').includes(selectedType),
           );
@@ -90,7 +95,7 @@ function Projects() {
           }
 
           return (
-            <div key={index} className="space-y-4">
+            <div key={sectionIndex} className="space-y-4">
               <p className="text-gray-500">{title}</p>
               <div className="sm:grid grid-cols-2 gap-4">
                 {filteredList.map((item, index) => (
@@ -99,6 +104,7 @@ function Projects() {
                       item={item}
                       selectedType={selectedType}
                       setSelectedType={setSelectedType}
+                      index={sectionIndex * list.length + index}
                     />
                   </div>
                 ))}
@@ -107,7 +113,7 @@ function Projects() {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
