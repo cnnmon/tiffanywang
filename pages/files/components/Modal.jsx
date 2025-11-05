@@ -6,7 +6,6 @@ import files from '../../../utils/files.json';
 import Button from './Button';
 
 export default function Modal({ selectedItem, setSelectedItem }) {
-  const [isLoading, setIsLoading] = useState(true);
   const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
 
   const imageItems = useMemo(() => files.filter((item) => item.imageUrl && !item.wip), []);
@@ -29,7 +28,6 @@ export default function Modal({ selectedItem, setSelectedItem }) {
   };
 
   useEffect(() => {
-    setIsLoading(true);
     if (selectedItem?.imageUrl) {
       const img = new window.Image();
       img.onload = () => {
@@ -113,11 +111,6 @@ export default function Modal({ selectedItem, setSelectedItem }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex border bg-black relative">
-          {isLoading && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="animate-spin rounded-full h-8 w-8 border border-gray-700 border-t-white border-2"></div>
-            </div>
-          )}
           {selectedItem.pdfUrl ? (
             <iframe
               src={selectedItem.pdfUrl}
@@ -125,7 +118,6 @@ export default function Modal({ selectedItem, setSelectedItem }) {
               height={1000}
               allow="autoplay"
               className="w-[50vw] h-[50vh]"
-              onLoad={() => setIsLoading(false)}
             />
           ) : imageDimensions.width > 0 ? (
             <Image
@@ -133,7 +125,6 @@ export default function Modal({ selectedItem, setSelectedItem }) {
               alt={selectedItem.name}
               width={imageDimensions.width}
               height={imageDimensions.height}
-              onLoad={() => setIsLoading(false)}
             />
           ) : null}
         </div>
