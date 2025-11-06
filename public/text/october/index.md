@@ -14,7 +14,7 @@ i stole the pretty font (neue montreal) from [this cool website](https://abrande
 
 generally fun ideas that i'd like to see in the wild, or i'll make myself at some point.
 
-**personal context**: a github repo with a shoutout to the friend who off-handedly inspired it, or a paper with a footnote acknowledging the author's unavoidable biases. technical work that doesn't pretend to be objective or context-free.
+**personal context**: a github repo with a shoutout to the friend who off-handedly inspired it, or a paper with a footnote acknowledging the author's unavoidable biases. technical work that doesn't pretend to be objective or context-free. (update: [for example](https://pbs.twimg.com/media/G5EmBW2aAAAvYGQ?format=jpg&name=4096x4096))
 
 **stuffed embodiment**: i went to this gorgeous exhibit recently on architect sou fujimoto. my favorite part was tucked in the back: as what seemed to be an educational experiment, someone decided to transform his buildings into stuffed animals and make them chat with each other. the toys rustled whenever they talked. it was so charming...
 
