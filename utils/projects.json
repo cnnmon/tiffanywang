@@ -13,7 +13,7 @@
       {
         "name": "botsbotsbots",
         "type": "game web",
-        "description": "a reverse turing test set in a post-apocalyptic chatroom. 4 bots, 1 human (you). blend in to survive.",
+        "description": "a reverse turing test where you must blend in with bots to survive.",
         "image": "/images/botsbotsbots.gif",
         "link": "https://cnnmon.itch.io/botsbotsbots"
       }
@@ -91,7 +91,7 @@
         "date": "mar 2020",
         "image": "/images/coffeelings.gif",
         "link": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/",
-        "award": "Front-paged Chrome Web Store"
+        "award": "Featured Chrome Web Store"
       },
       {
         "name": "cardio casino",

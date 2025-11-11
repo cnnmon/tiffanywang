@@ -6,17 +6,14 @@ import files from '../../utils/files.json';
 import { formatTime } from '../../utils/time';
 import Modal from './components/Modal';
 
-function File({ item, setSelectedItem, index }) {
+function File({ item, setSelectedItem }) {
   if (item.imageUrl) {
     return (
       <Image
         src={item.thumbnailUrl || item.imageUrl}
         alt={item.name}
         fill
-        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-        loading={index < 8 ? 'eager' : 'lazy'}
-        priority={index < 4}
-        className="border object-cover hover:opacity-50 transition duration-50 cursor-pointer"
+        className="border object-cover hover:opacity-50 transition duration-50 cursor-pointer h-full w-full"
         onClick={(e) => {
           e.stopPropagation();
           setSelectedItem(item);
@@ -60,7 +57,7 @@ export default function Filesys() {
       <AnimatePresence mode="wait">
         <Modal selectedItem={selectedItem} setSelectedItem={setSelectedItem} />
       </AnimatePresence>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
         {files
           .filter((item) => !item.wip)
           .map((item, index) => (
@@ -69,9 +66,9 @@ export default function Filesys() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.01 }}
-              className="relative w-full h-full aspect-square bg-gray-100 p-2"
+              className="relative aspect-square h-full w-full"
             >
-              <File item={item} setSelectedItem={setSelectedItem} index={index} />
+              <File item={item} setSelectedItem={setSelectedItem} />
             </motion.div>
           ))}
       </div>
