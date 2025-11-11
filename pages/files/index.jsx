@@ -53,10 +53,10 @@ export default function Filesys() {
 
   return (
     <div className="space-y-4">
-      <p>A file system containing art, WIPs, smaller projects, and writing snippets.</p>
       <AnimatePresence mode="wait">
         <Modal selectedItem={selectedItem} setSelectedItem={setSelectedItem} />
       </AnimatePresence>
+      <p>A file system containing art, WIPs, smaller projects, and writing snippets.</p>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
         {files
           .filter((item) => !item.wip)

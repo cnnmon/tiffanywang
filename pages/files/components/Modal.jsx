@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useMemo, useState } from 'react';
-import { MdChevronLeft, MdChevronRight, MdClose, MdOpenInNew } from 'react-icons/md';
+import { MdOpenInNew } from 'react-icons/md';
 import files from '../../../utils/files.json';
-import Button from './Button';
 
 export default function Modal({ selectedItem, setSelectedItem }) {
   const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
@@ -31,8 +30,11 @@ export default function Modal({ selectedItem, setSelectedItem }) {
     if (selectedItem?.imageUrl) {
       const img = new window.Image();
       img.onload = () => {
-        const maxWidth = window.innerWidth * 0.9;
-        const maxHeight = window.innerHeight * 0.85;
+        // Account for polaroid frame: p-4 (16px) + pb-16 (64px) + caption (~28px) = ~108px vertical
+        // horizontal padding: 16px each side = 32px total
+        const polaroidPadding = { vertical: 108, horizontal: 32 };
+        const maxWidth = window.innerWidth * 0.9 - polaroidPadding.horizontal;
+        const maxHeight = window.innerHeight * 0.8 - polaroidPadding.vertical;
 
         let width = img.naturalWidth;
         let height = img.naturalHeight;
@@ -80,72 +82,63 @@ export default function Modal({ selectedItem, setSelectedItem }) {
       className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[2]"
       onClick={() => setSelectedItem(null)}
     >
-      {currentIndex > 0 && (
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            goToPrevious();
-          }}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-full p-2 transition z-10"
-          aria-label="Previous image"
-        >
-          <MdChevronLeft className="w-8 h-8" />
-        </button>
-      )}
-
-      {currentIndex < imageItems.length - 1 && (
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            goToNext();
-          }}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-full p-2 transition z-10"
-          aria-label="Next image"
-        >
-          <MdChevronRight className="w-8 h-8" />
-        </button>
-      )}
-
-      <div
-        className="relative flex flex-col justify-center items-center max-w-2xl gap-4"
+      <motion.div
+        initial={{ scale: 0.8, opacity: 0, y: 20 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        exit={{ scale: 0.95, opacity: 0, y: 10 }}
+        transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+        className="relative flex flex-col max-w-4xl bg-white rounded-lg shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex border bg-black relative">
-          {selectedItem.pdfUrl ? (
-            <iframe
-              src={selectedItem.pdfUrl}
-              width={1000}
-              height={1000}
-              allow="autoplay"
-              className="w-[50vw] h-[50vh]"
+        {/* Window Title Bar */}
+        <div className="bg-gray-100 border-b border-gray-300 px-4 py-2 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setSelectedItem(null)}
+              className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-600"
             />
-          ) : imageDimensions.width > 0 ? (
-            <Image
-              src={selectedItem.imageUrl}
-              alt={selectedItem.name}
-              width={imageDimensions.width}
-              height={imageDimensions.height}
-            />
-          ) : null}
+            <button className="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-600" />
+            <button className="w-3 h-3 rounded-full bg-green-500 hover:bg-green-600" />
+          </div>
+          <div className="text-sm text-gray-600 font-medium flex-1 text-center">
+            {selectedItem.id}
+          </div>
+          <div className="w-20"></div>
         </div>
-        <p className="text-white text-sm">
-          {selectedItem.id} {selectedItem.date}
-        </p>
-        <div className="flex gap-2">
-          <Button onClick={() => setSelectedItem(null)}>
-            <MdClose className="w-4 h-4 hover:text-gray-700" /> Close
-          </Button>
+
+        {/* Window Content */}
+        <div className="bg-white p-6 flex flex-col items-center max-h-[80vh] overflow-auto">
+          <div className="flex bg-black relative">
+            {selectedItem.pdfUrl ? (
+              <iframe
+                src={selectedItem.pdfUrl}
+                width={1000}
+                height={1000}
+                allow="autoplay"
+                className="w-[50vw] h-[50vh]"
+              />
+            ) : imageDimensions.width > 0 ? (
+              <Image
+                src={selectedItem.imageUrl}
+                alt={selectedItem.name}
+                width={imageDimensions.width}
+                height={imageDimensions.height}
+              />
+            ) : null}
+          </div>
+          <p className="text-gray-600 text-sm mt-4">{selectedItem.date}</p>
           {selectedItem.link && (
-            <Button
+            <button
               onClick={() => {
                 window.open(selectedItem.link, '_blank');
               }}
+              className="mt-4 flex items-center gap-2 px-4 py-2 text-sm text-blue-600 hover:text-blue-700 hover:underline"
             >
-              <MdOpenInNew className="w-4 h-4 hover:text-gray-700" /> Open link
-            </Button>
+              <MdOpenInNew className="w-4 h-4" /> Open link
+            </button>
           )}
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
