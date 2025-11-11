@@ -13,7 +13,7 @@ function File({ item, setSelectedItem }) {
         src={item.thumbnailUrl || item.imageUrl}
         alt={item.name}
         fill
-        className="border object-cover hover:opacity-50 transition duration-50 cursor-pointer h-full w-full select-none"
+        className="object-cover hover:opacity-50 transition duration-50 cursor-pointer h-full w-full select-none bg-white"
         onClick={(e) => {
           e.stopPropagation();
           setSelectedItem(item);
@@ -25,7 +25,7 @@ function File({ item, setSelectedItem }) {
   if (item.blog) {
     const blogLink = `/files/${item.id}`;
     return (
-      <div>
+      <div className="bg-gradient-to-b from-[#c6bae3] to-tr h-full p-2">
         <a href={blogLink}>{item.id}</a>
         <p className="text-gray-500 text-sm">{formatTime(item.date)}</p>
       </div>
@@ -66,7 +66,7 @@ export default function Filesys() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.01 }}
-              className="relative aspect-square h-full w-full bg-white"
+              className="relative aspect-square h-full w-full"
             >
               <File item={item} setSelectedItem={setSelectedItem} />
             </motion.div>
