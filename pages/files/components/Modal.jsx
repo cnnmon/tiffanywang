@@ -86,7 +86,7 @@ export default function Modal({ selectedItem, setSelectedItem }) {
         initial={{ scale: 0.8, opacity: 0, y: 20 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.95, opacity: 0, y: 10 }}
-        transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+        transition={{ type: 'spring', damping: 20, stiffness: 200 }}
         className="relative flex flex-col max-w-4xl bg-white rounded-lg shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >

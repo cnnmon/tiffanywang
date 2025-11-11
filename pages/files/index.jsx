@@ -13,7 +13,7 @@ function File({ item, setSelectedItem }) {
         src={item.thumbnailUrl || item.imageUrl}
         alt={item.name}
         fill
-        className="border object-cover hover:opacity-50 transition duration-50 cursor-pointer h-full w-full"
+        className="border object-cover hover:opacity-50 transition duration-50 cursor-pointer h-full w-full select-none"
         onClick={(e) => {
           e.stopPropagation();
           setSelectedItem(item);
@@ -66,7 +66,7 @@ export default function Filesys() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.01 }}
-              className="relative aspect-square h-full w-full"
+              className="relative aspect-square h-full w-full bg-white"
             >
               <File item={item} setSelectedItem={setSelectedItem} />
             </motion.div>
