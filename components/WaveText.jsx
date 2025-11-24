@@ -1,4 +1,4 @@
-const waveColors = ['#6B5B93', '#96517C', '#5A7B9E'];
+const waveColors = ['#A499C6', '#B191A9', '#AF6A9B'];
 
 function hexToRgb(hex) {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);

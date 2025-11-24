@@ -2,21 +2,25 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
 import { MdOpenInNew } from 'react-icons/md';
+import { twMerge } from 'tailwind-merge';
 import files from '../../utils/files.json';
 import { formatTime } from '../../utils/time';
 import Modal from './components/Modal';
 
-function File({ item, setSelectedItem }) {
+function File({ item }) {
   if (item.imageUrl) {
     return (
       <Image
         src={item.thumbnailUrl || item.imageUrl}
         alt={item.name}
         fill
-        className="object-cover hover:opacity-50 transition duration-50 cursor-pointer h-full w-full select-none bg-white"
+        className={twMerge(
+          'object-cover hover:opacity-50 transition duration-50 cursor-pointer h-full w-full select-none bg-white',
+          !item.link && 'cursor-zoom-in',
+        )}
         onClick={(e) => {
           e.stopPropagation();
-          setSelectedItem(item);
+          window.location.href = item.link || item.imageUrl;
         }}
       />
     );
