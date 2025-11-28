@@ -45,7 +45,7 @@ export default function WaveText({ text, className, gradient = 'true' }) {
               className={className}
               style={{
                 animationDelay: `${-2 + index * 0.1}s`,
-                WebkitTextFillColor: gradient ? lerpColor(waveColors, t) : '#6a3b7b',
+                WebkitTextFillColor: gradient ? lerpColor(waveColors, t) : undefined,
               }}
             >
               {letter}

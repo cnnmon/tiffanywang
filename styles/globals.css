@@ -5,6 +5,12 @@
 }
 
 @font-face {
+  font-family: 'bodytext';
+  src: url('../public/neuemontreal-bold.otf');
+  font-weight: bold;
+}
+
+@font-face {
   font-family: 'wavetext';
   src: url('../public/neuebit.otf');
   font-weight: normal;
