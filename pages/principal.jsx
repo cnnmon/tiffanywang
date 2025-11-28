@@ -24,7 +24,7 @@ function Principal() {
             <h1 className="text-3xl font-bold">princi/pal: A Moral Dilemma Tamagotchi Game</h1>
             <p className="text-lg">
               <a
-                href="https://www.tiffanywang.com"
+                href="https://www.tiffanywang.me"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-500 hover:text-blue-700"
