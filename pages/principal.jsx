@@ -95,9 +95,9 @@ function Principal() {
             <Image
               src="/images/principal.gif"
               alt="princi/pal game screenshot"
-              width={1000}
-              height={1000}
-              className="object-cover w-full rounded"
+              width={800}
+              height={800}
+              className="object-cover h-[400px] rounded"
             />
           </motion.div>
 
