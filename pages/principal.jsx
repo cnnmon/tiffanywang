@@ -3,6 +3,21 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { BiTable } from 'react-icons/bi';
 import { IoDocumentTextOutline, IoLogoGithub, IoPlayCircle } from 'react-icons/io5';
+import { twMerge } from 'tailwind-merge';
+
+export function Button({ children, onClick, variant = 'light' }) {
+  return (
+    <button
+      onClick={onClick}
+      className={twMerge(
+        'rounded flex-1 w-full flex items-center justify-center gap-1 py-2 bg-gray-200 text-black hover:bg-gray-300',
+        variant === 'dark' && 'bg-blue-500 text-white hover:bg-blue-600',
+      )}
+    >
+      {children}
+    </button>
+  );
+}
 
 function Principal() {
   return (
@@ -11,13 +26,13 @@ function Principal() {
         <title>princi/pal: A Moral Dilemma Tamagotchi Game - Tiffany Wang</title>
       </Head>
 
-      <div className="min-h-screen w-full bg-white py-10 ">
+      <div className="min-h-screen w-full bg-white pb-10">
         {/* Main Content */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.2 }}
-          className="max-w-4xl mx-auto px-8 py-12 flex flex-col gap-6"
+          className="max-w-4xl mx-auto px-8 py-12 flex flex-col gap-10"
         >
           {/* Header */}
           <div className="flex flex-col gap-2">
@@ -39,19 +54,19 @@ function Principal() {
 
             {/* Links */}
             <div className="flex flex-wrap gap-2 text-lg justify-center">
-              <button
+              <Button
                 onClick={() => window.open('https://openreview.net/pdf?id=ElaELqeFt8', '_blank')}
               >
                 <IoDocumentTextOutline /> Paper
-              </button>
-              <button
+              </Button>
+              <Button
                 onClick={() =>
                   window.open('https://github.com/cnnmon/moral-dilemma-tamagotchi', '_blank')
                 }
               >
                 <IoLogoGithub /> Code
-              </button>
-              <button
+              </Button>
+              <Button
                 onClick={() =>
                   window.open(
                     'https://huggingface.co/datasets/cnnmon/moral-dilemma-responses',
@@ -60,14 +75,13 @@ function Principal() {
                 }
               >
                 <BiTable /> Dataset
-              </button>
-
-              <button
+              </Button>
+              <Button
                 onClick={() => window.open('https://cnnmon.itch.io/principal', '_blank')}
-                className="bg-blue-400 text-white hover:bg-blue-500"
+                variant="dark"
               >
                 <IoPlayCircle /> Play!
-              </button>
+              </Button>
             </div>
           </div>
 
@@ -77,7 +91,7 @@ function Principal() {
             alt="princi/pal game screenshot"
             width={1000}
             height={1000}
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full rounded"
           />
 
           {/* Abstract */}
@@ -94,7 +108,7 @@ function Principal() {
               autonomously after reaching one of 16 evolutionary paths.
             </p>
             <p>
-              Public deployment collected over 12,000 moral reasoning inputs, revealing how AI
+              Public deployment collected over 30,000 moral reasoning inputs, revealing how AI
               systems interpret human moral reasoning. Players experienced parental anxiety as pets
               gained independence, mirroring real concerns about AI alignment. The AI demonstrated
               concerning patterns: extrapolating from minimal input, sanitizing extreme suggestions,
@@ -103,6 +117,13 @@ function Principal() {
               interpretation and raises fundamental questions about authorship and understanding in
               autonomous artificial moral reasoning.
             </p>
+            <Image
+              src="/principal/system.png"
+              alt="System design"
+              width={1000}
+              height={1000}
+              className="object-cover w-full h-full rounded"
+            />
           </section>
 
           {/* Citation */}
@@ -119,6 +140,16 @@ function Principal() {
             </div>
           </section>
         </motion.div>
+
+        <section className="flex justify-center items-center">
+          <Image
+            src="/principal/pan.gif"
+            alt="Evolutions"
+            width={200}
+            height={200}
+            className="object-cover"
+          />
+        </section>
       </div>
     </>
   );
