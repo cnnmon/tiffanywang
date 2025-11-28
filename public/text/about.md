@@ -1,6 +1,6 @@
 Hi, I'm Tiffany! I'm a programmer, researcher, and artist. I'm currently working on [storytelling tools](https://mj-storytelling.github.io/) at Midjourney.
 
-I'm interested in learning from playful, collaborative, even adversarial interactions between man & machine. I also love game-making ([1.5m plays!](https://cnnmon.itch.io/)), personality tests, creativity, and {restlessness}. See results of those fixations: [/projects](/projects).
+I'm interested in the playful, collaborative, even adversarial interactions between man & machine. I also love game-making ([1.5m plays!](https://cnnmon.itch.io/)), personality tests, tea, and {restlessness}. See results of those fixations: [/projects](/projects).
 
 Previously, I:
 - Graduated from Berkeley!

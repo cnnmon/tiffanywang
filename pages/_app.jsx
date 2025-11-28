@@ -24,9 +24,10 @@ function MyApp({ Component, pageProps }) {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  return (
-    <MouseContext.Provider value={mousePosition}>
-      <GoogleAnalytics gaId="G-3GQCPVERX9" />
+  // Use custom layout if page defines one
+  const getLayout =
+    Component.getLayout ||
+    ((page) => (
       <div className="flex flex-col w-full h-screen">
         <Head>
           <title>tiffanywang</title>
@@ -47,7 +48,7 @@ function MyApp({ Component, pageProps }) {
 
             <AnimatePresence mode="wait">
               <div key={router.route} className="pb-[200px]">
-                <Component {...pageProps} />
+                {page}
               </div>
             </AnimatePresence>
 
@@ -58,6 +59,12 @@ function MyApp({ Component, pageProps }) {
           </div>
         </div>
       </div>
+    ));
+
+  return (
+    <MouseContext.Provider value={mousePosition}>
+      <GoogleAnalytics gaId="G-3GQCPVERX9" />
+      {getLayout(<Component {...pageProps} />)}
     </MouseContext.Provider>
   );
 }

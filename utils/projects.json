@@ -91,13 +91,14 @@
         "date": "mar 2020",
         "image": "/images/coffeelings.gif",
         "link": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/",
-        "award": "Featured Chrome Web Store"
+        "award": "Featured on Chrome Web Store"
       },
       {
         "name": "cardio casino",
         "type": "game",
         "description": "a slot machine game tied to your childhood.",
         "date": "oct 2019",
+        "award": "Cleveland Clinic eXpressions exhibit",
         "image": "/images/cardio.gif",
         "link": "https://cnnmon.itch.io/cardiocasino"
       },
@@ -124,6 +125,7 @@
         "type": "game",
         "description": "morning routine simulator.",
         "date": "jan 2019",
+        "award": "Scholastic Gold Key exhibit",
         "image": "/images/goodmorning.gif",
         "link": "https://cnnmon.itch.io/goodmorning"
       },
@@ -133,11 +135,13 @@
         "description": "do research. treat patients. eat catnip. repeat.",
         "date": "nov 2018",
         "image": "/images/kittyclinic.png",
+        "award": "Cleveland Clinic eXpressions exhibit",
         "link": "https://cnnmon.itch.io/kittyclinic"
       },
       {
         "name": "spacebar",
         "type": "game",
+        "award": "Scholastic Gold Key exhibit",
         "description": "endless-runner typing game. explore planets. if you type fast enough, you won't fall into endless void.",
         "date": "sep 2018",
         "image": "/images/spacebar.PNG",

@@ -106,3 +106,21 @@ a:hover {
     transform: translateY(0em);
   }
 }
+
+button {
+  @apply bg-blue-100 text-blue-800 text-lg;
+  border: none;
+  padding: 7px 30px;
+  flex: 1;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+button:hover {
+  @apply bg-blue-200;
+}
