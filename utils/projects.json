@@ -4,7 +4,7 @@
     "list": [
       {
         "name": "dramamancer",
-        "type": "game web research",
+        "type": "web research",
         "description": "an ai visual novel engine.",
         "image": "/images/drama.gif",
         "link": "https://storytelling-dev.midjourney.com/",
