@@ -15,8 +15,8 @@ function File({ item }) {
         alt={item.name}
         fill
         className={twMerge(
-          'object-cover hover:opacity-50 transition duration-50 cursor-pointer h-full w-full select-none bg-white',
-          !item.link && 'cursor-zoom-in',
+          'object-cover hover:opacity-50 transition duration-50 h-full w-full select-none bg-white',
+          item.link ? 'cursor-ne-resize' : 'cursor-zoom-in',
         )}
         onClick={(e) => {
           e.stopPropagation();

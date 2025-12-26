@@ -7,23 +7,32 @@
         "type": "web research",
         "description": "an ai visual novel engine.",
         "image": "/images/drama.gif",
-        "link": "https://storytelling-dev.midjourney.com/",
-        "award": "UIST 2025"
+        "links": {
+          "main": "https://storytelling-dev.midjourney.com/",
+          "paper": "https://dl.acm.org/doi/full/10.1145/3746058.3758995",
+          "video": "https://drive.google.com/file/d/1dGaWHQJCWKOClatyI5NOrQXnDBUqx50B/view?usp=sharing"
+        },
+        "sublabel": "UIST 2025"
       },
       {
         "name": "principal",
         "type": "game web research",
         "description": "a tamagotchi that grows and learns from moral dilemmas.",
         "image": "/images/principal.gif",
-        "link": "https://cnnmon.itch.io/principal",
-        "award": "NeurIPS Creative AI 2025"
+        "links": {
+          "main": "https://cnnmon.itch.io/principal",
+          "paper": "/principal"
+        },
+        "sublabel": "NeurIPS Creative AI 2025"
       },
       {
         "name": "botsbotsbots",
         "type": "game web",
         "description": "a reverse turing test where you must blend in with bots to survive.",
         "image": "/images/botsbotsbots.gif",
-        "link": "https://cnnmon.itch.io/botsbotsbots"
+        "links": {
+          "main": "https://cnnmon.itch.io/botsbotsbots"
+        }
       }
     ]
   },
@@ -36,7 +45,10 @@
         "description": "ai pair programmer VS code extension powered by a living design doc.",
         "date": "apr 2024",
         "image": "/images/dango.gif",
-        "link": "https://github.com/cnnmon/dango"
+        "links": {
+          "main": "https://github.com/cnnmon/dango",
+          "paper": "https://drive.google.com/file/d/1L9hbCK6j5lHo6sMCb29kYXOEPmc_awkW/view"
+        }
       },
       {
         "name": "tensor trust",
@@ -44,8 +56,11 @@
         "description": "sweet-talk your way into bank robbery.",
         "date": "nov 2023",
         "image": "/images/tensortrust.gif",
-        "link": "https://tensortrust.ai/",
-        "award": "ICLR 2024 (spotlight)"
+        "links": {
+          "main": "https://tensortrust.ai/",
+          "paper": "https://tensortrust.ai/paper/"
+        },
+        "sublabel": "ICLR 2024 (spotlight)"
       },
       {
         "name": "univers(ity)",
@@ -53,7 +68,9 @@
         "description": "you're a university student in space over holiday break.",
         "date": "dec 2023",
         "image": "/images/university.gif",
-        "link": "https://university-game.vercel.app/"
+        "links": {
+          "main": "https://university-game.vercel.app/"
+        }
       },
       {
         "name": "my singing friends",
@@ -61,7 +78,9 @@
         "description": "an interpersonal music maker  🎵🕺🏻.",
         "date": "oct 2023",
         "image": "/images/mysingingfriends.gif",
-        "link": "https://singing-friends.vercel.app/"
+        "links": {
+          "main": "https://singing-friends.vercel.app/"
+        }
       },
       {
         "name": "drip or drown",
@@ -69,7 +88,9 @@
         "description": "ai can and will roast your style.",
         "date": "feb 2023",
         "image": "/images/dripordrown.gif",
-        "link": "https://www.youtube.com/watch?v=g8LlEDijwe8&t=36s&ab_channel=AKS"
+        "links": {
+          "main": "https://www.youtube.com/watch?v=g8LlEDijwe8&t=36s&ab_channel=AKS"
+        }
       },
       {
         "name": "ezcv",
@@ -77,7 +98,10 @@
         "description": "the easiest resume maker. just add plaintext.",
         "date": "sep 2022",
         "image": "/images/ezcv3.gif",
-        "link": "https://www.ezcv.pro/"
+        "links": {
+          "main": "https://www.ezcv.pro/",
+          "video": "https://www.youtube.com/watch?v=ySbI8ernz3M"
+        }
       }
     ]
   },
@@ -90,7 +114,10 @@
         "description": "drink boba... efficiently? a boba-themed mobile puzzle game.",
         "date": "aug 2020",
         "image": "/images/boba.gif",
-        "link": "https://cnnmon.itch.io/boba"
+        "links": {
+          "main": "https://cnnmon.itch.io/boba",
+          "video": "https://www.youtube.com/watch?v=TFjMKTdCfcg&t=6s"
+        }
       },
       {
         "name": "coffeelings",
@@ -98,17 +125,21 @@
         "description": "a mood tracking chrome extension. (200k+ daily active users)",
         "date": "mar 2020",
         "image": "/images/coffeelings.gif",
-        "link": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/",
-        "award": "Featured on Chrome Web Store"
+        "links": {
+          "main": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/"
+        },
+        "sublabel": "Featured on Chrome Web Store"
       },
       {
         "name": "cardio casino",
         "type": "game",
         "description": "a slot machine game tied to your childhood.",
         "date": "oct 2019",
-        "award": "Cleveland Clinic eXpressions exhibit",
+        "sublabel": "Cleveland Clinic eXpressions exhibit",
         "image": "/images/cardio.gif",
-        "link": "https://cnnmon.itch.io/cardiocasino"
+        "links": {
+          "main": "https://cnnmon.itch.io/cardiocasino"
+        }
       },
       {
         "name": "ashes to ash",
@@ -116,8 +147,10 @@
         "description": "72-hour ludum dare platformer about collecting emotions.",
         "date": "oct 2019",
         "image": "/images/ashestoash.gif",
-        "link": "https://ldjam.com/events/ludum-dare/45/ashes-to-ash/",
-        "award": "Ludum Dare top 0.3%"
+        "links": {
+          "main": "https://ldjam.com/events/ludum-dare/45/ashes-to-ash/"
+        },
+        "sublabel": "Ludum Dare top 0.3%"
       },
       {
         "name": "slice of scythe",
@@ -125,17 +158,21 @@
         "description": "72-hour ludum dare game about doing chores (and collecting souls!?) as a grim reaper.",
         "date": "apr 2019",
         "image": "/images/sliceofscythe.gif",
-        "link": "https://ldjam.com/events/ludum-dare/44/slice-of-scythe/",
-        "award": "Ludum Dare top 2%"
+        "links": {
+          "main": "https://ldjam.com/events/ludum-dare/44/slice-of-scythe/"
+        },
+        "sublabel": "Ludum Dare top 2%"
       },
       {
         "name": "good morning!",
         "type": "game",
         "description": "morning routine simulator.",
         "date": "jan 2019",
-        "award": "Scholastic Gold Key exhibit",
+        "sublabel": "Scholastic Gold Key exhibit",
         "image": "/images/goodmorning.gif",
-        "link": "https://cnnmon.itch.io/goodmorning"
+        "links": {
+          "main": "https://cnnmon.itch.io/goodmorning"
+        }
       },
       {
         "name": "kittyclinic",
@@ -143,17 +180,21 @@
         "description": "do research. treat patients. eat catnip. repeat.",
         "date": "nov 2018",
         "image": "/images/kittyclinic.png",
-        "award": "Cleveland Clinic eXpressions exhibit",
-        "link": "https://cnnmon.itch.io/kittyclinic"
+        "sublabel": "Cleveland Clinic eXpressions exhibit",
+        "links": {
+          "main": "https://cnnmon.itch.io/kittyclinic"
+        }
       },
       {
         "name": "spacebar",
         "type": "game",
-        "award": "Scholastic Gold Key exhibit",
+        "sublabel": "Scholastic Gold Key NYC exhibit",
         "description": "endless-runner typing game. explore planets. if you type fast enough, you won't fall into endless void.",
         "date": "sep 2018",
         "image": "/images/spacebar.PNG",
-        "link": "https://cnnmon.itch.io/spacebar"
+        "links": {
+          "main": "https://cnnmon.itch.io/spacebar"
+        }
       }
     ]
   }

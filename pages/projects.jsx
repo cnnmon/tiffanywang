@@ -1,35 +1,23 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
-import { twMerge } from 'tailwind-merge';
 import Url from '../components/Url';
 import projectSections from '../utils/projects.json';
 
-function Project({ item, selectedType, setSelectedType }) {
-  const { name, type, description, link, image, award } = item;
+const linkToIcon = {
+  paper: '/icons/article.svg',
+  video: '/icons/video.svg',
+};
 
-  const handleNoLinkClick = () => {
-    if (!link) {
-      alert('this is a work in progress — email me if you want a preview!');
-      return '';
-    }
-  };
-
+function Project({ item }) {
+  const { name, description, links, image, sublabel } = item;
   const projectId = `project-${name.replace(/\s+/g, '-').toLowerCase()}`;
-  const isSelected = selectedType === null || type.split(' ').includes(selectedType);
-  const tags = type.split(' ');
 
   return (
-    <motion.div key={projectId} id={projectId} className="flex flex-col w-full mb-10">
-      <div
-        className="transition-all duration-50"
-        style={{
-          opacity: !isSelected ? 0.3 : 1,
-          filter: !isSelected ? 'saturate(20%)' : 'none',
-        }}
-      >
-        <a href={link || undefined} onClick={!link ? handleNoLinkClick : undefined} target="_blank">
-          <div className="relative card mb-5 bg-gray-100 h-[200px]">
+    <motion.div key={projectId} id={projectId} className="flex flex-col w-full mb-5">
+      <div className="transition-all duration-50">
+        <a href={links.main} target="_blank">
+          <div className="relative card mb-3 bg-gray-100 h-[200px]">
             <Image
               src={image}
               alt={name}
@@ -42,39 +30,46 @@ function Project({ item, selectedType, setSelectedType }) {
           </div>
         </a>
         <div className="flex flex-row justify-between gap-2">
-          <a
-            href={link || undefined}
-            onClick={!link ? handleNoLinkClick : undefined}
-            target="_blank"
-            className="font-bold"
-          >
+          <a href={links.main} target="_blank" className="font-bold">
             {name}
           </a>
           <div className="flex flex-row gap-2 select-none">
-            {tags.map((t) => (
-              <div
-                onClick={() => {
-                  if (selectedType === t) {
-                    setSelectedType(null);
-                  } else {
-                    setSelectedType(t);
-                  }
-                }}
-                className={twMerge(
-                  'cursor-pointer text-sm',
-                  selectedType && selectedType !== t && 'opacity-40',
-                )}
-                style={{
-                  color: '#6a3b7b',
-                }}
-              >
-                [{t}]
-              </div>
-            ))}
+            {Object.keys(links)
+              .filter((k) => k !== 'main')
+              .map((k) => {
+                const iconSrc = linkToIcon[k];
+                return (
+                  <div
+                    key={k}
+                    onClick={() => {
+                      window.open(links[k], '_blank')?.focus();
+                    }}
+                    className="cursor-ne-resize text-sm hover:opacity-50"
+                    style={{
+                      color: '#6a3b7b',
+                    }}
+                  >
+                    {iconSrc ? (
+                      <img
+                        src={iconSrc}
+                        alt={k}
+                        title={k}
+                        className="w-4 h-4"
+                        style={{
+                          filter:
+                            'invert(23%) sepia(28%) saturate(1766%) hue-rotate(264deg) brightness(56%) contrast(87%)',
+                        }}
+                      />
+                    ) : (
+                      k
+                    )}
+                  </div>
+                );
+              })}
           </div>
         </div>
         <p>{description}</p>
-        <p className="text-gray-500">{award}</p>
+        <p className="text-gray-500">{sublabel}</p>
       </div>
     </motion.div>
   );
@@ -97,11 +92,7 @@ function Projects() {
               <div className="sm:grid grid-cols-2 gap-4">
                 {list.map((item) => (
                   <div key={item.name}>
-                    <Project
-                      item={item}
-                      selectedType={selectedType}
-                      setSelectedType={setSelectedType}
-                    />
+                    <Project item={item} />
                   </div>
                 ))}
               </div>
