@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useState } from 'react';
 import Url from '../components/Url';
+import { useTooltip } from '../hooks/useTooltip';
 import projectSections from '../utils/projects.json';
 
 const linkToIcon = {
@@ -9,7 +9,7 @@ const linkToIcon = {
   video: '/icons/video.svg',
 };
 
-function Project({ item }) {
+function Project({ item, showTooltip, hideTooltip }) {
   const { name, description, links, image, sublabel } = item;
   const projectId = `project-${name.replace(/\s+/g, '-').toLowerCase()}`;
 
@@ -45,6 +45,8 @@ function Project({ item }) {
                       window.open(links[k], '_blank')?.focus();
                     }}
                     className="cursor-ne-resize text-sm hover:opacity-50"
+                    onMouseEnter={() => showTooltip(k)}
+                    onMouseLeave={() => hideTooltip()}
                     style={{
                       color: '#6a3b7b',
                     }}
@@ -53,7 +55,6 @@ function Project({ item }) {
                       <img
                         src={iconSrc}
                         alt={k}
-                        title={k}
                         className="w-4 h-4"
                         style={{
                           filter:
@@ -76,10 +77,11 @@ function Project({ item }) {
 }
 
 function Projects() {
-  const [selectedType, setSelectedType] = useState(null);
+  const { showTooltip, hideTooltip, Tooltip } = useTooltip();
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-4">
+      {Tooltip}
       <p>
         Take a look around! Smaller projects live on my{' '}
         <Url href="https://github.com/cnnmon">GitHub</Url>.
@@ -92,7 +94,7 @@ function Projects() {
               <div className="sm:grid grid-cols-2 gap-4">
                 {list.map((item) => (
                   <div key={item.name}>
-                    <Project item={item} />
+                    <Project item={item} showTooltip={showTooltip} hideTooltip={hideTooltip} />
                   </div>
                 ))}
               </div>

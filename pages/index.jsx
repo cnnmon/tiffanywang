@@ -1,10 +1,55 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
 import VideoScrubber from '../components/VideoScrubber';
+import { useTooltip } from '../hooks/useTooltip';
+
+const randomTexts = ['hi'];
+
+function IconButton({ icon, delay, onClick, onMouseEnter, onMouseLeave }) {
+  return (
+    <motion.img
+      src={`/icons/${icon}.svg`}
+      width={35}
+      height={35}
+      onClick={onClick}
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, delay: delay }}
+      className="cursor-pointer p-1.5 hover:bg-black/30 z-[2]"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      style={{
+        filter:
+          'invert(23%) sepia(28%) saturate(1766%) hue-rotate(264deg) brightness(100%) contrast(30%)',
+      }}
+    />
+  );
+}
 
 function Home() {
+  const router = useRouter();
+  const { showTooltip, hideTooltip, Tooltip } = useTooltip();
+  const [videoSpeed, setVideoSpeed] = useState(1);
+
+  const handleChat = () => {
+    const text = randomTexts[Math.floor(Math.random() * randomTexts.length)];
+    confirm(text);
+  };
+
+  const handleWind = () => {
+    setVideoSpeed((s) => Math.min(s + 0.5, 10));
+  };
+
+  const handleContact = () => {
+    router.push('/about');
+  };
+
   return (
-    <div className="flex justify-center items-center relative">
+    <div className="flex justify-center items-end relative">
+      {Tooltip}
+
       {/* sparkles */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -57,7 +102,7 @@ function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.8 }}
         transition={{ duration: 2 }}
-        className="absolute z-[1] mix-blend-overlay pointer-events-none"
+        className="absolute z-[3] mix-blend-overlay pointer-events-none"
       >
         {/* Bloom layers */}
         <div
@@ -93,6 +138,30 @@ function Home() {
         />
       </motion.div>
 
+      <div className="flex flex-col">
+        <IconButton
+          icon="chat"
+          delay={0.1}
+          onClick={handleChat}
+          onMouseEnter={() => showTooltip(`say hi!`)}
+          onMouseLeave={hideTooltip}
+        />
+        <IconButton
+          icon="contact"
+          delay={0.2}
+          onClick={handleContact}
+          onMouseEnter={() => showTooltip('read my id')}
+          onMouseLeave={hideTooltip}
+        />
+        <IconButton
+          icon="wind"
+          delay={0.3}
+          onClick={handleWind}
+          onMouseEnter={() => showTooltip('blow some wind')}
+          onMouseLeave={hideTooltip}
+        />
+      </div>
+
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -103,6 +172,9 @@ function Home() {
           alt="me in 3d"
           width={500}
           height={500}
+          showTooltip={showTooltip}
+          hideTooltip={hideTooltip}
+          speed={videoSpeed}
           className="object-cover h-[60vh] w-[25vh]"
         />
       </motion.div>

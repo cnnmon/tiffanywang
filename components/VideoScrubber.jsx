@@ -1,7 +1,17 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useMousePosition } from '../pages/_app';
 
-function VideoScrubber({ src, width, height, className, ...props }) {
+function VideoScrubber({
+  src,
+  width,
+  height,
+  className,
+  showTooltip,
+  hideTooltip,
+  speed = 1,
+  scale = 1,
+  ...props
+}) {
   const [isHovering, setIsHovering] = useState(false);
   const hoverStartTimeRef = useRef(0);
   const lastMouseXRef = useRef(0);
@@ -142,6 +152,12 @@ function VideoScrubber({ src, width, height, className, ...props }) {
     updateVideoTime();
   }, [mousePosition, isHovering, updateVideoTime]);
 
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = speed;
+    }
+  }, [speed]);
+
   return (
     <video
       ref={videoRef}
@@ -154,8 +170,15 @@ function VideoScrubber({ src, width, height, className, ...props }) {
       width={width}
       height={height}
       className={className}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      style={{ transform: `scale(${scale})`, transition: 'transform 0.3s ease' }}
+      onMouseEnter={() => {
+        showTooltip('wheeee', true);
+        handleMouseEnter();
+      }}
+      onMouseLeave={() => {
+        hideTooltip();
+        handleMouseLeave();
+      }}
       {...props}
     />
   );

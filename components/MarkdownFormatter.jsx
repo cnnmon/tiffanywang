@@ -111,7 +111,7 @@ function MarkdownFormatter({ file }) {
               <WaveText
                 key={`b-${key}-${match.index}`}
                 text={match[1]}
-                className="text-2xl"
+                className="text-2xl text-[#6a3b7b]"
                 gradient={false}
               />,
             );

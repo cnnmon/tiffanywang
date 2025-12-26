@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { createContext, useContext, useEffect, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 import WaveText from '../components/WaveText';
 import '../styles/globals.css';
 
@@ -40,9 +41,33 @@ function MyApp({ Component, pageProps }) {
                 <WaveText text="tiffanywang⊹" className="text-3xl" />
               </Link>
               <div className="flex gap-4">
-                <Link href="/about">about</Link>
-                <Link href="/projects">projects</Link>
-                <Link href="/files">files</Link>
+                <Link
+                  href="/about"
+                  className={twMerge(
+                    'hover:opacity-100',
+                    router.pathname === '/about' ? 'opacity-100' : 'opacity-60',
+                  )}
+                >
+                  about
+                </Link>
+                <Link
+                  href="/projects"
+                  className={twMerge(
+                    'hover:opacity-100',
+                    router.pathname === '/projects' ? 'opacity-100' : 'opacity-60',
+                  )}
+                >
+                  projects
+                </Link>
+                <Link
+                  href="/files"
+                  className={twMerge(
+                    'hover:opacity-100',
+                    router.pathname.startsWith('/files') ? 'opacity-100' : 'opacity-60',
+                  )}
+                >
+                  files
+                </Link>
               </div>
             </header>
 

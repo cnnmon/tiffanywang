@@ -77,7 +77,6 @@ a:hover {
 }
 
 .wave span {
-  color: #6a3b7b;
   font-family: 'wavetext';
   display: inline-block;
   -webkit-animation: wave-text 2s ease-in-out infinite;
