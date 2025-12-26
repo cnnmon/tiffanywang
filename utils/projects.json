@@ -3,6 +3,14 @@
     "title": "2024-present",
     "list": [
       {
+        "name": "dramamancer",
+        "type": "game web research",
+        "description": "an ai visual novel engine.",
+        "image": "/images/drama.gif",
+        "link": "https://storytelling-dev.midjourney.com/",
+        "award": "UIST 2025"
+      },
+      {
         "name": "principal",
         "type": "game web research",
         "description": "a tamagotchi that grows and learns from moral dilemmas.",
