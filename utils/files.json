@@ -34,11 +34,6 @@
     "link": "https://oaktime.vercel.app/"
   },
   {
-    "id": "oranges",
-    "imageUrl": "/images/oranges.png",
-    "date": "2025"
-  },
-  {
     "id": "a semantic search for your diary",
     "thumbnailUrl": "/images/magnets-thumb.png",
     "imageUrl": "/images/magnets.png",
