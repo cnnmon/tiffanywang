@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
+import { motion, useAnimationControls } from 'framer-motion';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SnowParticles from '../components/SnowParticles';
 import VideoScrubber from '../components/VideoScrubber';
 import { useTooltip } from '../hooks/useTooltip';
@@ -9,6 +9,25 @@ import { useTooltip } from '../hooks/useTooltip';
 const randomTexts = ['hi'];
 
 function IconButton({ icon, delay, onClick, onMouseEnter, onMouseLeave }) {
+  const controls = useAnimationControls();
+
+  useEffect(() => {
+    const animate = async () => {
+      // Fade in from 0 to 0.5
+      await controls.start({
+        opacity: 0.5,
+        scale: 1,
+        transition: { duration: 0.5, delay: delay * 0.2 },
+      });
+      // Then loop between 0.5 and 0.3
+      controls.start({
+        opacity: [0.5, 0.3, 0.5],
+        transition: { duration: 1.4, repeat: Infinity },
+      });
+    };
+    animate();
+  }, [controls, delay]);
+
   return (
     <motion.img
       src={`/icons/${icon}.svg`}
@@ -16,19 +35,7 @@ function IconButton({ icon, delay, onClick, onMouseEnter, onMouseLeave }) {
       height={35}
       onClick={onClick}
       initial={{ opacity: 0, scale: 0.95 }}
-      animate={{
-        opacity: [0.5, 0.3, 0.5],
-        scale: 1,
-      }}
-      transition={{
-        opacity: {
-          duration: 1.4,
-          repeat: Infinity,
-          repeatType: 'reverse',
-          delay: delay * 0.2 + 0.5,
-        },
-        scale: { duration: 0.7, delay: delay * 0.2 + 0.5 },
-      }}
+      animate={controls}
       className="cursor-pointer p-1.5 hover:bg-black/30 z-[2]"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
