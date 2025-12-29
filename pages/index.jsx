@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import SnowParticles from '../components/SnowParticles';
 import VideoScrubber from '../components/VideoScrubber';
 import { useTooltip } from '../hooks/useTooltip';
 
@@ -15,8 +16,19 @@ function IconButton({ icon, delay, onClick, onMouseEnter, onMouseLeave }) {
       height={35}
       onClick={onClick}
       initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5, delay: delay }}
+      animate={{
+        opacity: [0.5, 0.3, 0.5],
+        scale: 1,
+      }}
+      transition={{
+        opacity: {
+          duration: 1.4,
+          repeat: Infinity,
+          repeatType: 'reverse',
+          delay: delay * 0.2 + 0.5,
+        },
+        scale: { duration: 0.7, delay: delay * 0.2 + 0.5 },
+      }}
       className="cursor-pointer p-1.5 hover:bg-black/30 z-[2]"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -48,6 +60,7 @@ function Home() {
 
   return (
     <div className="flex justify-center items-end relative">
+      <SnowParticles count={50} />
       {Tooltip}
 
       {/* sparkles */}
@@ -141,21 +154,21 @@ function Home() {
       <div className="flex flex-col">
         <IconButton
           icon="chat"
-          delay={0.1}
+          delay={1}
           onClick={handleChat}
           onMouseEnter={() => showTooltip(`say hi!`)}
           onMouseLeave={hideTooltip}
         />
         <IconButton
           icon="contact"
-          delay={0.2}
+          delay={2}
           onClick={handleContact}
           onMouseEnter={() => showTooltip('read my id')}
           onMouseLeave={hideTooltip}
         />
         <IconButton
           icon="wind"
-          delay={0.3}
+          delay={3}
           onClick={handleWind}
           onMouseEnter={() => showTooltip('blow some wind')}
           onMouseLeave={hideTooltip}

@@ -8,7 +8,7 @@ function VideoScrubber({
   className,
   showTooltip,
   hideTooltip,
-  speed = 1,
+  speed = 1.5,
   scale = 1,
   ...props
 }) {
