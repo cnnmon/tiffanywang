@@ -3,6 +3,18 @@
     "title": "2024-present",
     "list": [
       {
+        "name": "bonsai",
+        "type": "web research",
+        "description": "a cultivatable llm-based game engine",
+        "image": "/images/bonsai.png",
+        "links": {
+          "main": "https://tinypot.vercel.app/",
+          "paper": "https://drive.google.com/file/d/1oR92RWXR9UvC2vm_x8Dy452-dans7f1u/view?usp=sharing",
+          "video": "https://drive.google.com/file/d/1hs8WgjMvw1CQsWiEx_rd2oWVw10YNoCJ/view?usp=sharing"
+        },
+        "sublabel": "preprint"
+      },
+      {
         "name": "dramamancer",
         "type": "web research",
         "description": "an ai-supported visual novel engine.",
