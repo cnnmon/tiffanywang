@@ -1,4 +1,4 @@
-Hi, I'm Tiffany! I'm a programmer, researcher, and artist. I'm currently working on [storytelling tools](https://mj-storytelling.github.io/) at Midjourney.
+Hi, I'm Tiffany! I'm a programmer, researcher, and artist. I'm currently working on tools at [Midjourney](https://www.midjourney.com/).
 
 I'm interested in the playful, collaborative, even adversarial interactions between man & machine. I also love game-making ([1.5m plays!](https://cnnmon.itch.io/)), psychoanalyzing people via personality tests, tea-tasting, and {restlessness}. See results of those fixations: [/projects](/projects).
 
