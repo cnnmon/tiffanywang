@@ -5,7 +5,7 @@
       {
         "name": "bonsai",
         "type": "web research",
-        "description": "a cultivatable game engine that grows through play",
+        "description": "a cultivatable game engine that grows through play.",
         "image": "/images/bonsai.png",
         "links": {
           "main": "https://tinypot.vercel.app/",
