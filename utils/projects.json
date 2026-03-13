@@ -201,7 +201,7 @@
         "name": "spacebar",
         "type": "game",
         "sublabel": "Scholastic Gold Key exhibit",
-        "description": "endless-runner typing game. explore planets. if you type fast enough, you won't fall into endless void.",
+        "description": "type fast enough, and you won't fall into the endless void.",
         "date": "sep 2018",
         "image": "/images/spacebar.PNG",
         "links": {
