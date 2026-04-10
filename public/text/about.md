@@ -1,16 +1,11 @@
-Hi, I'm Tiffany! I'm a programmer, researcher, and artist. I'm currently working on tools at [Midjourney](https://www.midjourney.com/).
+Hi, I'm Tiffany! I'm a programmer, researcher, and artist. I'm currently a research engineer at [Midjourney](https://www.midjourney.com/) (previously at the [Storytelling Lab](https://mj-storytelling.github.io/)).
 
-I'm interested in the playful, collaborative, even adversarial interactions between man & machine. I also love game-making ([1.5m plays!](https://cnnmon.itch.io/)), psychoanalyzing people via personality tests, tea-tasting, and {restlessness}. See results of those fixations: [/projects](/projects).
+I like interaction; the playful, collaborative, reflective, even adversarial kinds where people & machines can learn from each other. See results from that fixation at [/projects](/projects).
 
-Previously, I:
-- Graduated from Berkeley!
-- Built product and infra at [Watershed](https://watershed.com/), [Meta Reality Labs](https://about.meta.com/realitylabs/), and [Ramp](https://ramp.com/)
-- Researched [adversarial robustness in LLMs](https://tensortrust.ai/paper/) at the [CHAI lab](https://humancompatible.ai/)
-- Taught [Operating Systems](https://cs162.org/), [Intro to CS](https://cs61a.org/), and [Web Design](https://webdesigndecal.github.io/)
-- Illustrated for [Kernel](https://www.kernelmag.io/) and [GAG](https://www.tiktok.com/@gag.magazine/) magazine
-- Made games for the [Cleveland](https://cnnmon.itch.io/cardiocasino) [Clinic](https://cnnmon.itch.io/kittyclinic) and a [biofeedback therapy startup](https://www.news5cleveland.com/news/local-news/akron-canton-news/akron-startups-getting-big-bounce-at-innovation-hub)
-- Grew up in a small town [with a big park](https://en.wikipedia.org/wiki/Brecksville_Reservation) in Ohio
+I graduated from [UC Berkeley](https://berkeley.edu/) with a BA in Computer Science, where I taught [Operating Systems](https://cs162.org/) and conducted research with the [Center for Human Compatible AI](https://humancompatible.ai/), advised by Stuart Russell. I also [ran hackathons](https://www.calhacks.io/), [built tech for non-profits](https://calblueprint.org/), and interned as a product and infra engineer at [Watershed](https://watershed.com/), [Meta Reality Labs](https://about.meta.com/realitylabs/), and [Ramp](https://ramp.com/).
+
+Past that, I enjoy making games ([1.5m+ plays!](https://cnnmon.itch.io/)), psychoanalyzing people via personality tests, tea-tasting, and {restlessness}.
+
+Want to chat or collaborate? Feel free to email me at **wangttiffany at gmail dot com**.
 
 Find me at: [GitHub ❀](https://github.com/cnnmon), [Twitter ꕤ](https://twitter.com/cnnmonie), [LinkedIn ✿](https://www.linkedin.com/in/wtiffany/), [Scholar ʚɞ](https://scholar.google.com/citations?hl=en&user=p8hhfi4AAAAJ)
-
-Want to chat? Feel free to email me at **wangttiffany at gmail dot com** 📬.

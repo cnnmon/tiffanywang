@@ -2,7 +2,6 @@ import { motion, useAnimationControls } from 'framer-motion';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import SnowParticles from '../components/SnowParticles';
 import VideoScrubber from '../components/VideoScrubber';
 import { useTooltip } from '../hooks/useTooltip';
 
@@ -67,7 +66,6 @@ function Home() {
 
   return (
     <div className="flex justify-center items-end relative">
-      <SnowParticles count={50} />
       {Tooltip}
 
       {/* sparkles */}
@@ -195,7 +193,7 @@ function Home() {
           showTooltip={showTooltip}
           hideTooltip={hideTooltip}
           speed={videoSpeed}
-          className="object-cover h-[60vh] w-[25vh]"
+          className="object-cover h-[55vh] w-[25vh]"
         />
       </motion.div>
     </div>
