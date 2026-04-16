@@ -3,16 +3,23 @@
     "title": "2024-present",
     "list": [
       {
+        "name": "comparefish",
+        "type": "web",
+        "description": "plot yourself and fix your friends.",
+        "image": "/images/comparefish.gif",
+        "links": {
+          "main": "https://comparefish.vercel.app/"
+        }
+      },
+      {
         "name": "bonsai",
         "type": "web research",
-        "description": "a cultivatable game engine that grows through play.",
+        "description": "cultivation as a design metaphor for authoring ai interaction.",
         "image": "/images/bonsai.png",
         "links": {
           "main": "https://tinypot.vercel.app/",
-          "paper": "https://drive.google.com/file/d/1oR92RWXR9UvC2vm_x8Dy452-dans7f1u/view?usp=sharing",
           "video": "https://drive.google.com/file/d/1hs8WgjMvw1CQsWiEx_rd2oWVw10YNoCJ/view?usp=sharing"
-        },
-        "sublabel": "preprint"
+        }
       },
       {
         "name": "dramamancer",
@@ -24,7 +31,7 @@
           "paper": "https://dl.acm.org/doi/full/10.1145/3746058.3758995",
           "video": "https://drive.google.com/file/d/1dGaWHQJCWKOClatyI5NOrQXnDBUqx50B/view?usp=sharing"
         },
-        "sublabel": "Midjourney, UIST 2025"
+        "sublabel": "UIST 2025"
       },
       {
         "name": "principal",
