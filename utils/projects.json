@@ -5,8 +5,8 @@
       {
         "name": "comparefish",
         "type": "web",
-        "description": "plot yourself and fix your friends.",
-        "image": "/images/comparefish.gif",
+        "description": "a social fish plotter where you can \"fix\" your friend's placements.",
+        "image": "/images/comparefish.mp4",
         "links": {
           "main": "https://comparefish.vercel.app/"
         }
@@ -19,25 +19,26 @@
         "links": {
           "main": "https://tinypot.vercel.app/",
           "video": "https://drive.google.com/file/d/1hs8WgjMvw1CQsWiEx_rd2oWVw10YNoCJ/view?usp=sharing"
-        }
+        },
+        "sublabel": "Creativity & Cognition 2026 poster"
       },
       {
         "name": "dramamancer",
         "type": "web research",
         "description": "an ai-supported visual novel engine.",
-        "image": "/images/drama.gif",
+        "image": "/images/drama.mp4",
         "links": {
           "main": "https://storytelling-dev.midjourney.com/",
           "paper": "https://dl.acm.org/doi/full/10.1145/3746058.3758995",
           "video": "https://drive.google.com/file/d/1dGaWHQJCWKOClatyI5NOrQXnDBUqx50B/view?usp=sharing"
         },
-        "sublabel": "UIST 2025"
+        "sublabel": "UIST 2025, EMNLP 2025 Wordplay Workshop"
       },
       {
         "name": "principal",
         "type": "game web research",
         "description": "a tamagotchi that grows and learns from moral dilemmas.",
-        "image": "/images/principal.gif",
+        "image": "/images/principal.mp4",
         "links": {
           "main": "https://cnnmon.itch.io/principal",
           "paper": "/principal"
@@ -48,7 +49,7 @@
         "name": "botsbotsbots",
         "type": "game web",
         "description": "a reverse turing test where you must blend in with bots to survive.",
-        "image": "/images/botsbotsbots.gif",
+        "image": "/images/botsbotsbots.mp4",
         "links": {
           "main": "https://cnnmon.itch.io/botsbotsbots"
         }
@@ -63,7 +64,7 @@
         "type": "research",
         "description": "ai pair programmer VS code extension powered by a living design doc.",
         "date": "apr 2024",
-        "image": "/images/dango.gif",
+        "image": "/images/dango.mp4",
         "links": {
           "main": "https://github.com/cnnmon/dango",
           "paper": "https://drive.google.com/file/d/1L9hbCK6j5lHo6sMCb29kYXOEPmc_awkW/view"
@@ -74,7 +75,7 @@
         "type": "game web research",
         "description": "sweet-talk your way into bank robbery.",
         "date": "nov 2023",
-        "image": "/images/tensortrust.gif",
+        "image": "/images/tensortrust.mp4",
         "links": {
           "main": "https://tensortrust.ai/",
           "paper": "https://tensortrust.ai/paper/"
@@ -86,7 +87,7 @@
         "type": "game",
         "description": "you're a university student in space over holiday break.",
         "date": "dec 2023",
-        "image": "/images/university.gif",
+        "image": "/images/university.mp4",
         "links": {
           "main": "https://university-game.vercel.app/"
         }
@@ -96,7 +97,7 @@
         "type": "game",
         "description": "an interpersonal music maker  🎵🕺🏻.",
         "date": "oct 2023",
-        "image": "/images/mysingingfriends.gif",
+        "image": "/images/mysingingfriends.mp4",
         "links": {
           "main": "https://singing-friends.vercel.app/"
         }
@@ -106,7 +107,7 @@
         "type": "web",
         "description": "ai can and will roast your style.",
         "date": "feb 2023",
-        "image": "/images/dripordrown.gif",
+        "image": "/images/dripordrown.mp4",
         "links": {
           "main": "https://www.youtube.com/watch?v=g8LlEDijwe8&t=36s&ab_channel=AKS"
         }
@@ -116,7 +117,7 @@
         "type": "web",
         "description": "the easiest resume maker. just add plaintext.",
         "date": "sep 2022",
-        "image": "/images/ezcv3.gif",
+        "image": "/images/ezcv3.mp4",
         "links": {
           "main": "https://www.ezcv.pro/",
           "video": "https://www.youtube.com/watch?v=ySbI8ernz3M"
@@ -132,7 +133,7 @@
         "type": "game mobile",
         "description": "drink boba... efficiently? a boba-themed mobile puzzle game.",
         "date": "aug 2020",
-        "image": "/images/boba.gif",
+        "image": "/images/boba.mp4",
         "links": {
           "main": "https://cnnmon.itch.io/boba",
           "video": "https://www.youtube.com/watch?v=TFjMKTdCfcg&t=6s"
@@ -141,9 +142,9 @@
       {
         "name": "coffeelings",
         "type": "web",
-        "description": "a mood tracking chrome extension. (200k+ daily active users)",
+        "description": "a mood tracking chrome extension, 200k+ daily active users.",
         "date": "mar 2020",
-        "image": "/images/coffeelings.gif",
+        "image": "/images/coffeelings.mp4",
         "links": {
           "main": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/"
         },
@@ -155,7 +156,7 @@
         "description": "a slot machine game tied to your childhood.",
         "date": "oct 2019",
         "sublabel": "Cleveland Clinic eXpressions exhibit",
-        "image": "/images/cardio.gif",
+        "image": "/images/cardio.mp4",
         "links": {
           "main": "https://cnnmon.itch.io/cardiocasino"
         }
@@ -165,7 +166,7 @@
         "type": "game",
         "description": "72-hour ludum dare platformer about collecting emotions.",
         "date": "oct 2019",
-        "image": "/images/ashestoash.gif",
+        "image": "/images/ashestoash.mp4",
         "links": {
           "main": "https://ldjam.com/events/ludum-dare/45/ashes-to-ash/"
         },
@@ -176,7 +177,7 @@
         "type": "game",
         "description": "72-hour ludum dare game about doing chores (and collecting souls!?) as a grim reaper.",
         "date": "apr 2019",
-        "image": "/images/sliceofscythe.gif",
+        "image": "/images/sliceofscythe.mp4",
         "links": {
           "main": "https://ldjam.com/events/ludum-dare/44/slice-of-scythe/"
         },
@@ -188,7 +189,7 @@
         "description": "morning routine simulator.",
         "date": "jan 2019",
         "sublabel": "Scholastic Gold Key exhibit",
-        "image": "/images/goodmorning.gif",
+        "image": "/images/goodmorning.mp4",
         "links": {
           "main": "https://cnnmon.itch.io/goodmorning"
         }

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import WaveText from '../components/WaveText';
 import markdownPreloader from '../utils/markdownPreloader';
@@ -51,12 +52,16 @@ function MarkdownFormatter({ file }) {
               segments.push(part.substring(lastIndex, match.index));
             }
             segments.push(
-              <img
-                key={`img-${key}-${idx}-${match.index}`}
-                src={match[2]}
-                alt={match[1]}
-                className="max-w-full h-auto"
-              />,
+              <span key={`img-${key}-${idx}-${match.index}`} className="block relative w-full">
+                <Image
+                  src={match[2]}
+                  alt={match[1]}
+                  width={800}
+                  height={600}
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  className="max-w-full h-auto"
+                />
+              </span>,
             );
             lastIndex = regex.lastIndex;
           }

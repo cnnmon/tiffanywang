@@ -75,12 +75,13 @@ function Principal() {
         </div>
       </div>
 
-      <Image
-        src="/images/principal.gif"
-        alt="princi/pal game screenshot"
-        width={800}
-        height={800}
-        className="object-cover h-[400px] rounded"
+      <video
+        src="/images/principal.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="object-cover h-[400px] w-full rounded"
       />
 
       <section className="space-y-3 text-lg">
@@ -133,6 +134,7 @@ function Principal() {
           alt="System design"
           width={1000}
           height={1000}
+          sizes="(max-width: 768px) 100vw, 1000px"
           className="object-cover w-full h-full rounded"
         />
       </section>

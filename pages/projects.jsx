@@ -13,20 +13,34 @@ function Project({ item, showTooltip, hideTooltip }) {
   const { name, description, links, image, sublabel } = item;
   const projectId = `project-${name.replace(/\s+/g, '-').toLowerCase()}`;
 
+  const isVideo = image.endsWith('.mp4');
+
   return (
     <motion.div key={projectId} id={projectId} className="flex flex-col w-full mb-5">
       <div className="transition-all duration-50">
         <a href={links.main} target="_blank">
           <div className="relative card mb-3 bg-gray-100 h-[200px]">
-            <Image
-              src={image}
-              alt={name}
-              fill
-              sizes="(max-width: 640px) 100vw, 50vw"
-              loading="lazy"
-              priority={false}
-              className="object-cover w-full h-full"
-            />
+            {isVideo ? (
+              <video
+                src={image}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="none"
+                className="object-cover w-full h-full"
+              />
+            ) : (
+              <Image
+                src={image}
+                alt={name}
+                fill
+                sizes="(max-width: 640px) 100vw, 50vw"
+                loading="lazy"
+                priority={false}
+                className="object-cover w-full h-full"
+              />
+            )}
           </div>
         </a>
         <div className="flex flex-row justify-between gap-2">

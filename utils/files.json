@@ -1,5 +1,23 @@
 [
   {
+    "id": "shrimp",
+    "description": "for <a href='https://www.kernelmag.io/'>KERNEL</a> piece about shrimp welfare",
+    "date": "may 2026",
+    "imageUrl": "/images/shrimp_color.png"
+  },
+  {
+    "id": "echocardiogram",
+    "date": "may 2026",
+    "description": "for <a href='https://www.kernelmag.io/'>KERNEL</a> fiction about echocardiograms",
+    "imageUrl": "/images/echocardiogram_color.png"
+  },
+  {
+    "id": "caladay",
+    "date": "jan 2026",
+    "description": "a <a href='https://caladay.vercel.app/'>ceasar calendar-a-day</a> puzzle",
+    "imageUrl": "/images/caladay.mp4"
+  },
+  {
     "id": "emofighting",
     "date": "oct 29 2025",
     "wip": true,
@@ -17,13 +35,13 @@
   },
   {
     "id": "grass",
+    "description": "i love touching grass",
     "imageUrl": "/images/grass.png",
     "date": "2025"
   },
   {
     "id": "a lactose full journaling app",
-    "thumbnailUrl": "/images/milkt.png",
-    "imageUrl": "/images/milktgit.png",
+    "imageUrl": "/images/milkt.png",
     "date": "2025",
     "link": "https://github.com/cnnmon/milktea"
   },
@@ -35,14 +53,14 @@
   },
   {
     "id": "a semantic search for your diary",
-    "thumbnailUrl": "/images/magnets-thumb.png",
     "imageUrl": "/images/magnets.png",
     "link": "https://github.com/cnnmon/magnets",
     "date": "2025"
   },
   {
-    "id": "war",
-    "imageUrl": "/images/war.png",
+    "id": "civiccenter",
+    "description": "fake poster for friend's <a href='https://open.spotify.com/track/6Wwop2BJQXEpNUO01Keoh9'>amazing song</a>",
+    "imageUrl": "/images/civiccenter.png",
     "date": "2024"
   },
   {
@@ -51,52 +69,49 @@
     "date": "2024"
   },
   {
-    "id": "fred",
-    "imageUrl": "/images/fred.gif",
-    "date": "2024"
-  },
-  {
-    "id": "botsbotsbots sketch",
+    "id": "botsconcept",
+    "description": "early concept art for <a href='https://cnnmon.itch.io/botsbotsbots'>botsbotsbots</a>",
     "imageUrl": "/images/botssketch.png",
     "date": "2024"
   },
   {
     "id": "sea",
+    "description": "<a href='https://www.youtube.com/watch?v=eEFVxI9lqjU'>i wanna take you to the sea</a>",
     "imageUrl": "/images/sea.png",
     "date": "2024"
   },
   {
     "id": "peppermint",
-    "imageUrl": "/images/peppermint.gif",
+    "description": "fan animation to <a href='https://www.youtube.com/watch?v=MtTBqIAQ434'>peppermint</a> by jack stauber",
+    "imageUrl": "/images/peppermint.mp4",
     "date": "2024"
   },
   {
     "id": "digital upload",
-    "imageUrl": "/images/digitalupload.gif",
+    "imageUrl": "/images/digitalupload.mp4",
     "date": "2024"
   },
   {
     "id": "me but online",
+    "description": "<a href='https://www.mebut.online/'>me, but online",
     "imageUrl": "/images/online.png",
     "date": "2024"
   },
   {
-    "id": "claw machine breaks free!",
-    "imageUrl": "/images/clawmachine.gif",
-    "date": "2024"
-  },
-  {
-    "id": "bee and puppycat reference",
-    "imageUrl": "/images/cat.gif",
+    "id": "bee and puppycat",
+    "description": "<a href='https://www.youtube.com/watch?v=XmUKhcuCZ3Q'>cue bee and puppycat audio</a>",
+    "imageUrl": "/images/cat.mp4",
     "date": "2024"
   },
   {
     "id": "cat cafe",
-    "imageUrl": "/images/catcafe.gif",
+    "description": "cat cafe (spot the cat posters)",
+    "imageUrl": "/images/catcafe.mp4",
     "date": "2024"
   },
   {
     "id": "bike",
+    "description": "i love baywheels",
     "imageUrl": "/images/bike.png",
     "date": "2023"
   },
@@ -106,56 +121,62 @@
     "date": "2023"
   },
   {
-    "id": "walk cycle",
-    "imageUrl": "/images/walk.gif",
+    "id": "walkcycle",
+    "description": "walk cycle for <a href='https://university-game.vercel.app/'>univers(ity)</a>",
+    "imageUrl": "/images/walk.mp4",
     "date": "2023"
   },
   {
     "id": "twirl",
-    "imageUrl": "/images/twirl.gif",
+    "imageUrl": "/images/twirl.mp4",
     "date": "2023"
   },
   {
     "id": "for zora",
     "imageUrl": "/images/zora.png",
-    "link": "https://www.kernelmag.io/4/oracles",
+    "description": "commissioned by KERNEL magazine for <a href='https://www.kernelmag.io/4/oracles'>Oracles in the Machine</a>",
     "date": "2023"
   },
   {
     "id": "for irena",
     "imageUrl": "/images/irena.png",
-    "link": "https://www.kernelmag.io/4/adieu",
+    "description": "commissioned by KERNEL magazine for <a href='https://www.kernelmag.io/4/adieu'>Adieu</a>",
     "date": "2023"
   },
   {
     "id": "meditation",
     "imageUrl": "/images/meditation.png",
+    "description": "20min figure drawing",
     "date": "2023"
   },
   {
     "id": "roadtrip",
     "imageUrl": "/images/roadtrip.png",
+    "description": "roadtrip with <a href='https://watershed.com/watershed'>watershed</a> intern friends to montreal",
     "date": "2024"
   },
   {
     "id": "summer",
+    "description": "pinterest photo study",
     "imageUrl": "/images/summer.png",
     "date": "2023"
   },
   {
     "id": "yakult",
-    "imageUrl": "/images/yakult.gif",
+    "imageUrl": "/images/yakult.mp4",
+    "description": "first blender project (after the <a href='https://www.youtube.com/watch?v=4haAdmHqGOw'>donut</a>)",
     "date": "2022"
   },
   {
-    "id": "turtle programming game design",
+    "id": "turtle",
+    "description": "concept art for a coding game inspired by <a href='https://en.wikipedia.org/wiki/Turtle_graphics'>turtle graphics</a>",
     "imageUrl": "/images/turtle.png",
     "date": "2020"
   },
   {
     "id": "boba artbook",
+    "description": "<a href='https://drive.google.com/file/d/1SFVpI8nrKWvd9WKqb_tzCEGFUpq7fDS8/preview'>kickstarter perk</a> for <a href='https://cnnmon.itch.io/boba'>boba game</a>",
     "imageUrl": "/images/bobasketch.png",
-    "pdfUrl": "https://drive.google.com/file/d/1SFVpI8nrKWvd9WKqb_tzCEGFUpq7fDS8/preview",
     "date": "2020"
   },
   {
@@ -169,7 +190,7 @@
     "date": "2020"
   },
   {
-    "id": "model",
+    "id": "role model",
     "imageUrl": "/images/model.jpg",
     "date": "2019"
   },
@@ -190,17 +211,17 @@
   },
   {
     "id": "download wizard",
-    "imageUrl": "/images/downloadwizard.gif",
+    "imageUrl": "/images/downloadwizard.mp4",
     "date": "2019"
   },
   {
     "id": "dressup game",
-    "imageUrl": "/images/dressup.gif",
+    "imageUrl": "/images/dressup.mp4",
     "date": "2019"
   },
   {
     "id": "game dev tutorials i made in high school",
-    "imageUrl": "/images/box.gif",
+    "imageUrl": "/images/box.mp4",
     "date": "2019",
     "link": "https://docs.google.com/document/d/1UTqJSkouI3yEpAoR57pUBAGIQmCrYQjycVrASpQkBYQ/edit?usp=sharing"
   }

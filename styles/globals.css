@@ -84,11 +84,6 @@ a:hover {
   @apply relative mt-[-10px] bottom-[-2px] mb-[-10px];
 }
 
-.wave:hover span {
-  -webkit-animation-play-state: paused;
-  animation-play-state: paused;
-}
-
 @-webkit-keyframes wave-text {
   00% {
     transform: translateY(0em);

@@ -5,8 +5,6 @@ import { useEffect, useState } from 'react';
 import VideoScrubber from '../components/VideoScrubber';
 import { useTooltip } from '../hooks/useTooltip';
 
-const randomTexts = ['hi'];
-
 function IconButton({ icon, delay, onClick, onMouseEnter, onMouseLeave }) {
   const controls = useAnimationControls();
 
@@ -52,8 +50,9 @@ function Home() {
   const [videoSpeed, setVideoSpeed] = useState(1);
 
   const handleChat = () => {
-    const text = randomTexts[Math.floor(Math.random() * randomTexts.length)];
-    confirm(text);
+    if (prompt("hi! what's up?")) {
+      alert("sorry that's not actually going anywhere");
+    }
   };
 
   const handleWind = () => {
