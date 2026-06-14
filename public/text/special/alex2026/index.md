@@ -4,7 +4,7 @@ even though i saw you just a few days ago, there was just too much Fun and Eatin
 
 it's funny how we've gotten closer post-grad, especially since we live in different cities (Haha). but i do feel lucky for it -- you've proven how NYC (particularly Queens) is the Greatest City In The World ♫ and i'm glad that we share shockingly similar media taste (league/arcane, futurama, hamilton, now UNDERTALE!?). while it's buried under upside-down OK signs and other troll behaviors, you're a truly great, thoughtful, and selfless friend. and i will always admire your skill in being able to get anywhere in NYC on-time.
 
-btw i did want to make you a shirt again but i ran out of time... jojo thought the pigeon & shit (← see left) could be a good front-side. i will figure it out more post-deadlines, but that's a sneak peak.
+btw i did want to make you a shirt again but it's a WIP... as a sneak peak jojo thought the pigeon & shit (← see left) could be a good front-side. i will figure it out more post-deadlines, but feel free to give me input!
 
 have an amazing knicks-in-5 bday!!! 🏀🏀🏀🏀🏀
 
