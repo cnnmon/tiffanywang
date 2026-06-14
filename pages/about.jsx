@@ -66,11 +66,14 @@ function About() {
           ref={containerRef}
           onMouseEnter={() => setHovering(true)}
           onMouseMove={handleMouseMove}
-          onMouseLeave={() => { setPicIndex(DEFAULT_INDEX); setHovering(false); }}
+          onMouseLeave={() => {
+            setPicIndex(DEFAULT_INDEX);
+            setHovering(false);
+          }}
           className="h-40 w-40 overflow-hidden cursor-crosshair"
         >
           <Image
-            src={PICS[picIndex][0]}
+            src={'/me/me_1.png'}
             alt="tiffanywang"
             width={200}
             height={200}
@@ -79,7 +82,7 @@ function About() {
             className="h-40 w-40 object-cover object-center pointer-events-none"
           />
         </div>
-        <p>📍 {hovering ? PICS[picIndex][3] : 'San Francisco, CA'}</p>
+        <p>📍 {'San Francisco, CA'}</p>
       </div>
       <MarkdownFormatter file="/text/about.md" />
     </motion.div>

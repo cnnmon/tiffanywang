@@ -44,9 +44,7 @@ function Principal() {
           San Francisco, California, USA
         </p>
         <div className="flex flex-wrap gap-2 text-lg grid grid-cols-2 sm:grid-cols-4">
-          <Button
-            onClick={() => window.open('https://openreview.net/pdf?id=ElaELqeFt8', '_blank')}
-          >
+          <Button onClick={() => window.open('https://openreview.net/pdf?id=ElaELqeFt8', '_blank')}>
             <IoDocumentTextOutline /> Paper
           </Button>
           <Button
@@ -87,28 +85,25 @@ function Principal() {
       <section className="space-y-3 text-lg">
         <h2 className="text-xl">Abstract</h2>
         <p>
-          princi/pal explores the anxiety of raising a responsible, good-natured child, with an
-          AI twist. Based in a Tamagotchi-like virtual pet game, the pet in princi/pal grows
-          based on the player's guidance on moral dilemmas. Scenarios can range from{' '}
+          princi/pal explores the anxiety of raising a responsible, good-natured child, with an AI
+          twist. Based in a Tamagotchi-like virtual pet game, the pet in princi/pal grows based on
+          the player's guidance on moral dilemmas. Scenarios can range from{' '}
           <i>"Should I pick up trash?"</i> to{' '}
-          <i>
-            "Should you lie in court to defend a friend, who claims they were falsely accused?"
-          </i>
-          . Players articulate their reasoning in natural language, which the system
-          "internalizes" to update the pet's personality and moral stats. The pet evolves from{' '}
+          <i>"Should you lie in court to defend a friend, who claims they were falsely accused?"</i>
+          . Players articulate their reasoning in natural language, which the system "internalizes"
+          to update the pet's personality and moral stats. The pet evolves from{' '}
           <span className="font-[900]">impressionable child to independent moral agent</span>,
-          eventually resolving dilemmas autonomously after reaching one of 16 evolutionary
-          paths.
+          eventually resolving dilemmas autonomously after reaching one of 16 evolutionary paths.
         </p>
         <p>
           Public deployment collected 30k+ moral reasoning inputs, revealing how AI systems
           interpret human moral reasoning. Players experienced parental anxiety as pets gained
-          independence, mirroring real concerns about AI alignment. The AI demonstrated
-          concerning patterns: extrapolating from minimal input, sanitizing extreme suggestions,
-          and defaulting to embedded moral biases when guidance was absent, revealing AI as both
-          mirror and interpreter of human ethics. The game exposes the challenges of AI moral
-          interpretation and raises fundamental questions about authorship and understanding in
-          autonomous artificial moral reasoning.
+          independence, mirroring real concerns about AI alignment. The AI demonstrated concerning
+          patterns: extrapolating from minimal input, sanitizing extreme suggestions, and defaulting
+          to embedded moral biases when guidance was absent, revealing AI as both mirror and
+          interpreter of human ethics. The game exposes the challenges of AI moral interpretation
+          and raises fundamental questions about authorship and understanding in autonomous
+          artificial moral reasoning.
         </p>
         <p>
           Released filtered moral reasoning dataset with 17.2k inputs{' '}
@@ -126,11 +121,11 @@ function Principal() {
       <section className="space-y-3">
         <h2 className="text-xl">System design</h2>
         <p className="text-lg">
-          The system uses gpt-4o-mini to internalize the player's moral reasoning, update the
-          pet's personality and moral stats, and generate questions or overrides after maturity.
+          The system uses gpt-4o-mini to internalize the player's moral reasoning, update the pet's
+          personality and moral stats, and generate questions or overrides after maturity.
         </p>
         <Image
-          src="/principal/system.png"
+          src="/text/principal/system.png"
           alt="System design"
           width={1000}
           height={1000}
@@ -154,7 +149,7 @@ function Principal() {
 
       <section className="flex justify-center items-center">
         <Image
-          src="/principal/pan.gif"
+          src="/text/principal/pan.gif"
           alt="Evolutions"
           width={200}
           height={200}
@@ -164,6 +159,5 @@ function Principal() {
     </motion.div>
   );
 }
-
 
 export default Principal;

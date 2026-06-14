@@ -1,5 +1,11 @@
 [
   {
+    "id": "alex2026",
+    "blog": "/text/special/alex2026/index.md",
+    "date": "jun 2026",
+    "wip": true
+  },
+  {
     "id": "shrimp",
     "description": "for <a href='https://www.kernelmag.io/'>KERNEL</a> piece about shrimp welfare",
     "date": "may 2026",
