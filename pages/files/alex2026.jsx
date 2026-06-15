@@ -102,8 +102,8 @@ function Alex2026() {
               width: W,
               height: H,
               transformStyle: 'preserve-3d',
-              rotateX: isOpen ? 0 : rotateX,
-              rotateY: isOpen ? 0 : rotateY,
+              rotateX,
+              rotateY,
             }}
           >
             <motion.button
