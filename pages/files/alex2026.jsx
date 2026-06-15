@@ -1,12 +1,13 @@
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import Image from 'next/image';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import MarkdownFormatter from '../../components/MarkdownFormatter';
 import WaveText from '../../components/WaveText';
 
-const SCALE = 1.4;
-const W = 340 * SCALE;
-const H = 460 * SCALE;
+const BASE_W = 340;
+const BASE_H = 460;
+const MAX_SCALE = 1.4;
+const MIN_W = 220;
 const EASE = [0.4, 0, 0.2, 1];
 const DUR = 0.9;
 
@@ -14,8 +15,8 @@ function Alex2026() {
   const [isOpen, setIsOpen] = useState(false);
   const [coverLoaded, setCoverLoaded] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
+  const [viewport, setViewport] = useState({ width: 1200, height: 900 });
 
-  // Mouse position normalized to [-0.5, 0.5] relative to the viewport
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [12, -12]), {
@@ -29,7 +30,23 @@ function Alex2026() {
 
   const sceneRef = useRef(null);
 
-  // Shimmer derived from springs so it animates back smoothly on mouse leave
+  useEffect(() => {
+    const updateViewport = () => {
+      setViewport({ width: window.innerWidth, height: window.innerHeight });
+    };
+
+    updateViewport();
+    window.addEventListener('resize', updateViewport);
+    return () => window.removeEventListener('resize', updateViewport);
+  }, []);
+
+  const maxW = BASE_W * MAX_SCALE;
+  const widthFromViewport = viewport.width * 0.88;
+  const widthFromHeight = viewport.height * 0.78 * (BASE_W / BASE_H);
+  const W = Math.max(MIN_W, Math.min(maxW, widthFromViewport, widthFromHeight));
+  const H = (W / BASE_W) * BASE_H;
+
+  // Shimmer derived from the tilt springs so it eases back on mouse leave
   const shimmerX = useTransform(rotateY, [-12, 12], [-0.5, 0.5]);
   const shimmerY = useTransform(rotateX, [12, -12], [-0.5, 0.5]);
 
@@ -60,77 +77,48 @@ function Alex2026() {
     mouseY.set((e.clientY - top - height / 2) / height);
   }
 
-  function handleOpen() {
+  function onMouseLeave() {
+    setIsHovering(false);
     mouseX.set(0);
     mouseY.set(0);
-    setIsOpen(true);
+  }
+
+  function toggleCard() {
+    mouseX.set(0);
+    mouseY.set(0);
+    setIsOpen((prev) => !prev);
   }
 
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div style={{ perspective: 1400 }}>
-        <div className="relative" style={{ width: W * 2, height: H }}>
-          {/*
-            Scene is always 2×W wide.
-            When closed, shift left by W/2 so the right-half cover is centered.
-            When open, shift back to 0 so both halves are centered.
-            rotateX/rotateY: whole-card 3D tilt from mouse, resets to 0 on open.
-          */}
+        <div className="relative" style={{ width: W, height: H }}>
           <motion.div
             ref={sceneRef}
             onMouseMove={onMouseMove}
-            onMouseLeave={() => {
-              setIsHovering(false);
-              mouseX.set(0);
-              mouseY.set(0);
-            }}
+            onMouseLeave={onMouseLeave}
             style={{
               position: 'relative',
-              width: W * 2,
+              width: W,
               height: H,
               transformStyle: 'preserve-3d',
               rotateX: isOpen ? 0 : rotateX,
               rotateY: isOpen ? 0 : rotateY,
             }}
-            animate={{ x: isOpen ? 0 : -(W / 2) }}
-            transition={{ duration: DUR, ease: EASE }}
           >
-            {/* Inside panel — right half, always present behind the cover */}
-            <div
-              style={{ position: 'absolute', left: W, top: 0, width: W, height: H }}
-              className="bg-[#f8f5fc] border-[1px] border-[#c6bae3] flex flex-col p-6 gap-4"
-            >
-              <WaveText
-                text="happy happy happy birthday alex!!!"
-                className="text-2xl"
-                gradient={false}
-              />
-              <div className="flex-1 text-left overflow-y-auto">
-                <MarkdownFormatter file="/text/special/alex2026/index.md" />
-              </div>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-gray-400 text-xs hover:text-gray-600 text-left"
-              >
-                ↩ close
-              </button>
-            </div>
-
-            {/* Cover — right half, rotates around the spine (left edge) on click */}
-            <motion.div
+            <motion.button
+              type="button"
+              aria-label="Flip greeting card"
+              onClick={toggleCard}
+              className="absolute inset-0 cursor-pointer"
               style={{
-                position: 'absolute',
-                left: W,
-                top: 0,
-                width: W,
-                height: H,
-                transformOrigin: 'left center',
+                border: 'none',
+                padding: 0,
+                background: 'transparent',
                 transformStyle: 'preserve-3d',
-                cursor: isOpen ? 'default' : 'pointer',
               }}
-              animate={{ rotateY: isOpen ? -180 : 0 }}
+              animate={{ rotateY: isOpen ? 180 : 0 }}
               transition={{ duration: DUR, ease: EASE }}
-              onClick={() => !isOpen && handleOpen()}
             >
               {/* Front face */}
               <div
@@ -146,14 +134,12 @@ function Alex2026() {
                   onLoadingComplete={() => setCoverLoaded(true)}
                 />
 
-                {/* Holographic rainbow foil */}
                 <motion.div
                   className="absolute inset-0 pointer-events-none"
                   style={{ background: rainbow, mixBlendMode: 'color-dodge' }}
                   animate={{ opacity: isHovering && !isOpen ? 0.15 : 0 }}
                   transition={{ duration: 0.25 }}
                 />
-                {/* Specular glare */}
                 <motion.div
                   className="absolute inset-0 pointer-events-none"
                   style={{ background: glare, mixBlendMode: 'overlay' }}
@@ -166,37 +152,41 @@ function Alex2026() {
                   animate={{ opacity: isOpen ? 0 : 1 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <span className="text-white/80 text-sm select-none">click to open →</span>
+                  <span className="text-white/80 text-sm select-none">tap to flip →</span>
                 </motion.div>
               </div>
 
               {/* Back face */}
               <div
-                className="absolute inset-0 bg-[#f8f5fc] border-[1px] border-[#c6bae3]"
+                className="absolute inset-0 bg-[#f8f5fc] border-[1px] border-[#c6bae3] p-5 flex flex-col gap-3"
                 style={{
                   backfaceVisibility: 'hidden',
                   WebkitBackfaceVisibility: 'hidden',
                   transform: 'rotateY(180deg)',
                 }}
               >
-                <div className="justify-between flex flex-col h-full items-end p-8">
+                <WaveText text="happy birthday alex!!!" className="text-2xl" gradient={false} />
+                <div className="min-h-0 flex-1 text-left overflow-y-auto">
+                  <MarkdownFormatter file="/text/special/alex2026/index.md" />
+                </div>
+                <div className="flex items-end justify-between gap-3">
                   <Image
                     src="/text/special/alex2026/inner_pigeon.png"
-                    alt="inner card art"
-                    width={W / 3}
-                    height={H}
-                    className="object-cover"
+                    alt="inner pigeon"
+                    width={96}
+                    height={96}
+                    className="object-contain"
                   />
                   <Image
                     src="/text/special/alex2026/inner_poo.png"
-                    alt="inner card art"
-                    width={W / 6}
-                    height={H}
-                    className="object-cover"
+                    alt="inner doodle"
+                    width={44}
+                    height={44}
+                    className="object-contain"
                   />
                 </div>
               </div>
-            </motion.div>
+            </motion.button>
           </motion.div>
 
           <motion.div
