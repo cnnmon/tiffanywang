@@ -105,7 +105,7 @@ export default function Filesys() {
   return (
     <div className="space-y-4">
       {selectedItem && <Modal selectedItem={selectedItem} setSelectedItem={setSelectedItem} />}
-      <p>A file system containing art, WIPs, smaller projects, and writing snippets.</p>
+      <p>Take a look around...</p>
       <div className="grid grid-cols-2 gap-2">
         {columns.map((col, colIndex) => (
           <div key={colIndex} className="flex flex-col gap-2">

@@ -7,7 +7,10 @@
         "type": "exhibit",
         "description": "a two-player game about repurposed data and artificial intimacy.",
         "image": "/images/wouldyoustillloveme.png",
-        "sublabel": "On view at [TIAT epistemologies of slop](https://tiat.place/)!",
+        "sublabel": "On view at [TIAT epistemologies of slop](https://www.tiat.place/slop-epistemologies)!",
+        "links": {
+          "main": "https://www.tiat.place/slop-epistemologies"
+        },
         "date": "June 2026"
       },
       {
@@ -25,52 +28,24 @@
         "type": "web research",
         "description": "Cultivation as a design metaphor for authoring AI-mediated interactive narratives.",
         "image": "/images/bonsai.png",
-        "links": {
-          "main": "https://tinypot.vercel.app/"
-        },
-        "sublabel": "Creativity & Cognition 2026 poster"
+        "sublabel": "[Creativity & Cognition 2026 poster](https://mkremins.github.io/publications/Bonsai_C&C2026.pdf), [Human-AI Co-Creativity @ ICML 2026](https://mkremins.github.io/publications/Bonsai_HAICC2026.pdf)",
+        "authors": "Tiffany Wang, Max Kreminski"
       },
       {
         "name": "Dramamancer: Interactive Narratives with LLM-powered Storylets",
         "type": "web research",
         "description": "Exploring how AI can make games more interactive.",
         "image": "/images/drama.mp4",
-        "links": [
-          {
-            "label": "main",
-            "kind": "main",
-            "href": "https://storytelling-dev.midjourney.com/"
-          },
-          {
-            "label": "paper",
-            "kind": "paper",
-            "href": "https://dl.acm.org/doi/full/10.1145/3746058.3758995"
-          },
-          {
-            "label": "video",
-            "kind": "video",
-            "href": "https://drive.google.com/file/d/1dGaWHQJCWKOClatyI5NOrQXnDBUqx50B/view?usp=sharing"
-          }
-        ],
-        "sublabel": "UIST 2025, EMNLP 2025 Wordplay Workshop"
+        "sublabel": "[UIST 2025](https://dl.acm.org/doi/full/10.1145/3746058.3758995), [EMNLP 2025 Wordplay Workshop](https://mkremins.github.io/publications/Dramamancer_Wordplay2025.pdf)",
+        "authors": "Tiffany Wang, Yuqian Sun, Yi Wang, Melissa Roemmele, John Joon Young Chung, Max Kreminski"
       },
       {
         "name": "princi/pal: A moral dilemma Tamagotchi",
         "type": "game web research",
         "description": "A virtual pet that grows and learns from moral dilemmas.",
         "image": "/images/principal.mp4",
-        "links": {
-          "main": "https://cnnmon.itch.io/principal",
-          "paper": "https://openreview.net/pdf?id=ElaELqeFt8"
-        },
-        "sublabel": "NeurIPS Creative AI 2025"
-      },
-      {
-        "name": "princi/pal",
-        "type": "game web",
-        "description": "A virtual pet that grows and learns from moral dilemmas.",
-        "image": "/images/principal.mp4",
-        "sublabel": "NeurIPS Creative AI 2025"
+        "sublabel": "[NeurIPS Creative AI 2025](https://openreview.net/pdf?id=ElaELqeFt8)",
+        "authors": "Tiffany Wang"
       },
       {
         "name": "botsbotsbots",
@@ -84,19 +59,16 @@
     ]
   },
   {
-    "title": "2020-2024 college era",
+    "title": "2020-2024",
     "list": [
       {
-        "name": "tensor trust",
+        "name": "Tensor Trust: Interpretable Prompt Injection Attacks from an Online Game",
         "type": "game web research",
         "description": "Sweet-talk an LLM to win big.",
         "date": "nov 2023",
         "image": "/images/tensortrust.mp4",
-        "links": {
-          "main": "https://tensortrust.ai/",
-          "paper": "https://tensortrust.ai/paper/"
-        },
-        "sublabel": "ICLR 2024 (spotlight)"
+        "sublabel": "[ICLR 2024 (spotlight)](https://arxiv.org/pdf/2311.01011)",
+        "authors": "Sam Toyer, Olivia Watkins, Ethan Adrian Mendes, Justin Svegliato, Luke Bailey, Tiffany Wang, Isaac Ong, Karim Elmaaroufi, Pieter Abbeel, Trevor Darrell, Alan Ritter, Stuart Russell"
       },
       {
         "name": "univers(ity)",

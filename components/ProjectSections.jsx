@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 import { useTooltip } from '../hooks/useTooltip';
 import Url from './Url';
 
@@ -7,6 +8,10 @@ const linkToIcon = {
   paper: '/icons/article.svg',
   video: '/icons/video.svg',
 };
+
+const purpleIconFilter =
+  'invert(23%) sepia(28%) saturate(1766%) hue-rotate(264deg) brightness(56%) contrast(87%)';
+const tiffanyName = 'Tiffany Wang';
 
 function renderSublabel(sublabel) {
   if (!sublabel) return null;
@@ -79,6 +84,61 @@ function renderDescription(item, variant) {
   }
 
   return <p>{item.description}</p>;
+}
+
+function AuthorsLine({ authorsText }) {
+  const measureRef = useRef(null);
+  const [isOverTwoLines, setIsOverTwoLines] = useState(false);
+
+  const authors = authorsText
+    .split(/,\s*/)
+    .map((author) => author.trim())
+    .filter(Boolean);
+  const tiffanyIndex = authors.findIndex((author) => author === tiffanyName);
+  const middleAuthorsAfterTiffany = tiffanyIndex >= 0 ? authors.slice(tiffanyIndex + 1, -1) : [];
+  const canAbbreviate = middleAuthorsAfterTiffany.length > 0;
+
+  useEffect(() => {
+    const measure = () => {
+      const el = measureRef.current;
+      if (!el) return;
+      const lineHeight = Number.parseFloat(window.getComputedStyle(el).lineHeight);
+      if (!lineHeight || Number.isNaN(lineHeight)) {
+        setIsOverTwoLines(false);
+        return;
+      }
+      setIsOverTwoLines(el.scrollHeight > lineHeight * 2 + 1);
+    };
+
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
+  }, [authorsText]);
+
+  const shouldAbbreviate = canAbbreviate && isOverTwoLines;
+  const visibleAuthors = shouldAbbreviate ? authors.slice(0, tiffanyIndex + 1) : authors;
+  const lastAuthor = authors[authors.length - 1];
+  const showLastAuthor = shouldAbbreviate && lastAuthor !== tiffanyName;
+
+  return (
+    <span className="relative inline-block w-full">
+      <span
+        ref={measureRef}
+        className="absolute invisible pointer-events-none w-full"
+        aria-hidden="true"
+      >
+        {authors.join(', ')}
+      </span>
+      {visibleAuthors.map((author, idx) => (
+        <span key={`${author}-${idx}`}>
+          {author === tiffanyName ? <b>{author}</b> : author}
+          {idx < visibleAuthors.length - 1 ? ', ' : ''}
+        </span>
+      ))}
+      {shouldAbbreviate && <span>, et al.</span>}
+      {showLastAuthor && <span>, {lastAuthor}</span>}
+    </span>
+  );
 }
 
 function Project({ item, showTooltip, hideTooltip, variant }) {
@@ -157,9 +217,14 @@ function Project({ item, showTooltip, hideTooltip, variant }) {
       <motion.div key={projectId} id={projectId} className="flex flex-col w-full mb-8">
         <div className="transition-all duration-50 flex flex-col sm:flex-row gap-4">
           <div className="shrink-0">{preview}</div>
-          <div className="flex-1 space-y-2">
-            <div className="flex flex-row justify-between gap-2">
+          <div className="flex-1 space-y-1">
+            <div className="flex flex-col gap-1">
               <h1 className="font-bold text-lg leading-tight text-[#6a3b7b]">{name}</h1>
+              {item.authors && (
+                <p className="text-gray-500 text-sm">
+                  <AuthorsLine authorsText={item.authors} />
+                </p>
+              )}
             </div>
             <div className="space-y-1">
               {renderDescription(
@@ -167,7 +232,7 @@ function Project({ item, showTooltip, hideTooltip, variant }) {
                 variant,
               )}
             </div>
-            {sublabel && <p className="text-gray-500">{renderSublabel(sublabel)}</p>}
+            {sublabel && <p className="text-sm">{renderSublabel(sublabel)}</p>}
           </div>
         </div>
       </motion.div>
