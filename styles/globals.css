@@ -26,14 +26,10 @@
 }
 
 body {
-  background-color: #e2dde8;
+  background: #e2dde8; /*linear-gradient(180deg, #e2dde8 0%, #e8e1e1 80%); */
   color: rgba(0, 0, 0, 0.85);
   font-family: 'bodytext';
   line-height: 1.4;
-}
-
-.body {
-  padding-bottom: 20vh;
 }
 
 a {

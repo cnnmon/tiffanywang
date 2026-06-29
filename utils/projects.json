@@ -1,48 +1,75 @@
 [
   {
-    "title": "2024-present",
+    "title": "2024-2026",
     "list": [
+      {
+        "name": "would you still love me if everything i said to you came from eavesdropping on other relationships?",
+        "type": "exhibit",
+        "description": "a two-player game about repurposed data and artificial intimacy.",
+        "image": "/images/wouldyoustillloveme.png",
+        "sublabel": "On view at [TIAT epistemologies of slop](https://tiat.place/)!",
+        "date": "June 2026"
+      },
       {
         "name": "comparefish",
         "type": "web",
-        "description": "a social fish plotter where you can \"fix\" your friend's placements.",
+        "description": "a social plotter where you \"fix\" friends' placements. on internal vs external perception.",
         "image": "/images/comparefish.mp4",
         "links": {
           "main": "https://comparefish.site/"
-        }
+        },
+        "sublabel": "6k+ fish placed & fixed"
       },
       {
-        "name": "bonsai",
+        "name": "Bonsai: Designing for Cultivation in AI Interactive Digital Narratives",
         "type": "web research",
-        "description": "cultivation as a design metaphor for authoring ai interaction.",
+        "description": "Cultivation as a design metaphor for authoring AI-mediated interactive narratives.",
         "image": "/images/bonsai.png",
         "links": {
-          "main": "https://tinypot.vercel.app/",
-          "video": "https://drive.google.com/file/d/1hs8WgjMvw1CQsWiEx_rd2oWVw10YNoCJ/view?usp=sharing"
+          "main": "https://tinypot.vercel.app/"
         },
         "sublabel": "Creativity & Cognition 2026 poster"
       },
       {
-        "name": "dramamancer",
+        "name": "Dramamancer: Interactive Narratives with LLM-powered Storylets",
         "type": "web research",
-        "description": "an ai-supported visual novel engine.",
+        "description": "Exploring how AI can make games more interactive.",
         "image": "/images/drama.mp4",
-        "links": {
-          "main": "https://storytelling-dev.midjourney.com/",
-          "paper": "https://dl.acm.org/doi/full/10.1145/3746058.3758995",
-          "video": "https://drive.google.com/file/d/1dGaWHQJCWKOClatyI5NOrQXnDBUqx50B/view?usp=sharing"
-        },
+        "links": [
+          {
+            "label": "main",
+            "kind": "main",
+            "href": "https://storytelling-dev.midjourney.com/"
+          },
+          {
+            "label": "paper",
+            "kind": "paper",
+            "href": "https://dl.acm.org/doi/full/10.1145/3746058.3758995"
+          },
+          {
+            "label": "video",
+            "kind": "video",
+            "href": "https://drive.google.com/file/d/1dGaWHQJCWKOClatyI5NOrQXnDBUqx50B/view?usp=sharing"
+          }
+        ],
         "sublabel": "UIST 2025, EMNLP 2025 Wordplay Workshop"
       },
       {
-        "name": "principal",
+        "name": "princi/pal: A moral dilemma Tamagotchi",
         "type": "game web research",
-        "description": "a tamagotchi that grows and learns from moral dilemmas.",
+        "description": "A virtual pet that grows and learns from moral dilemmas.",
         "image": "/images/principal.mp4",
         "links": {
           "main": "https://cnnmon.itch.io/principal",
-          "paper": "/principal"
+          "paper": "https://openreview.net/pdf?id=ElaELqeFt8"
         },
+        "sublabel": "NeurIPS Creative AI 2025"
+      },
+      {
+        "name": "princi/pal",
+        "type": "game web",
+        "description": "A virtual pet that grows and learns from moral dilemmas.",
+        "image": "/images/principal.mp4",
         "sublabel": "NeurIPS Creative AI 2025"
       },
       {
@@ -60,20 +87,9 @@
     "title": "2020-2024 college era",
     "list": [
       {
-        "name": "dango",
-        "type": "research",
-        "description": "ai pair programmer VS code extension powered by a living design doc.",
-        "date": "apr 2024",
-        "image": "/images/dango.mp4",
-        "links": {
-          "main": "https://github.com/cnnmon/dango",
-          "paper": "https://drive.google.com/file/d/1L9hbCK6j5lHo6sMCb29kYXOEPmc_awkW/view"
-        }
-      },
-      {
         "name": "tensor trust",
         "type": "game web research",
-        "description": "sweet-talk your way into bank robbery.",
+        "description": "Sweet-talk an LLM to win big.",
         "date": "nov 2023",
         "image": "/images/tensortrust.mp4",
         "links": {
@@ -85,7 +101,7 @@
       {
         "name": "univers(ity)",
         "type": "game",
-        "description": "you're a university student in space over holiday break.",
+        "description": "you're a university student in space over holiday break. short narrative game.",
         "date": "dec 2023",
         "image": "/images/university.mp4",
         "links": {
@@ -100,16 +116,6 @@
         "image": "/images/mysingingfriends.mp4",
         "links": {
           "main": "https://singing-friends.vercel.app/"
-        }
-      },
-      {
-        "name": "drip or drown",
-        "type": "web",
-        "description": "ai can and will roast your style.",
-        "date": "feb 2023",
-        "image": "/images/dripordrown.mp4",
-        "links": {
-          "main": "https://www.youtube.com/watch?v=g8LlEDijwe8&t=36s&ab_channel=AKS"
         }
       },
       {
@@ -137,18 +143,19 @@
         "links": {
           "main": "https://cnnmon.itch.io/boba",
           "video": "https://www.youtube.com/watch?v=TFjMKTdCfcg&t=6s"
-        }
+        },
+        "sublabel": "Funded on Kickstarter"
       },
       {
         "name": "coffeelings",
         "type": "web",
-        "description": "a mood tracking chrome extension, 200k+ daily active users.",
+        "description": "a mood tracking chrome extension.",
         "date": "mar 2020",
         "image": "/images/coffeelings.mp4",
         "links": {
           "main": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/"
         },
-        "sublabel": "Featured on Chrome Web Store"
+        "sublabel": "200k+ daily active users"
       },
       {
         "name": "cardio casino",

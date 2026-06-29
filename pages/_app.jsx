@@ -51,13 +51,22 @@ function MyApp({ Component, pageProps }) {
                   about
                 </Link>
                 <Link
-                  href="/projects"
+                  href="/research"
                   className={twMerge(
                     'hover:opacity-100',
-                    router.pathname === '/projects' ? 'opacity-100' : 'opacity-60',
+                    router.pathname === '/research' ? 'opacity-100' : 'opacity-60',
                   )}
                 >
-                  projects
+                  research
+                </Link>
+                <Link
+                  href="/toys"
+                  className={twMerge(
+                    'hover:opacity-100',
+                    router.pathname === '/toys' ? 'opacity-100' : 'opacity-60',
+                  )}
+                >
+                  toys
                 </Link>
                 <Link
                   href="/files"
