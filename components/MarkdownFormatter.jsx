@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import FadeImage from '../components/FadeImage';
 import WaveText from '../components/WaveText';
 import markdownPreloader from '../utils/markdownPreloader';
 import Url from './Url';
@@ -53,7 +53,7 @@ function MarkdownFormatter({ file }) {
             }
             segments.push(
               <span key={`img-${key}-${idx}-${match.index}`} className="block relative w-full">
-                <Image
+                <FadeImage
                   src={match[2]}
                   alt={match[1]}
                   width={800}

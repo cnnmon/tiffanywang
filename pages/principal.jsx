@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { BiTable } from 'react-icons/bi';
 import { IoDocumentTextOutline, IoLogoGithub } from 'react-icons/io5';
 import { twMerge } from 'tailwind-merge';
+import LazyVideo from '../components/LazyVideo';
 import WaveText from '../components/WaveText';
 
 export function Button({ children, onClick, variant = 'light' }) {
@@ -73,14 +74,7 @@ function Principal() {
         </div>
       </div>
 
-      <video
-        src="/images/principal.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="object-cover h-[400px] w-full rounded"
-      />
+      <LazyVideo src="/images/principal.mp4" className="object-cover h-[400px] w-full rounded" />
 
       <section className="space-y-3 text-lg">
         <h2 className="text-xl">Abstract</h2>

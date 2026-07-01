@@ -1,12 +1,15 @@
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useMemo, useState } from 'react';
 import { MdOpenInNew } from 'react-icons/md';
-import Modal from '../../components/Modal';
+import FadeImage from '../../components/FadeImage';
+import InlineLinks from '../../components/InlineLinks';
+import LazyVideo from '../../components/LazyVideo';
 import files from '../../utils/files.json';
 import markdownPreloader from '../../utils/markdownPreloader';
 import { formatTime } from '../../utils/time';
+
+const getFilename = (item) => item.imageUrl.split('/').pop();
 
 function BlogPreview({ item, blogLink }) {
   const [preview, setPreview] = useState('');
@@ -38,64 +41,58 @@ function BlogPreview({ item, blogLink }) {
   );
 }
 
-function File({ item, setSelectedItem }) {
+function File({ item }) {
   if (item.imageUrl) {
     const isVideo = item.imageUrl.endsWith('.mp4');
     const src = item.thumbnailUrl || item.imageUrl;
-    const handleClick = (e) => {
-      e.stopPropagation();
-      if (item.link) {
-        window.open(item.link, '_blank');
-      } else {
-        setSelectedItem(item);
-      }
-    };
 
     const media = isVideo ? (
-      <video src={src} autoPlay muted loop playsInline preload="none" className="w-full" />
+      <LazyVideo src={src} className="w-full" />
     ) : (
-      <Image src={src} alt={item.id} width={300} height={300} className="w-full" />
+      <FadeImage
+        src={src}
+        alt={item.id}
+        width={1000}
+        height={1000}
+        sizes="(max-width: 672px) 60vw, 400px"
+        className="w-full"
+      />
     );
 
+    // Clicking opens the external link if there is one, otherwise the raw original file
     return (
-      <div
-        className={`relative group transition-opacity ${item.link ? 'cursor-ne-resize hover:opacity-70' : 'cursor-zoom-in'}`}
-        onClick={handleClick}
-      >
-        {media}
-        {item.link && (
-          <MdOpenInNew className="absolute top-2 right-2 w-4 h-4 text-white drop-shadow opacity-0 group-hover:opacity-100 transition-opacity" />
-        )}
+      <div>
+        <a
+          href={item.link || item.imageUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`relative group block transition-opacity hover:opacity-70 ${item.link ? 'cursor-ne-resize' : 'cursor-zoom-in'}`}
+        >
+          {media}
+          {item.link && (
+            <MdOpenInNew className="absolute top-2 right-2 w-4 h-4 text-white drop-shadow opacity-0 group-hover:opacity-100 transition-opacity" />
+          )}
+        </a>
+        <div className="flex justify-between gap-2 text-gray-500 mt-0.5">
+          <p>
+            <InlineLinks text={item.id} />
+          </p>
+          <p className="shrink-0">{item.date}</p>
+        </div>
       </div>
     );
   }
 
   if (item.blog) {
-    const blogLink = `/files/${item.id}`;
-    return <BlogPreview item={item} blogLink={blogLink} />;
+    return <BlogPreview item={item} blogLink={`/files/${item.id}`} />;
   }
 
-  if (item.link) {
-    return (
-      <div>
-        <a href={item.link} target="_blank">
-          {item.name}
-        </a>
-        <p className="text-gray-500 text-sm">
-          <MdOpenInNew className="w-4 h-4 hover:text-gray-700" />
-        </p>
-      </div>
-    );
-  }
-
-  return <p>{JSON.stringify(item)}</p>;
+  return null;
 }
 
 const COL_COUNT = 2;
 
 export default function Filesys() {
-  const [selectedItem, setSelectedItem] = useState(null);
-
   const columns = useMemo(() => {
     const cols = Array.from({ length: COL_COUNT }, () => []);
     files.filter((item) => !item.wip).forEach((item, i) => cols[i % COL_COUNT].push(item));
@@ -104,11 +101,10 @@ export default function Filesys() {
 
   return (
     <div className="space-y-4">
-      {selectedItem && <Modal selectedItem={selectedItem} setSelectedItem={setSelectedItem} />}
-      <p>Take a look around...</p>
+      <p>A bunch of other stuff I've drawn, designed, written, coded, and 3D modeled.</p>
       <div className="grid grid-cols-2 gap-2">
         {columns.map((col, colIndex) => (
-          <div key={colIndex} className="flex flex-col gap-2">
+          <div key={colIndex} className="flex flex-col gap-3">
             {col.map((item, index) => (
               <motion.div
                 key={item.id}
@@ -116,7 +112,7 @@ export default function Filesys() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: (colIndex + index * COL_COUNT) * 0.01 }}
               >
-                <File item={item} setSelectedItem={setSelectedItem} />
+                <File item={item} />
               </motion.div>
             ))}
           </div>

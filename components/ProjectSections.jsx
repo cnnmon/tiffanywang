@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { useTooltip } from '../hooks/useTooltip';
-import Url from './Url';
+import FadeImage from './FadeImage';
+import InlineLinks from './InlineLinks';
+import LazyVideo from './LazyVideo';
 
 const linkToIcon = {
   paper: '/icons/article.svg',
@@ -12,34 +13,6 @@ const linkToIcon = {
 const purpleIconFilter =
   'invert(23%) sepia(28%) saturate(1766%) hue-rotate(264deg) brightness(56%) contrast(87%)';
 const tiffanyName = 'Tiffany Wang';
-
-function renderSublabel(sublabel) {
-  if (!sublabel) return null;
-
-  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-  const parts = [];
-  let lastIndex = 0;
-  let match;
-
-  while ((match = linkRegex.exec(sublabel)) !== null) {
-    if (match.index > lastIndex) {
-      parts.push(sublabel.slice(lastIndex, match.index));
-    }
-
-    parts.push(
-      <Url key={`sublabel-link-${match.index}`} href={match[2]}>
-        {match[1]}
-      </Url>,
-    );
-    lastIndex = linkRegex.lastIndex;
-  }
-
-  if (lastIndex < sublabel.length) {
-    parts.push(sublabel.slice(lastIndex));
-  }
-
-  return parts.length ? parts : sublabel;
-}
 
 function normalizeLinks(links) {
   if (Array.isArray(links)) {
@@ -159,23 +132,14 @@ function Project({ item, showTooltip, hideTooltip, variant }) {
       }
     >
       {isVideo ? (
-        <video
-          src={image}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="none"
-          className="object-cover w-full h-full"
-        />
+        <LazyVideo src={image} className="object-cover w-full h-full" />
       ) : (
-        <Image
+        <FadeImage
           src={image}
           alt={name}
           fill
           sizes="(max-width: 640px) 100vw, 50vw"
           loading="lazy"
-          priority={false}
           className="object-cover w-full h-full"
         />
       )}
@@ -232,7 +196,11 @@ function Project({ item, showTooltip, hideTooltip, variant }) {
                 variant,
               )}
             </div>
-            {sublabel && <p className="text-sm">{renderSublabel(sublabel)}</p>}
+            {sublabel && (
+              <p className="text-sm">
+                <InlineLinks text={sublabel} />
+              </p>
+            )}
           </div>
         </div>
       </motion.div>
@@ -260,7 +228,11 @@ function Project({ item, showTooltip, hideTooltip, variant }) {
           <div className="flex flex-row gap-2 select-none">{extraLinkElements}</div>
         </div>
         {renderDescription({ name, description, longDescription: item.longDescription }, variant)}
-        {sublabel && <p className="text-gray-500">{renderSublabel(sublabel)}</p>}
+        {sublabel && (
+          <p className="text-gray-500">
+            <InlineLinks text={sublabel} />
+          </p>
+        )}
       </div>
     </motion.div>
   );

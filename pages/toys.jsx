@@ -1,4 +1,5 @@
 import ProjectSections from '../components/ProjectSections';
+import Url from '../components/Url';
 import projectSections from '../utils/projects.json';
 
 function shouldShowInToys(item) {
@@ -17,7 +18,11 @@ function Toys() {
   return (
     <div className="flex flex-col gap-4">
       <p>
-        I draw, code, write, design, and animate in service of making playful interactive systems!!
+        Take a look around! Smaller projects live on my{' '}
+        <Url href="https://github.com/cnnmon" target="_blank">
+          GitHub ❀
+        </Url>
+        .
       </p>
       <ProjectSections sections={sections} variant="toys" />
     </div>

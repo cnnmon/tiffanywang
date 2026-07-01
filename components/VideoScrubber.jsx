@@ -13,6 +13,7 @@ function VideoScrubber({
   ...props
 }) {
   const [isHovering, setIsHovering] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const hoverStartTimeRef = useRef(0);
   const lastMouseXRef = useRef(0);
   const videoRef = useRef(null);
@@ -158,6 +159,11 @@ function VideoScrubber({
     }
   }, [speed]);
 
+  // Catch videos that loaded before hydration (e.g. from cache), where loadeddata never fires
+  useEffect(() => {
+    if (videoRef.current?.readyState >= 2) setIsLoaded(true);
+  }, []);
+
   return (
     <video
       ref={videoRef}
@@ -170,7 +176,12 @@ function VideoScrubber({
       width={width}
       height={height}
       className={className}
-      style={{ transform: `scale(${scale})`, transition: 'transform 0.3s ease' }}
+      onLoadedData={() => setIsLoaded(true)}
+      style={{
+        transform: `scale(${scale})`,
+        opacity: isLoaded ? 1 : 0,
+        transition: 'transform 0.3s ease, opacity 0.5s ease',
+      }}
       onMouseEnter={() => {
         showTooltip('wheeee', true);
         handleMouseEnter();
