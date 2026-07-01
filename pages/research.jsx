@@ -16,8 +16,8 @@ function Research() {
   return (
     <div className="flex flex-col gap-4">
       <p>
-        I'm interested in exploring the playful, collaborative, reflective, even adversarial
-        interactions between man & machine. More on{' '}
+        I research the playful, collaborative, reflective, even adversarial interactions between man
+        & machine ₊˚⊹♡. More on{' '}
         <a href="https://scholar.google.com/citations?hl=en&user=p8hhfi4AAAAJ">Google Scholar</a>.
       </p>
       <ProjectSections sections={sections} variant="research" />
