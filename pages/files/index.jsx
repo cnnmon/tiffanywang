@@ -47,13 +47,13 @@ function File({ item }) {
     const src = item.thumbnailUrl || item.imageUrl;
 
     const media = isVideo ? (
-      <LazyVideo src={src} className="w-full" />
+      <LazyVideo src={src} className="w-full h-full" />
     ) : (
       <FadeImage
         src={src}
         alt={item.id}
-        width={1000}
-        height={1000}
+        width={item.width}
+        height={item.height}
         sizes="(max-width: 672px) 60vw, 400px"
         className="w-full"
       />
@@ -68,7 +68,11 @@ function File({ item }) {
           rel="noopener noreferrer"
           className={`relative group block transition-opacity hover:opacity-70 ${item.link ? 'cursor-ne-resize' : 'cursor-zoom-in'}`}
         >
-          {media}
+          {/* Reserves the media's true aspect ratio (measured into files.json by
+              scripts/measure-media.mjs) so masonry columns never shift as items load */}
+          <div className="bg-gray-100" style={{ aspectRatio: `${item.width} / ${item.height}` }}>
+            {media}
+          </div>
           {item.link && (
             <MdOpenInNew className="absolute top-2 right-2 w-4 h-4 text-white drop-shadow opacity-0 group-hover:opacity-100 transition-opacity" />
           )}

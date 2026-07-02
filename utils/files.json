@@ -8,17 +8,23 @@
   {
     "id": "would you still love me... letter",
     "date": "jun 2026",
-    "imageUrl": "/images/wyslmi_letter.png"
+    "imageUrl": "/images/wyslmi_letter.png",
+    "width": 7557,
+    "height": 9387
   },
   {
     "id": "shrimp for [kernel](https://www.kernelmag.io/)",
     "date": "may 2026",
-    "imageUrl": "/images/shrimp_color.png"
+    "imageUrl": "/images/shrimp_color.png",
+    "width": 910,
+    "height": 1407
   },
   {
     "id": "echocardiogram for [kernel](https://www.kernelmag.io/)",
     "date": "may 2026",
-    "imageUrl": "/images/echocardiogram_color.png"
+    "imageUrl": "/images/echocardiogram_color.png",
+    "width": 910,
+    "height": 1407
   },
   {
     "id": "emofighting",
@@ -39,175 +45,243 @@
   {
     "id": "grass, i love touching grass",
     "imageUrl": "/images/grass.png",
-    "date": "2025"
+    "date": "2025",
+    "width": 1640,
+    "height": 2360
   },
   {
     "id": "a lactose full journaling app",
     "imageUrl": "/images/milkt.png",
     "date": "2025",
-    "link": "https://github.com/cnnmon/milktea"
+    "link": "https://github.com/cnnmon/milktea",
+    "width": 276,
+    "height": 242
   },
   {
     "id": "oaktime personality quiz",
     "imageUrl": "/images/oaktime.png",
     "date": "2025",
-    "link": "https://oaktime.vercel.app/"
+    "link": "https://oaktime.vercel.app/",
+    "width": 2886,
+    "height": 1758
   },
   {
     "id": "a semantic search for your diary",
     "imageUrl": "/images/magnets.png",
     "link": "https://github.com/cnnmon/magnets",
-    "date": "2025"
+    "date": "2025",
+    "width": 1828,
+    "height": 1346
   },
   {
     "id": "fanposter for friend's [song](https://open.spotify.com/track/6Wwop2BJQXEpNUO01Keoh9)",
     "imageUrl": "/images/civiccenter.png",
-    "date": "2024"
+    "date": "2024",
+    "width": 1363,
+    "height": 1756
   },
   {
     "id": "power",
     "imageUrl": "/images/power.png",
-    "date": "2024"
+    "date": "2024",
+    "width": 1912,
+    "height": 2077
   },
   {
     "id": "concept art for [botsbotsbots](https://cnnmon.itch.io/botsbotsbots)",
     "imageUrl": "/images/botssketch.png",
-    "date": "2024"
+    "date": "2024",
+    "width": 2360,
+    "height": 1640
   },
   {
     "id": "[i wanna take you to the sea](https://www.youtube.com/watch?v=eEFVxI9lqjU)",
     "imageUrl": "/images/sea.png",
-    "date": "2024"
+    "date": "2024",
+    "width": 1640,
+    "height": 2071
   },
   {
     "id": "fan anim to [peppermint](https://www.youtube.com/watch?v=MtTBqIAQ434)",
     "imageUrl": "/images/peppermint.mp4",
-    "date": "2024"
+    "date": "2024",
+    "width": 600,
+    "height": 338
   },
   {
     "id": "digital upload",
     "imageUrl": "/images/digitalupload.mp4",
-    "date": "2024"
+    "date": "2024",
+    "width": 600,
+    "height": 338
   },
   {
     "id": "[me, but online](https://www.mebut.online/)",
     "imageUrl": "/images/online.png",
-    "date": "2024"
+    "date": "2024",
+    "width": 1945,
+    "height": 1640
   },
   {
     "id": "[cue bee and puppycat audio](https://www.youtube.com/watch?v=XmUKhcuCZ3Q)",
     "imageUrl": "/images/cat.mp4",
-    "date": "2024"
+    "date": "2024",
+    "width": 600,
+    "height": 338
   },
   {
     "id": "cat cafe (spot the cat posters)",
     "imageUrl": "/images/catcafe.mp4",
-    "date": "2024"
+    "date": "2024",
+    "width": 600,
+    "height": 338
   },
   {
     "id": "bike, i love baywheels",
     "imageUrl": "/images/bike.png",
-    "date": "2023"
+    "date": "2023",
+    "width": 1368,
+    "height": 1410
   },
   {
     "id": "fit",
     "imageUrl": "/images/medripped.png",
-    "date": "2023"
+    "date": "2023",
+    "width": 1554,
+    "height": 2329
   },
   {
     "id": "walk cycle for [univers(ity)](https://university-game.vercel.app/)",
     "imageUrl": "/images/walk.mp4",
-    "date": "2023"
+    "date": "2023",
+    "width": 800,
+    "height": 394
   },
   {
     "id": "twirl",
     "imageUrl": "/images/twirl.mp4",
-    "date": "2023"
+    "date": "2023",
+    "width": 600,
+    "height": 704
   },
   {
     "id": "oracles in the machine for [kernel](https://www.kernelmag.io/4/oracles)",
     "imageUrl": "/images/zora.png",
-    "date": "2023"
+    "date": "2023",
+    "width": 726,
+    "height": 1122
   },
   {
     "id": "adieu for [kernel](https://www.kernelmag.io/4/adieu)",
     "imageUrl": "/images/irena.png",
-    "date": "2023"
+    "date": "2023",
+    "width": 726,
+    "height": 1122
   },
   {
     "id": "meditation (20min figure drawing)",
     "imageUrl": "/images/meditation.png",
-    "date": "2023"
+    "date": "2023",
+    "width": 776,
+    "height": 1000
   },
   {
     "id": "roadtrip with [watershed](https://watershed.com/watershed) interns",
     "imageUrl": "/images/roadtrip.png",
-    "date": "2024"
+    "date": "2024",
+    "width": 2300,
+    "height": 2360
   },
   {
     "id": "summer",
     "imageUrl": "/images/summer.png",
-    "date": "2023"
+    "date": "2023",
+    "width": 2000,
+    "height": 1456
   },
   {
     "id": "first blender project (after [donut](https://www.youtube.com/watch?v=4haAdmHqGOw))",
     "imageUrl": "/images/yakult.mp4",
-    "date": "2022"
+    "date": "2022",
+    "width": 600,
+    "height": 374
   },
   {
     "id": "game concept inspired by [turtles](https://en.wikipedia.org/wiki/Turtle_graphics)",
     "imageUrl": "/images/turtle.png",
-    "date": "2020"
+    "date": "2020",
+    "width": 2048,
+    "height": 1152
   },
   {
     "id": "[kickstarter perk](https://drive.google.com/file/d/1SFVpI8nrKWvd9WKqb_tzCEGFUpq7fDS8/preview) for [boba game](https://cnnmon.itch.io/boba)",
     "imageUrl": "/images/bobasketch.png",
-    "date": "2020"
+    "date": "2020",
+    "width": 2000,
+    "height": 1125
   },
   {
     "id": "why are you still here?",
     "imageUrl": "/images/why.jpg",
-    "date": "2020"
+    "date": "2020",
+    "width": 2058,
+    "height": 2933
   },
   {
     "id": "looking up",
     "imageUrl": "/images/stars.jpg",
-    "date": "2020"
+    "date": "2020",
+    "width": 1437,
+    "height": 2048
   },
   {
     "id": "role model",
     "imageUrl": "/images/model.jpg",
-    "date": "2019"
+    "date": "2019",
+    "width": 1437,
+    "height": 2048
   },
   {
     "id": "outside the window",
     "imageUrl": "/images/outside.jpg",
-    "date": "2019"
+    "date": "2019",
+    "width": 1664,
+    "height": 2048
   },
   {
     "id": "train",
     "imageUrl": "/images/train.jpg",
-    "date": "2019"
+    "date": "2019",
+    "width": 1437,
+    "height": 2048
   },
   {
     "id": "reflection",
     "imageUrl": "/images/reflection.jpg",
-    "date": "2019"
+    "date": "2019",
+    "width": 2058,
+    "height": 2933
   },
   {
     "id": "download wizard",
     "imageUrl": "/images/downloadwizard.mp4",
-    "date": "2019"
+    "date": "2019",
+    "width": 748,
+    "height": 596
   },
   {
     "id": "dressup game",
     "imageUrl": "/images/dressup.mp4",
-    "date": "2019"
+    "date": "2019",
+    "width": 552,
+    "height": 444
   },
   {
     "id": "from a [game dev tutorial](https://docs.google.com/document/d/1UTqJSkouI3yEpAoR57pUBAGIQmCrYQjycVrASpQkBYQ/edit?usp=sharing)",
     "imageUrl": "/images/box.mp4",
     "date": "2019",
-    "link": "https://docs.google.com/document/d/1UTqJSkouI3yEpAoR57pUBAGIQmCrYQjycVrASpQkBYQ/edit?usp=sharing"
+    "link": "https://docs.google.com/document/d/1UTqJSkouI3yEpAoR57pUBAGIQmCrYQjycVrASpQkBYQ/edit?usp=sharing",
+    "width": 512,
+    "height": 514
   }
 ]
