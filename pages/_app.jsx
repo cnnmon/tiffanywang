@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
               <Link href="/" className="text-xl">
                 <WaveText text="tiffanywang⊹" className="text-3xl" />
               </Link>
-              <div className="flex gap-4">
+              <div className="flex md:gap-4 md:flex-row flex flex-col">
                 <Link
                   href="/about"
                   className={twMerge(

@@ -18,7 +18,7 @@ function Toys() {
   return (
     <div className="flex flex-col gap-4">
       <p>
-        Take a look around! Smaller projects live on my{' '}
+        My games, tools, and sandboxes. Smaller projects live on my{' '}
         <Url href="https://github.com/cnnmon" target="_blank">
           GitHub ❀
         </Url>

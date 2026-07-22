@@ -50,25 +50,22 @@
     "height": 2360
   },
   {
-    "id": "a lactose full journaling app",
+    "id": "a lactose-full journaling [app](https://github.com/cnnmon/milktea)",
     "imageUrl": "/images/milkt.png",
     "date": "2025",
-    "link": "https://github.com/cnnmon/milktea",
     "width": 276,
     "height": 242
   },
   {
-    "id": "oaktime personality quiz",
+    "id": "oaktime personality quiz ([play here](https://oaktime.vercel.app/))",
     "imageUrl": "/images/oaktime.png",
     "date": "2025",
-    "link": "https://oaktime.vercel.app/",
     "width": 2886,
     "height": 1758
   },
   {
-    "id": "a semantic search for your diary",
+    "id": "a [semantic search](https://github.com/cnnmon/magnets) for your diary",
     "imageUrl": "/images/magnets.png",
-    "link": "https://github.com/cnnmon/magnets",
     "date": "2025",
     "width": 1828,
     "height": 1346
@@ -95,7 +92,7 @@
     "height": 1640
   },
   {
-    "id": "[i wanna take you to the sea](https://www.youtube.com/watch?v=eEFVxI9lqjU)",
+    "id": "i wanna take you to the sea - [porter](https://www.youtube.com/watch?v=eEFVxI9lqjU)",
     "imageUrl": "/images/sea.png",
     "date": "2024",
     "width": 1640,
@@ -277,7 +274,7 @@
     "height": 444
   },
   {
-    "id": "from a [game dev tutorial](https://docs.google.com/document/d/1UTqJSkouI3yEpAoR57pUBAGIQmCrYQjycVrASpQkBYQ/edit?usp=sharing)",
+    "id": "from a [game-making tutorial](https://docs.google.com/document/d/1UTqJSkouI3yEpAoR57pUBAGIQmCrYQjycVrASpQkBYQ/edit?usp=sharing) i made",
     "imageUrl": "/images/box.mp4",
     "date": "2019",
     "link": "https://docs.google.com/document/d/1UTqJSkouI3yEpAoR57pUBAGIQmCrYQjycVrASpQkBYQ/edit?usp=sharing",

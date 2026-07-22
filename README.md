@@ -6,6 +6,7 @@ my ongoing project to capture my identity in a fun way through a website.
 
 - stills render through `components/FadeImage.jsx`: `next/image` (avif/webp via sharp) + 500ms opacity fade-in, so nothing pops in jarringly
 - autoplaying loop videos render through `components/LazyVideo.jsx`: IntersectionObserver defers the download until ~300px from viewport, then fades in
+- `/files` masonry entries store their media's `width`/`height` in `utils/files.json` (regenerate with `node scripts/measure-media.mjs` after adding files) so each card reserves its exact aspect ratio and columns never shift while loading
 - the `/files` lightbox (`Modal.jsx`) serves optimized 1600px images (not raw originals) and pre-renders hidden prev/next neighbors so arrow-key navigation is instant
 - mp4s in `public/` are served raw (no optimizer), so keep them compressed: h264, crf ~23 (visually lossless-ish; higher = smaller but softer), max 960w for project cards (`ffmpeg -i in.mp4 -vf "scale='min(960,iw)':-2" -c:v libx264 -crf 23 -preset slow -pix_fmt yuv420p -movflags +faststart -an out.mp4`)
 - keep original exports somewhere outside the repo — re-encoding an already-compressed mp4 compounds quality loss
