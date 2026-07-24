@@ -26,7 +26,7 @@
       {
         "name": "Bonsai: Designing for Cultivation in AI Interactive Digital Narratives",
         "type": "web research",
-        "description": "Cultivation as a design metaphor for authoring AI-mediated interactive narratives.",
+        "description": "Cultivation as a design metaphor for authoring AI interactivity.",
         "image": "/images/bonsai.png",
         "sublabel": "[Creativity & Cognition 2026 poster](https://mkremins.github.io/publications/Bonsai_C&C2026.pdf), [Human-AI Co-Creativity @ ICML 2026](https://mkremins.github.io/publications/Bonsai_HAICC2026.pdf)",
         "authors": "Tiffany Wang, Max Kreminski"
@@ -34,7 +34,7 @@
       {
         "name": "Dramamancer: Interactive Narratives with LLM-powered Storylets",
         "type": "web research",
-        "description": "Exploring how AI can make games more interactive.",
+        "description": "Exploring how AI can make games more responsive.",
         "image": "/images/drama.mp4",
         "sublabel": "[UIST 2025](https://dl.acm.org/doi/full/10.1145/3746058.3758995), [I3D 2026](https://dl.acm.org/doi/10.1145/3807895.3807937?__cf_chl_f_tk=SRc5J2N8UjYWpDQmcBNeGwEP5rrdfeUVEBBvqlvZH0s-1782835145-1.0.1.1-s4kmJkvH7kwAf3Br_o53zTiFWTIChDNhvhMEuPVGFiI), [Wordplay @ EMNLP 2025](https://mkremins.github.io/publications/Dramamancer_Wordplay2025.pdf)",
         "authors": "Tiffany Wang, Yuqian Sun, Yi Wang, Melissa Roemmele, John Joon Young Chung, Max Kreminski"
