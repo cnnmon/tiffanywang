@@ -1,18 +1,7 @@
 import ProjectSections from '../components/ProjectSections';
-import projectSections from '../utils/projects.json';
-
-function shouldShowInResearch(item) {
-  return (item.type || '').toLowerCase().includes('research');
-}
+import researchSections from '../utils/research.json';
 
 function Research() {
-  const sections = projectSections
-    .map(({ title, list }) => ({
-      title,
-      list: list.filter(shouldShowInResearch),
-    }))
-    .filter(({ list }) => list.length > 0);
-
   return (
     <div className="flex flex-col gap-4">
       <p>
@@ -21,6 +10,7 @@ function Research() {
         .
       </p>
       <ProjectSections sections={sections} variant="research" />
+      <ProjectSections sections={researchSections} variant="research" />
     </div>
   );
 }

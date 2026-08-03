@@ -118,12 +118,12 @@ function Project({ item, showTooltip, hideTooltip, variant }) {
   const { name, description, links, image, sublabel } = item;
   const projectId = `project-${name.replace(/\s+/g, '-').toLowerCase()}`;
   const isResearch = variant === 'research';
-  const isVideo = image.endsWith('.mp4');
+  const isVideo = Boolean(image?.endsWith('.mp4'));
   const normalizedLinks = normalizeLinks(links);
   const [mainLink, ...extraLinks] = normalizedLinks;
   const hasMainLink = Boolean(mainLink?.href);
 
-  const preview = (
+  const preview = image && (
     <div
       className={
         isResearch
@@ -180,7 +180,7 @@ function Project({ item, showTooltip, hideTooltip, variant }) {
     return (
       <motion.div key={projectId} id={projectId} className="flex flex-col w-full mb-8">
         <div className="transition-all duration-50 flex flex-col sm:flex-row gap-4">
-          <div className="shrink-0">{preview}</div>
+          {preview && <div className="shrink-0">{preview}</div>}
           <div className="flex-1 space-y-1">
             <div className="flex flex-col gap-1">
               <h1 className="font-bold text-lg leading-tight text-[#6a3b7b]">{name}</h1>
@@ -248,7 +248,7 @@ function ProjectSections({ sections, intro, variant = 'all' }) {
       <div>
         {sections.map(({ title, list }, sectionIndex) => (
           <div key={sectionIndex} className="space-y-4">
-            <p className="text-gray-500">{title}</p>
+            {title && <p className="text-gray-500">{title}</p>}
             <div className={variant === 'research' ? 'flex flex-col' : 'sm:grid grid-cols-2 gap-4'}>
               {list.map((item) => (
                 <div key={item.name}>

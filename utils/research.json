@@ -1,0 +1,40 @@
+[
+  {
+    "list": [
+      {
+        "name": "It's Up to Interpretation: Aligning to One's Ever-Shifting Internal State",
+        "description": "The same reader in different moods will prefer different answers.",
+        "sublabel": "[Pluralistic Alignment @ ICML 2026](/papers/interpretation-paper.pdf)",
+        "authors": "Tiffany Wang, Vincent Huang"
+      },
+      {
+        "name": "Bonsai: Designing for Cultivation in AI Interactive Digital Narratives",
+        "description": "Cultivating an emergent narrative from author edits.",
+        "image": "/images/bonsai.png",
+        "sublabel": "[Creativity & Cognition 2026 poster](https://mkremins.github.io/publications/Bonsai_C&C2026.pdf), [Human-AI Co-Creativity @ ICML 2026](https://mkremins.github.io/publications/Bonsai_HAICC2026.pdf)",
+        "authors": "Tiffany Wang, Max Kreminski"
+      },
+      {
+        "name": "Dramamancer: Interactive Narratives with LLM-powered Storylets",
+        "description": "Where human authorship meets AI responsivity in games.",
+        "image": "/images/drama.mp4",
+        "sublabel": "[UIST 2025](https://dl.acm.org/doi/full/10.1145/3746058.3758995), [I3D 2026](https://dl.acm.org/doi/10.1145/3807895.3807937?__cf_chl_f_tk=SRc5J2N8UjYWpDQmcBNeGwEP5rrdfeUVEBBvqlvZH0s-1782835145-1.0.1.1-s4kmJkvH7kwAf3Br_o53zTiFWTIChDNhvhMEuPVGFiI), [Wordplay @ EMNLP 2025](https://mkremins.github.io/publications/Dramamancer_Wordplay2025.pdf)",
+        "authors": "Tiffany Wang, Yuqian Sun, Yi Wang, Melissa Roemmele, John Joon Young Chung, Max Kreminski"
+      },
+      {
+        "name": "princi/pal: A moral dilemma Tamagotchi",
+        "description": "A virtual pet that grows and learns from moral dilemmas.",
+        "image": "/images/principal.mp4",
+        "sublabel": "[NeurIPS Creative AI 2025](/papers/principal-paper.pdf) ⟢ [Dataset of moral reasonings](https://huggingface.co/datasets/cnnmon/moral-dilemma-responses)",
+        "authors": "Tiffany Wang"
+      },
+      {
+        "name": "Tensor Trust: Interpretable Prompt Injection Attacks from an Online Game",
+        "description": "Sweet-talk an LLM to win big.",
+        "image": "/images/tensortrust.mp4",
+        "sublabel": "[ICLR 2024 (spotlight)](https://arxiv.org/pdf/2311.01011)",
+        "authors": "Sam Toyer, Olivia Watkins, Ethan Adrian Mendes, Justin Svegliato, Luke Bailey, Tiffany Wang, Isaac Ong, Karim Elmaaroufi, Pieter Abbeel, Trevor Darrell, Alan Ritter, Stuart Russell"
+      }
+    ]
+  }
+]

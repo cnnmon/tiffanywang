@@ -51,6 +51,15 @@ function MyApp({ Component, pageProps }) {
                   about
                 </Link>
                 <Link
+                  href="/projects"
+                  className={twMerge(
+                    'hover:opacity-100',
+                    router.pathname === '/toys' ? 'opacity-100' : 'opacity-60',
+                  )}
+                >
+                  projects
+                </Link>
+                <Link
                   href="/research"
                   className={twMerge(
                     'hover:opacity-100',
@@ -58,15 +67,6 @@ function MyApp({ Component, pageProps }) {
                   )}
                 >
                   research
-                </Link>
-                <Link
-                  href="/toys"
-                  className={twMerge(
-                    'hover:opacity-100',
-                    router.pathname === '/toys' ? 'opacity-100' : 'opacity-60',
-                  )}
-                >
-                  projects
                 </Link>
                 <Link
                   href="/files"
