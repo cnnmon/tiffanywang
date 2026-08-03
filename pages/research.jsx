@@ -9,7 +9,6 @@ function Research() {
         <a href="https://scholar.google.com/citations?hl=en&user=p8hhfi4AAAAJ">Google Scholar ʚɞ</a>
         .
       </p>
-      <ProjectSections sections={sections} variant="research" />
       <ProjectSections sections={researchSections} variant="research" />
     </div>
   );
