@@ -66,7 +66,7 @@ function MyApp({ Component, pageProps }) {
                     router.pathname === '/toys' ? 'opacity-100' : 'opacity-60',
                   )}
                 >
-                  toys
+                  projects
                 </Link>
                 <Link
                   href="/files"

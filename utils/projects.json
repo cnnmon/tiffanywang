@@ -3,11 +3,11 @@
     "title": "2024-2026",
     "list": [
       {
-        "name": "would you still love me if everything i said to you came from eavesdropping on other relationships?",
+        "name": "would you still love me if...",
         "type": "exhibit",
         "description": "a two-player game about repurposed data and artificial intimacy.",
         "image": "/images/wouldyoustillloveme.png",
-        "sublabel": "On view at [TIAT epistemologies of slop](https://www.tiat.place/slop-epistemologies)!",
+        "sublabel": "TIAT epistemologies of slop exhibit",
         "links": {
           "main": "https://www.tiat.place/slop-epistemologies"
         },
@@ -41,11 +41,20 @@
       },
       {
         "name": "princi/pal: A moral dilemma Tamagotchi",
-        "type": "game web research",
+        "type": "research",
         "description": "A virtual pet that grows and learns from moral dilemmas.",
         "image": "/images/principal.mp4",
         "sublabel": "[NeurIPS Creative AI 2025](/papers/principal-paper.pdf)",
         "authors": "Tiffany Wang"
+      },
+      {
+        "name": "princi/pal",
+        "type": "game web",
+        "description": "a moral dilemma Tamagotchi.",
+        "image": "/images/principal.mp4",
+        "links": {
+          "main": "https://cnnmon.itch.io/principal"
+        }
       },
       {
         "name": "botsbotsbots",
