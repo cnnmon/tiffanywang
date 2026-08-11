@@ -18,8 +18,7 @@
         "image": "/images/comparefish.mp4",
         "links": {
           "main": "https://comparefish.site/"
-        },
-        "sublabel": "6.3k fish"
+        }
       },
       {
         "name": "princi/pal",
@@ -32,6 +31,7 @@
       {
         "name": "botsbotsbots",
         "description": "a reverse turing test where you must blend in with bots to survive.",
+        "sublabel": "20k plays",
         "image": "/images/botsbotsbots.mp4",
         "links": {
           "main": "https://cnnmon.itch.io/botsbotsbots"
@@ -130,7 +130,7 @@
         "name": "good morning!",
         "description": "morning routine simulator.",
         "date": "jan 2019",
-        "sublabel": "Scholastic Gold Key exhibit",
+        "sublabel": "Scholastic Gold Key exhibit, 1m plays",
         "image": "/images/goodmorning.mp4",
         "links": {
           "main": "https://cnnmon.itch.io/goodmorning"
