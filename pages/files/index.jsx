@@ -48,6 +48,7 @@ function BlogPreview({ item, blogLink }) {
     >
       <span className="flex-1 min-w-0 block">
         <a className="font-bold">{item.id}</a>
+        {item.subtitle && <i className="text-[#6a3b7b]"> — {item.subtitle}</i>}
         {preview && <p className="text-gray-600 mt-1 line-clamp-3">{parseInlineMarkup(preview)}</p>}
         <p className="text-gray-500 mt-1">{formatTime(item.date)}</p>
       </span>
