@@ -8,7 +8,7 @@ function Projects() {
       sections={projectSections}
       intro={
         <>
-          Take a look around! Smaller projects live on my{' '}
+          I mostly make websites & games here. Smaller projects live on my{' '}
           <Url href="https://github.com/cnnmon">GitHub</Url>.
         </>
       }

@@ -5,7 +5,7 @@ function Research() {
   return (
     <div className="flex flex-col gap-4">
       <p>
-        More on{' '}
+        I'm interested in human-AI interaction, alignment, new media, and creativity. More on{' '}
         <a href="https://scholar.google.com/citations?hl=en&user=p8hhfi4AAAAJ">Google Scholar ʚɞ</a>
         .
       </p>

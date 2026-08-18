@@ -2,17 +2,17 @@
   {
     "list": [
       {
-        "name": "It's Up to Interpretation: Aligning to One's Ever-Shifting Internal State",
-        "description": "The same reader in different moods will prefer different answers.",
-        "sublabel": "[Pluralistic Alignment @ ICML 2026](/papers/interpretation-paper.pdf)",
-        "authors": "Tiffany Wang, Vincent Huang"
-      },
-      {
         "name": "Bonsai: Designing for Cultivation in AI Interactive Digital Narratives",
         "description": "Cultivating an emergent narrative from author edits.",
         "image": "/images/bonsai.png",
         "sublabel": "[Creativity & Cognition 2026 poster](https://mkremins.github.io/publications/Bonsai_C&C2026.pdf), [Human-AI Co-Creativity @ ICML 2026](https://mkremins.github.io/publications/Bonsai_HAICC2026.pdf)",
         "authors": "Tiffany Wang, Max Kreminski"
+      },
+      {
+        "name": "It's Up to Interpretation: Aligning to One's Ever-Shifting Internal State",
+        "description": "The same reader in different moods will prefer different answers.",
+        "sublabel": "[Pluralistic Alignment @ ICML 2026](/papers/interpretation-paper.pdf)",
+        "authors": "Tiffany Wang, Vincent Huang"
       },
       {
         "name": "Dramamancer: Interactive Narratives with LLM-powered Storylets",

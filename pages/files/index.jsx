@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { useEffect, useMemo, useState } from 'react';
 import { MdOpenInNew } from 'react-icons/md';
+import { twMerge } from 'tailwind-merge';
 import FadeImage from '../../components/FadeImage';
 import InlineLinks from '../../components/InlineLinks';
 import LazyVideo from '../../components/LazyVideo';
@@ -11,32 +12,57 @@ import { formatTime } from '../../utils/time';
 
 const getFilename = (item) => item.imageUrl.split('/').pop();
 
+// Renders **bold** and _italic_ markup as elements; unmatched markers pass through as-is
+const parseInlineMarkup = (text) =>
+  text.split(/(\*\*.*?\*\*|_.*?_)/g).map((seg, i) => {
+    if (seg.startsWith('**') && seg.endsWith('**')) return <b key={i}>{seg.slice(2, -2)}</b>;
+    if (seg.startsWith('_') && seg.endsWith('_')) return <i key={i}>{seg.slice(1, -1)}</i>;
+    return seg;
+  });
+
 function BlogPreview({ item, blogLink }) {
   const [preview, setPreview] = useState('');
+  const [thumbnail, setThumbnail] = useState('');
   const router = useRouter();
 
   useEffect(() => {
     markdownPreloader.getContentAsync(item.blog).then((text) => {
       const snippet = text
         .split('\n')
-        .filter((line) => line.trim() && !line.startsWith('#') && !line.startsWith('!'))
+        .filter((line) => line.trim() && !/^[#!>]/.test(line))
         .slice(0, 2)
         .join(' ')
-        .replace(/\*\*(.*?)\*\*/g, '$1')
         .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
         .replace(/[~{}]/g, '');
       setPreview(snippet.length > 140 ? snippet.slice(0, 140) + '...' : snippet);
+
+      const firstImage = text.match(/!\[[^\]]*\]\(([^)]+)\)/);
+      setThumbnail(firstImage ? firstImage[1] : '');
     });
   }, [item.blog]);
 
   return (
     <button
       onClick={() => router.push(blogLink)}
-      className="block bg-gradient-to-b from-[#c6bae3] to-transparent p-3 h-full text-left hover:opacity-50"
+      className="flex items-start gap-3 w-full pt-2 pb-3 text-left hover:opacity-50"
     >
-      <a className="font-bold">{item.id}</a>
-      {preview && <p className="text-gray-600 mt-1 line-clamp-3">{preview}</p>}
-      <p className="text-gray-500 mt-1">{formatTime(item.date)}</p>
+      <span className="flex-1 min-w-0 block">
+        <a className="font-bold">{item.id}</a>
+        {preview && <p className="text-gray-600 mt-1 line-clamp-3">{parseInlineMarkup(preview)}</p>}
+        <p className="text-gray-500 mt-1">{formatTime(item.date)}</p>
+      </span>
+      {thumbnail && (
+        <span className="relative block w-24 h-24 shrink-0 bg-gray-100">
+          <FadeImage
+            src={thumbnail}
+            alt={item.id}
+            fill
+            sizes="96px"
+            quality={50}
+            className="object-cover"
+          />
+        </span>
+      )}
     </button>
   );
 }
@@ -96,31 +122,101 @@ function File({ item }) {
 
 const COL_COUNT = 2;
 
+// Verb shown in the intro sentence → tag used in files.json
+const TAGS = [
+  ['drawn', 'drawing'],
+  ['written', 'writing'],
+  ['modeled', 'model'],
+  ['programmed', 'program'],
+  ['designed', 'design'],
+];
+
+const FadeIn = ({ order, children }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.3, delay: order * 0.01 }}
+  >
+    {children}
+  </motion.div>
+);
+
 export default function Filesys() {
-  const columns = useMemo(() => {
-    const cols = Array.from({ length: COL_COUNT }, () => []);
-    files.filter((item) => !item.wip).forEach((item, i) => cols[i % COL_COUNT].push(item));
-    return cols;
-  }, []);
+  // One tag at a time; clicking the active tag deselects it (shows everything)
+  const [selectedTag, setSelectedTag] = useState(null);
+
+  const toggleTag = (tag) => setSelectedTag((prev) => (prev === tag ? null : tag));
+
+  // Blog entries span full width; runs of media items between them form masonry grids
+  const sections = useMemo(() => {
+    const result = [];
+    let run = [];
+    const flushRun = () => {
+      if (run.length === 0) return;
+      const cols = Array.from({ length: COL_COUNT }, () => []);
+      run.forEach((item, i) => cols[i % COL_COUNT].push(item));
+      result.push({ type: 'grid', cols });
+      run = [];
+    };
+
+    files
+      .filter(
+        (item) =>
+          !item.wip && (!selectedTag || item.tags?.includes(selectedTag)),
+      )
+      .forEach((item) => {
+        if (item.blog) {
+          flushRun();
+          result.push({ type: 'full', item });
+        } else {
+          run.push(item);
+        }
+      });
+    flushRun();
+    return result;
+  }, [selectedTag]);
+
+  let order = 0;
 
   return (
     <div className="space-y-4">
-      <p>A bunch of other stuff I've drawn, designed, written, coded, and 3D modeled.</p>
-      <div className="grid grid-cols-2 gap-2">
-        {columns.map((col, colIndex) => (
-          <div key={colIndex} className="flex flex-col gap-3">
-            {col.map((item, index) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: (colIndex + index * COL_COUNT) * 0.01 }}
-              >
-                <File item={item} />
-              </motion.div>
-            ))}
-          </div>
+      <p>
+        A bunch of miscellaneous stuff I've{' '}
+        {TAGS.map(([verb, tag], i) => (
+          <span key={tag}>
+            <button
+              onClick={() => toggleTag(tag)}
+              className={twMerge(
+                'underline underline-offset-2 decoration-dotted hover:opacity-50',
+                selectedTag === tag && 'bg-[#6a3b7b] text-white decoration-solid',
+              )}
+            >
+              {verb}
+            </button>
+            {i < TAGS.length - 1 ? ', ' : ', etc.'}
+          </span>
         ))}
+      </p>
+      <div className="flex flex-col gap-3">
+        {sections.map((section, sectionIndex) =>
+          section.type === 'full' ? (
+            <FadeIn key={section.item.id} order={order++}>
+              <File item={section.item} />
+            </FadeIn>
+          ) : (
+            <div key={`grid-${sectionIndex}`} className="grid grid-cols-2 gap-2">
+              {section.cols.map((col, colIndex) => (
+                <div key={colIndex} className="flex flex-col gap-3">
+                  {col.map((item) => (
+                    <FadeIn key={item.id} order={order++}>
+                      <File item={item} />
+                    </FadeIn>
+                  ))}
+                </div>
+              ))}
+            </div>
+          ),
+        )}
       </div>
     </div>
   );

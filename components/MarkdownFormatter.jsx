@@ -25,166 +25,79 @@ function MarkdownFormatter({ file }) {
     let inList = false;
     let currentSection = [];
 
-    const processLine = (line, key) => {
-      // Bold text
-      const boldRegex = /\*\*(.*?)\*\*/g;
-      // Strikethrough text
-      const strikeRegex = /~~(.*?)~~/g;
-      // Images ![alt](url)
-      const imageRegex = /!\[([^\]]*)\]\(([^)]+)\)/g;
-      // Links [text](url)
-      const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-      // Wavy text {text}
-      const waveRegex = /{(.*?)}/g;
+    // Splits string parts on regex matches and replaces each match with render(match)
+    const applyRegex = (parts, regex, render) =>
+      parts.flatMap((part) => {
+        if (typeof part !== 'string') return [part];
 
+        const segments = [];
+        let lastIndex = 0;
+        let match;
+        const re = new RegExp(regex);
+
+        while ((match = re.exec(part)) !== null) {
+          if (match.index > lastIndex) {
+            segments.push(part.substring(lastIndex, match.index));
+          }
+          segments.push(render(match));
+          lastIndex = re.lastIndex;
+        }
+
+        if (lastIndex < part.length) {
+          segments.push(part.substring(lastIndex));
+        }
+
+        return segments.length > 0 ? segments : [part];
+      });
+
+    const processLine = (line, key) => {
       let parts = [line];
 
-      // Process images (before links since syntax is similar)
-      parts = parts.flatMap((part, idx) => {
-        if (typeof part === 'string') {
-          const segments = [];
-          let lastIndex = 0;
-          let match;
-          const regex = new RegExp(imageRegex);
+      // Images ![alt](url) (before links since syntax is similar)
+      parts = applyRegex(parts, /!\[([^\]]*)\]\(([^)]+)\)/g, (match) => (
+        <span key={`img-${key}-${match.index}`} className="block relative w-full">
+          <FadeImage
+            src={match[2]}
+            alt={match[1]}
+            width={800}
+            height={600}
+            sizes="(max-width: 768px) 100vw, 800px"
+            className="max-w-full h-auto"
+          />
+        </span>
+      ));
 
-          while ((match = regex.exec(part)) !== null) {
-            if (match.index > lastIndex) {
-              segments.push(part.substring(lastIndex, match.index));
-            }
-            segments.push(
-              <span key={`img-${key}-${idx}-${match.index}`} className="block relative w-full">
-                <FadeImage
-                  src={match[2]}
-                  alt={match[1]}
-                  width={800}
-                  height={600}
-                  sizes="(max-width: 768px) 100vw, 800px"
-                  className="max-w-full h-auto"
-                />
-              </span>,
-            );
-            lastIndex = regex.lastIndex;
-          }
+      // Bold **text**
+      parts = applyRegex(parts, /\*\*(.*?)\*\*/g, (match) => (
+        <b key={`b-${key}-${match.index}`}>{match[1]}</b>
+      ));
 
-          if (lastIndex < part.length) {
-            segments.push(part.substring(lastIndex));
-          }
+      // Wavy text {text}
+      parts = applyRegex(parts, /{(.*?)}/g, (match) => (
+        <WaveText
+          key={`w-${key}-${match.index}`}
+          text={match[1]}
+          className="text-2xl text-[#6a3b7b]"
+          gradient={false}
+        />
+      ));
 
-          return segments.length > 0 ? segments : [part];
-        }
-        return [part];
-      });
+      // Strikethrough ~~text~~
+      parts = applyRegex(parts, /~~(.*?)~~/g, (match) => (
+        <s key={`s-${key}-${match.index}`}>{match[1]}</s>
+      ));
 
-      // Process bold
-      parts = parts.flatMap((part) => {
-        if (typeof part === 'string') {
-          const segments = [];
-          let lastIndex = 0;
-          let match;
-          const regex = new RegExp(boldRegex);
+      // Links [text](url)
+      parts = applyRegex(parts, /\[([^\]]+)\]\(([^)]+)\)/g, (match) => (
+        <Url key={`url-${key}-${match.index}`} href={match[2]}>
+          {match[1]}
+        </Url>
+      ));
 
-          while ((match = regex.exec(part)) !== null) {
-            if (match.index > lastIndex) {
-              segments.push(part.substring(lastIndex, match.index));
-            }
-            segments.push(<b key={`b-${key}-${match.index}`}>{match[1]}</b>);
-            lastIndex = regex.lastIndex;
-          }
-
-          if (lastIndex < part.length) {
-            segments.push(part.substring(lastIndex));
-          }
-
-          return segments.length > 0 ? segments : [part];
-        }
-        return [part];
-      });
-
-      // Process wave
-      parts = parts.flatMap((part) => {
-        if (typeof part === 'string') {
-          const segments = [];
-          let lastIndex = 0;
-          let match;
-          const regex = new RegExp(waveRegex);
-
-          while ((match = regex.exec(part)) !== null) {
-            if (match.index > lastIndex) {
-              segments.push(part.substring(lastIndex, match.index));
-            }
-            segments.push(
-              <WaveText
-                key={`b-${key}-${match.index}`}
-                text={match[1]}
-                className="text-2xl text-[#6a3b7b]"
-                gradient={false}
-              />,
-            );
-            lastIndex = regex.lastIndex;
-          }
-
-          if (lastIndex < part.length) {
-            segments.push(part.substring(lastIndex));
-          }
-
-          return segments.length > 0 ? segments : [part];
-        }
-        return [part];
-      });
-
-      // Process strikethrough
-      parts = parts.flatMap((part) => {
-        if (typeof part === 'string') {
-          const segments = [];
-          let lastIndex = 0;
-          let match;
-          const regex = new RegExp(strikeRegex);
-
-          while ((match = regex.exec(part)) !== null) {
-            if (match.index > lastIndex) {
-              segments.push(part.substring(lastIndex, match.index));
-            }
-            segments.push(<s key={`s-${key}-${match.index}`}>{match[1]}</s>);
-            lastIndex = regex.lastIndex;
-          }
-
-          if (lastIndex < part.length) {
-            segments.push(part.substring(lastIndex));
-          }
-
-          return segments.length > 0 ? segments : [part];
-        }
-        return [part];
-      });
-
-      // Process links
-      parts = parts.flatMap((part, idx) => {
-        if (typeof part === 'string') {
-          const segments = [];
-          let lastIndex = 0;
-          let match;
-          const regex = new RegExp(linkRegex);
-
-          while ((match = regex.exec(part)) !== null) {
-            if (match.index > lastIndex) {
-              segments.push(part.substring(lastIndex, match.index));
-            }
-            segments.push(
-              <Url key={`url-${key}-${idx}-${match.index}`} href={match[2]}>
-                {match[1]}
-              </Url>,
-            );
-            lastIndex = regex.lastIndex;
-          }
-
-          if (lastIndex < part.length) {
-            segments.push(part.substring(lastIndex));
-          }
-
-          return segments.length > 0 ? segments : [part];
-        }
-        return [part];
-      });
+      // Italics _text_ (after links so underscores in urls are untouched)
+      parts = applyRegex(parts, /_(.*?)_/g, (match) => (
+        <i key={`i-${key}-${match.index}`}>{match[1]}</i>
+      ));
 
       return parts;
     };
@@ -237,6 +150,18 @@ function MarkdownFormatter({ file }) {
           <HeaderTag key={`h-${index}`} className={className}>
             {content}
           </HeaderTag>,
+        );
+        return;
+      }
+
+      // Captions "> text" — muted, centered, sits tight under the previous line (e.g. an image)
+      const captionMatch = line.match(/^>\s+(.+)$/);
+      if (captionMatch) {
+        flushList();
+        currentSection.push(
+          <p key={`cap-${index}`} className="mt-2 text-center italic text-neutral-500">
+            {processLine(captionMatch[1], `cap-${index}`)}
+          </p>,
         );
         return;
       }

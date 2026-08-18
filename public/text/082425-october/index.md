@@ -2,11 +2,11 @@ i redesigned my website! if you've found your way here, it seems like you've fou
 
 ### the design
 
-redesigning a website is a vulnerable experience. every time, i flirt with the idea of making a hyper-optimized, minimalistic, professional-looking website, and lose my way [again](https://tiffanywang-4w3l9uyno-cnnmon.vercel.app/) and [again](https://tiffanywang-nddwqs5e6-cnnmon.vercel.app) and [again](https://drive.google.com/file/d/1cjlGzkEwjKlM0HqieyNCmgYJnHS1sYuu/view?usp=sharing). this time, i was lured in by the idea of making a pseudo-3d centerpiece, so i dug up a blender model i made for a class last year, retextured the hair to my new seasonal color(s), exported her spinning as an mp4, and vibe coded a way to reactively "spin" her with your mouse (really just scrubbing the video).
+redesigning a website is a vulnerable experience. every time, i flirt with the idea of making a hyper-optimized, minimalistic, professional-looking website, and lose my way [again](https://user-images.githubusercontent.com/20329981/221345138-8496c1bb-bf2f-4f37-8870-0000b7d7cae6.png) and [again](https://user-images.githubusercontent.com/20329981/221339055-2a98c071-10b2-49a8-b8e7-9c459d23770c.png). this time, i was lured in by the idea of making a pseudo-3d centerpiece, so i dug up a blender model i made for a class last year, retextured the hair to my new seasonal color(s), exported her spinning as an mp4, and vibe coded a way to reactively "spin" her with your mouse (really just scrubbing the video).
 
 my first figma mock:
 
-![figma design](/text/october/mock.png)
+![figma design](/text/082425-october/mock.png)
 
 i stole the pretty font (neue montreal) from [this cool website](https://abrandenberger.github.io/#colophon) and coded the site in nextjs and tailwind on the flight from sf → denver → [tennessee](https://www.rabbitholeathon.com/).
 
@@ -18,7 +18,7 @@ generally fun ideas that i'd like to see in the wild, or i'll make myself at som
 
 **stuffed embodiment**: i went to this gorgeous exhibit recently on architect sou fujimoto. my favorite part was tucked in the back: as what seemed to be an educational experiment, someone decided to transform his buildings into stuffed animals and make them chat with each other. the toys rustled whenever they talked. it was so charming...!
 
-![figma design](/text/october/stuffed.png)
+![figma design](/text/082425-october/stuffed.png)
 
 **a monkey's paw**: unintended things happen when you ask things of it.
 
