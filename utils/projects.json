@@ -66,8 +66,7 @@
         "date": "sep 2022",
         "image": "/images/ezcv3.mp4",
         "links": {
-          "main": "https://www.ezcv.pro/",
-          "video": "https://www.youtube.com/watch?v=ySbI8ernz3M"
+          "main": "https://www.ezcv.pro/"
         }
       }
     ]
@@ -81,8 +80,7 @@
         "date": "aug 2020",
         "image": "/images/boba.mp4",
         "links": {
-          "main": "https://cnnmon.itch.io/boba",
-          "video": "https://www.youtube.com/watch?v=TFjMKTdCfcg&t=6s"
+          "main": "https://cnnmon.itch.io/boba"
         },
         "sublabel": "Funded on Kickstarter"
       },

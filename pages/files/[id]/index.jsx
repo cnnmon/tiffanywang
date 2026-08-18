@@ -14,7 +14,7 @@ export default function BlogPost() {
     return <div>{id} not found</div>;
   }
 
-  const { blog, date } = item;
+  const { blog, date, subtitle } = item;
 
   // Fetch markdown content for estimated reading time
   const [content, setContent] = useState('');
@@ -40,6 +40,7 @@ export default function BlogPost() {
     >
       <div>
         <h1 className="text-xl">{id}</h1>
+        {subtitle && <h2 className="italic text-[#6a3b7b]">{subtitle}</h2>}
         <h2 className="text-gray-500">({estTime < 1 ? '<1' : estTime} min read)</h2>
         <h2 className="text-gray-500">{formatTime(date)}</h2>
       </div>
