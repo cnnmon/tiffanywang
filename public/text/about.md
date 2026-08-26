@@ -1,4 +1,4 @@
-Hi, I'm Tiffany! I'm a researcher, engineer, and toy-maker. I use machines to wrestle with human intent, perception, and (mis-)understanding. Often, I make games ([1.5M+ plays!](https://cnnmon.itch.io/)).
+Hi, I'm Tiffany! I'm a researcher, engineer, and game-maker ([1.5M+ plays!](https://cnnmon.itch.io/)). I use machines to wrestle with human intent, perception, and (mis-)understanding.
 
 I'm an incoming graduate student at MIT Media Lab in the [Cyborg Psychology](https://www.media.mit.edu/groups/cyborg-psychology/overview/) group, advised by Pat Pataranutaporn. Currently, I'm a resident at [Stochastic Labs](https://stochasticlabs.org/) working on massively multiplayer co-creative tools with Max Kreminski.
 
