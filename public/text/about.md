@@ -1,4 +1,4 @@
-Hi, I'm Tiffany! I'm a researcher, engineer, and [game developer](https://cnnmon.itch.io/) who uses machines to wrestle with things like intent, perception, and (mis-)understanding. I'm currently a graduate student at the MIT Media Lab in the [Cyborg Psychology](https://www.media.mit.edu/groups/cyborg-psychology/overview/) group, advised by Pat Pataranutaporn.
+Hi, I'm Tiffany! I'm a graduate student at the MIT Media Lab in the [Cyborg Psychology](https://www.media.mit.edu/groups/cyborg-psychology/overview/) group, advised by Pat Pataranutaporn. I'm a researcher, engineer, and [game developer](https://cnnmon.itch.io/) interested in using machines to wrestle with messy but deeply human traits like values, interpretation, and (mis-)understanding.
 
 I graduated with a BA in Computer Science at UC Berkeley, where I researched adversarial robustness with the [CHAI](https://en.wikipedia.org/wiki/Center_for_Human-Compatible_Artificial_Intelligence) lab, advised by Stuart Russell. I taught [Operating Systems](https://cs162.org/), [ran hackathons](https://www.calhacks.io/), [developed apps for non-profits](https://calblueprint.org/).
 
