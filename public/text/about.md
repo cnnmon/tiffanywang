@@ -1,11 +1,12 @@
-Hi, I'm Tiffany! I'm a researcher, engineer, and game-maker ([1.5M+ plays!](https://cnnmon.itch.io/)). I use machines to wrestle with human intent, perception, and (mis-)understanding.
+Hi, I'm Tiffany! I'm a researcher, engineer, and [game developer](https://cnnmon.itch.io/) who uses machines to wrestle with things like intent, perception, and (mis-)understanding. I'm currently a graduate student at the MIT Media Lab in the [Cyborg Psychology](https://www.media.mit.edu/groups/cyborg-psychology/overview/) group, advised by Pat Pataranutaporn.
 
-I'm an incoming graduate student at MIT Media Lab in the [Cyborg Psychology](https://www.media.mit.edu/groups/cyborg-psychology/overview/) group, advised by Pat Pataranutaporn. Currently, I'm a resident at [Stochastic Labs](https://stochasticlabs.org/) working on massively multiplayer co-creative tools with Max Kreminski.
+I graduated with a BA in Computer Science at UC Berkeley, where I researched adversarial robustness with the [CHAI](https://en.wikipedia.org/wiki/Center_for_Human-Compatible_Artificial_Intelligence) lab, advised by Stuart Russell. I taught [Operating Systems](https://cs162.org/), [ran hackathons](https://www.calhacks.io/), [developed apps for non-profits](https://calblueprint.org/).
 
-Previously, I was a research engineer at [Midjourney](https://www.midjourney.com/). I studied Computer Science at UC Berkeley, where I worked on adversarial robustness with the [Center for Human-Compatible AI (CHAI)](https://humancompatible.ai/), advised by Stuart Russell. I taught [Operating Systems](https://cs162.org/), [ran hackathons](https://www.calhacks.io/), [developed apps for non-profits](https://calblueprint.org/), and interned as a product and infra engineer at [Watershed](https://watershed.com/), [Meta Reality Labs](https://about.meta.com/realitylabs/), and [Ramp](https://ramp.com/).
 
-Before all that, I grew up in a small town in Ohio with a [big park](https://en.wikipedia.org/wiki/Brecksville_Reservation).
+I've worked at [Midjourney](https://www.midjourney.com/) and [Watershed](https://watershed.com/) and was a resident at [Stochastic Labs](https://stochasticlabs.org/). Before all that, I grew up in a small town in Ohio with a [big park](https://en.wikipedia.org/wiki/Brecksville_Reservation).
+
+:･ﾟ✧:･.☽˚｡･ﾟ✧:･.:
 
 Want to chat? Reach out at **wangttiffany at gmail dot com**.
 
-Other places you can spot me: [GitHub ❀](https://github.com/cnnmon), [Twitter ꕤ](https://twitter.com/cnnmonie), [LinkedIn ✿](https://www.linkedin.com/in/wtiffany/), [Scholar ʚɞ](https://scholar.google.com/citations?hl=en&user=p8hhfi4AAAAJ)
+Or spot me at: [GitHub ❀](https://github.com/cnnmon), [Twitter ꕤ](https://twitter.com/cnnmonie), [LinkedIn ✿](https://www.linkedin.com/in/wtiffany/), [Scholar ʚɞ](https://scholar.google.com/citations?hl=en&user=p8hhfi4AAAAJ)

@@ -14,7 +14,7 @@
       },
       {
         "name": "comparefish",
-        "description": "a social plotter where you \"fix\" friends' placements. on internal vs external perception.",
+        "description": "a social plotter where you \"fix\" friends' placements.",
         "image": "/images/comparefish.mp4",
         "links": {
           "main": "https://comparefish.site/"

@@ -1,59 +1,76 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useCallback, useRef, useState } from 'react';
+import { useRef } from 'react';
 import MarkdownFormatter from '../components/MarkdownFormatter';
+import Url from '../components/Url';
 
-// [src, gazeX, gazeY, location] — 0,0 = top-left, 1,1 = bottom-right
-const PICS = [
-  ['/me/me_13.png', 0.05, 0.5, 'Berkeley, CA'],
-  ['/me/me_2.png', 0.1, 0.35, 'San Francisco, CA'],
-  ['/me/me_7.png', 0.1, 0.2, 'San Francisco, CA'],
-  ['/me/me_19.png', 0.15, 0.5, 'New York, NY'],
-  ['/me/me_5.png', 0.3, 0.15, 'San Francisco, CA'],
-  ['/me/me_10.png', 0.3, 0.8, 'San Francisco, CA'],
-  ['/me/me_12.png', 0.4, 0.5, 'Daly City, CA'],
-  ['/me/me_11.png', 0.45, 0.45, 'San Francisco, CA'],
-  ['/me/me_8.png', 0.5, 0.5, 'New York, NY'],
-  ['/me/me_17.png', 0.5, 0.7, 'Tokyo, Japan'],
-  ['/me/me_18.png', 0.8, 0.8, 'Tokyo, Japan'],
-  ['/me/me_4.png', 0.5, 0.6, 'Queens, NY'],
-  ['/me/me_3.png', 0.5, 0.65, 'Brecksville, OH'],
-  ['/me/me_15.png', 0.55, 0.45, 'Kamakura, Japan'],
-  ['/me/me_6.png', 0.55, 0.1, 'San Francisco, CA'],
-  ['/me/me_16.png', 0.7, 0.5, 'San Francisco, CA'],
-  ['/me/me_9.png', 0.75, 0.4, 'San Francisco, CA'],
-  ['/me/me_1.png', 0.9, 0.1, 'Kamakura, Japan'],
-];
+const SECTIONS = {
+  experience: [
+    {
+      date: '2026-Present',
+      role: 'Graduate Research Assistant, MIT Media Lab',
+      org: 'Cyborg Psychology',
+      href: 'https://www.media.mit.edu/groups/cyborg-psychology/overview/',
+    },
+    // { date: '2026', role: 'Resident', org: 'Stochastic Labs', href: 'https://stochasticlabs.org/' },
+    {
+      date: '2025-2026',
+      role: 'Research Engineer',
+      org: 'Midjourney',
+      href: 'https://www.midjourney.com/',
+    },
+    { date: '2026', role: 'Software Engineer', org: 'Watershed', href: 'https://watershed.com/' },
+    {
+      date: '2024',
+      role: 'Undergraduate Researcher',
+      org: 'UC Berkeley CHAI',
+      href: 'https://humancompatible.ai/',
+    },
+    {
+      date: '2024',
+      role: 'Software Engineering Intern',
+      org: 'Watershed',
+      href: 'https://watershed.com/',
+    },
+    {
+      date: '2023',
+      role: 'Software Engineering Intern',
+      org: 'Meta Reality Labs',
+      href: 'https://about.meta.com/realitylabs/',
+    },
+    { date: '2022', role: 'Software Engineering Intern', org: 'Ramp', href: 'https://ramp.com/' },
+  ],
+  teaching: [
+    { role: 'CS 162: Operating Systems', href: 'https://cs162.org/' },
+    'CS 161: Computer Architecture',
+    'CS 163: Computer Networks',
+    'CS 164: Algorithms',
+    'CS 165: Machine Learning',
+  ],
+};
 
-const DEFAULT_INDEX = PICS.findIndex(([src]) => src === '/me/me_1.png');
+function SectionItem({ item }) {
+  const { date, role, org, href } = typeof item === 'string' ? { role: item } : item;
+  const roleNode = href && !org ? <Url href={href}>{role}</Url> : role;
+  const orgNode = org ? href ? <Url href={href}>{org}</Url> : org : null;
 
-function nearest(nx, ny) {
-  let best = 0;
-  let bestDist = Infinity;
-  for (let i = 0; i < PICS.length; i++) {
-    const dx = nx - PICS[i][1];
-    const dy = ny - PICS[i][2];
-    const d = dx * dx + dy * dy;
-    if (d < bestDist) {
-      bestDist = d;
-      best = i;
-    }
-  }
-  return best;
+  return (
+    <p>
+      {date && (
+        <>
+          <span className="text-[#6a3b7b] tabular-nums sm:inline-block sm:w-[8.5rem]">
+            {date}
+          </span>{' '}
+        </>
+      )}
+      {roleNode}
+      {orgNode && <>, {orgNode}</>}
+    </p>
+  );
 }
 
 function About() {
-  const [picIndex, setPicIndex] = useState(DEFAULT_INDEX);
-  const [hovering, setHovering] = useState(false);
   const containerRef = useRef(null);
-
-  const handleMouseMove = useCallback((e) => {
-    const rect = containerRef.current.getBoundingClientRect();
-    const nx = (e.clientX - rect.left) / rect.width;
-    const ny = (e.clientY - rect.top) / rect.height;
-    setPicIndex(nearest(nx, ny));
-  }, []);
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -62,16 +79,7 @@ function About() {
       className="flex flex-col gap-4"
     >
       <div className="flex flex-col gap-2">
-        <div
-          ref={containerRef}
-          onMouseEnter={() => setHovering(true)}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={() => {
-            setPicIndex(DEFAULT_INDEX);
-            setHovering(false);
-          }}
-          className="h-40 w-40 overflow-hidden cursor-crosshair"
-        >
+        <div ref={containerRef} className="h-40 w-40 overflow-hidden cursor-crosshair">
           <Image
             src={'/me/me_1.png'}
             alt="tiffanywang"
@@ -82,9 +90,19 @@ function About() {
             className="h-40 w-40 object-cover object-center pointer-events-none"
           />
         </div>
-        <p>📍 {'San Francisco, CA'}</p>
+        <p>📍 {'Cambridge, MA'}</p>
       </div>
       <MarkdownFormatter file="/text/about.md" />
+      {/* <div className="flex flex-col gap-4">
+        {Object.entries(SECTIONS).map(([header, items]) => (
+          <div key={header}>
+            <p className="font-bold">{header}</p>
+            {items.map((item, i) => (
+              <SectionItem key={`${header}-${i}`} item={item} />
+            ))}
+          </div>
+        ))}
+      </div> */}
     </motion.div>
   );
 }
