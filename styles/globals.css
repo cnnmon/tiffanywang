@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'bodytext';
-  src: url('../public/neuemontreal.otf');
+  src: url('../public/fonts/neuemontreal.otf');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'bodytext';
-  src: url('../public/neuemontreal-medium.otf');
+  src: url('../public/fonts/neuemontreal-medium.otf');
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'wavetext';
-  src: url('../public/neuebit.otf');
+  src: url('../public/fonts/neuebit.otf');
   font-weight: normal;
 }
 

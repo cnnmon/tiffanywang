@@ -9,4 +9,4 @@ I've worked at [Midjourney](https://www.midjourney.com/) and [Watershed](https:/
 
 Want to chat? Reach out at **wangttiffany at gmail dot com**.
 
-Or spot me at: [GitHub ❀](https://github.com/cnnmon), [Twitter ꕤ](https://twitter.com/cnnmonie), [LinkedIn ✿](https://www.linkedin.com/in/wtiffany/), [Scholar ʚɞ](https://scholar.google.com/citations?hl=en&user=p8hhfi4AAAAJ)
+Or spot me at: [GitHub ❀](https://github.com/cnnmon), [Twitter ꕤ](https://twitter.com/cnnmonie), [LinkedIn ✿](https://www.linkedin.com/in/wtiffany/), [Scholar ʚɞ](https://scholar.google.com/citations?hl=en&user=p8hhfi4AAAAJ), [CV 𓆟](https://www.ezcv.pro/view/cabbages)
