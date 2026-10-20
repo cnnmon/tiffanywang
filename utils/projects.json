@@ -16,6 +16,7 @@
         "name": "comparefish",
         "description": "a social plotter where you \"fix\" friends' placements.",
         "image": "/images/comparefish.mp4",
+        "sublabel": "600+ custom plots",
         "links": {
           "main": "https://comparefish.site/"
         }
@@ -24,6 +25,7 @@
         "name": "princi/pal",
         "description": "a moral dilemma Tamagotchi.",
         "image": "/images/principal.mp4",
+        "sublabel": "NeurIPS 2025 Creative AI",
         "links": {
           "main": "https://cnnmon.itch.io/principal"
         }
