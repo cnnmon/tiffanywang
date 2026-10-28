@@ -23,6 +23,15 @@
     "date": "jan 6 2026"
   },
   {
+    "id": "princi/pal",
+    "subtitle": "a moral dilemma tamagotchi",
+    "href": "/files/principal",
+    "preview": "princi/pal explores the anxiety of raising a responsible, good-natured child, with an AI twist.",
+    "thumbnail": "/text/principal/evolutions.png",
+    "tags": ["writing", "program"],
+    "date": "dec 6 2025"
+  },
+  {
     "id": "new website",
     "date": "oct 24 2025",
     "tags": ["writing"],

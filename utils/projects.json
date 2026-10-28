@@ -27,7 +27,8 @@
         "image": "/images/principal.mp4",
         "sublabel": "NeurIPS 2025 Creative AI",
         "links": {
-          "main": "https://cnnmon.itch.io/principal"
+          "main": "https://cnnmon.itch.io/principal",
+          "writeup": "/files/principal"
         }
       },
       {

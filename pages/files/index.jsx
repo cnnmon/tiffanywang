@@ -21,11 +21,12 @@ const parseInlineMarkup = (text) =>
   });
 
 function BlogPreview({ item, blogLink }) {
-  const [preview, setPreview] = useState('');
-  const [thumbnail, setThumbnail] = useState('');
+  const [preview, setPreview] = useState(item.preview || '');
+  const [thumbnail, setThumbnail] = useState(item.thumbnail || '');
   const router = useRouter();
 
   useEffect(() => {
+    if (!item.blog) return;
     markdownPreloader.getContentAsync(item.blog).then((text) => {
       const snippet = text
         .split('\n')
@@ -114,8 +115,9 @@ function File({ item }) {
     );
   }
 
-  if (item.blog) {
-    return <BlogPreview item={item} blogLink={`/files/${item.id}`} />;
+  // Custom pages (href) sit in the list the same way markdown posts do
+  if (item.blog || item.href) {
+    return <BlogPreview item={item} blogLink={item.href || `/files/${item.id}`} />;
   }
 
   return null;
@@ -166,7 +168,7 @@ export default function Filesys() {
           !item.wip && (!selectedTag || item.tags?.includes(selectedTag)),
       )
       .forEach((item) => {
-        if (item.blog) {
+        if (item.blog || item.href) {
           flushRun();
           result.push({ type: 'full', item });
         } else {

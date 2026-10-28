@@ -24,7 +24,7 @@
         "name": "princi/pal: A moral dilemma Tamagotchi",
         "description": "A virtual pet that grows and learns from moral dilemmas.",
         "image": "/images/principal.mp4",
-        "sublabel": "[NeurIPS Creative AI 2025](/papers/principal-paper.pdf) ⟢ [Dataset of moral reasonings](https://huggingface.co/datasets/cnnmon/moral-dilemma-responses)",
+        "sublabel": "[NeurIPS Creative AI 2025](/papers/principal-paper.pdf) ⟢ [writeup](/files/principal) ⟢ [Dataset of moral reasonings](https://huggingface.co/datasets/cnnmon/moral-dilemma-responses)",
         "authors": "Tiffany Wang"
       },
       {
