@@ -8,7 +8,8 @@ function Projects() {
       sections={projectSections}
       intro={
         <>
-          Here you can find some games and toys. Smaller projects live on my{' '}
+          <i>“Playing a game is the voluntary attempt to overcome unnecessary obstacles.”</i> —
+          Bernard Suits. Smaller projects live on my{' '}
           <Url href="https://github.com/cnnmon">GitHub</Url>.
         </>
       }
