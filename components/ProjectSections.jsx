@@ -115,13 +115,10 @@ function AuthorsLine({ authorsText }) {
 }
 
 function Project({ item, showTooltip, hideTooltip, variant }) {
-  const { name, description, links, image, sublabel } = item;
+  const { name, description, link, image, sublabel } = item;
   const projectId = `project-${name.replace(/\s+/g, '-').toLowerCase()}`;
   const isResearch = variant === 'research';
   const isVideo = Boolean(image?.endsWith('.mp4'));
-  const normalizedLinks = normalizeLinks(links);
-  const [mainLink, ...extraLinks] = normalizedLinks;
-  const hasMainLink = Boolean(mainLink?.href);
 
   const preview = image && (
     <div
@@ -145,36 +142,6 @@ function Project({ item, showTooltip, hideTooltip, variant }) {
       )}
     </div>
   );
-
-  const extraLinkElements = extraLinks.map((link) => {
-    const iconSrc = linkToIcon[link.kind];
-    return (
-      <div
-        key={`${projectId}-${link.label}-${link.href}`}
-        onClick={() => {
-          window.open(link.href, '_blank')?.focus();
-        }}
-        className="cursor-ne-resize text-sm hover:opacity-50"
-        onMouseEnter={() => showTooltip(link.kind)}
-        onMouseLeave={() => hideTooltip()}
-        style={{ color: '#6a3b7b' }}
-      >
-        {iconSrc ? (
-          <img
-            src={iconSrc}
-            alt={link.kind}
-            className="w-4 h-4"
-            style={{
-              filter:
-                'invert(23%) sepia(28%) saturate(1766%) hue-rotate(264deg) brightness(56%) contrast(87%)',
-            }}
-          />
-        ) : (
-          link.label
-        )}
-      </div>
-    );
-  });
 
   if (isResearch) {
     return (
@@ -210,22 +177,21 @@ function Project({ item, showTooltip, hideTooltip, variant }) {
   return (
     <motion.div key={projectId} id={projectId} className="flex flex-col w-full mb-5">
       <div className="transition-all duration-50">
-        {hasMainLink ? (
-          <a href={mainLink.href} target="_blank" rel="noopener noreferrer">
+        {link ? (
+          <a href={link.href} target="_blank" rel="noopener noreferrer">
             {preview}
           </a>
         ) : (
           preview
         )}
         <div className="flex flex-row justify-between gap-2">
-          {hasMainLink ? (
-            <a href={mainLink.href} target="_blank" rel="noopener noreferrer" className="font-bold">
+          {link ? (
+            <a href={link.href} target="_blank" rel="noopener noreferrer" className="font-bold">
               {name}
             </a>
           ) : (
             <p className="font-bold text-[#6a3b7b]">{name}</p>
           )}
-          <div className="flex flex-row gap-2 select-none">{extraLinkElements}</div>
         </div>
         {renderDescription({ name, description, longDescription: item.longDescription }, variant)}
         {sublabel && (

@@ -3,42 +3,41 @@
     "title": "2024-2026",
     "list": [
       {
+        "name": "THE SUITORS AND THE AI PRINCESS",
+        "description": "try to appease a princess with evolving secret preferences [beta]",
+        "image": "/images/suitors.gif",
+        "link": "https://suitors-sigma.vercel.app/",
+        "date": "September 2026"
+      },
+      {
         "name": "would you still love me if...",
         "description": "a two-player game about repurposed data and artificial intimacy.",
         "image": "/images/wouldyoustillloveme.png",
         "sublabel": "TIAT epistemologies of slop exhibit",
-        "links": {
-          "main": "https://www.tiat.place/slop-epistemologies"
-        },
+        "link": "https://www.tiat.place/slop-epistemologies",
         "date": "June 2026"
       },
       {
         "name": "comparefish",
         "description": "a social plotter where you \"fix\" friends' placements.",
         "image": "/images/comparefish.mp4",
-        "sublabel": "600+ custom plots",
-        "links": {
-          "main": "https://comparefish.site/"
-        }
+        "sublabel": "3k placements, 600+ plots",
+        "link": "https://comparefish.site/"
       },
       {
         "name": "princi/pal",
         "description": "a moral dilemma Tamagotchi.",
         "image": "/images/principal.mp4",
         "sublabel": "NeurIPS 2025 Creative AI",
-        "links": {
-          "main": "https://cnnmon.itch.io/principal",
-          "writeup": "/files/principal"
-        }
+        "link": "https://cnnmon.itch.io/principal",
+        "writeup": "/files/principal"
       },
       {
         "name": "botsbotsbots",
         "description": "a reverse turing test where you must blend in with bots to survive.",
         "sublabel": "20k plays",
         "image": "/images/botsbotsbots.mp4",
-        "links": {
-          "main": "https://cnnmon.itch.io/botsbotsbots"
-        }
+        "link": "https://cnnmon.itch.io/botsbotsbots"
       }
     ]
   },
@@ -50,27 +49,21 @@
         "description": "you're a university student in space over holiday break. short narrative game.",
         "date": "dec 2023",
         "image": "/images/university.mp4",
-        "links": {
-          "main": "https://university-game.vercel.app/"
-        }
+        "link": "https://university-game.vercel.app/"
       },
       {
         "name": "my singing friends",
         "description": "an interpersonal music maker  🎵🕺🏻.",
         "date": "oct 2023",
         "image": "/images/mysingingfriends.mp4",
-        "links": {
-          "main": "https://singing-friends.vercel.app/"
-        }
+        "link": "https://singing-friends.vercel.app/"
       },
       {
         "name": "ezcv",
         "description": "the easiest resume maker. just add plaintext.",
         "date": "sep 2022",
         "image": "/images/ezcv3.mp4",
-        "links": {
-          "main": "https://www.ezcv.pro/"
-        }
+        "link": "https://www.ezcv.pro/"
       }
     ]
   },
@@ -82,9 +75,7 @@
         "description": "drink boba... efficiently? a boba-themed mobile puzzle game.",
         "date": "aug 2020",
         "image": "/images/boba.mp4",
-        "links": {
-          "main": "https://cnnmon.itch.io/boba"
-        },
+        "link": "https://cnnmon.itch.io/boba",
         "sublabel": "Funded on Kickstarter"
       },
       {
@@ -92,9 +83,7 @@
         "description": "a mood tracking chrome extension.",
         "date": "mar 2020",
         "image": "/images/coffeelings.mp4",
-        "links": {
-          "main": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/"
-        },
+        "link": "https://chrome.google.com/webstore/detail/coffeelings/hcbddpppkcnfjifbcfnhmelpemdoepkk/",
         "sublabel": "200k+ daily active users"
       },
       {
@@ -103,18 +92,14 @@
         "date": "oct 2019",
         "sublabel": "Cleveland Clinic eXpressions exhibit",
         "image": "/images/cardio.mp4",
-        "links": {
-          "main": "https://cnnmon.itch.io/cardiocasino"
-        }
+        "link": "https://cnnmon.itch.io/cardiocasino"
       },
       {
         "name": "ashes to ash",
         "description": "72-hour ludum dare platformer about collecting emotions.",
         "date": "oct 2019",
         "image": "/images/ashestoash.mp4",
-        "links": {
-          "main": "https://ldjam.com/events/ludum-dare/45/ashes-to-ash/"
-        },
+        "link": "https://ldjam.com/events/ludum-dare/45/ashes-to-ash/",
         "sublabel": "Ludum Dare top 0.3%"
       },
       {
@@ -122,9 +107,7 @@
         "description": "72-hour ludum dare game about doing chores (and collecting souls!?) as a grim reaper.",
         "date": "apr 2019",
         "image": "/images/sliceofscythe.mp4",
-        "links": {
-          "main": "https://ldjam.com/events/ludum-dare/44/slice-of-scythe/"
-        },
+        "link": "https://ldjam.com/events/ludum-dare/44/slice-of-scythe/",
         "sublabel": "Ludum Dare top 2%"
       },
       {
@@ -133,9 +116,7 @@
         "date": "jan 2019",
         "sublabel": "Scholastic Gold Key exhibit, 1M plays",
         "image": "/images/goodmorning.mp4",
-        "links": {
-          "main": "https://cnnmon.itch.io/goodmorning"
-        }
+        "link": "https://cnnmon.itch.io/goodmorning"
       },
       {
         "name": "kittyclinic",
@@ -143,9 +124,7 @@
         "date": "nov 2018",
         "image": "/images/kittyclinic.png",
         "sublabel": "Cleveland Clinic eXpressions exhibit",
-        "links": {
-          "main": "https://cnnmon.itch.io/kittyclinic"
-        }
+        "link": "https://cnnmon.itch.io/kittyclinic"
       },
       {
         "name": "spacebar",
@@ -153,9 +132,7 @@
         "description": "type fast enough, and you won't fall into the endless void.",
         "date": "sep 2018",
         "image": "/images/spacebar.PNG",
-        "links": {
-          "main": "https://cnnmon.itch.io/spacebar"
-        }
+        "link": "https://cnnmon.itch.io/spacebar"
       }
     ]
   }
