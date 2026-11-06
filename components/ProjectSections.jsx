@@ -178,7 +178,7 @@ function Project({ item, showTooltip, hideTooltip, variant }) {
     <motion.div key={projectId} id={projectId} className="flex flex-col w-full mb-5">
       <div className="transition-all duration-50">
         {link ? (
-          <a href={link.href} target="_blank" rel="noopener noreferrer">
+          <a href={link} target="_blank" rel="noopener noreferrer">
             {preview}
           </a>
         ) : (
@@ -186,7 +186,7 @@ function Project({ item, showTooltip, hideTooltip, variant }) {
         )}
         <div className="flex flex-row justify-between gap-2">
           {link ? (
-            <a href={link.href} target="_blank" rel="noopener noreferrer" className="font-bold">
+            <a href={link} target="_blank" rel="noopener noreferrer" className="font-bold">
               {name}
             </a>
           ) : (
