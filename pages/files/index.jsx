@@ -164,8 +164,7 @@ export default function Filesys() {
 
     files
       .filter(
-        (item) =>
-          !item.wip && (!selectedTag || item.tags?.includes(selectedTag)),
+        (item) => !item.wip && !item.hidden && (!selectedTag || item.tags?.includes(selectedTag)),
       )
       .forEach((item) => {
         if (item.blog || item.href) {

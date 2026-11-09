@@ -26,10 +26,11 @@
     "id": "princi/pal",
     "subtitle": "a moral dilemma tamagotchi",
     "href": "/files/principal",
-    "preview": "princi/pal explores the anxiety of raising a responsible, good-natured child, with an AI twist.",
+    "preview": "raise a pet that questions your morals",
     "thumbnail": "/text/principal/evolutions.png",
     "tags": ["writing", "program"],
-    "date": "dec 6 2025"
+    "date": "dec 6 2025",
+    "hidden": true
   },
   {
     "id": "new website",
