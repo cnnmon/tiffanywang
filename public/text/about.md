@@ -2,11 +2,7 @@ Hi, I'm Tiffany! I'm a first-year graduate student at the [MIT Media Lab](https:
 
 I graduated with a BA in Computer Science at UC Berkeley, where I researched adversarial robustness with the [CHAI lab](https://en.wikipedia.org/wiki/Center_for_Human-Compatible_Artificial_Intelligence), advised by Stuart Russell. There, I taught [Operating Systems](https://cs162.org/), ran [hackathons](https://www.calhacks.io/), and [developed apps for non-profits](https://calblueprint.org/).
 
-Previously, I was a:
-- Resident at [Stochastic Labs](https://stochasticlabs.org/)
-- Research engineer at [Midjourney's](https://www.midjourney.com/) Storytelling Lab 
-- Data infrastructure engineer at [Watershed](https://watershed.com/)
-- Intern at [Facebook Reality Labs](https://tech.facebook.com/reality-labs/), [Ramp](https://ramp.com/), and [Watershed](https://watershed.com/)
+Previously, I was a research engineer [Midjourney's](https://www.midjourney.com/) Storytelling Lab and a software engineering intern at [Facebook Reality Labs](https://tech.facebook.com/reality-labs/), [Ramp](https://ramp.com/), and [Watershed](https://watershed.com/).
 
 Before all that, I grew up in a small town in Ohio with a [big park](https://en.wikipedia.org/wiki/Brecksville_Reservation).
 

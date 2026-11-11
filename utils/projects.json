@@ -3,8 +3,15 @@
     "title": "2024-2026",
     "list": [
       {
+        "name": "tinymysteries",
+        "description": "a daily lateral thinking puzzle game",
+        "image": "/images/tinymysteries.gif",
+        "link": "https://tinymysteries.vercel.app/",
+        "date": "November 2026"
+      },
+      {
         "name": "THE SUITORS AND THE AI PRINCESS",
-        "description": "try to appease a princess with evolving secret preferences [beta]",
+        "description": "a competitive preference-guessing game [beta]",
         "image": "/images/suitors.gif",
         "link": "https://suitors-sigma.vercel.app/",
         "date": "September 2026"

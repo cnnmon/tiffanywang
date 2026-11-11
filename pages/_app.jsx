@@ -57,7 +57,7 @@ function MyApp({ Component, pageProps }) {
                     router.pathname === '/toys' ? 'opacity-100' : 'opacity-60',
                   )}
                 >
-                  projects
+                  games
                 </Link>
                 <Link
                   href="/research"
