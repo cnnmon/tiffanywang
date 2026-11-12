@@ -29,7 +29,7 @@ an obvious application for adversarial play seems to exist in education. we have
 
 we are often traditionally taught to hedge like there is no tomorrow, and that to be disagreed with entails a failure of your argument. there's this 2008 essay by [Martin A. Schwartz](https://en.wikipedia.org/wiki/Martin_A._Schwartz) called "The importance of stupidity in scientific research". that to pursue research is to "bumble along" in near-infinite hypothesis space, "getting it wrong time after time, and feel perfectly fine as long as we learn something each time". Daniel Kahneman suggests it's our [unconditional attachment to our ideas](https://www.barnesandnoble.com/blog/a-book-excerpt-from-think-again-by-adam-grant/) that gets in the way of us enjoying this process of failure.
 
-adversarial play is about gamifying failure. with technology that can now adapt in real-time, the ground feels fertile for creating new digital arenas and design new and interesting ways to be wrong. on the other side of the same coin, i'm excited about using play to elicit confidence in your ability (yes, you) in your ability to overcome whatever challenges may come.
+adversarial play is about low-stakes failure. with tech that adapts in real-time, can we design new, fun, and interesting ways to be wrong? and on the flipside of the same coin, can we elicit confidence in your ability to overcome whatever challenges?
 
 ── ⋆⋅𖤓⋅⋆ ──
 
