@@ -2,7 +2,10 @@
 module.exports = {
   reactStrictMode: true,
   async redirects() {
-    return [{ source: '/principal', destination: '/files/principal', permanent: true }];
+    return [
+      { source: '/principal', destination: '/files/principal', permanent: true },
+      { source: '/intimacy-slop', destination: '/files/intimacy-slop', permanent: true },
+    ];
   },
   images: {
     formats: ['image/avif', 'image/webp'],
@@ -11,4 +14,4 @@ module.exports = {
       { protocol: 'https', hostname: 'user-images.githubusercontent.com' },
     ],
   },
-}
+};
