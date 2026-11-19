@@ -5,7 +5,7 @@ import LazyVideo from '../../components/LazyVideo';
 import Url from '../../components/Url';
 
 const links = [
-  ['paper', 'https://openreview.net/pdf?id=ElaELqeFt8'],
+  ['paper', 'https://neurips.cc/virtual/2025/loc/san-diego/129301'],
   ['code', 'https://github.com/cnnmon/moral-dilemma-tamagotchi'],
   ['dataset', 'https://huggingface.co/datasets/cnnmon/moral-dilemma-responses'],
   ['play', 'https://cnnmon.itch.io/principal'],
